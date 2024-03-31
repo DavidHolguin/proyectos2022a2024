@@ -1,0 +1,2210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas de Inteligencia Artificial aplicadas al Marketing Político</title>
+    <meta name="theme-color" content="#2f468a" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+  box-sizing:border-box;
+}
+body{
+  margin:0;
+
+  font-family: 'Poppins', sans-serif;
+   
+}
+a:hover, a:focus{
+    color: #fff;
+}
+#rum_sst_tab{
+  display: none !important;
+}
+.container{
+  margin: auto;
+ 
+  justify-content:space-between;
+}
+.img{
+ background-image: url(https://portafolio.site/wp-content/uploads/2023/03/Diseno-sin-titulo-6-1.png);
+ background-size:cover;
+ background-repeat:no-repeat;
+ padding: 40px 50PX 100px;
+ background-attachment: fixed;
+ 
+}
+
+
+@media screen and (max-width: 767px) {
+  .img{
+  background-image: url(https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-53-1.png);
+}}
+
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+a{
+  color:white;
+  font-weight:700;
+  font-size:15px;
+  font-family: 'Poppins', sans-serif;
+  text-decoration:none;
+  margin-bottom:70px;
+
+}
+.title1{
+  color:#2f468a;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size:1.5rem;
+
+
+}
+.title2{
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  font-size:40px;
+  font-weight: 600 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  
+}
+.introduce{
+ color:#ffffffb3;
+ font-family: 'Poppins', sans-serif;
+ line-height: 1.5;
+ font-size:17px;
+ font-weight: 500 !important;
+ 
+ margin-bottom: 66px !important;
+
+}
+.jotform-icon{
+  background-image:url("https://www.eam.edu.co/wp-content/uploads/2022/06/logoeam-footer.png");
+  margin-bottom:70px;
+}
+
+.button{
+  padding:12px 17px;
+  border-radius:5px;
+  border:0;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  background-color: #2f468a2b;
+  font-size:100%;
+  letter-spacing:0.5px;
+  margin-top: 20px !important;
+  font-weight: 500;
+  border: solid 1px #2f468a;
+}
+.title3{
+  font-family: 'Poppins', sans-serif;
+  font-size:40px;
+  text-align:center;
+  margin-top:90px;
+}
+.icon1-img{
+   background-repeat:no-repeat;
+  background-size:cover;
+  width:120px;
+  height:120px;
+}
+
+.icon-description{
+display: block;
+text-align:center;
+font-family: 'Poppins', sans-serif;
+color:#000000b3;
+font-weight:500;
+font-size:15px;
+}
+
+.icon-list{
+  display:flex;
+  flex-wrap:wrap;
+}
+.three-icon{
+  flex:1;
+  padding:30px;
+}
+.icon-title{
+  font-family: 'Poppins', sans-serif;
+}
+.page2{
+  text-align:center;
+}
+.page3{
+ background-color:#fbfbfb;
+
+}
+.page3-box{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  padding: 20px 0;
+}
+.page3-img{
+ max-width:540px;
+width:100%;
+  
+}
+.information{
+flex:1;
+  padding-left:70px;
+}
+button.learn-more{
+  background-color:#292b2c;
+  color:white;
+}
+.info-title{
+  font-family: 'Poppins', sans-serif;
+  font-size:30px;
+  font-weight:bold;
+
+}
+.info-all{
+  color:#000000b3;
+  margin-bottom:20px;
+  line-height:1.4;
+  font-size:17px;
+
+}
+.get-free{
+   background-color:#292b2c;
+  color:white;
+}
+.memberships{
+  display:flex;
+  flex-wrap:wrap;
+}
+.member{
+flex:auto;
+padding:60px;
+text-align:center;  
+font-family: 'Poppins', sans-serif;
+border-radius:4px;
+}
+span{
+  font-size:40px;
+
+}
+.mem-title{
+  font-size:26px;
+  font-weight:bold;
+}
+.orange{
+  background-color:#ff8001;
+  color:white;
+}
+.page4{
+  padding:80px 0;
+}
+.under{
+  background-color:#f5f5f5;
+  padding:10px;
+  display:flex;
+
+
+}
+ .under .container{
+   display:flex;
+   flex-wrap:wrap;
+   justify-content:space-between;
+   width:100%;
+  }
+ 
+.copy{
+ font-family: 'Work Sans', sans-serif;
+
+
+}
+.facebook{
+  background-image:url("https://i.ibb.co/x6n6DNV/facebook-logo-button.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  width:30px;
+  height:30px;
+
+}
+.sos-med{
+  display:flex;
+  justify-content:space-between;
+  width:100px;
+}
+
+
+.twitter{
+   background-image:url("https://i.ibb.co/wzstzsd/twitter.png");
+   background-repeat:no-repeat;
+  background-size:cover;
+  width:30px;
+  height:30px;
+}
+.linkedin{
+  background-image:url("https://i.ibb.co/9T8kqqb/linkedin-logo-button.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  width:30px;
+  height:30px;
+}
+
+
+
+
+
+
+
+@media (max-width: 840px) {
+  .information {
+    padding-left: 0;
+    text-align: center;
+  }
+  .page3-box {
+    justify-content: center;
+  }
+}
+
+
+
+
+.main-product-detail{
+background-color: #201E1C;
+position: relative;
+width: 100%;
+min-width: 320px;
+height: auto;
+padding: 10px 10px 30px 10px;
+}
+.dobleTitulacion {
+width: 20%;
+}
+
+.product-detail--title {
+width: 90%;
+min-width: 288px;
+height: auto;
+margin: 0 auto;
+margin-top: 10px;
+
+font-family: 'Poppins', sans-serif;
+
+
+}
+
+.product-detail--title h2 {
+ margin-bottom: 20px;
+ font-size: 3rem;
+ font-weight: bold;
+ line-height: 2.6rem;
+ color: #fff;
+ font-family: 'Poppins', sans-serif;
+ margin-top: 40px;
+ text-align: center;
+
+}
+.product-detail--title p {
+margin-bottom: 20px;
+font-size: 1.5rem;
+font-weight: 500;
+text-align: center;
+line-height: 1.8rem;
+color:#808080;
+} 
+.product-detail--card {
+width: 90%;
+min-width: 288px;
+max-width: 400px;
+height: auto;
+margin: 15px auto;
+padding: 15px;
+background-color: #282623;
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+
+}
+.product-detail--card .material-symbols-outlined {
+color: #fff;
+width: 40px;
+display: inline-block;
+margin-bottom: 10px;
+
+}
+.product--card-title {
+margin-bottom: 15px;
+font-size: 1.5rem;
+font-weight: bold;
+color:#fff ;
+line-height: 1.8rem;
+}
+
+.product--card-body {
+font-size: 1.4rem;
+font-weight: 500px;
+line-height: 1.7rem;
+color: #808080;
+
+  
+
+    }
+.product-cards--container {
+    display: flex;
+    gap: 40px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+.main-program-detail a {
+    background-color: #147d36;
+    padding: 5px 8px;
+    color: #fff;
+    width: 20%;
+    margin-top: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    gap: 5px;
+    align-items: center;
+}
+
+
+
+
+.blog-header {
+        display: flex;
+        height: 64px;
+        width: 100%;
+        background: #fff;
+        align-items: center;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+        
+        justify-content: space-evenly;
+        left: 0;
+        
+        right: 0;
+        top: 0;
+        transform: translateY(0);
+        transition: transform 150ms ease-out;
+        z-index: 300000;
+    }
+    .blog-header_containt {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .blog-header_containt a {
+      margin-bottom: 0px;
+    }
+    .blog-header img {
+        width: 96px;
+        height: 47px;            
+    }
+    .blog-header_menu {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+    .blog-header_menu .material-symbols-outlined {
+        color:#5f6368;
+    }
+    .blog-header_menu-buttonCategory  {
+        color:#5f6368;
+        text-decoration: none;
+    }
+    .blog-header_menu-buttonSuscribe {
+        background-color: #2f468a;
+        color: #fff !important ;
+        text-decoration: none;
+        display: block;
+        padding: 13px 24px 11px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 30px;
+        font-weight: 500;
+    }
+    .start {
+      width: 65%;
+    }
+    
+:root {
+  --color: ;
+  --transition-time: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.cards-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.card {
+  font-family: 'Heebo';
+  --bg-filter-opacity: 0.5;
+  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+  height:auto;
+  width: 15em;
+  font-size: 1.5em;
+  color: #fff;
+  border-radius: 1em;
+  padding: 1em;
+  /*margin: 2em;*/
+  display: flex;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+  
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ccc;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.card:hover {
+  transform: rotate(0);
+  color:#3f51b5 !important;
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 !important;
+
+}
+
+.card p {
+  font-size: 0.55em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin-top: 0.5em;
+  line-height: 1.31em;
+  color: #fff;
+}
+
+.card .tags {
+  display: flex;
+}
+
+.card .tags .tag {
+    font-size: 0.6em;
+    font-family: 'Poppins', sans-serif;
+    background: #2f468a45;
+    border-radius: 0.3rem;
+    padding: 3px 7px;
+    margin-right: 0.5em;
+    line-height: 1.5em;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all, var(--transition-time);
+    border: solid 1px #2f468a;
+}
+
+.card:hover .tags .tag {
+  background: #2f468a;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card:hover h1  {
+  color:#2f468a;
+}
+.card:hover p  {
+  color:#2f468a;
+}
+.card .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 1em;
+  line-height: 1em;
+  opacity: .8;
+}
+
+.card:before, .card:after {
+  content: '';
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+
+.card:before {
+  background: #ddd;
+  width: 250%;
+  
+  height: 250%;
+}
+
+.card:after {
+  background: white;
+  width: 200%;
+  height: 200%;
+}
+
+.card:hover {
+  color: #2f468a !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.card:hover:before, .card:hover:after {
+  transform: scale(1);
+}
+
+.card-grid-space .num {
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  color:#878787;
+}
+
+.info {
+  font-size: 1.2em;
+  display: flex;
+  padding: 1em 3em;
+  height: 3em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info img {
+  height: 3em;
+  margin-right: 0.5em;
+  
+}
+
+.info h1 {
+  font-size: 1em;
+  font-weight: normal;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    justify-content: center;
+  }
+  .card-grid-space .num {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards-wrapper {
+    padding: 4rem 2rem;
+  }
+  .card {
+    max-width: calc(100vw - 4rem);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info {
+    display: block;
+    text-align: center;
+  }
+  .info h1 {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+.blog-header {
+      display: flex;
+      height: 64px;
+      width: 100%;
+      background: #fff;
+      align-items: center;
+      box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+    
+      justify-content: space-evenly;
+      left: 0;
+      
+      right: 0;
+      top: 0;
+      transform: translateY(0);
+      transition: transform 150ms ease-out;
+      z-index: 300000;
+  }
+  .blog-header_containt {
+    justify-content: center;
+  }
+
+.blog-header_containt a {
+    display: none;
+  }
+  .product-cards--container {
+    flex-wrap: wrap;
+    padding: 0px;
+    gap: 0px;
+  }
+  .start {
+    width: 100%;
+  }
+  .title2 {
+    font-size: 25px;
+    
+  }
+  .introduce {
+    font-weight: 400;
+  }
+
+}
+.cards-wrapper a {
+  margin-bottom: 0px;
+  min-height: 220px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+div, footer {
+    box-sizing: border-box;
+}
+
+div.mister_separator {
+    margin-top: 100px;
+}
+
+
+/*
+What do we have here? A set of three responsive footers, 2, 3 and 4 columns each.
+In order to make it easier to implement a preferred footer into your project, I decided to keep all the necessary styles right into their sections without putting common styles apart.
+This entails some things that otherwise wouldn't've been considered elegant for this project itself, like IDs duplication, code overuse and so forth.
+There are only three selectors which are common for all the footers below. Don't forget to transfer them to your project. They go right below this description.
+After that, you can simply copy the code from the section with your footer - there's all styles you need.
+Thank you for your interest.
+*/
+
+
+/*============ COMMON STYLES. DON'T FORGET TO COPY THEM AS WELL! ===========*/
+
+footer.site-footer {
+    padding: 60px 30px;
+    background: #222222 !important;
+    color: #999999;
+    font-size: 10pt;
+}
+
+div#footer-container {
+    width: 80%;
+    margin: 0 auto;
+    transition: all 0.2s ease;
+}
+
+div#footer-grid {
+    display: flex;
+    align-items: stretch;
+    padding-bottom: 60px;
+}
+
+
+
+
+
+
+
+/*============ footer 2 columns ===========*/
+
+footer#footer-2-cols div#left-footer-section {
+    flex-basis: 50%;
+    border-right: 1px solid #444444;
+    padding-right: 30px;
+}
+
+footer#footer-2-cols div#right-footer-section {
+    flex-basis: 50%;
+}
+
+footer#footer-2-cols div#copyright-information div#footer-logo-section {
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-2-cols div#copyright-information div#footer-logo {
+    width: 30px;
+    margin-right: 30px;
+}
+
+footer#footer-2-cols div#footer-search input {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: #2a2a2a;
+    outline: none;
+    color: #999999;
+    padding: 2px;
+}
+
+footer#footer-2-cols div#footer-search button {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: transparent;
+    color: #cecece;
+    padding: 2px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+footer#footer-2-cols div#footer-search button:hover {
+    background: #2f468a;
+    color: #ffffff;
+    border: 2px solid #666666;
+    transition: all 0.25s ease;
+}
+
+footer#footer-2-cols div#footer-search button:active {
+    position: relative;
+    top: 1px;
+}
+
+footer#footer-2-cols div#footer-logo img {
+    width: 100%;
+}
+
+footer#footer-2-cols div.footer-information p {
+    margin-top: 10px;
+}
+
+footer#footer-2-cols div.footer-information p:first-child {
+    margin-top: 30px;
+}
+
+footer#footer-2-cols div.footer-information p:last-child {
+    margin-bottom: 0;
+}
+
+footer#footer-2-cols div.footer-information p img {
+    margin-right: 0.75em;
+}
+
+footer#footer-2-cols div#right-footer-section ul {
+    margin: 0;
+}
+
+footer#footer-2-cols div.footer-links ul li, footer#footer-2-cols div.footer-links ul li a  {
+    list-style: none;
+    color: #999999;
+    line-height: 1.38em;
+    margin-bottom: 1em;
+}
+
+footer#footer-2-cols div.footer-links ul li:last-child, footer#footer-2-cols div.footer-links ul li a:last-child  {
+    margin-bottom: 0;
+}
+
+footer#footer-2-cols div#right-footer-section ul li a:hover {
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+footer#footer-2-cols div#copyright-information {
+    border-top: 1px solid #444444;
+    padding: 30px 0 0 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-2-cols div#copyright-information div#social-buttons {
+    margin-left: auto;
+}
+
+footer#footer-2-cols div#copyright-information div#social-buttons img {
+    margin-left: 0.68em;
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+footer#footer-2-cols div#copyright-information div#social-buttons i.fa:hover {
+    color: #666666;
+    transition: all 0.2s ease;
+}
+
+
+/*==== media queries for footer-2-columns ====*/
+
+@media screen and (max-width: 960px){
+
+    div#footer-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    div#footer-grid {
+        flex-direction: column;
+        width: 480px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+
+    footer#footer-2-cols div#left-footer-section {
+        border-right: 0;
+        padding-bottom: 30px;
+    }
+
+    footer#footer-2-cols div.footer-section {
+        padding-top: 30px;
+    }
+
+    footer#footer-2-cols div.footer-section:first-child {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    footer#footer-2-cols div#right-footer-section ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 11pt;
+    }
+
+    footer#footer-2-cols div#right-footer-section ul li {
+        margin: 0;
+    }
+
+    footer#footer-2-cols div#right-footer-section ul li a {
+        margin: 0;
+        display: block;
+        padding: 15px;
+        background: #2a2a2a;
+        border-bottom: 1px solid #444444;
+        text-decoration: none;
+    }
+
+    footer#footer-2-cols div#right-footer-section ul li:last-child a {
+        border-bottom: none;
+    }
+
+    footer#footer-2-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-2-cols div#copyright-information {
+        display: block;
+        width: 480px;
+        margin: 0 auto;
+    }
+
+    footer#footer-2-cols div#copyright-information div#social-buttons {
+        padding: 15px 0;
+    }
+
+    footer#footer-2-cols div#copyright-information div#social-buttons i.fa:first-child {
+        margin-left: 0;
+    }
+
+    footer#footer-2-cols div#copyright-information div#footer-logo-section {
+        display: block;
+        align-items: normal;
+    }
+
+    footer#footer-2-cols div#copyright-information div#footer-logo {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    footer#footer-2-cols div#copyright-information div#footer-logo img {
+        width: 30px;
+        text-align: center;
+    }
+
+    footer#footer-2-cols div#copyright-information div#copyright-text {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    footer#footer-2-cols div#copyright-information div#social-buttons i.fa {
+        font-size: 24pt;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    div#footer-grid {
+        width: 100%;
+    }
+
+    footer#footer-2-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-2-cols div.footer-information {
+        margin: 0 auto;
+    }
+
+    footer#footer-2-cols div#copyright-information {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer#footer-2-cols div#copyright-information div#copyright-text {
+        width: 100%;
+    }
+
+    footer#footer-2-cols div#copyright-information div#social-buttons {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/*============ footer 3 columns ===========*/
+
+footer#footer-3-cols div#left-footer-section {
+    flex-basis: 33.33%;
+    border-right: 1px solid #444444;
+    padding-right: 30px;
+}
+
+footer#footer-3-cols div#second-footer-section {
+    flex-basis: 33.33%;
+    border-right: 1px solid #444444;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+footer#footer-3-cols div#right-footer-section {
+    flex-basis: 33.33%;
+    padding-left: 30px;
+}
+
+footer#footer-3-cols div#footer-logo-section {
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-3-cols div#footer-logo {
+    width: 30px;
+    margin-right: 30px;
+}
+
+footer#footer-3-cols div#footer-search input {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: #2a2a2a;
+    outline: none;
+    color: #999999;
+    padding: 2px;
+    width: 130px;
+}
+
+footer#footer-3-cols div#footer-search button {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: transparent;
+    color: #cecece;
+    padding: 2px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+footer#footer-3-cols div#footer-search button:hover {
+    background: #2f468a;
+    color: #ffffff;
+    border: 2px solid #666666;
+    transition: all 0.25s ease;
+}
+
+footer#footer-3-cols div#footer-search button:active {
+    position: relative;
+    top: 1px;
+}
+
+footer#footer-3-cols div.footer-section h3 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 12pt;
+}
+
+footer#footer-3-cols div#footer-logo img {
+    width: 100%;
+}
+
+footer#footer-3-cols div.footer-information p {
+    margin-top: 10px;
+}
+
+footer#footer-3-cols div.footer-information p:first-child {
+    margin-top: 30px;
+}
+
+footer#footer-3-cols div.footer-information p:last-child {
+    margin-bottom: 0;
+}
+
+footer#footer-3-cols div.footer-information p img {
+    margin-right: 0.75em;
+}
+
+
+footer#footer-3-cols div.footer-section ul {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+footer#footer-3-cols div.footer-links ul li, footer#footer-3-cols div.footer-links ul li a   {
+    list-style: none;
+    color: #999999;
+    line-height: 1.38em;
+    margin-bottom: 1em;
+}
+
+footer#footer-3-cols div.footer-links ul li:last-child, footer#footer-3-cols div.footer-links ul li a:last-child   {
+    margin-bottom: 0;
+}
+
+footer#footer-3-cols div.footer-section ul li a:hover {
+    color:#ffffff;
+    transition: all 0.2s ease;
+}
+
+footer#footer-3-cols div#copyright-information {
+    border-top: 1px solid #444444;
+    padding: 30px 0 0 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-3-cols div#copyright-information div#social-buttons {
+    margin-left: auto;
+
+}
+
+footer#footer-3-cols div#copyright-information div#social-buttons img {
+    margin-left: 0.68em;
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+
+/*==== media queries for footer-3-columns ====*/
+
+@media screen and (max-width: 960px){
+
+    div#footer-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    div#footer-grid {
+        flex-direction: column;
+        width: 480px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+    footer#footer-3-cols div#left-footer-section {
+        border-right: 0;
+        padding-bottom: 30px;
+    }
+
+    footer#footer-3-cols div#second-footer-section {
+        border-right: none;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 30px;
+
+    }
+
+    footer#footer-3-cols div.footer-section {
+        padding-top: 30px;
+    }
+
+    footer#footer-3-cols div.footer-section h3 {
+        text-align: center;
+    }
+
+    footer#footer-3-cols div.footer-section:first-child {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    footer#footer-3-cols div#right-footer-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    footer#footer-3-cols div#second-footer-section ul,
+    footer#footer-3-cols div#right-footer-section ul {
+        margin: 0;
+        padding: 0;
+        font-size: 11pt;
+        text-align: center;
+    }
+
+    footer#footer-3-cols div.footer-links ul li {
+        margin: 0;
+    }
+
+    footer#footer-3-cols div.footer-links ul li a {
+        margin: 0;
+        display: block;
+        padding: 15px;
+        background: #2a2a2a;
+        border-bottom: 1px solid #444444;
+        text-decoration: none;
+
+    }
+
+    footer#footer-3-cols div.footer-links ul li:last-child a {
+        border-bottom: none;
+    }
+
+    footer#footer-3-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-3-cols div#copyright-information {
+        display: block;
+        width: 480px;
+        margin: 0 auto;
+    }
+
+    footer#footer-3-cols div#copyright-information div#social-buttons {
+        padding: 15px 0;
+    }
+
+    footer#footer-3-cols div#copyright-information div#social-buttons img:first-child {
+        margin-left: 0;
+    }
+
+    footer#footer-3-cols div#copyright-information div#footer-logo-section {
+        display: block;
+        align-items: normal;
+    }
+
+    footer#footer-3-cols div#copyright-information div#footer-logo {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    footer#footer-3-cols div#copyright-information div#footer-logo img {
+        width: 30px;
+        text-align: center;
+    }
+
+    footer#footer-3-cols div#copyright-information div#copyright-text {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    footer#footer-3-cols div#copyright-information div#social-buttons i.fa {
+        font-size: 24pt;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    div#footer-grid {
+        width: 100%;
+    }
+
+    footer#footer-3-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-3-cols div.footer-information {
+        margin: 0 auto;
+    }
+
+    footer#footer-3-cols div#copyright-information {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer#footer-3-cols div#copyright-information div#copyright-text {
+        width: 100%;
+    }
+
+    footer#footer-3-cols div#copyright-information div#social-buttons {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/*============ footer 4 columns ===========*/
+
+footer#footer-4-cols div#left-footer-section {
+    flex-basis: 33.33%;
+    padding-right: 20px;
+}
+
+footer#footer-4-cols div#first-footer-section {
+  flex-basis: 35%;
+    border-right: 1px solid #444444;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #444444;
+    display: flex;
+    overflow: auto;
+    flex-wrap: nowrap;
+}
+footer#footer-4-cols div#firstt-footer-section {
+  flex-basis: 35%;
+    
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    border-left: 1px solid #444444;
+    display: flex;
+    overflow: auto;
+    flex-wrap: nowrap;
+}
+
+
+footer#footer-4-cols div#second-footer-section {
+    flex-basis: 22.22%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+footer#footer-4-cols div#right-footer-section {
+    flex-basis: 22.22%;
+    padding-left: 20px;
+}
+
+footer#footer-4-cols div#footer-logo-section {
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-4-cols div#footer-logo {
+    width: 30px;
+    margin-right: 30px;
+}
+
+footer#footer-4-cols div#footer-search input {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: #2a2a2a;
+    outline: none;
+    color: #999999;
+    padding: 2px;
+    width: 130px;
+}
+
+footer#footer-4-cols div#footer-search button {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: transparent;
+    color: #cecece;
+    padding: 2px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+footer#footer-4-cols div#footer-search button:hover {
+    background: #2f468a;
+    color: #fff;
+    
+    transition: all 0.25s ease;
+}
+
+footer#footer-4-cols div#footer-search button:active {
+    position: relative;
+    top: 1px;
+}
+
+footer#footer-4-cols div.footer-section h3 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 12pt;
+    color: #fff;
+}
+
+footer#footer-4-cols div#footer-logo img {
+    width: 100%;
+}
+
+footer#footer-4-cols div.footer-information p {
+    margin-top: 10px;
+}
+
+footer#footer-4-cols div.footer-information p:first-child {
+    margin-top: 30px;
+}
+
+footer#footer-4-cols div.footer-information p:last-child {
+    margin-bottom: 0;
+}
+
+footer#footer-4-cols div.footer-information p img {
+    margin-right: 0.75em;
+}
+
+footer#footer-4-cols div.footer-tags a.footer-tag {
+    
+  text-decoration: none;
+    color: #999999;
+    border: 1px solid #666666;
+    background: #282828;
+    padding: 0.2em 0.6em;
+    margin: 0 0.68em 0.68em 0;
+    display: block;
+    float: left;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    font-style: italic;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.16);
+
+}
+
+footer#footer-4-cols div.footer-tags a.footer-tag:hover {
+    background: #2f468a;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+footer#footer-4-cols div.footer-section ul {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+footer#footer-4-cols div.footer-links ul li, footer#footer-4-cols div.footer-links ul li a   {
+    list-style: none;
+    color: #999999;
+    line-height: 1.38em;
+    margin-bottom: 1em;
+}
+
+footer#footer-4-cols div.footer-links ul li:last-child, footer#footer-4-cols div.footer-links ul li a:last-child   {
+    margin-bottom: 0;
+}
+
+footer#footer-4-cols div.footer-section ul li a:hover {
+    color:#ffffff;
+    transition: all 0.2s ease;
+}
+
+footer#footer-4-cols div#copyright-information {
+    border-top: 1px solid #444444;
+    padding: 30px 0 0 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-4-cols div#copyright-information div#social-buttons {
+    margin-left: auto;
+
+}
+
+footer#footer-4-cols div#copyright-information div#social-buttons img {
+    margin-left: 0.68em;
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+
+/*==== media queries for footer-4-columns ====*/
+
+@media screen and (max-width: 960px){
+
+    div#footer-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    div#footer-grid {
+        flex-direction: column;
+        width: 480px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+    footer#footer-4-cols div#left-footer-section {
+        border-right: 0;
+        padding-bottom: 30px;
+    }
+
+    footer#footer-4-cols div#second-footer-section {
+        border-right: none;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+
+    footer#footer-4-cols div.footer-section {
+        padding-top: 30px;
+    }
+
+   
+
+    footer#footer-4-cols div.footer-section:first-child {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    footer#footer-4-cols div#first-footer-section {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 30px;
+        border-right: none;
+    }
+
+    footer#footer-4-cols div.footer-tags a.footer-tag {
+        font-size: 11pt;
+        padding: 0.32em 0.5em;
+    }
+
+    footer#footer-4-cols div#right-footer-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    footer#footer-4-cols div#second-footer-section ul,
+    footer#footer-4-cols div#right-footer-section ul {
+        margin: 0;
+        padding: 0;
+        font-size: 11pt;
+        text-align: center;
+    }
+
+    footer#footer-4-cols div.footer-links ul li {
+        margin: 0;
+    }
+
+    footer#footer-4-cols div.footer-links ul li a {
+        margin: 0;
+        display: block;
+        padding: 15px;
+        background: #2a2a2a;
+        border-bottom: 1px solid #444444;
+        text-decoration: none;
+    }
+
+    footer#footer-4-cols div.footer-links ul li:last-child a {
+        border-bottom: none;
+    }
+
+    footer#footer-4-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-4-cols div#copyright-information {
+        display: block;
+        width: 480px;
+        margin: 0 auto;
+    }
+
+    footer#footer-4-cols div#copyright-information div#social-buttons {
+        padding: 15px 0;
+    }
+
+    footer#footer-4-cols div#copyright-information div#social-buttons i.fa:first-child {
+        margin-left: 0;
+    }
+
+    footer#footer-4-cols div#copyright-information div#footer-logo-section {
+        display: block;
+        align-items: normal;
+    }
+
+    footer#footer-4-cols div#copyright-information div#footer-logo {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    footer#footer-4-cols div#copyright-information div#footer-logo img {
+        width: 70px;
+        text-align: center;
+    }
+
+    footer#footer-4-cols div#copyright-information div#copyright-text {
+        display: block;
+        text-align: justify;
+        padding: 15px 0;
+        line-height: 1.5;
+    }
+
+    footer#footer-4-cols div#copyright-information div#social-buttons i.fa {
+        font-size: 24pt;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    div#footer-grid {
+        width: 100%;
+    }
+
+    footer#footer-4-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-4-cols div.footer-information {
+        margin: 0 auto;
+    }
+
+    footer#footer-4-cols div#copyright-information {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer#footer-4-cols div#copyright-information div#copyright-text {
+        width: 100%;
+    }
+
+    footer#footer-4-cols div#copyright-information div#social-buttons {
+        width: 100%;
+    }
+}
+.button-googleMaps {
+    background-color: #2f468a2b;
+    color: #fff;
+    padding: 7px 14px;
+    font-weight: 400;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    margin-bottom: 30px !important;
+    border: solid 1px #2f468a;
+}
+@media screen and (max-width: 767px) { 
+  footer#footer-4-cols div#left-footer-section {
+    font-size: 1.5rem;
+  }
+  footer#footer-4-cols div.footer-tags a.footer-tag {
+    font-size: 1rem;
+  }
+  footer#footer-4-cols div#firstt-footer-section {
+    border-left: none;
+    border-top: 1px solid #444444;
+    padding-left: 0px;
+    
+  }
+  footer#footer-4-cols div#first-footer-section {
+    border-left: none;
+    border-top: 1px solid #444444;
+  }
+
+}
+
+.containt-team {
+  margin:0;
+  padding: 50px 0;
+  color:#333;
+  background:#0e1013;
+  font-family:sans-serif;
+}
+.title-team{
+  text-align:center;
+  padding-top: 0px !important;
+  font-size: 40px;
+    font-weight: 600 !important;
+  color:#fff;
+  font-family: 'Poppins', sans-serif;
+}
+#team{
+  display:flex;
+  flex-wrap: wrap;
+  flex-grow:3;
+  justify-content: center;
+  gap: 10px;
+}
+.card-team {
+  width:33%;
+  min-width: 300px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  margin:0 0.5% 1% 0;
+  display:inline-block
+}
+.card-team:nth-of-type(3n){
+  margin-right:0;
+}
+.card-team img {
+  width: 100%;
+  min-height:100%;
+  transition:all 0.9s
+}
+.card-team:hover img{
+ transform:scale(1.2,1.2)
+}
+.data {
+  position: absolute;
+  bottom: 5%;
+  background: #fff;
+  text-align:center;
+  width: 90%;
+  height: 80px;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 10px 5%;
+  box-sizing: border-box;
+  opacity: 0.8;
+  border-radius: 5px;
+  transition: all 0.4s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-team:hover .data {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  opacity: 0.9;
+  padding:90px 10%
+}
+
+.data h2 {
+  margin: 0 0 5px 0;
+  transition:color 0.4s
+}
+
+.data p {
+  opacity: 0;
+  text-align:justify;
+  transition: all 0.2s
+}
+
+.card-team:hover .data p,.card:hover .data a {
+  opacity: 1
+}
+
+.data a{
+  color:#333;
+  text-decoration:none;
+  padding:20px;
+  opacity:0
+}
+.data a:hover,.card:hover h2{
+  color:#38c
+}
+
+@media (max-width:799px){
+  .card {width:100%;margin-right:0}
+}
+
+
+
+
+.btn-twtr{
+  color:#ddd;
+  border:2px solid;
+  border-radius:3px;
+  text-decoration:none;
+  display:inline-block;
+  padding:5px 10px;
+  font-family:sans-serif;
+  font-weight:600;
+  margin-top:100px;
+  opacity:0.8
+}
+.data h2 {
+  padding: 0;
+}
+/* Slider */
+.slick-slide {
+margin: 0px 20px;
+}
+.slick-slide img {
+width: 100%;
+}
+/*
+.slick-slider
+{
+position: relative;
+display: block;
+box-sizing: border-box;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+-webkit-touch-callout: none;
+-khtml-user-select: none;
+-ms-touch-action: pan-y;
+touch-action: pan-y;
+-webkit-tap-highlight-color: transparent;
+} */
+.slick-list
+{
+position: relative;
+display: block;
+overflow: hidden;
+margin: 0;
+padding: 0;
+}
+.slick-list:focus
+{
+outline: none;
+}
+.slick-list.dragging
+{
+cursor: pointer;
+cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+.slick-track
+{
+position: relative;
+top: 0;
+left: 0;
+display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+display: table;
+content: '';
+}
+.slick-track:after
+{
+clear: both;
+}
+.slick-loading .slick-track
+{
+visibility: hidden;
+}
+.slick-slide
+{
+display: none;
+float: left;
+height: 100%;
+min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+float: right;
+}
+.slick-slide img
+{
+display: block;
+}
+.slick-slide.slick-loading img
+{
+display: none;
+}
+.slick-slide.dragging img
+{
+pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+display: block;
+}
+.slick-loading .slick-slide
+{
+visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+display: block;
+height: auto;
+border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+display: none;
+}
+  
+    </style>
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700&display=swap" rel="stylesheet">
+
+
+<header class="blog-header">
+  <section class="blog-header_containt">
+      <img src="https://www.eam.edu.co/wp-content/uploads/2021/10/logoo.png" alt="">
+      <div class="blog-header_menu">
+      
+      <a class="blog-header_menu-buttonSuscribe" href="https://wa.me//573188516428">Recibir asesoría </a>
+  </div>
+
+  </section>
+  
+  
+  
+</header>
+<div class="img">
+  
+ <div class="container"> 
+  
+   <div class="start">
+     <h2 class="title1">DIPLOMADO</h2>
+     <h1 class="title2">Pedagogía y Docencia Universitaria</h1>
+     <h3 class="introduce">El Diplomado Pedagogía y Docencia Universitaria tiene como objetivo formar profesionales de diversas áreas del conocimiento, fortaleciendo competencias pedagógicas, didácticas, curriculares, actitudinales y tecnológicas para el desempeño de la misión como docente universitario.
+
+     </h3>
+     
+     <a href="https://www.eam.edu.co/form-diplomado/" target="_blank" class="button">Registrate ahora!</a>
+     
+   </div>
+   </div>
+</div>
+
+<section class="cards-wrapper">
+
+  <div class="card-grid-space">
+    <div class="num">MODULO 1</div>
+    <a class="card" href="https://api.whatsapp.com/send?phone=573188516428&text=Me%20interesa%20obtener%20asesor%C3%ADa%20sobre%20el%20diplomado%20de%20herramientas%20de%20inteligencia%20artificial%20aplicadas%20al%20marketing%20pol%C3%ADtico" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-55-1.png')">
+      <div>
+        <h1>Experiencia del usuario en salud</h1>
+        <p>Explorará la importancia de diseñar experiencias de usuario significativas y efectivas en el contexto de la salud. </p>
+        <div class="tags">
+          <div class="tag">🕛 12 Horas</div>
+        </div>
+      </div>
+    </a>
+  </div>    
+
+  <div class="card-grid-space">
+    <div class="num">MODULO 2</div>
+    <a class="card" href="https://api.whatsapp.com/send?phone=573188516428&text=Me%20interesa%20obtener%20asesor%C3%ADa%20sobre%20el%20diplomado%20de%20herramientas%20de%20inteligencia%20artificial%20aplicadas%20al%20marketing%20pol%C3%ADtico" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-26.png')">
+      <div>
+        <h1>Mercadeo en salud </h1>
+        <p>Aprende a aplicar los principios del marketing para desarrollar estrategias efectivas en el mercado de la salud.</p>
+        
+        <div class="tags">
+          <div class="tag">🕛 16 Horas</div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="card-grid-space">
+    <div class="num">MODULO 3</div>
+    <a class="card" href="https://api.whatsapp.com/send?phone=573188516428&text=Me%20interesa%20obtener%20asesor%C3%ADa%20sobre%20el%20diplomado%20de%20herramientas%20de%20inteligencia%20artificial%20aplicadas%20al%20marketing%20pol%C3%ADtico" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-27.png')">
+      <div>
+        <h1>Design thinking aplicado a salud</h1>
+        <p> Uso de tecnologías de inteligencia artificial para la generación de imágenes impactantes y atractivas en el contexto político.
+      </p>
+      
+        <div class="tags">
+          <div class="tag">🕛 8 Horas</div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="card-grid-space">
+      <div class="num">MODULO 4</div>
+      <a class="card" href="https://api.whatsapp.com/send?phone=573188516428&text=Me%20interesa%20obtener%20asesor%C3%ADa%20sobre%20el%20diplomado%20de%20herramientas%20de%20inteligencia%20artificial%20aplicadas%20al%20marketing%20pol%C3%ADtico" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-28.png')">
+        <div>
+          <h1>Gestión del conocimiento e innovación en salud</h1>
+          <p>Visión general de las estrategias de marketing político digital y cómo aplicar la inteligencia artificial en esta área.</p>
+        
+          <div class="tags">
+              <div class="tag">🕛 10 Horas</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-grid-space">
+      <div class="num">MODULO 5</div>
+      <a class="card" href="https://api.whatsapp.com/send?phone=573188516428&text=Me%20interesa%20obtener%20asesor%C3%ADa%20sobre%20el%20diplomado%20de%20herramientas%20de%20inteligencia%20artificial%20aplicadas%20al%20marketing%20pol%C3%ADtico" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-29.png')">
+        <div>
+          <h1>Gestión de la tecnología de la información en salud</h1>
+          <p>explora la importancia de la marca personal en la política y cómo se puede utilizar la inteligencia artificial para mejorarla.</p>
+        
+          <div class="tags">
+              <div class="tag">🕛 15 Horas</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-grid-space">
+      <div class="num">MODULO 6</div>
+      <a class="card" href="https://api.whatsapp.com/send?phone=573188516428&text=Me%20interesa%20obtener%20asesor%C3%ADa%20sobre%20el%20diplomado%20de%20herramientas%20de%20inteligencia%20artificial%20aplicadas%20al%20marketing%20pol%C3%ADtico" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-30.png')">
+        <div>
+          <h1>Analis de la competencia y propuesta de valor</h1>
+          <p>Recopilación y uso estrategico de datos de multiples fuentes para la toma efectiva de desiciones.</p>
+        
+          <div class="tags">
+              <div class="tag">🕛 15 Horas</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+
+
+  
+<section class="containt-team">
+  <h1 class="title-team">Docentes</h1>
+<section id="team">
+<div class="card-team">
+  <img src="https://portafolio.site/wp-content/uploads/2023/03/WhatsApp-Image-2023-03-09-at-08.19.25-1.jpeg" alt="" />
+  <div class="data">
+    <h2>Richard Z. Kruspe</h2>
+    <i>Product Designer</i>
+    <p>Ingeniero de sistemas, especialista en gerencia financiera, especialista en gerencia de proyectos, magister en gestión de la información y el conocimiento, experto en gestión de la innovación, con mas de 15 años liderando procesos y acompañamiento de proyectos de innovación a nivel nacional e internacional.v</p>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-behance"></a>
+  </div>
+</div>
+<div class="card-team">
+  <img src="https://portafolio.site/wp-content/uploads/2023/03/David-Concha-1.png" alt="" />
+  <div class="data">
+    <h2>David Concha</h2>
+    <i>Product Tester</i>
+    <p>Ingeniero de sistemas, especialista en gerencia financiera, especialista en gerencia de proyectos, magister en gestión de la información y el conocimiento, experto en gestión de la innovación, con mas de 15 años liderando procesos y acompañamiento de proyectos de innovación a nivel nacional e internacional.</p>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-behance"></a>
+  </div>
+</div>
+
+</section>
+
+
+  
+</section>
+
+
+
+
+
+<div class="container">
+   
+  <hr>
+   <section class="logos-slider slider">
+      <div class="slide"><img src="https://portafolio.site/wp-content/uploads/2023/03/Diseno-sin-titulo-3-1.png"></div>
+      <div class="slide"><img src="https://portafolio.site/wp-content/uploads/2023/03/4.png"></div>
+      <div class="slide"><img src="https://portafolio.site/wp-content/uploads/2023/03/3.png"></div>
+      <div class="slide"><img src="https://portafolio.site/wp-content/uploads/2023/03/2-1.png"></div>
+      <div class="slide"><img src="https://portafolio.site/wp-content/uploads/2023/03/7.png"></div>
+      <div class="slide"><img src="https://portafolio.site/wp-content/uploads/2023/03/5.png"></div>
+      <div class="slide"><img src="https://portafolio.site/wp-content/uploads/2023/03/Diseno-sin-titulo-5-1.png"></div>
+    </section>
+  <hr>
+</div>
+
+
+
+
+
+
+
+
+<section class="main-product-detail">
+  <div class="product-detail--title">
+      <h2>¿ Por qué estudiar en la EAM ?</h2>
+      <p>Descubre por qué somos tu mejor opción</p>
+  </div>
+  <section class="product-cards--container">
+      <article class="product-detail--card">
+          <span class="material-symbols-outlined">clinical_notes</span>
+          <p class="product--card-title">Inovacción para la educación</p>
+          <p class="product--card-body">Estamos a la vanguardia del desarrollo de programas académicos de última generación mediante la implementación de tecnologías online y metodologías basadas en proyectos para reforzar el aprendizaje.</p>
+      </article>
+      <article class="product-detail--card">
+          <span class="material-symbols-outlined">share_location</span>
+          <p class="product--card-title">Casos de éxito reales</p>
+          <p class="product--card-body"> profundizaremos en los casos exitosos de implementación de nuevas tecnologías en el ámbito político, y analizaremos detalladamente ejemplos destacados como los de Donald Trump, el Brexit y AMLO.
+            
+          </p>
+      </article>
+      <article class="product-detail--card">
+          <span class="material-symbols-outlined">work_history</span>
+          <p class="product--card-title">Aprendizaje basado en proyectos</p>
+          <p class="product--card-body">Aprender creando proyectos reales que aplican a las necesidades y problemáticas del mundo moderno e implementadolas de manera practica mientras adquieres nuevo conocimiento.</p>
+      </article>
+  </section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<footer id="footer-4-cols" class="site-footer">
+<div id="footer-container">
+  <div id="footer-grid">
+      <div id="left-footer-section" class="footer-section">
+
+          <div id="footer-search">
+              
+          </div>
+          <div class="footer-information">
+              <p><img src="https://img.icons8.com/ios-filled/12/999999/marker.png">Avenida Bolívar # 3-11 Armenia Q.</p>
+              <a class="button-googleMaps" href="https://goo.gl/maps/srxqCV49CVp7ouGp8" style="margin-bottom: 30px !important;">Llegar con Google Maps</a>
+              <p><img src="https://img.icons8.com/ios-filled/12/999999/phone.png">PBX: (60) 6 745 11 01</p>
+              <p><img src="https://img.icons8.com/ios-filled/12/999999/mail.png">mercadeo@eam.edu.co</p>
+              
+          </div>
+      </div>
+
+      <div id="first-footer-section" class="footer-section">
+          <div class="footer-tags">
+              <h3>Pregrados</h3>
+              <a href="https://www.eam.edu.co/diseno-visual-digital/" class="footer-tag">Diseño Visual Digital</a>
+              <a href="https://www.eam.edu.co/publicidad-digital-y-mercadeo/" class="footer-tag">Publicidad Digital y Mercadeo</a>
+              <a href="https://www.eam.edu.co/ingenieria-mecatronica/" class="footer-tag">Ing Mecatrónica</a>
+              <a href="https://www.eam.edu.co/ingenieria-industrial" class="footer-tag">Ing Industrial</a>
+              <a href="https://www.eam.edu.co/ingenieria-de-software" class="footer-tag">Ing de Software</a>
+              <a href="https://www.eam.edu.co/administracion-de-empresas" class="footer-tag">Admin de Empresas</a>
+              <a href="https://www.eam.edu.co/administracion-de-negocios-internacionales/" class="footer-tag">Admin de Negocios Internacionales</a>
+              <a href="https://www.eam.edu.co/contaduria-publica" class="footer-tag">Contaduría Pública</a>
+              <a href="https://www.eam.edu.co/hoteleria-y-turismo/" class="footer-tag">Hotelería y Turismo</a>
+              
+          </div>
+      </div>
+
+      <div id="firstt-footer-section" class="footer-section">
+        <div class="footer-tags">
+            <h3>Posgrados</h3>
+            <a href="https://www.eam.edu.co/especializacion-en-analitica-de-datos/" class="footer-tag">Analítica de Datos Aplicada a los Negocios</a>
+            <a href="https://www.eam.edu.co/especializacion-en-calidad-de-software/" class="footer-tag">Calidad de Software</a>
+            
+        </div>
+    </div>
+
+      
+      
+  </div>
+  <div id="copyright-information">
+      <div id="footer-logo-section">
+          <div id="footer-logo">
+              <img src="https://www.eam.edu.co/wp-content/uploads/2022/06/logoeam-footer.png" alt="">
+          </div></div>
+      <div id="copyright-text">
+          &copy; Institución Universitaria EAM - IES sujeta a inspección y vigilancia por el MEN. 2023. Todos los derechos reservados. 
+      </div>
+      <div id="social-buttons">
+        <a href="https://www.facebook.com/eamdelquindio"><img src="https://img.icons8.com/ios-filled/25/999999/facebook--v1.png"/></a>
+        <a href="https://www.instagram.com/eamdelquindio/"><img src="https://img.icons8.com/ios-filled/25/999999/instagram--v1.png"/></a>
+          
+      </div>
+  </div>
+</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+ <script>
+        //logo slider
+
+$('.logos-slider').slick({
+slidesToShow: 4,
+slidesToScroll: 1,
+autoplay: true,
+autoplaySpeed: 500,
+arrows: false,
+dots: false,
+pauseOnHover: false,
+responsive: [{
+breakpoint: 768,
+settings: {
+slidesToShow: 3
+}
+}, {
+breakpoint: 520,
+settings: {
+slidesToShow: 2
+}
+}]
+});
+    </script>
+
+</body>
+</html>
+
+

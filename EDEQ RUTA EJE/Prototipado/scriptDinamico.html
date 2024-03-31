@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulación de Tráfico en Municipios</title>
+<style>
+    /* Estilos simples para la presentación */
+    body {
+        font-family: Arial, sans-serif;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+<h1>Simulación de Tráfico en Municipios</h1>
+<table>
+    <tr>
+        <th>Municipio</th>
+        <th>Turistas</th>
+        <th>Carros</th>
+    </tr>
+    <tr>
+        <td>Boquia</td>
+        <td id="Boquia-turistas">0</td>
+        <td id="Boquia-carros">0</td>
+    </tr>
+    <tr>
+        <td>Salento</td>
+        <td id="Salento-turistas">0</td>
+        <td id="Salento-carros">0</td>
+    </tr>
+    <tr>
+        <td>Cocora</td>
+        <td id="Cocora-turistas">0</td>
+        <td id="Cocora-carros">0</td>
+    </tr>
+</table>
+
+<script>
+    // server.js
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.use(express.static('public'));
+
+app.get('/simulacion', (req, res) => {
+    const totalTuristasRecolectados = 1759;
+    const promedioPersonasPorCarro = 2.5;
+    const diasRecoleccionTuristas = [29, 30, 31, 6, 7, 8, 9];
+    const diasSimulados = 1;
+    const distribucionMunicipios = { Boquia: 0.1, Salento: 0.4, Cocora: 0.5 };
+
+    const datosMunicipios = {};
+    Object.keys(distribucionMunicipios).forEach((municipio) => {
+        const turistas = Math.round(totalTuristasRecolectados * distribucionMunicipios[municipio]);
+        const carros = Math.round(turistas / promedioPersonasPorCarro);
+        datosMunicipios[municipio] = { turistas, carros };
+    });
+
+    res.json(datosMunicipios);
+});
+
+app.listen(port, () => {
+    console.log(`Servidor escuchando en http://localhost:${port}`);
+});
+
+    const totalTuristasRecolectados = 1759;
+    const promedioPersonasPorCarro = 2.5;
+    const diasRecoleccionTuristas = [29, 30, 31, 6, 7, 8, 9];
+    const diasSimulados = 1;
+    const distribucionMunicipios = { Boquia: 0.1, Salento: 0.4, Cocora: 0.5 };
+
+    function simularDatos() {
+        const datosMunicipios = {};
+        Object.keys(distribucionMunicipios).forEach((municipio) => {
+            const turistas = Math.round(totalTuristasRecolectados * distribucionMunicipios[municipio]);
+            const carros = Math.round(turistas / promedioPersonasPorCarro);
+            datosMunicipios[municipio] = { turistas, carros };
+        });
+        return datosMunicipios;
+    }
+
+    function actualizarHTML(datos) {
+        Object.keys(datos).forEach((municipio) => {
+            document.getElementById(`${municipio}-turistas`).innerText = datos[municipio].turistas;
+            document.getElementById(`${municipio}-carros`).innerText = datos[municipio].carros;
+        });
+    }
+
+    function simularTrafico() {
+        const datos = simularDatos();
+        actualizarHTML(datos);
+    }
+
+    simularTrafico();
+    setInterval(simularTrafico, 1000);
+</script>
+</body>
+</html>

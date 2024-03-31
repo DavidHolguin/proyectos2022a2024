@@ -1,0 +1,1431 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#673ab7" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+        
+        <style>
+                #rum_sst_tab {
+                    display: none;
+                }
+                .landingRobotica-about {
+                    display: flex;
+                    padding: 5rem 3rem 10rem 3rem;
+                    font-family: 'Poppins', sans-serif;
+                }
+                .landingRobotica-about_containt {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .landingRobotica-aboutTop {
+                    display: flex;
+                    justify-content: center;
+                }
+                .landingRobotica-aboutTop-left {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 3rem 0rem 2rem 7rem;
+                    justify-content: flex-start;
+                    font-family: 'Poppins', sans-serif;
+                    width: 100%;
+                    
+                }
+                .landingRobotica-aboutTop-rigth p {
+                    text-align: justify;
+                    line-height: 2rem;
+                    font-size: 15px;
+                }
+                .landingRobotica-aboutTop-left h2 {
+                    margin: 0;
+                    font-size: 2.5rem;
+                    line-height: 3rem;
+                    font-weight: 700;
+                    padding: 0;
+                    font-family: 'Poppins', sans-serif;
+                }
+                .landingRobotica-aboutTop-left p {
+                    background-color: #673ab7;
+                    padding: 5px 2px;
+                    text-align: center;
+                    box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+                    margin-right: 150px;
+                    color: #fff;
+                }
+                .landingRobotica-aboutTop-rigth {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 3rem 8rem;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: 'Poppins', sans-serif;
+                }
+                .landingRobotica-aboutBottom {
+                    display: flex;
+                    padding: 0rem 3rem;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    margin-bottom: -182px;
+                    z-index: 5;
+                    margin-top: 30px;
+                }
+                .landingRobotica-aboutBottom-card{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1.5rem;
+                    width: 20%;
+                    border-radius: 15px;
+                    background-color: #ffffff;
+                    
+                }
+                .landingRobotica-aboutBottom-card img {
+                    width: 30%;
+                    background-color: #fbb33f9c;
+                    padding: 10px;
+                    border-radius: 50px;
+                    box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+
+                }
+                .landingRobotica-aboutBottom-card h3 {
+                    font-size: 16px;
+                    line-height: 2rem;
+                    margin-bottom: 0;
+                    font-weight: 600;
+                }
+                .landingRobotica-aboutBottom-card p {
+                    line-height: 1.2rem;
+                    font-size: 13px;
+                }
+                .landingRobotica-form {
+                    display: flex;
+                    background-size: cover;
+                    font-family: 'Poppins', sans-serif;
+                    background-repeat: no-repeat;
+                    box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+
+                    background-image: url("https://grupofinancierobbva.com/wp-content/uploads/2023/06/Diseno-sin-titulo-98-1.png");
+                }
+                .landingRobotica-form_containt {
+                    display: flex;
+                    width: 100%;
+                    box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+                    font-family: 'Poppins', sans-serif;
+                    flex-direction: column;
+                    padding: 16rem 3rem 5rem 3rem;
+                    background-color: #673ab7e0;
+                    color: #fff !important;
+                    align-items: center;
+                    
+                }
+                
+                .landingRobotica-form_formulario {
+                    width: 70%;
+                }
+                .landingRobotica-form_formulario h2  {
+                    padding: 0px 50px;
+                    font-size: 25px;
+                    color: #fff !important;
+                    font-weight: 700;
+                    line-height: 3rem;
+                    font-family: 'Poppins', sans-serif;
+                    
+                }
+                .landingRobotica-form_formulario p {
+                    padding: 0px 50px;
+                    text-align: justify;
+                    line-height: 2rem;
+                    font-size: 15px;
+                }
+                .blog-header {
+                display: flex;
+                font-family: 'Poppins', sans-serif;
+                height: 64px;
+                width: 100%;
+                background: #fff;
+                align-items: center;
+                box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+                
+                justify-content: space-evenly;
+                left: 0;
+                position: fixed;
+                right: 0;
+                top: 0;
+                transform: translateY(0);
+                transition: transform 150ms ease-out;
+                z-index: 300000;
+                border-bottom: #673ab7 solid 2px;
+            }
+            .blog-header_containt {
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .blog-header_containt a {
+            margin-bottom: 0px;
+            }
+            .blog-header img {
+                width: 96px;
+                        
+            }
+            .blog-header_menu {
+                display: flex;
+                
+                align-items: center;
+                flex-direction: row-reverse;
+            }
+            .blog-header_menu .material-symbols-outlined {
+                color:#ffffff;
+            }
+            .blog-header_menu-buttonCategory  {
+                color:#5f6368;
+                text-decoration: none;
+            }
+            .blog-header_menu-buttonSuscribeHeader {
+                background-color: #673ab7;
+                color: #fff !important ;
+                text-decoration: none;
+                display: flex;
+                padding: 9px 24px 9px;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                font-size: 15px;
+                align-items: center;
+                box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+                font-weight: 500;
+                gap: 10px;
+            }
+            .blog-header_menu-buttonSuscribe {
+                background-color: #673ab7;
+                color: #fff !important ;
+                text-decoration: none;
+                display: flex;
+                padding: 9px 24px 9px;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                font-size: 15px;
+                align-items: center;
+                box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+                font-weight: 500;
+                gap: 3px;
+            }
+            .blog-header_containt_whatsapp {
+                width: 42px !important;
+                height: auto !important;
+            }
+            .landingRobotica-hero {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            background-color: #f1f3f4;
+            }
+            .landingRobotica-hero_containt {
+                display: flex;
+                padding: 3rem;
+                margin-top: 30px;
+                font-family: 'Poppins', sans-serif;
+                flex-direction: row-reverse
+            }
+            .landingRobotica-hero_left {
+                display: flex;
+                flex-direction: column;
+                padding: 80px 0px 80px 80px;
+                align-items: flex-start;
+                justify-content: center;
+                font-family: 'Poppins', sans-serif;
+            }
+            .landingRobotica-hero_rigth {
+                display: flex;
+                margin: 3rem;
+                width: 100%;
+                align-items: center;
+            }
+            .landingRobotica-hero_rigth img {
+                width: 120%;
+            }
+            .blog-header_containt_whatsapp img {
+                width: 34px;
+            }
+            .landingRobotica-hero_rigthContaintIMG {
+                display: flex;
+                width: 100%;
+            }
+            .landingRobotica-hero_leftCurso {
+                display: flex;
+                align-items: center;
+            }
+            .landingRobotica-hero_left h2 {
+                font-size: 3rem;
+                line-height: 3.2rem;
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                padding-top: 0;
+            }
+            .landingRobotica-hero_left img {
+                width: 8%;
+                z-index: 5;
+                margin-bottom: -25px;
+            }
+            .blog-header_containt_whatsapp img {
+                width: 34px;
+                margin-bottom: 0;
+            }
+            .landingRobotica-hero_leftCTA1 {
+                background-color: #673ab7;
+                color: #fff !important ;
+                text-decoration: none;
+                display: flex;
+                padding: 9px 24px 9px;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                font-size: 15px;
+                align-items: center;
+                box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+                font-weight: 500;
+                gap: 10px;
+            }
+            .landingRobotica-hero_leftCTA img {
+                    width: 50% !important;
+                    margin: 0;
+
+                }
+                .landingRobotica-hero_leftCTA  {
+                    display: flex;
+                    gap: 20px;
+                }
+            .landingRobotica-hero_leftCTAwpp {
+                width: 5%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            .landingRobotica-hero_leftCTAwpp  img {
+            
+                width: 150% !important;
+                max-width: 200%;
+            }
+            .landingRobotica-hero_left p {
+                text-align: justify;
+                line-height: 2rem;
+                font-size: 17px !important;
+                margin: 23px 0px;
+
+            }
+            .landingRobotica_footer {
+                display: flex;
+                
+                background-color: #1c1e21 !important;
+                font-family: 'Poppins', sans-serif;
+                color: #fff;
+                
+            }
+            .landingRobotica_footer-containt {
+                display: flex;
+                flex-direction: column;
+            }
+            .landingRobotica_footerTop {
+                display: flex;
+                gap: 3%;
+                padding: 3rem 3rem 0rem 3rem;
+                justify-content: center;
+                background-color: #111b21;
+            }
+            .landingRobotica_footerTop_column1 {
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+                font-size: 14px;
+                text-align: start;
+                padding: 3rem;
+                line-height: 2rem;
+
+            }
+            
+            #landingRobotica_footerTop_logoEAM {
+                width: 40%;
+            }
+            .landingRobotica_footerTop_column2 {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 30%;
+                line-height: 2rem;
+                padding: 3rem;
+
+            }
+            .landingRobotica_footerTop_column2 a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 14px;
+            }
+            .landingRobotica_footerTop_column3 {
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+                padding: 3rem;
+
+            }
+            .landingRobotica_footerTop_column3 p {
+                margin-top: 0;
+                margin-bottom: 25px;
+            }
+            .landingRobotica_footerTop_column3 img {
+                width: 80%;
+            }
+            .landingRobotica_footerBottom {
+                display: flex;
+                font-size: 12px;
+                box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+                align-items: center;
+                background-color: #673ab7;
+            
+                justify-content: center;
+
+            }
+            .landingRobotica_footerBottom p {
+                margin: 0;
+            }
+            .landingRobotica_footerTop_column1-socialContaint {
+                display: flex;
+                margin-top: 30px;
+            }
+            .landingRobotica_footerBottom-mediosPago {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                padding: 0.5rem 3rem;
+                gap: 10px;
+                background-color: #fff;
+                color: #1c1e21;
+                font-weight: 500;
+            }
+            .landingRobotica_footerBottom-mediosPago p {
+                margin: 0;
+            }
+            .landingRobotica_footerBottom-mediosPago img {
+                width: 70%;
+            }
+
+            .plan {
+                border-radius: 16px;
+                box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
+                padding: 10px;
+                background-color: #fff;
+                color: #697e91;
+                max-width: 580px;
+                font-family: 'Poppins', sans-serif;
+                }
+
+                .plan strong {
+                font-weight: 600;
+                color: #425275;
+                }
+
+                .plan .inner {
+                align-items: center;
+                padding: 20px;
+                padding-top: 40px;
+                background-color: #ecf0ff;
+                border-radius: 12px;
+                position: relative;
+                }
+
+                .plan .pricing {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: #bed6fb;
+                border-radius: 99em 0 0 99em;
+                display: flex;
+                align-items: center;
+                padding: 0.625em 0.75em;
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: #425475;
+                }
+
+                .plan .pricing small {
+                color: #707a91;
+                font-size: 0.75em;
+                margin-left: 0.25em;
+                }
+
+                .plan .title {
+                font-weight: 600;
+                font-size: 2.5rem;
+                color: #425675;
+                }
+
+                .plan .title + * {
+                    margin-top: 0.75rem;
+                    font-size: 17px;
+                    line-height: 2rem;
+                }
+
+                .plan .info + * {
+                margin-top: 1rem;
+                }
+
+                .plan .features {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 17px;
+                    padding: 8px 0px;
+                    
+                }
+
+                .plan .features li {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+
+                .plan .features li + * {
+                    margin-top: 0.75rem;
+                }
+
+                .plan .features .icon {
+                    background-color: #1FCAC5;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .plan .features .icon svg {
+                    width: auto;
+                    height: auto ;
+                }
+
+                .plan .features + * {
+                margin-top: 1.25rem;
+                }
+
+                .plan .action {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                }
+
+                .plan .button {
+                background-color: #673ab7;
+                border-radius: 6px;
+                color: #fff;
+                font-weight: 500;
+                font-size: 1.9rem;
+                text-align: center;
+                border: 0;
+                outline: 0;
+                width: 100%;
+                padding: 0.625em 0.75em;
+                text-decoration: none;
+                }
+
+                .plan .button:hover, .plan .button:focus {
+                background-color: #4133B7;
+                }
+
+                .landingAnaliticaDatos_feactures {
+                    display: flex;
+                    padding: 3rem 3rem 10rem 3rem;
+                    justify-content: center;
+                    background-color: #f1f3f4;
+                    gap:10px;
+                    flex-wrap: wrap;
+                }
+                .card {
+  width: 65%;
+  height: 380px;
+  overflow:scroll;
+  font-family: 'Poppins', sans-serif;
+ 
+}
+
+.wrapper {
+  margin: 2rem auto;
+  width: 600px;
+  font-size: small;
+}
+
+.title {
+  text-align: center;
+  color: #1b1b1b;
+}
+
+.heading {
+  font-weight: bold;
+  letter-spacing: 7px;
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.heading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #e8e8e8;
+  z-index: -1;
+  filter: blur(50px);
+  height: 50px;
+}
+
+.color {
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hex {
+  text-align: end;
+  font-family: monospace;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.black {
+  background: var(--black);
+  color: var(--ch-white);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.eerie-black {
+  background: var(--ch-black);
+  color: var(--ch-white);
+}
+
+.chinese-black {
+  background: var(--eer-black);
+  color: var(--ch-white);
+}
+
+.night-rider {
+  background: var(--night-rider);
+  color: var(--ch-white);
+}
+
+.chinese-white {
+  background: var(--ch-white);
+  color: var(--night-rider);
+}
+
+.anti-flash-white {
+  background: #fff;
+  color: var(--night-rider);
+  border-bottom: #2e2e2e solid 1px;
+}
+
+.white {
+  background: var(--white);
+  color: var(--night-rider);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.border {
+  color: var(--night-rider);
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.border span {
+  border-radius: 5px;
+  color: var(--ch-white);
+  padding: 2px 4px;
+  background-color: var(--night-rider);
+}
+.pregradoAdminEmpresas_fichaTecnica {
+    display: flex;
+    padding: 5rem 0rem;
+    height: 500px;
+    
+   
+}
+.pregradoAdminEmpresas_fichaTecnica_left {
+    width: 50%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    
+}
+.pregradoAdminEmpresas_fichaTecnica_left h2 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 3rem;
+    font-weight: 900;
+    margin: 0;
+    color: #558d36;
+    
+}
+.pregradoAdminEmpresas_fichaTecnica_left p {
+    font-family: 'Poppins', sans-serif;
+    margin: 5px 0px;
+}
+
+
+
+    
+
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                @media screen and (max-width: 767px) {
+
+                   
+
+                    .landingRobotica-about {
+                        flex-direction: column;
+                        padding: 5rem 3rem;
+                    }
+                    .landingRobotica-aboutTop {
+                        flex-direction: column;
+                        gap: 20px;
+                    }
+                    .landingRobotica-aboutTop-left {
+                        padding: 0;
+                        gap: 20px;
+                    }
+                    .landingRobotica-aboutTop-rigth {
+                        padding: 0;
+                    }
+                    .landingRobotica-aboutBottom {
+                        padding: 0;
+                        gap: 10px;
+                        margin-top: 40px;
+                        margin-bottom: -134px;
+                    }
+                    .landingRobotica-aboutBottom-card {
+                        width: 100%;
+                        background-color: #f1f3f4;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 10px;
+                        
+                    }
+                    .landingRobotica-aboutBottom-card h3 {
+                        margin: 0;
+                        font-size: 16px;
+                        padding: 0;
+
+                    }
+                    .landingRobotica-form_formulario h2 {
+                        padding: 0;
+                    }
+                    .landingRobotica-form_containt {
+                        padding: 13rem 3rem 1rem;
+                    }
+                    .landingRobotica-form_formulario {
+                        width: auto;
+                    }
+                    .landingRobotica-form_formulario p {
+                        padding: 0;
+                    }
+                    .landingRobotica-form {
+                        background-image: url("https://grupofinancierobbva.com/wp-content/uploads/2023/06/Diseno-sin-titulo-2023-06-05T113610.758-1.png");
+                    }
+                    .blog-header_containt {
+                        width: 90%;
+                        padding: 0%;
+                    }
+                    .blog-header_containt_whatsapp {
+                    width: 31px !important;
+                    height: auto !important;
+                }
+                .blog-header_menu-buttonSuscribeHeader {
+                    background-color: #ffffff;
+                    color: #673ab7 !important;
+                    text-decoration: none;
+                    display: flex;
+                    padding: 0;
+                    border: none;
+                    border-radius: 0px;
+                    box-shadow: none;
+                    cursor: pointer;
+                    font-size: 14px;
+                    align-items: center;
+                    
+                    font-weight: 500;
+                    gap: 6px;
+                    padding-right: 7px;
+                    border-right: solid;
+                }
+                
+                .blog-header_menu .material-symbols-outlined {
+                    color: #ffffff !important;
+                }
+                .blog-header_menu-buttonSuscribeHeader .material-symbols-outlined {
+                    color: #673ab7 !important;
+                }
+                .blog-header img {
+                    width: 75px;
+                }
+                .landingRobotica-hero_containt {
+                    flex-direction: column-reverse;
+                    padding: 0;
+                }
+                .landingRobotica-hero_left {
+                    padding: 3rem;
+                }
+                .blog-header_containt_whatsapp img {
+                    width: 70%;
+                    
+                }
+                .blog-header_menu {
+                    flex-direction: row;
+                    gap: 10px;
+                }
+                
+                .landingRobotica-hero_containt {
+                    margin-bottom: 46px;
+                }
+                .landingRobotica-hero_left img {
+                    width: 14%;
+                    z-index: 5;
+                    
+                    
+                }
+                .blog-header_containt_whatsappHero img {
+                    width: 100%;
+                    margin-bottom: -5px;
+                }
+                .blog-header_containt_whatsappHero {
+                    width: 20%;
+                }
+                .landingRobotica-hero_leftCTAwpp  img {
+                    width: 100% !important;
+                }
+                .landingRobotica-hero_leftCTAwpp {
+                    width: 10%;
+                }
+                .landingRobotica-hero_leftCTA {
+                    gap: 5px;
+                }
+                .landingRobotica-aboutBottom-cardIMG {
+                    width: 30%;
+                }
+
+                .landingRobotica-aboutBottom-card img {
+                    width: 100%;
+                }
+                .landingRobotica_footerTop {
+                    flex-direction: column;
+                    padding: 3rem 0rem;
+                    align-items: center;
+                
+                    
+                }
+                .landingRobotica_footerTop_column1 {
+                    width: 100%;
+                    padding: 3rem;
+                    gap: 20px;
+                }
+                .landingRobotica_footerTop_column2 {
+                    width: 100%;
+                    padding: 3rem;
+                }
+                .landingRobotica_footerTop_column3 {
+                    width: 100%;
+                    padding: 3rem;
+                }
+                .landingRobotica_footerBottom-mediosPago {
+                    display: none;
+                }
+                .landingRobotica_footerBottom {
+                    padding: 1rem 3rem;
+                }
+                #landingRobotica_footerTop_logoEAM {
+                    width: 50%;
+                }
+                .landingRobotica-hero_left h2 {
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                }
+                .landingRobotica-aboutTop-left p {
+                    margin-right: 60px;
+                }
+                .landingRobotica_footerBottom p {
+                    line-height: 1.8rem;
+                }
+                .landingAnaliticaDatos_feactures {
+                    padding: 3rem 1rem 10rem 1rem;
+                    gap: 20px;
+                }
+                .landingAnaliticaDatos_feactures_items {
+                    line-height: 2rem;
+                 }
+                 .plan .features {
+                    gap: 5px;
+                 }
+                 .landingRobotica-hero_rigth {
+                    margin: 0;
+                 }
+                 .landingRobotica-hero_rigthContaintIMG {
+                    justify-content: center;
+                 }
+                 .landingRobotica-hero_rigth img {
+                    width: 80%;
+                    margin-top: 60px;
+                 }
+                 .card {
+      width: 100%;
+    }
+    .pregradoAdminEmpresas_fichaTecnica {
+        flex-direction: column;
+        padding: 3rem 1rem;
+    }
+    .pregradoAdminEmpresas_fichaTecnica_left {
+        width: 100%;
+        padding: 0;
+    }
+    .color {
+        flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    }
+    .wrapper {
+        width: 100%;
+    }
+    .hex {
+        text-align: start;
+        line-height: 1.3rem;
+    }
+                }
+
+                
+                 
+
+                
+        </style>
+    </head>
+    <body>
+
+
+        <header class="blog-header">
+            <section class="blog-header_containt">
+
+                <img src="https://www.eam.edu.co/wp-content/uploads/2021/10/logoo.png" alt="">
+                <div class="blog-header_menu">
+
+                    <button class="blog-header_menu-buttonSuscribeHeader" data-paperform-id="hpaplqf0" data-popup-button="1"><span class="material-symbols-outlined">
+                        person_add
+                        </span>Postulate ahora</button><script>(function() { var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js";document.body.appendChild(script); })()</script>
+
+                    
+                    
+                    <div class="blog-header_containt_whatsapp">
+                        <a  href="https://wa.me//573188516428"><img src="https://grupofinancierobbva.com/wp-content/uploads/2023/04/Diseno-sin-titulo-36.png" alt=""> </a>
+                
+                    </div>
+                </div>
+        
+            </section>
+        </header>
+
+       
+
+
+        <section class="landingRobotica-hero">
+            <div class="landingRobotica-hero_containt">
+
+                <div class="landingRobotica-hero_left">
+                    
+                    <h2>DESCUBRE LOS SECRETOS DEL <span style="color:#673ab7; font-weight: bold;" >COMPORTAMIENTO DEL CONSUMIDOR </span>  Y DOMINA EL ARTE DE PERSUADIR</h2>
+                    <p>Impulsa tu carrera en el mundo del marketing y las ventas con nuestra Especialización en Comportamiento del Consumidor. Aprende a entender a tu audiencia, descubre sus necesidades y conviértete en un experto en crear estrategias efectivas. <br> <br> ¡Regístrate ahora y desbloquea tu potencial en el mercado! </p>
+                    
+
+                    <div class="landingRobotica-hero_leftCTA">
+                        <div class="landingRobotica-hero_leftCTAwpp">
+                            <a  href="https://wa.me//573188516428">
+                                <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/04/Diseno-sin-titulo-36.png" alt=""> 
+                            </a>
+
+                        </div>
+                       
+                    
+
+                            <button class="landingRobotica-hero_leftCTA1" data-paperform-id="hpaplqf0" data-popup-button="1"><span class="material-symbols-outlined">
+                                person_add
+                                </span>Postulate ahora</button><script>(function() { var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js";document.body.appendChild(script); })()</script>
+         
+                    </div>
+                
+                    
+                    
+            </div>   
+                
+                <div class="landingRobotica-hero_rigth">
+                    <div class="landingRobotica-hero_rigthContaintIMG">
+                        <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/06/MarcaRefRazon-02-1.png" alt="">
+                    </div>
+
+                </div>
+            
+        </div>
+        </section>
+
+
+
+
+
+        <section>
+
+        </section>
+
+
+        <section class="landingAnaliticaDatos_feactures">
+
+
+            
+            
+            
+            
+            <div class="plan">
+                <div class="inner">
+                
+                    <p class="title">¿A quiénes está dirigida esta especialización?</p>
+                    <p class="info">Esta especialización está diseñada para profesionales con título universitario en disciplinas como:</p>
+                    <ul class="features">
+
+
+                        <li>
+                            <span class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                </svg>
+                            </span>
+                            <span class="landingAnaliticaDatos_feactures_items">Ciencias de la administración</span>
+                        </li>
+
+
+                        <li>
+                            <span class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                </svg>
+                            </span>
+                            <span class="landingAnaliticaDatos_feactures_items">Ciencias sociales</span>
+                        </li>
+
+
+                        <li>
+                            <span class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                </svg>
+                            </span>
+                            <span class="landingAnaliticaDatos_feactures_items">Ciencias humanas</span>
+                        </li>
+
+
+                        <li>
+                            <span class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                </svg>
+                            </span>
+                            <span class="landingAnaliticaDatos_feactures_items">TIC</span>
+                        </li>
+
+                        <li>
+                            <span class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                </svg>
+                            </span>
+                            <span class="landingAnaliticaDatos_feactures_items">Mercadotecnia y publicidad</span>
+                        </li>
+
+                        <li>
+                            <span class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                </svg>
+                            </span>
+                            <span class="landingAnaliticaDatos_feactures_items">ingeniería</span>
+                        </li>
+
+
+
+
+                    </ul>
+
+
+                    <button class="landingRobotica-hero_leftCTA1" data-paperform-id="hpaplqf0" data-popup-button="1"><span class="material-symbols-outlined">
+                        person_add
+                        </span>Postulate ahora</button><script>(function() { var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js";document.body.appendChild(script); })()</script>
+ 
+                    
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="plan">
+                <div class="inner">
+                    
+                    <p class="title">Oportunidades profesionales para graduados</p>
+                    <p class="info">Prepárate para acceder a diversas oportunidades profesionales en empresas y organizaciones de todos los sectores, a nivel local, regional y nacional. Algunos de los roles destacados incluyen:</p>
+                    <ul class="features">
+                        <li>
+                            <span class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                </svg>
+                            </span>
+                            <span>Gerente de incorporación de clientes</span>
+                        </li>
+                        <li>
+                            <span class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                </svg>
+                            </span>
+                            <span>Gerente de ventas y comercialización</span>
+                        </li>
+                        <li>
+                            <span class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                </svg>
+                            </span>
+                            <span>Gerente Estratégico de Mercadeo
+                            </span>
+                        </li>
+
+
+                        <li>
+                            <span class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                </svg>
+                            </span>
+                            <span>Gerente y consultor corporativo  y de producto</span>
+                        </li>
+
+
+                        <li>
+                            <span class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                </svg>
+                            </span>
+                            <span>Gerente de punto de venta – físico y digital.
+                            </span>
+                        </li>
+
+
+
+                    </ul>
+                    
+                    <button class="landingRobotica-hero_leftCTA1" data-paperform-id="hpaplqf0" data-popup-button="1"><span class="material-symbols-outlined">
+                        person_add
+                        </span>Postulate ahora</button><script>(function() { var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js";document.body.appendChild(script); })()</script>
+ 
+
+                </div>
+            </div>
+
+
+
+             
+        </section>
+
+
+        <section class="pregradoAdminEmpresas_fichaTecnica">
+
+            <div class="pregradoAdminEmpresas_fichaTecnica_left">
+                
+                <p>Ficha técnica</p>
+                <h2>ESPECIALIZACIÓN EN COMPORTAMIENTO DEL CONSUMIDOR
+    
+    
+                </h2>
+                <p>2 semestres</p>
+                
+            </div>
+    
+    
+        
+            <div class="card">
+            
+            <div class="wrapper">
+              
+              <div class="color anti-flash-white">
+                DENOMINACIÓN DEL PROGRAMA
+                <span class="hex">ESPECIALIZACIÓN EN COMPORTAMIENTO DEL CONSUMIDOR
+    
+    
+                </span>
+              </div>
+              <div class="color anti-flash-white">
+                SNIES
+                <span class="hex">111562</span>
+              </div>
+               <div class="color anti-flash-white">
+                REGISTRO CALIFICADO
+                <span class="hex">Res. MEN No. 5518 de 05 de abril de 2023
+                </span>
+              </div>
+              <div class="color anti-flash-white">
+                VIGENCIA
+                <span class="hex">Siete (7) años</span>
+              </div>
+              <div class="color anti-flash-white">
+                TITULO A EXPEDIR
+                <span class="hex">ESPECIALISTA EN COMPORTAMIENTO DEL CONSUMIDOR</span>
+              </div>
+              <div class="color anti-flash-white">
+                CRÉDITOS
+                <span class="hex">28</span>
+              </div>
+              <div class="color anti-flash-white">
+                SEMESTRES
+                <span class="hex">2</span>
+              </div>
+              <div class="color anti-flash-white">
+                NIVEL ACADÉMICO
+                <span class="hex">POSGRADO</span>
+              </div>
+              <div class="color anti-flash-white">
+                NIVEL DE FORMACIÓN
+                <span class="hex">Especialización universitaria</span>
+              </div>
+              <div class="color anti-flash-white">
+                CICLOS PROPEDÉUTICOS
+                <span class="hex">NO</span>
+              </div>
+              <div class="color anti-flash-white">
+                TIPO DE PROGRAMA
+                <span class="hex">PRINCIPAL</span>
+              </div>
+              <div class="color anti-flash-white">
+                UBICACIÓN
+                <span class="hex">ARMENIA – QUINDÍO</span>
+              </div>
+              <div class="color anti-flash-white">
+                MODALIDAD
+                <span class="hex">PRESENCIAL</span>
+              </div>
+              <div class="color anti-flash-white">
+                ADMISIÓN
+                <span class="hex">SEMESTRAL</span>
+              </div>
+              
+    
+            
+            </div>
+            <div class="wrapper">
+              
+                <div style="font-weight: bold;" class="color anti-flash-white">
+                  CLASIFICACIÓN CINE
+                  
+                </div>
+                <div class="color anti-flash-white">
+                    Campo amplio
+                  <span class="hex">Administración de Empresas y Derecho</span>
+                </div>
+                 <div class="color anti-flash-white">
+                    Campo específico
+                  <span class="hex">Educación comercial y administración</span>
+                </div>
+                <div class="color anti-flash-white">
+                    Campo detallado
+                  <span class="hex">Mercadotecnia y publicidad</span>
+                </div>
+           
+      
+              
+              </div>
+          </div>
+    
+    
+    
+    
+    
+    
+    
+    
+        </section>
+
+
+
+
+
+        <section class="landingRobotica-about">
+            <div class="landingRobotica-about_containt">
+                <div class="landingRobotica-aboutTop">
+                    <div class="landingRobotica-aboutTop-left">
+                        
+                        <h2>Descubre los Secretos del Éxito en el Marketing y las Ventas</h2>
+                    
+                    </div>
+                    <div class="landingRobotica-aboutTop-rigth">
+                        <p>¿Quieres descubrir los secretos detrás de las decisiones de compra? ¿Deseas comprender a tu audiencia en un nivel más profundo y crear estrategias que realmente conecten? Nuestra especialización te proporcionará las herramientas para entender la dinámica interna y externa del consumidor, analizar su comportamiento y utilizar esos conocimientos para desarrollar estrategias efectivas.</p>
+                    </div>
+                </div>
+
+                <div class="landingRobotica-aboutBottom">
+                    
+                    <article class="landingRobotica-aboutBottom-card">
+                        <div class="landingRobotica-aboutBottom-cardIMG">
+                            <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/05/cerebro.png" alt="">
+                        </div>
+                        <h3>Desarrolla habilidades altamente demandadas</h3>
+                    
+                    </article> 
+                    
+                    <article class="landingRobotica-aboutBottom-card">
+                        <div class="landingRobotica-aboutBottom-cardIMG">
+                        <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/05/creatividad.png" alt="">
+                    </div>
+                    <h3>Desata tu potencial para impulsar el crecimiento</h3>
+                    
+                </article> 
+
+                <article class="landingRobotica-aboutBottom-card">
+                    <div class="landingRobotica-aboutBottom-cardIMG">
+                            <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/05/trabajar-5-1.png" alt="">
+                        </div>
+                        <h3>Accede a mejores oportunidades laborales</h3>
+                        
+                    </article> 
+
+                    <article class="landingRobotica-aboutBottom-card">
+                        <div class="landingRobotica-aboutBottom-cardIMG">
+                            <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/05/big-data-1.png" alt="">
+                        </div>
+                        <h3>Domina el arte de la persuasión</h3>
+                        
+                    </article> 
+
+                
+                </div>
+            </div>
+        </section>
+
+        <section class="landingRobotica-form">
+            <div class="landingRobotica-form_containt">
+                
+                <div class="landingRobotica-form_formulario">
+                    <h2>¡Registra tus datos hoy mismo para que uno de nuestros asesores pueda ayudarte!</h2>
+                    <p>Nuestro equipo de expertos en educación estará encantado de responder a todas tus preguntas y brindarte más información sobre nuestro curso.</p>
+                    
+                    <div data-paperform-id="hpaplqf0"></div><script>(function() {var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js"; document.body.appendChild(script); })()</script>
+                    
+
+                </div>
+                
+            </div>
+        </section>
+
+
+
+        <footer class="landingRobotica_footer">
+            <div class="landingRobotica_footer-containt"> 
+                <div class="landingRobotica_footerTop">
+
+
+
+                    <div class="landingRobotica_footerTop_column1">
+                        <!-- <img id="landingRobotica_footerTop_logoEAM" src="https://www.eam.edu.co/wp-content/uploads/2022/06/logoeam-footer.png" alt=""> -->
+                        <p>El éxito en el mundo del marketing y las ventas está al alcance de aquellos valientes que se atreven a comprender y dominar el comportamiento del consumidor. En nuestra Especialización en Comportamiento del Consumidor, te ofrecemos la llave para desbloquear tu potencial y convertirte en un experto estratega. </p>
+                        
+                    </div>
+
+
+                    <div class="landingRobotica_footerTop_column2">
+                        <a style="border-left: solid 4px #a13c85; padding-left: 10px;" href="https://www.eam.edu.co/facultad-de-ingenieria">Facultad de ingeniería</a>
+                        <a style="border-left: solid 4px #558d36; padding-left: 10px;" href="https://www.eam.edu.co/facultad-de-ciencias-administrativas-y-financieras">Facultad de Ciencias Administrativas y Financieras </a>
+                        <a style="border-left: solid 4px #ec6f00; padding-left: 10px;" href="https://www.eam.edu.co/facultad-de-publicidad-diseno-y-comunicacion/">Facultad de Publicidad Diseño y Comunicación</a>
+                        <a style="border-left: solid 4px #673ab7; padding-left: 10px;" href="https://www.eam.edu.co/diplomados/">Diplomados</a>
+                        <a style="border-left: solid 4px #673ab7; padding-left: 10px;" href="#">Cursos</a>
+                    </div>
+
+
+
+                    <div class="landingRobotica_footerTop_column2">
+                        <a style="border-left: solid 4px #673ab7; padding-left: 10px;" href="#">Analítica de Datos Aplicada a los Negocios</a>
+                        <a style="border-left: solid 4px #673ab7; padding-left: 10px;" href="#">Calidad de Software</a>
+                        <a style="border-left: solid 4px #673ab7; padding-left: 10px;" href="#">Psicología del consumidor</a>
+
+                        <div class="landingRobotica_footerTop_column1-socialContaint">
+                            <a href="https://www.facebook.com/eamdelquindio"><img width="30%" src="https://grupofinancierobbva.com/wp-content/uploads/2023/05/Diseno-sin-titulo-42-1.png" alt=""></a>
+                            <a href="https://www.instagram.com/eamdelquindio/"><img width="30%" src="https://grupofinancierobbva.com/wp-content/uploads/2023/05/Diseno-sin-titulo-43-1.png" alt=""></a>
+                            <a href="https://twitter.com/EAMdelquindio"><img width="30%" src="https://grupofinancierobbva.com/wp-content/uploads/2023/05/Diseno-sin-titulo-47-1.png" alt=""></a>
+                            <a href="https://www.linkedin.com/in/instituci%C3%B3n-universitaria-eam-aa09714b/"><img width="30%" src="https://grupofinancierobbva.com/wp-content/uploads/2023/05/Diseno-sin-titulo-49-1.png" alt=""></a>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+
+                <div class="landingRobotica_footerBottom-mediosPago">
+                    <p>Medios de pago:</p>
+                    <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/05/Sin-titulo-1000-×-150-px-1-e1683189271382.png" alt="">
+                </div>
+                <div class="landingRobotica_footerBottom">
+                    <p>Institución Universitaria EAM | IES sujeta a inspección y vigilancia por el MEN | © 2022 www.eam.edu.co | Todos los Derechos Reservados.</p>
+                </div>
+
+
+
+            </div>
+        </footer>
+
+
+
+        
+    </body>
+    </html>
+

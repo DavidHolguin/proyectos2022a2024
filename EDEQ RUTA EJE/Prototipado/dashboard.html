@@ -1,0 +1,906 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+        
+
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(initialize);
+
+        var dynamicValue1, dynamicValue2, dynamicValue3; // Variables globales para almacenar los valores dinámicos
+
+        function initialize() {
+            // Configuramos el intervalo para llamar a las funciones updateChart() cada 9 segundos
+            setInterval(updateChart1, 9000);
+            setInterval(updateChart2, 9000);
+            setInterval(updateChart3, 9000);
+        }
+
+        function updateChart1() {
+            dynamicValue1 = Math.floor(Math.random() * 101); // Generamos un nuevo valor aleatorio para el gráfico 1
+            updateChart(dynamicValue1, 'donut_single1'); // Llamamos a la función updateChart con el valor generado y el ID del div correspondiente
+            document.getElementById('dynamic_value_1').innerText = dynamicValue1;
+        }
+
+        function updateChart2() {
+            dynamicValue2 = Math.floor(Math.random() * 101); // Generamos un nuevo valor aleatorio para el gráfico 2
+            updateChart(dynamicValue2, 'donut_single2'); // Llamamos a la función updateChart con el valor generado y el ID del div correspondiente
+            document.getElementById('dynamic_value_2').innerText = dynamicValue2;
+        }
+
+        function updateChart3() {
+            dynamicValue3 = Math.floor(Math.random() * 101); // Generamos un nuevo valor aleatorio para el gráfico 3
+            updateChart(dynamicValue3, 'donut_single3'); // Llamamos a la función updateChart con el valor generado y el ID del div correspondiente
+            document.getElementById('dynamic_value_3').innerText = dynamicValue3;
+        }
+
+        function updateChart(dynamicValue, chartId) {
+            // Definimos el color principal del gráfico según el valor generado
+            var mainColor;
+            if (dynamicValue > 80) {
+                mainColor = '#d80100'; // Rojo si el valor es superior al 80%
+            } else if (dynamicValue > 60) {
+                mainColor = '#ef8b22'; // Amarillo si el valor es superior al 60% pero no llega al 80%
+            } else {
+                mainColor = '#85cc37'; // Azul por defecto
+            }
+            // Creamos los datos del gráfico con el nuevo valor aleatorio y el color principal definido
+            var data = google.visualization.arrayToDataTable([
+                ['Effort', 'Amount given', { role: 'style' }],
+                ['Disponible', 100 - dynamicValue, '#dddddd'], // Color gris para el espacio restante
+                ['Visitantes', dynamicValue, mainColor] // Color principal definido según el valor generado
+            ]);
+            // Opciones del gráfico
+            var options = {
+                pieHole: 0.7,
+                pieSliceText: 'none',
+                chartArea: { width: '90%', height: '90%' },
+                pieSliceTextStyle: 'none',
+                legend: 'none',
+                colors: ['#dddddd', mainColor], // Colores especificados para las porciones del gráfico
+                tooltip: { trigger: 'hover' } // Mostrar etiquetas solo al hacer selección
+            };
+            // Seleccionamos el elemento div donde se mostrará el gráfico
+            var chart = new google.visualization.PieChart(document.getElementById(chartId));
+            // Dibujamos el gráfico con los nuevos datos y opciones
+            chart.draw(data, options);
+        }
+    </script>
+
+
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(initializeSecondVersion); // Cambiamos el nombre de la función de inicialización
+
+var dynamicValue4="30", dynamicValue5="96", dynamicValue6="5";
+
+function initializeSecondVersion() { // Renombramos la función de inicialización
+    setInterval(updateChart4, 9000);
+    setInterval(updateChart5, 9000);
+    setInterval(updateChart6, 9000);
+}
+
+function updateChart4() {
+    dynamicValue4 = Math.floor(Math.random() * 101);
+    updateChart(dynamicValue4, 'donut_single4');
+    document.getElementById('dynamic_value_4').innerText = dynamicValue4;
+}
+
+function updateChart5() {
+    dynamicValue5 = Math.floor(Math.random() * 101);
+    updateChart(dynamicValue5, 'donut_single5');
+    document.getElementById('dynamic_value_5').innerText = dynamicValue5;
+}
+
+function updateChart6() {
+    dynamicValue6 = Math.floor(Math.random() * 101);
+    updateChart(dynamicValue6, 'donut_single6');
+    document.getElementById('dynamic_value_6').innerText = dynamicValue6;
+}
+
+function updateChart(dynamicValue, chartId) {
+    var mainColor;
+    if (dynamicValue > 80) {
+        mainColor = '#d80100';
+    } else if (dynamicValue > 60) {
+        mainColor = '#ef8b22';
+    } else {
+        mainColor = '#85cc37';
+    }
+    var data = google.visualization.arrayToDataTable([
+        ['Effort', 'Amount given', { role: 'style' }],
+        ['Disponible', 100 - dynamicValue, '#dddddd'],
+        ['Visitantes', dynamicValue, mainColor]
+    ]);
+    var options = {
+        pieHole: 0.7,
+        pieSliceText: 'none',
+        chartArea: { width: '90%', height: '90%' },
+        pieSliceTextStyle: 'none',
+        legend: 'none',
+        colors: ['#dddddd', mainColor],
+        tooltip: { trigger: 'hover' }
+    };
+    var chart = new google.visualization.PieChart(document.getElementById(chartId));
+    chart.draw(data, options);
+}
+</script>
+
+
+
+
+
+
+
+
+
+          
+        <style>
+
+            body {
+                margin: 0;
+                font-family: "Nunito Sans", sans-serif;
+            }
+      
+           
+            .headerContaint {
+                display: flex;
+                padding: 1rem 3rem;
+                align-items: center;
+                justify-content: space-around;
+                box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+            }
+            .headerContaint img {
+                width: 12%;
+            }
+            #carousel-container {
+                position: relative;
+                background-color: #000000;
+                margin: auto;
+                overflow: hidden;
+                
+            }
+
+            #image-container {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .carousel-image {
+                width: 100%;
+                height: auto;
+                opacity: 0.7;
+            }
+
+            .carouselText{
+                position: absolute;
+                top: 35%;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 200px;
+            }
+            .carouselText h4 {
+                color: #fff;
+                font-size: 45px;
+                line-height: 47px;
+                text-align: right;
+                margin: 0;
+            }
+
+            .arrow {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                font-size: 20px;
+                color: #4f8333;
+                background-color: rgba(255, 255, 255, 0.534);
+                border: none;
+                outline: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10;
+            }
+
+            #prev {
+                left: 10px;
+                font-weight: 800;
+            }
+
+            #next {
+                right: 10px;
+                font-weight: 800;
+            }
+            .dashboardContaint {
+                display: flex;
+                background-color: #FAFAFA;
+                font-family: "Nunito Sans", sans-serif;
+                justify-content: space-evenly;
+                padding: 7rem 0rem
+            }
+            .dashboardDer {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                width: 42%;
+                align-items: center;
+                justify-content: space-between;
+                
+            }
+            .dashboardContaintEstacionMeteorologica {
+                display: flex;
+                gap: 20px;
+                width: 100%;
+                justify-content: space-evenly;
+            }
+            .dashboarEstacionMetereologica {
+                display: flex;
+                flex-direction: column;
+                background-color: #1A9CAE;
+                align-items: center;
+                color: #ffffff;
+                justify-content: center;
+                height: 260px;
+                border-radius: 16px;
+                width: 450px;
+                
+                box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
+
+            }
+            .dashboarEstacionMetereologica p {
+                margin: 0;
+                font-size: 25px;
+                font-weight: 700;
+
+            }
+            .dashboardCO2Containt {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 260px;
+                gap: 20px;
+            }
+            .dashboardCO2Card {
+                display: flex;
+                width: 250px;
+                height: 50%;
+                border-radius: 16px;
+                background: #fff;
+                box-shadow: 0px 20px 60px 0px rgba(128, 144, 155, 0.20);
+                gap: 20px;
+                padding: 1rem;
+                justify-content: space-evenly;
+
+            }
+            .parkingCardRojo {
+                width: 80px;
+                height: 80px;
+                flex-shrink: 0;
+                border-radius: 50px;
+                background:#d8010000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+                border: 1px solid #f00;
+
+            }
+            .parkingCardRojo svg {
+                fill: #b40000;
+            }
+            .parkingCardRojo h2 {
+                margin: 0;
+                font-size: 40px;
+                font-weight: 800;
+            }
+            .parkingCardVerde {
+                width: 80px;
+                height: 80px;
+                flex-shrink: 0;
+                border-radius: 150px;
+                background: #4f833300;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+                border: solid 1px #4f8333;
+            }
+            .parkingCardVerde h2, .parkingCardAzul h2 {
+                margin: 0;
+                font-size: 40px;
+                font-weight: 800;
+            }
+           
+            .parkingCardVerde svg {
+                fill: #4f8333;
+            }
+            .parkingCardAzul {
+                width: 80px;
+                height: 80px;
+                flex-shrink: 0;
+                border-radius: 150px;
+                background: #1a9dae00;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+                border: 1px solid #1a9cae;
+            }
+            .parkingCardAzul svg {
+                fill: #1a9cae;
+            }
+            .parkingCardData {
+                display: flex;
+                flex-direction: column;
+            }
+            .dashboardCO2Card h2 {
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin: 0px;
+                font-family: "Nunito Sans", sans-serif;
+            }
+            .dashboardCO2Card p {
+                color: #8A97A4;
+                font-family: "Nunito Sans", sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 0px;
+            }
+            .dashboardCO2Card h3 {
+                font-family: "Nunito Sans", sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 0px;
+            }
+            .parkingCardData h2 {
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin: 0px;
+            }
+            .parkingCardData p {
+                color: #000000;
+                font-family: "Nunito Sans", sans-serif;
+                margin: 0px 0px -3px 0px;
+                font-size: 17px;
+            }
+            .parkingCardData h3 {
+                font-family: "Nunito Sans", sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 0px;
+            }
+            .dashboardIzq {
+                display: flex;
+                flex-direction: column;
+            
+                gap: 20px;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .dashboardContaintVisitantes {
+                display: flex;
+                flex-direction: column;
+                
+            
+            }
+            .containtCardsVisitantes {
+                display: flex;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+            .cardVisitantes {
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 232px;
+                height: 222px;
+                gap: 5px;
+                flex-shrink: 0;
+                border-radius: 28px;
+                background: #FFF;
+                box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.04), 0px 2px 6px 0px rgba(0, 0, 0, 0.04), 0px 16px 24px 0px rgba(0, 0, 0, 0.06);
+            }
+            .cardOcupaciónParquederosSemaforo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 49px;
+                height: 49px;
+                flex-shrink: 0;
+
+            }
+            .dashboardContaintParqueaderos {
+                display: flex;
+                flex-direction: column;
+            }
+            .cardOcupacionParqueaderos {
+                display: flex;
+                gap: 10px;
+            }
+            .dashboardParkingContaint {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+            }
+            .dashboardParkingContaint h3 {
+                margin: -5px 0px 0px 0px;
+                font-size: 25px;
+                font-weight: 700;
+                color: #000000;
+                text-align: start;
+            }
+            .dashboardParkingContaintCards {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: space-between;
+            }
+            .dashboardParkingCard {
+                display: flex;
+                border-radius: 16px;
+                background: #fff;
+                box-shadow: 0px 20px 60px 0px rgba(128, 144, 155, 0.20);
+                gap: 10px;
+                padding: 1rem;
+                width: 232px;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            .dashboardCO2Data {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+            .dashboardYoutube {
+                width: 98%;
+                display: flex;
+                justify-content: center;
+            
+            
+            }
+            .dashboardContaintVisitantes h3 {
+                margin: 0 0 20px 0;
+                font-size: 20px;
+                font-weight: 700;
+                text-align: start;
+                color: #000000;
+            }
+            .cardVisitantes p {
+                margin: 0 0 10px 0;
+                text-align: center;
+                font-size: 15px;
+                line-height: 16px;
+                font-weight: 600;
+                font-family: "Nunito Sans", sans-serif;
+                color: #000000ee;
+            }
+            .cardVisitantes canvas {
+                width: 160px !important;
+                height: 160px !important;
+            }
+            .carouselTextContaint {
+                width: 35%;
+                border-right: 5px solid #8ed046;
+                padding-right: 21px;
+            }
+
+            .dashboarEstacionMetereologicaPanel {
+                
+                display: flex;
+                flex-wrap: wrap;
+                position: absolute;
+                z-index: 5;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                gap: 5px;
+            }
+            .card_dashboarEstacionMetereologicaPanel {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+                height: 45%;
+                
+                align-items: center;
+                justify-content: center;
+                padding: 5px;
+                border-radius: 15px;
+                background-color: rgba(255, 255, 255, 0.5); /* Color de fondo con transparencia */
+                backdrop-filter: blur(10px); /* Aplicar desenfoque */
+                -webkit-backdrop-filter: blur(10px); /* Para compatibilidad con navegadores WebKit */
+                border-radius: 10px; /* Bordes redondeados para un aspecto más suave */
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Sombra */
+            }
+            .card_dashboarEstacionMetereologicaPanel  p {
+                margin: 0; 
+                color: #000000;           
+            }
+            .card_dashboarEstacionMetereologicaPanel  h3 {
+                margin: 0;
+            }
+           
+        .graph-container {
+            width: 100px;
+            height:100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        .titleParqueaderoInteligente h3 {
+            margin: 0 0 20px 0 !important;
+            font-size: 20px;
+            font-weight: 700;
+            color: #000000;
+            text-align: start;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            @media only screen and (max-width: 767px) {
+                .dashboardContaint {
+                    flex-direction: column;
+                    padding: 1rem;
+                }
+                .dashboardDer {
+                    width: 100%;
+                }
+                .headerContaint img {
+                    width: 40%;
+                }
+                .headerContaint {
+                    justify-content: space-between;
+                }
+                .dashboardContaintEstacionMeteorologica {
+                    flex-direction: column;
+                }
+                .dashboarEstacionMetereologica {
+                    width: 100%;
+                }
+                .dashboardCO2Containt {
+                    justify-content: flex-start;
+                }
+                .dashboardCO2Card {
+                    width: 100%;
+                    flex-direction: row-reverse;
+                }
+                .cardVisitantes {
+                    width: 100%;
+                    height: 290px;
+                }
+                
+                .dashboardParkingCard {
+                    width: 100%;
+                    justify-content: space-around;
+                    flex-direction: row-reverse;
+                }
+                .carouselText {
+                    padding-right: 60px;
+                    top:20%;
+                }
+                .carouselTextContaint {
+                    width: 75%;
+                    padding-right: 10px;
+                }
+                .carouselText h4 {
+                    
+                    font-size: 17px;
+                    line-height: 19px;
+                }
+                #carousel-container{
+                    background-color: #000000;
+                }
+                .carousel-image {
+                    opacity: 0.65;
+                }
+                .arrow {
+                    width: 25px;
+                    height: 25px;
+                    font-size: 15px;
+                    background-color: #fff;
+                }
+                
+               
+
+        }
+
+
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="headerContaint">
+                <img src="https://www.edeq.com.co/Portals/0/smart-cities/logo_edeq.png" alt="">
+                <img src="https://www.edeq.com.co/Portals/0/smart-cities/logo_quindio_inteligente.png" alt="">
+            </div>
+        </header>
+        <div id="carousel-container">
+            <div id="image-container">
+                <img class="carousel-image" src="https://www.rutaeje.com/wp-content/uploads/2024/01/banner_salento-1.webp" alt="Imagen 1">
+                <img class="carousel-image" src="https://www.rutaeje.com/wp-content/uploads/2024/01/1-1.webp" alt="Imagen 1">
+                <img class="carousel-image" src="https://www.rutaeje.com/wp-content/uploads/2024/01/2-1.webp" alt="Imagen 1">
+            </div>
+            <div class="carouselText">
+
+                <span class="carouselTextContaint">
+                    <h4 >
+                        Innovamos a través de nuestras iniciativas de <span style="color:#8ed046 ;">Smart Cities</span> , para promover el desarrollo del Quindío.
+                    </h4>
+                </span>
+                
+            </div>
+            <button class="arrow" id="prev" onclick="prevImage()">❮</button>
+            <button class="arrow" id="next" onclick="nextImage()">❯</button>
+        </div>
+        <section class="dashboardContaint">
+
+            <div class="dashboardDer">
+
+                <div class="dashboardYoutube">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wAFUuiMsBxM?si=30Sae1hIfSxyskAT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <div class="dashboardContaintEstacionMeteorologica">
+
+            
+                        <article class="dashboarEstacionMetereologica">
+                            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+                            <dotlottie-player src="https://lottie.host/82f865b0-20dc-46ec-a48b-8bc99d79cba5/LzmKECPsam.json" background="transparent" speed="1" style="width: 180px; height: 180px;" loop autoplay></dotlottie-player>
+                            
+                                
+                            
+                                
+                            
+                            
+                           <div class="dashboarEstacionMetereologicaPanel">
+                            <div class="card_dashboarEstacionMetereologicaPanel" id="estacionTemperatura">
+                                <svg id="Layer_1" enable-background="new 0 0 511.812 511.812" height="40" viewBox="0 0 511.812 511.812" width="40" xmlns="http://www.w3.org/2000/svg"><g><g><g><g><ellipse cx="358.492" cy="153.304" fill="#ffe940" rx="86.989" ry="86.987" transform="matrix(.014 -1 1 .014 200.089 509.572)"/><path d="m401.24 77.544c-18.233-10.289-38.596-13.282-57.724-9.927 9.487 1.663 18.858 4.924 27.724 9.927 41.841 23.61 56.62 76.668 33.011 118.51-13.321 23.608-36.017 38.595-60.783 42.939 35.282 6.185 72.177-9.964 90.783-42.939 23.609-41.842 8.83-94.901-33.011-118.51z" fill="#f5dc1d"/></g><g><g><g><g><path d="m109.349 504.293c-56.16 0-101.849-44.967-101.849-100.238 0-32.068 15.433-61.88 41.548-80.765v-256.282c0-32.747 27.05-59.388 60.301-59.388s60.301 26.641 60.301 59.388v256.282c26.115 18.885 41.548 48.697 41.548 80.765-.001 55.271-45.689 100.238-101.849 100.238z" fill="#fceecf"/><path d="m109.349 462.124c-32.566 0-59.06-26.049-59.06-58.069 0-27.762 19.223-44.954 41.547-58.181v-278.867c0-9.495 7.856-17.219 17.513-17.219s17.513 7.724 17.513 17.219v278.867c22.324 13.227 41.547 30.419 41.547 58.181-.001 32.019-26.495 58.069-59.06 58.069z" fill="#91edff"/></g><g><path d="m91.836 159.773v174.848c0 6.819-3.423 13.147-9.053 16.994-18.226 12.45-32.493 28.523-32.493 52.44 0 32.019 26.494 58.069 59.06 58.069s59.06-26.049 59.06-58.069c0-23.917-14.267-39.99-32.493-52.44-5.63-3.846-9.053-10.175-9.053-16.994v-174.848z" fill="#f26e91"/></g><path d="m135.915 351.615c-5.63-3.846-9.053-10.175-9.053-16.994v-174.847h-35.026v174.848c0 1.49-.173 2.954-.487 4.377 1.124 5.087 4.167 9.611 8.566 12.616 18.226 12.45 32.493 28.523 32.493 52.44 0 25.849-17.271 47.798-41.06 55.301 5.678 1.791 11.724 2.767 18 2.767 32.566 0 59.06-26.049 59.06-58.069 0-23.916-14.267-39.989-32.493-52.439z" fill="#e05c7e"/></g></g><path d="m50.289 8.548s17.273 29.434 17.273 38.974-7.734 17.274-17.273 17.274-17.273-7.734-17.273-17.274 17.273-38.974 17.273-38.974z" fill="#91edff"/></g></g><path d="m255.82 361.857s17.273 29.434 17.273 38.974-7.734 17.274-17.273 17.274-17.273-7.734-17.273-17.274 17.273-38.974 17.273-38.974z" fill="#91edff"/><path d="m210.813 409.64s29.068 49.531 29.068 65.584-13.014 29.068-29.068 29.068-29.067-13.014-29.067-29.068 29.067-65.584 29.067-65.584z" fill="#91edff"/><path d="m210.813 409.64s-7.581 12.919-15 27.699c7.108 14.161 14.068 30.03 14.068 37.885 0 10.565-5.637 19.813-14.068 24.902 4.379 2.644 9.512 4.167 15 4.167 16.054 0 29.068-13.014 29.068-29.068-.001-16.054-29.068-65.585-29.068-65.585z" fill="#79e7fc"/></g><g><path d="m383.2 228.844c-27.095 8.832-57.014 2.457-78.084-16.637-15.733-14.257-24.974-33.788-26.018-54.994-1.044-21.207 6.233-41.551 20.49-57.284s33.788-24.974 54.994-26.018c21.191-1.048 41.549 6.232 57.282 20.489 33.375 30.243 34.386 84.079 2.3 115.622-6.919 6.794 3.594 17.498 10.51 10.701 38.204-37.497 36.936-101.488-2.737-137.438-18.701-16.947-42.877-25.593-68.093-24.356-25.208 1.241-48.424 12.226-65.371 30.928-34.985 38.608-32.038 98.48 6.57 133.466 17.595 15.944 40.375 24.43 63.535 24.429 9.81 0 19.689-1.522 29.27-4.646 9.22-3.007 4.572-17.272-4.648-14.262z"/><path d="m412.283 57.972c3.43 1.935 8.278.589 10.218-2.847l14.297-25.336c4.765-8.446-8.296-15.815-13.064-7.371l-14.297 25.336c-2.036 3.607-.761 8.181 2.846 10.218z"/><path d="m357.336 43.847c3.81 0 7.538-3.848 7.502-7.574l-.287-29.09c-.094-9.421-15.096-9.733-15 .148l.287 29.09c.041 4.118 3.391 7.426 7.498 7.426z"/><path d="m292.558 56.408c4.766 8.069 17.836.704 12.916-7.629l-14.794-25.049c-4.932-8.35-17.847-.722-12.916 7.629z"/><path d="m227.608 88.061 25.336 14.296c8.159 4.603 15.798-8.308 7.371-13.064l-25.336-14.296c-8.445-4.764-15.816 8.298-7.371 13.064z"/><path d="m212.446 162.245h.076l29.09-.287c9.473-.094 9.118-15-.148-15l-29.09.287c-9.655.096-9.572 15 .072 15z"/><path d="m253.97 206.324-25.049 14.794c-8.145 4.811-.598 17.774 7.629 12.916l25.049-14.794c8.35-4.932.722-17.844-7.629-12.916z"/><path d="m304.7 248.636c-3.607-2.035-8.181-.761-10.218 2.847l-14.297 25.337c-4.648 8.238 8.36 15.704 13.064 7.371l14.297-25.337c2.036-3.608.762-8.182-2.846-10.218z"/><path d="m359.571 262.761c-4.142.041-7.466 3.432-7.426 7.574l.287 29.09c.094 9.421 15.096 9.733 15-.148l-.287-29.09c-.041-4.143-3.463-7.448-7.574-7.426z"/><path d="m424.426 250.2c-4.929-8.351-17.848-.723-12.916 7.627l14.794 25.05c4.765 8.07 17.837.704 12.916-7.627z"/><path d="m489.375 218.547-25.336-14.297c-8.446-4.763-15.816 8.298-7.371 13.064l25.336 14.297c8.159 4.603 15.798-8.308 7.371-13.064z"/><path d="m504.461 144.363-29.09.287c-9.473.094-9.118 15 .148 15l29.09-.287c9.689-.096 9.567-15.104-.148-15z"/><path d="m459.207 101.327c1.297 0 2.61-.336 3.808-1.043l25.049-14.794c8.35-4.932.722-17.844-7.629-12.916l-25.049 14.794c-6.641 3.922-3.374 13.959 3.821 13.959z"/><path d="m218.68 404.571c.012-.172.018-.344.018-.516 0-32.874-15.462-64.18-41.548-84.512v-252.535c0-14.244-4.496-27.852-13.001-39.353-5.769-7.794-17.827 1.123-12.061 8.92 6.582 8.899 10.062 19.423 10.062 30.433v23.523h-8.729c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h8.729v15.376h-8.729c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h8.729v15.376h-8.729c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h8.729v15.376h-8.729c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h8.729v15.377h-8.729c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h8.729v15.376h-8.729c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h8.729v15.376h-8.729c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h8.729v35.502c0 2.406 1.155 4.667 3.105 6.077 24.002 17.358 38.359 45.169 38.442 74.436l-.247 3.573c-6.03 10.384-25.708 45.283-28.785 63.531-17.675 16.707-40.789 25.886-65.317 25.886-52.024 0-94.348-41.602-94.348-92.737 0-29.359 14.371-57.28 38.442-74.688 1.95-1.41 3.105-3.671 3.105-6.077v-35.502h8.729c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-8.729v-15.376h8.729c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-8.729v-15.376h8.729c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-8.729v-15.377h8.729c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-8.729v-15.376h8.729c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-8.729v-15.376h8.729c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-8.729v-15.376h8.729c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-8.729v-19.04c10.639-2.78 18.515-12.472 18.515-23.971 0-3.906-1.856-9.66-4.419-15.751 9.989-10.583 24.06-16.651 38.706-16.651 5.836 0 11.568.932 17.036 2.771 9.192 3.095 13.97-11.128 4.779-14.219-7.012-2.356-14.352-3.552-21.815-3.552-16.845 0-33.101 6.274-45.522 17.377-2.868-5.483-5.565-10.182-7.069-12.745-2.849-4.855-10.089-4.855-12.938 0-4.294 7.317-18.305 32.026-18.305 42.77 0 10.584 6.674 19.635 16.032 23.176v248.846c-26.085 20.333-41.547 51.638-41.547 84.513 0 59.406 49.054 107.737 109.349 107.737 24.777 0 48.31-8.1 67.507-23.025 14.556 36.364 70.524 25.724 70.524-13.544 0-16.139-22.025-55.447-28.927-67.368zm-168.386-380.567c6.03 11.518 9.769 20.775 9.769 23.518 0 12.226-19.547 12.786-19.547 0 0-3.008 4.083-12.631 9.778-23.518zm160.519 472.789c-11.893 0-21.567-9.676-21.567-21.568 0-7.961 11.135-31.29 21.568-50.355 10.432 19.062 21.566 42.389 21.566 50.355 0 11.892-9.675 21.568-21.567 21.568z"/><path d="m134.361 159.773v-92.765c0-31.85-50.025-31.901-50.025 0v92.766 174.849c0 4.274-2.149 8.296-5.749 10.772-20.179 13.773-35.798 33.192-35.798 58.661 0 36.154 29.858 65.568 66.56 65.568s66.56-29.414 66.56-65.568c0-25.268-15.602-44.87-35.763-58.634-3.622-2.474-5.784-6.511-5.784-10.8v-174.849zm-25.012-102.485c5.521 0 10.013 4.36 10.013 9.72v85.266h-20.026v-85.266c0-5.36 4.491-9.72 10.013-9.72zm0 397.336c-28.43 0-51.56-22.685-51.56-50.568 0-24.02 18.424-40.208 37.87-51.729 2.279-1.35 3.677-3.803 3.677-6.452v-178.602h20.025v178.601c0 2.649 1.397 5.103 3.677 6.452 19.404 11.497 37.87 27.724 37.87 51.729 0 27.884-23.13 50.569-51.559 50.569z"/><path d="m255.82 354.357c-2.66 0-5.122 1.409-6.469 3.704-4.294 7.317-18.305 32.026-18.305 42.77 0 13.66 11.113 24.773 24.773 24.773s24.773-11.113 24.773-24.773c0-10.743-14.011-35.452-18.305-42.77-1.345-2.295-3.807-3.704-6.467-3.704zm0 56.247c-5.389 0-9.773-4.385-9.773-9.773 0-3.008 4.083-12.63 9.778-23.518 6.03 11.518 9.769 20.775 9.769 23.518 0 5.389-4.385 9.773-9.774 9.773z"/></g></g></svg>
+                                <h3>Temperatura</h3>
+                                <p>25.3°C</p>
+                            </div>
+                            <div class="card_dashboarEstacionMetereologicaPanel" id="estacionVelViento">
+                                <svg id="Layer_1" enable-background="new 0 0 512 512" height="40" viewBox="0 0 512 512" width="40" xmlns="http://www.w3.org/2000/svg"><path d="m249.323 199.158c-6.194-7.626-16.169-12.833-24.842-12.208-18.923 1.156-22.945 11.569-29.792 25.77-7.672 15.185-20.994 27.577-37.367 33.611-10.645 3.983-22.35 5.081-33.309 3.136-15.369-2.641-28.77-10.462-40.422-25.369-7.589-10.621-20.644-13.454-19.481-13.088-5.153-1.619-8.018-7.108-6.399-12.26 1.107-3.526 4.041-5.981 7.425-6.662 13.079-2.598 27.733.15 40.672 9.63 7.428 5.564 15.596 7.558 22.287 6.942 20.113-1.966 22.433-21.335 25.47-27.757 4.669-11.193 11.899-19.742 19.745-26.996 22.395-19.364 49.637-21.018 63.401-18.024 35.456 6.141 60.536 36.584 63.385 67.827 2.054 38.868-21.739 64.401-47.262 72.038-9.288 2.824-19.04 3.356-27.983 1.502-5.305-1.1-8.713-6.292-7.614-11.596.759-3.663 3.47-6.422 6.822-7.417 32.15-9.541 40.054-40.998 25.264-59.079z" fill="#b9f0ff"/><path d="m17.141 326.544c52.753-3.657 70.645-21.044 97.272-20.167 32.798 1.359 48.063 22.459 53.06 27.908 31.802 34.593 81.628 42.381 121.478 22.46 20.648-10.325 26.826-20.485 34.273-25.454 16.591-11.61 45.931-.363 50.519 28.081.696 6.521.019 11.236-.683 14.927-.963 5.068-.381 10.691 4.265 13.242 4.731 2.598 9.674.166 13.97-5.345 2.417-3.1 4.609-6.763 6.451-10.17 22.025-45.956-19.391-93.603-65.339-94.129-30.654-.351-46.914 18.914-55.698 26.404-20.813 17.795-56.333 21.614-82.689 1.845-9.274-6.539-36.748-32.161-84.908-25.875-30.277 4.654-45.836 20.437-81.908 26.824-3.844.681-7.713 1.198-11.596 1.571-4.601.442-8.111 4.304-8.111 8.926.003 5.217 4.439 9.313 9.644 8.952z" fill="#7ce3ff"/><path d="m331.077 230.046c13.82-20.834 41.635-26.429 67.546-7.995 12.476 8.791 32.304 14.052 46.395 7.789 16.037-7.828 16.851-20.384 10.05-27.455-9.719-10.105-25.081-2.484-23.885-2.924-5.513 2.031-11.628-.791-13.659-6.304-5.692-15.448 31.537-41.733 63.837-20.157 36.33 23.634 29.635 81.41-18.357 100.77-37.81 14.79-75.488-5.939-89.23-22.116-4.459-5.41-10.43-10.196-17.372-9.909-5.611.137-12.95 4.284-11.757 3.693-9.706 4.808-19.518-6.372-13.568-15.392z" fill="#55dafe"/><path d="m315.069 166.839h64.966c14.042 0 25.466-11.424 25.466-25.466s-11.424-25.466-25.466-25.466c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5c5.771 0 10.466 4.695 10.466 10.466s-4.695 10.466-10.466 10.466h-64.966c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m418.998 300.772h-.431c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h.431c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5z"/><path d="m486.534 300.772h-37.536c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h37.536c5.771 0 10.466 4.695 10.466 10.466s-4.695 10.466-10.466 10.466c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5c14.042 0 25.466-11.424 25.466-25.466s-11.424-25.466-25.466-25.466z"/><path d="m25.39 166.838c4.13 0 7.5-3.37 7.5-7.5 0-4.14-3.37-7.5-7.5-7.5-4.14 0-7.51 3.36-7.51 7.5 0 4.129 3.37 7.5 7.51 7.5z"/><path d="m55.38 166.838h77.78c4.13 0 7.49-3.37 7.49-7.5 0-4.14-3.36-7.5-7.49-7.5h-77.78c-4.13 0-7.49 3.36-7.49 7.5 0 4.129 3.36 7.5 7.49 7.5z"/><path d="m125.719 201.268c-5.16 0-10.634-1.972-15.479-5.601-14.578-10.678-31.33-13.96-46.583-10.932-17.619 3.543-18.677 28.412-1.702 33.459 6.189 1.866 11.057 4.548 15.728 10.523 37.884 48.466 102.818 31.195 123.764-12.74 6.155-12.826 9.249-21.579 24.465-21.579 5.819 0 13.053 3.901 17.607 9.508 11.607 14.192 4.951 39.264-21.594 47.143-17.173 5.099-16.146 29.91 1.404 33.546 53.634 11.118 103.298-49.469 77.504-106.839-1.698-3.778-6.138-5.463-9.916-3.766-3.778 1.699-5.464 6.139-3.765 9.916 20.505 45.609-18.249 94.817-60.779 86.001-2.34-.486-2.48-3.797-.18-4.479 37.404-11.103 47.1-48.809 28.952-70.999-7.816-9.623-20.306-15.776-31.121-14.966-23.33 1.426-29.057 15.344-36.062 29.941-18.369 36.244-68.629 48.101-98.371 10.191-7.152-9.906-18.12-14.485-23.241-15.743-2.248-.715-2.048-3.948.246-4.409 30.242-6.004 35.847 19.102 62.228 16.681 24.467-2.391 28.597-25.003 31.663-32.334 16.913-40.543 74.143-57.757 111.125-21.962 2.976 2.883 7.724 2.805 10.605-.173 2.881-2.976 2.803-7.724-.173-10.604-45.998-44.522-119.218-21.918-137.231 31.903-3.08 9.21-6.763 18.314-19.094 18.314z"/><path d="m331.585 270.391c-33.22 0-51.421 21.113-59.748 28.21-9.877 8.444-23.624 13.288-37.713 13.288-28.443 0-37.15-16.002-59.625-27.747-3.671-1.919-8.203-.499-10.121 3.173-1.918 3.671-.498 8.202 3.173 10.12 10.579 5.53 17.822 11.771 22.057 14.774 12.841 9.604 28.232 14.68 44.517 14.68 52.42 0 52.714-41.794 98.199-41.493 33.502.383 64.013 29.233 64.013 60.529 0 20.74-13.284 36.202-15.401 35.04-1.101-.604-.756-3.951-.506-5.268 8.452-44.524-36.22-68.149-61.437-50.6-7.594 5.096-30.591 34.931-75.859 34.931-28.195 0-54.5-12.717-71.517-32.392-6.479-7.488-23.688-27.378-56.956-28.757-28.69-.951-46.073 16.581-98.037 20.181-1.931.215-2.239-2.744-.294-2.93 56.721-5.45 73.985-37.233 125.095-27.768 4.069.757 7.987-1.934 8.741-6.008.755-4.072-1.935-7.986-6.008-8.74-56.597-10.493-76.023 22.471-129.263 27.586-8.492.814-14.895 7.861-14.895 16.391 0 9.575 8.176 17.109 17.66 16.435 29.627-2.054 48.674-8.324 63.979-13.362 15.803-5.202 48.204-18.378 78.633 16.788 31.399 36.319 86.003 49.011 132.034 26.002 30.588-15.296 30.283-29.184 45.941-29.184 14.854 0 28.288 13.412 28.288 30.45 0 6.409-1.368 8.476-1.368 13.543 0 18.575 23.452 29.656 39.345-2.996 24.119-50.319-19.764-104.588-72.927-104.876z"/><path d="m512 216.163c0-20.449-9.677-38.474-26.474-49.399-34.349-22.945-76.084.575-76.084 23.063 0 12.387 12.887 21.144 24.525 16.598 1-.401 3.804-1.808 8.04-1.808 9.711 0 15.562 10.671-.155 18.422-11.035 4.818-27.989.576-38.882-7.1-42.655-30.345-81.204 1.541-81.204 19.939 0 9.873 8.293 18.215 18.109 18.215 11.535 0 15.883-12.342 28.182 2.417 12.204 14.364 38.681 29.824 67.972 29.824 10.246 0 20.241-1.877 29.78-5.609 28.06-11.319 46.191-36.662 46.191-64.562zm-75.971 55.172c-26.153 0-48.102-14.635-56.507-24.497-7.054-8.542-15.112-12.896-23.38-12.589-5.919.17-13.158 3.39-15.185 4.627-2.58.992-5.361-2.057-3.623-4.695 11.582-17.447 34.698-21.842 56.969-5.999 18.112 12.762 40.965 14.682 54.004 8.398 30.556-14.915 18.918-46.963-6.3-46.963-5.477 0-11.256 1.647-13.81 2.924-1.906.44-3.756-1.043-3.756-2.714 0-8.519 26.954-27.825 52.828-10.54 12.54 8.156 19.731 21.597 19.731 36.876 0 29.546-26.729 55.172-60.971 55.172z"/></svg>
+                                <h3>Vel Viento</h3>
+                                <p>0.3 m/s</p>
+                            </div>
+                            <div class="card_dashboarEstacionMetereologicaPanel" id="estacionHumedad">
+                                <svg id="Capa_1" enable-background="new 0 0 512 512" height="40" viewBox="0 0 512 512" width="40" xmlns="http://www.w3.org/2000/svg"><g id="XMLID_2040_"><circle id="XMLID_1170_" cx="210" cy="302" fill="#91def5" r="200"/><path id="XMLID_1252_" d="m310.911 116.754 84.079-106.754 84.079 106.754c33.55 42.598 29.941 103.557-8.401 141.899-41.796 41.796-109.561 41.796-151.357 0-38.342-38.342-41.951-99.301-8.4-141.899z" fill="#dff6fc"/><g id="XMLID_759_"><path id="XMLID_760_" d="m174.798 388.747c1.265.531 2.576.782 3.866.782 3.907 0 7.618-2.304 9.225-6.133l64.758-154.303c2.138-5.092-.259-10.953-5.351-13.09-5.095-2.138-10.954.258-13.091 5.351l-64.758 154.303c-2.137 5.092.259 10.953 5.351 13.09z"/><path id="XMLID_763_" d="m199.375 247.585c0-21.81-16.087-39.553-35.859-39.553s-35.858 17.743-35.858 39.553 16.086 39.553 35.858 39.553 35.859-17.744 35.859-39.553zm-35.859 19.552c-8.744 0-15.858-8.771-15.858-19.553s7.114-19.553 15.858-19.553c8.745 0 15.859 8.771 15.859 19.553s-7.114 19.553-15.859 19.553z"/><path id="XMLID_770_" d="m256.484 400.032c19.772 0 35.858-17.743 35.858-39.553s-16.086-39.553-35.858-39.553-35.859 17.743-35.859 39.553 16.087 39.553 35.859 39.553zm0-59.106c8.744 0 15.858 8.771 15.858 19.553s-7.114 19.553-15.858 19.553c-8.745 0-15.859-8.771-15.859-19.553s7.114-19.553 15.859-19.553z"/><path id="XMLID_773_" d="m486.926 110.567-84.079-106.754c-1.897-2.408-4.792-3.813-7.857-3.813s-5.96 1.405-7.855 3.813l-84.081 106.754c-.598.759-1.184 1.524-1.76 2.293-28.294-13.656-59.669-20.86-91.294-20.86-115.794 0-210 94.206-210 210s94.206 210 210 210c39.357 0 77.729-10.955 110.966-31.681 4.687-2.922 6.116-9.09 3.194-13.776-2.922-4.687-9.09-6.117-13.776-3.194-30.06 18.743-64.772 28.651-100.384 28.651-104.767 0-190-85.233-190-190s85.233-190 190-190c27.901 0 55.58 6.193 80.663 17.946-22.563 44.347-14.795 99.405 21.578 135.777 22.103 22.104 51.49 34.277 82.748 34.277 1.665 0 3.324-.042 4.978-.111.008.704.033 1.409.033 2.111 0 35.875-10.045 70.807-29.048 101.018-2.94 4.675-1.534 10.848 3.141 13.789 1.654 1.041 3.495 1.537 5.314 1.537 3.323 0 6.574-1.656 8.475-4.677 21.012-33.405 32.118-72.019 32.118-111.667 0-1.547-.039-3.102-.073-4.655 21.74-4.695 41.71-15.52 57.812-31.621 41.902-41.901 45.851-108.604 9.187-155.157zm-91.937 169.433c-25.916 0-50.281-10.092-68.606-28.418-34.741-34.74-38.016-90.043-7.616-128.64h-.001l76.225-96.779 76.223 96.779c30.399 38.597 27.125 93.9-7.616 128.641-18.327 18.325-42.692 28.417-68.609 28.417z"/><path id="XMLID_799_" d="m351.34 433.5c-2.64 0-5.22 1.07-7.07 2.93-1.859 1.86-2.93 4.44-2.93 7.07 0 2.64 1.07 5.21 2.93 7.08 1.86 1.86 4.431 2.92 7.07 2.92 2.63 0 5.2-1.06 7.07-2.92 1.859-1.87 2.93-4.44 2.93-7.08 0-2.63-1.07-5.21-2.93-7.07s-4.44-2.93-7.07-2.93z"/></g></g></svg>
+                                <h3>Humedad</h3>
+                                <p>66</p>
+                            </div>
+                            <div class="card_dashboarEstacionMetereologicaPanel" id="estacionRadiacion">
+                                <svg id="Capa_1" enable-background="new 0 0 512 512" height="40" viewBox="0 0 512 512" width="40" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m412.234 281.516c8.59-3.412 16.651-6.613 21.837-8.673 2.691-1.069 3.309-4.596 1.145-6.521l-17.57-15.632c-5.059-4.501-4.085-12.665 1.895-15.842 19.576-10.4 46.763-24.845 61.535-32.693 3.33-1.769 2.444-6.763-1.29-7.287l-68.974-9.671c-6.717-.942-10.433-8.296-7.214-14.265 4.387-8.135 8.505-15.769 11.154-20.68 1.375-2.549-.42-5.648-3.314-5.731l-23.507-.682c-6.769-.196-11.27-7.076-8.731-13.354 8.311-20.55 19.853-49.091 26.124-64.599 1.414-3.496-2.475-6.752-5.672-4.753l-59.054 36.927c-5.751 3.596-13.325.351-14.696-6.291-1.868-9.052-3.621-17.547-4.749-23.011-.585-2.836-3.952-4.056-6.223-2.26l-18.446 14.588c-5.312 4.201-13.182 1.824-15.272-4.618-6.844-21.087-16.349-50.373-21.513-66.282-1.163-3.585-6.234-3.58-7.397.005l-21.502 66.251c-2.094 6.451-9.982 8.834-15.301 4.627-7.249-5.733-14.053-11.114-18.429-14.575-2.271-1.796-5.635-.567-6.22 2.269l-4.753 23.032c-1.369 6.632-8.926 9.87-14.667 6.28-18.797-11.754-44.903-28.079-59.085-36.947-3.196-1.998-7.076 1.264-5.663 4.758l26.114 64.573c2.543 6.288-1.968 13.183-8.747 13.38-9.239.268-17.909.519-23.487.681-2.895.084-4.681 3.187-3.306 5.736l11.163 20.699c3.215 5.96-.493 13.298-7.199 14.238-21.955 3.078-52.447 7.354-69.011 9.676-3.732.523-4.608 5.517-1.28 7.286l61.511 32.681c5.989 3.182 6.967 11.364 1.9 15.872-6.905 6.144-13.385 11.909-17.554 15.618-2.163 1.925-1.537 5.451 1.154 6.519l21.856 8.68c6.294 2.5 8.17 10.504 3.637 15.535-14.84 16.47-35.45 39.345-46.646 51.772-2.523 2.8.016 7.188 3.703 6.404l68.127-14.504c6.634-1.412 12.641 4.227 11.658 10.938-1.341 9.145-2.599 17.727-3.408 23.248-.42 2.865 2.326 5.163 5.075 4.252l22.323-7.4c6.428-2.131 13.01 2.795 12.772 9.562-.781 22.156-1.865 52.927-2.455 69.643-.133 3.767 4.633 5.496 6.953 2.525l42.865-54.902c4.174-5.346 12.401-4.887 15.961.885 4.851 7.867 9.404 15.25 12.333 19.999 1.52 2.465 5.101 2.46 6.621-.005l12.338-20.008c3.557-5.769 11.776-6.223 15.947-.88l42.869 54.906c2.32 2.972 7.088 1.237 6.955-2.532l-2.453-69.606c-.239-6.778 6.358-11.715 12.796-9.581 8.773 2.908 17.006 5.637 22.303 7.393 2.749.911 5.489-1.394 5.069-4.259l-3.409-23.257c-.983-6.706 5.021-12.336 11.65-10.925l68.132 14.505c3.688.785 6.225-3.609 3.701-6.41l-46.621-51.744c-4.542-5.037-2.662-13.06 3.642-15.563z" fill="#e49824"/></g><g><path d="m479.787 194.867-68.969-9.67c-6.719-.942-10.436-8.301-7.216-14.272 4.388-8.137 8.506-15.772 11.154-20.682 1.373-2.547-.421-5.64-3.313-5.724l-23.502-.681c-.836-.024-1.638-.152-2.396-.367 4.69 16.519 7.016 34.032 6.589 52.151-1.074 45.567-19.729 86.862-49.358 117.438-3.587 3.702-9.423 4.073-13.46.868-20.16-16.002-45.634-25.581-73.314-25.581-42.913 0-80.507 22.963-101.203 57.272-2.631 4.361-8.124 6.036-12.769 3.948-.662-.298-1.269-.573-1.776-.808.143.932.168 1.902.022 2.902-1.341 9.148-2.6 17.733-3.409 23.256-.42 2.865 2.326 5.165 5.075 4.254l22.318-7.398c1.849-.613 3.705-.626 5.413-.196.277.083.553.167.833.249 3.824 1.339 6.689 5.011 6.53 9.514-.781 22.154-1.865 52.919-2.454 69.634-.133 3.767 4.633 5.499 6.953 2.528l42.862-54.898c4.175-5.348 12.407-4.888 15.968.887 4.853 7.869 9.406 15.253 12.334 20.001 1.519 2.463 5.095 2.455 6.613-.007l12.341-20.012c3.557-5.769 11.776-6.222 15.947-.88l42.869 54.906c2.32 2.972 7.088 1.237 6.956-2.532l-2.453-69.6c-.239-6.781 6.362-11.719 12.802-9.584 8.775 2.909 17.009 5.638 22.304 7.393 2.746.91 5.481-1.394 5.062-4.257l-3.411-23.268c-.983-6.703 5.019-12.331 11.645-10.92l68.138 14.506c3.688.785 6.225-3.609 3.701-6.41l-46.628-51.752c-4.536-5.035-2.658-13.052 3.641-15.553 8.592-3.413 16.657-6.615 21.845-8.676 2.691-1.069 3.31-4.597 1.146-6.522l-17.57-15.633c-5.059-4.501-4.085-12.664 1.895-15.842 19.576-10.4 46.763-24.845 61.536-32.693 3.329-1.771 2.443-6.765-1.291-7.289z" fill="#df751c"/></g><g><circle cx="256.002" cy="238.085" fill="#ffe07d" r="126.455"/></g><g><path d="m329.914 135.477c15.002 20.79 23.847 46.317 23.847 73.912 0 34.311-13.666 65.428-35.851 88.21-3 3.08-7.637 3.901-11.522 2.06-15.292-7.246-32.37-11.312-50.387-11.312-30.219 0-57.816 11.41-78.732 30.139-3.195 2.86-7.86 3.405-11.605 1.317-4.248-2.369-8.347-4.973-12.271-7.805 23.325 32.324 61.54 53.19 104.598 52.528 67.974-1.045 123.404-56.474 124.45-124.448.664-43.059-20.202-81.276-52.527-104.601z" fill="#ffd064"/></g><g><circle cx="256.002" cy="406.524" fill="#f6f9f9" r="97.976"/></g><g><g><path d="m296.536 390.363h-40.403v-49.493l-40.402 81.815h40.402v49.493z" fill="#ffe07d"/></g></g><g><path d="m490.463 196.736c-.864-4.878-4.741-8.613-9.64-9.294l-68.973-9.67c-1-.14-1.479-.812-1.675-1.199-.198-.392-.459-1.183.028-2.086 4.38-8.128 8.498-15.766 11.144-20.668 1.896-3.504 1.84-7.656-.152-11.106-1.992-3.453-5.562-5.58-9.536-5.69l-23.506-.68c-1.014-.029-1.563-.644-1.801-1.008-.235-.361-.575-1.107-.197-2.043 8.31-20.551 19.85-49.09 26.124-64.6 1.851-4.594.545-9.816-3.249-12.996-3.792-3.177-9.158-3.551-13.354-.925l-59.055 36.932c-.859.536-1.659.328-2.059.158-.402-.173-1.109-.61-1.315-1.609l-4.746-22.993c-.798-3.904-3.509-7.049-7.251-8.413-3.745-1.367-7.85-.701-10.971 1.771l-18.449 14.59c-.791.627-1.604.512-2.02.384-.414-.125-1.154-.478-1.465-1.435-3.758-11.587-8.321-25.646-12.526-38.601l-8.986-27.689c-1.533-4.706-5.885-7.866-10.831-7.866-.003 0-.006 0-.01 0-4.949.004-9.3 3.17-10.824 7.874l-21.498 66.244c-.316.972-1.066 1.329-1.486 1.456-.414.124-1.233.242-2.031-.389l-2.626-2.076c-6.242-4.933-11.956-9.449-15.811-12.51-3.127-2.464-7.227-3.117-10.966-1.751-3.738 1.366-6.447 4.509-7.243 8.393l-4.762 23.051c-.202.983-.896 1.414-1.292 1.583s-1.186.374-2.047-.166c-18.799-11.749-44.908-28.068-59.08-36.935-4.19-2.628-9.555-2.261-13.347.915-3.799 3.18-5.106 8.404-3.251 13.011l26.109 64.568c.38.941.037 1.693-.201 2.059-.24.366-.794.985-1.814 1.016-9.229.271-17.896.521-23.468.68-3.976.109-7.539 2.229-9.532 5.671-1.998 3.448-2.064 7.605-.171 11.128l11.167 20.695c.479.889.223 1.669.027 2.055-.194.386-.671 1.052-1.665 1.191l-69.001 9.679c-4.904.682-8.779 4.414-9.643 9.288-.865 4.882 1.496 9.726 5.876 12.054l61.513 32.681c.891.473 1.11 1.267 1.162 1.698.053.436.027 1.269-.728 1.941-5.106 4.536-9.978 8.872-13.855 12.323l-3.705 3.298c-2.972 2.641-4.334 6.557-3.645 10.476.69 3.925 3.313 7.147 7.018 8.619l21.853 8.682c.941.374 1.247 1.135 1.346 1.556.098.42.162 1.235-.512 1.982l-11.604 12.88c-12.682 14.076-26.561 29.482-35.047 38.893-3.308 3.674-3.87 9.021-1.4 13.305 2.473 4.29 7.386 6.484 12.247 5.459l68.116-14.51c1.002-.207 1.682.26 2.001.559.317.298.828.948.679 1.957l-3.409 23.248c-.577 3.934.897 7.81 3.943 10.368 3.053 2.562 7.131 3.344 10.918 2.091l8.782-2.912c-1.682 7.509-2.558 15.263-2.558 23.147 0 58.159 47.316 105.476 105.476 105.476s105.476-47.316 105.476-105.476c0-7.95-.89-15.696-2.565-23.147 3.384 1.121 6.399 2.119 8.795 2.91 1.188.395 2.406.588 3.612.588 2.624 0 5.192-.915 7.28-2.666 3.053-2.559 4.53-6.44 3.953-10.384l-3.4-23.26c-.147-1 .36-1.646.677-1.943.316-.298.997-.768 1.99-.556l68.143 14.512c4.84 1.026 9.755-1.169 12.228-5.456 2.47-4.285 1.906-9.634-1.405-13.312l-46.62-51.75c-.68-.755-.614-1.579-.515-2.004.1-.424.406-1.191 1.357-1.569 8.309-3.308 16.121-6.409 21.319-8.473l.52-.206c3.697-1.472 6.316-4.688 7.005-8.605.689-3.919-.677-7.84-3.654-10.486l-17.57-15.631c-.753-.669-.779-1.487-.728-1.916.052-.431.271-1.223 1.163-1.697l9.378-4.983c18.167-9.654 39.623-21.057 52.153-27.707 4.373-2.329 6.733-7.169 5.868-12.048zm-65.062 26.507-9.38 4.984c-4.977 2.646-8.347 7.566-9.016 13.16-.669 5.591 1.444 11.164 5.652 14.906l13.196 11.739c-4.68 1.858-10.407 4.134-16.387 6.515-5.241 2.08-9.138 6.6-10.423 12.091s.201 11.272 3.976 15.461l39.178 43.488-57.255-12.193c-5.517-1.173-11.269.431-15.381 4.292-4.109 3.858-6.072 9.491-5.25 15.059l2.554 17.465c-3.541-1.172-13.611-4.511-13.611-4.511-3.497-8.299-8.03-16.056-13.43-23.118 31.533-25.347 50.138-63.834 50.138-104.492 0-73.866-60.094-133.96-133.96-133.96-20.002 0-39.247 4.305-57.199 12.794-3.745 1.771-5.345 6.242-3.574 9.986 1.771 3.745 6.243 5.343 9.986 3.574 15.933-7.534 33.02-11.355 50.787-11.355 65.595 0 118.96 53.365 118.96 118.96 0 36.34-16.745 70.724-45.086 93.23-19.043-18.71-45.133-30.271-73.875-30.271-7.914 0-15.81.882-23.465 2.621-4.039.917-6.57 4.936-5.652 8.975.917 4.039 4.938 6.569 8.975 5.652 6.567-1.491 13.345-2.248 20.143-2.248 49.889 0 90.476 40.587 90.476 90.476s-40.587 90.477-90.476 90.477-90.476-40.587-90.476-90.476c0-30.496 15.217-58.746 40.705-75.568 3.457-2.282 4.409-6.935 2.128-10.392-2.282-3.456-6.934-4.409-10.392-2.128-5.763 3.804-11.07 8.115-15.89 12.844-28.31-22.506-45.036-56.872-45.036-93.191 0-34.291 14.811-66.925 40.633-89.535 3.116-2.729 3.431-7.467.702-10.583-2.728-3.116-7.467-3.43-10.583-.702-29.076 25.458-45.752 62.206-45.752 100.821 0 40.635 18.583 79.103 50.085 104.45-5.445 7.129-9.947 14.913-13.407 23.165l-13.587 4.506 2.559-17.446c.823-5.578-1.14-11.213-5.251-15.073-4.113-3.863-9.862-5.466-15.391-4.297l-57.248 12.194c8.049-8.93 18.155-20.148 27.598-30.629l11.605-12.881c3.771-4.186 5.255-9.958 3.973-15.44-1.284-5.484-5.179-10-10.415-12.078l-16.417-6.522c3.76-3.347 8.365-7.444 13.188-11.729 4.212-3.754 6.323-9.34 5.648-14.942-.674-5.594-4.047-10.511-9.02-13.15l-51.693-27.464 57.997-8.136c5.574-.782 10.421-4.248 12.964-9.271 2.544-5.023 2.468-10.984-.206-15.948l-8.391-15.55c5.033-.145 11.196-.323 17.632-.512 5.638-.167 10.846-3.085 13.93-7.806 3.083-4.718 3.663-10.654 1.552-15.883l-21.939-54.255c14.578 9.115 34.489 21.561 49.642 31.03 4.777 2.997 10.724 3.461 15.905 1.243 5.184-2.217 8.954-6.838 10.084-12.35l3.575-17.306c3.259 2.58 7.123 5.634 11.213 8.866l2.623 2.074c4.419 3.496 10.279 4.611 15.673 2.982 5.4-1.631 9.666-5.808 11.415-11.179l18.066-55.671 5.55 17.102c4.205 12.954 8.769 27.012 12.526 38.598 1.738 5.358 5.995 9.532 11.387 11.164 5.394 1.632 11.251.521 15.67-2.976l13.857-10.959 3.564 17.271c1.14 5.526 4.919 10.15 10.109 12.369 5.188 2.218 11.137 1.753 15.912-1.234l49.622-31.033c-6.445 15.937-15.249 37.708-21.951 54.282-2.111 5.221-1.534 11.153 1.544 15.868 3.08 4.718 8.283 7.634 13.922 7.801l17.653.51c-2.391 4.433-5.315 9.859-8.368 15.523-2.68 4.969-2.757 10.941-.207 15.978 2.546 5.03 7.397 8.499 12.978 9.28l57.958 8.126c-12.323 6.546-28.306 15.039-42.328 22.491z"/><path d="m209.361 426.644c1.368 2.202 3.777 3.541 6.37 3.541h32.901v41.992c0 3.485 2.401 6.512 5.795 7.304.569.133 1.142.197 1.707.197 2.804 0 5.438-1.579 6.723-4.18l40.402-81.815c1.148-2.325 1.014-5.078-.354-7.28s-3.777-3.541-6.37-3.541h-32.902v-41.992c0-3.485-2.401-6.512-5.795-7.304-3.391-.791-6.887.857-8.43 3.983l-40.401 81.814c-1.149 2.326-1.014 5.079.354 7.281zm39.272-53.646v17.365c0 4.143 3.357 7.5 7.5 7.5h28.334l-20.834 42.189v-17.366c0-4.143-3.357-7.5-7.5-7.5h-28.333z"/></g></g></svg>
+                                <h3>Radiación</h3>
+                                <p>1.1 W/m^2</p>
+                            </div>
+                           </div>
+                        </article>
+                    
+
+                    <div class="dashboardCO2Containt">
+
+                        <article class="dashboardCO2Card">
+                            <span class="CO2CardSemaforo">
+                                <svg id="Icon" height="80" viewBox="0 0 64 64" width="80" xmlns="http://www.w3.org/2000/svg"><path d="m54.24103 21.68241c.74365-6.44848-4.43833-12.23195-10.93329-12.1897-3.68207 0-6.93317 1.81567-8.92975 4.59351-1.62604-5.27606-6.53864-9.11096-12.34827-9.11096-7.13599 0-12.92084 5.78485-12.92084 12.92078 0 1.32794.2016 2.60852.57367 3.81433-3.89618 1.42419-6.68256 5.15283-6.68256 9.54211 0 5.61578 4.55249 10.16833 10.16833 10.16833h37.66335c5.61584 0 10.16833-4.55255 10.16833-10.16833 0-4.41797-2.82275-8.16711-6.75897-9.57007z" fill="#bdbdbd"/><g fill="#757576"><path d="m6 35.25245c0-4.38928 2.78638-8.11792 6.68256-9.54211-.37207-1.20581-.57367-2.48639-.57367-3.81433 0-7.13593 5.78485-12.92078 12.92084-12.92078 3.32507 0 6.35266 1.25995 8.64209 3.32355-2.08612-4.33167-6.51245-7.32355-11.64209-7.32355-7.13599 0-12.92084 5.78485-12.92084 12.92078 0 1.32794.2016 2.60852.57367 3.81433-3.89618 1.42419-6.68256 5.15283-6.68256 9.54211 0 3.19464 1.47595 6.04187 3.78009 7.90601-.5011-1.20288-.78009-2.52155-.78009-3.90601z"/><path d="m37.37799 18.08619c1.99658-2.77783 5.24768-4.59351 8.92975-4.59351 2.69934-.01758 5.16333.98102 7.078 2.60553-1.70129-3.85669-5.57111-6.63483-10.078-6.60553-3.41382 0-6.44354 1.57245-8.46008 4.01367 1.13165 1.32343 2.00476 2.87445 2.53033 4.57983z"/><path d="m19.53909 46.5295c-1.04175 0-1.9848.38245-2.73248.99463-.74768-.61218-1.69073-.99463-2.73242-.99463-2.39508 0-4.33667 1.94159-4.33667 4.33667s1.94159 4.33661 4.33667 4.33661c1.04169 0 1.98474-.38245 2.73242-.99457.74768.61212 1.69073.99457 2.73248.99457 2.39502 0 4.33661-1.94159 4.33661-4.33661s-1.94159-4.33667-4.33661-4.33667z"/></g><path d="m14.07416 48.52949c1.04169 0 1.98474.38245 2.73242.99463.74768-.61218 1.69073-.99463 2.73248-.99463 2.04932 0 3.75623 1.4259 4.20935 3.33667.07642-.32233.12726-.6543.12726-1 0-2.39508-1.94159-4.33667-4.33661-4.33667-1.04175 0-1.9848.38245-2.73248.99463-.74768-.61218-1.69073-.99463-2.73242-.99463-2.39508 0-4.33667 1.94159-4.33667 4.33667 0 .3457.05084.67767.12726 1 .45313-1.91077 2.1601-3.33667 4.20941-3.33667z" fill="#616261"/><path d="m49.4014 50.35149c-1.04175 0-1.9848.38245-2.73248.99463-.74768-.61218-1.69073-.99463-2.73242-.99463-2.39508 0-4.33667 1.94159-4.33667 4.33667s1.94159 4.33661 4.33667 4.33661c1.04169 0 1.98474-.38245 2.73242-.99457.74768.61212 1.69073.99457 2.73248.99457 2.39502 0 4.33661-1.94159 4.33661-4.33661s-1.94159-4.33667-4.33661-4.33667z" fill="#757576"/><path d="m43.93646 52.35151c1.04169 0 1.98474.38245 2.73242.99463.74768-.61218 1.69073-.99463 2.73248-.99463 2.04932 0 3.75623 1.4259 4.20935 3.33667.07642-.32233.12726-.6543.12726-1 0-2.39508-1.94159-4.33667-4.33661-4.33667-1.04175 0-1.9848.38245-2.73248.99463-.74768-.61218-1.69073-.99463-2.73242-.99463-2.39508 0-4.33667 1.94159-4.33667 4.33667 0 .3457.05084.67767.12726 1 .45313-1.91077 2.1601-3.33667 4.20941-3.33667z" fill="#616261"/><g><path d="m57.9082 22.62402c-.42969-.34961-1.05859-.28662-1.40723.14063-.35059.42725-.28711 1.05713.13965 1.40723 2.13477 1.74756 3.35938 4.32861 3.35938 7.08057 0 5.05566-4.1123 9.16846-9.16797 9.16846h-26.18848c-.55273 0-1 .44775-1 1s.44727 1 1 1h26.18848c6.1582 0 11.16797-5.01025 11.16797-11.16846 0-3.354-1.49121-6.49902-4.0918-8.62842z"/><path d="m20.54492 42.4209c.55273 0 1-.44775 1-1s-.44727-1-1-1h-7.37695c-5.05566 0-9.16797-4.11279-9.16797-9.16846 0-3.82813 2.42188-7.28516 6.02637-8.60254.5-.18311.76855-.72559.61133-1.23438-.35059-1.13721-.52832-2.32129-.52832-3.51953 0-6.57324 5.34766-11.9209 11.91992-11.9209 5.26465 0 9.84375 3.37793 11.39258 8.40576.1123.36279.41992.63135.79492.69238.375.0625.75098-.09424.97266-.40332 1.88086-2.61572 4.91602-4.17725 8.125-4.17725h.06445c2.69629 0 5.22656 1.09033 7.13086 3.0752 1.90234 1.9834 2.91992 4.66064 2.79102 7.34521-.02637.55176.39941 1.02002.95117 1.04688.55859.01904 1.02148-.39941 1.04688-.95117.1543-3.23096-1.06445-6.44775-3.3457-8.8252-2.28613-2.38232-5.32813-3.69141-8.56738-3.69141-3.28809 0-6.41406 1.31934-8.67676 3.646-2.23047-4.94678-7.12793-8.16309-12.67969-8.16309-7.67578 0-13.91992 6.24512-13.91992 13.9209 0 1.09131.12695 2.17334.37695 3.22754-3.91504 1.81201-6.48633 5.77344-6.48633 10.12891 0 6.1582 5.00977 11.16846 11.16797 11.16846h7.37695z"/><path d="m27.14355 26.94531c0 3.35889 2.73242 6.0918 6.0918 6.0918s6.0918-2.73291 6.0918-6.0918-2.73242-6.09131-6.0918-6.09131-6.0918 2.73242-6.0918 6.09131zm10.18359 0c0 2.25635-1.83594 4.0918-4.0918 4.0918s-4.0918-1.83545-4.0918-4.0918c0-2.25586 1.83594-4.09131 4.0918-4.09131s4.0918 1.83545 4.0918 4.09131z"/><path d="m23.41895 22.854c.62793 0 1.22949.13818 1.78906.41016.49707.24365 1.09473.03516 1.33691-.46094.24121-.49658.03516-1.09521-.46191-1.33691-.83398-.40625-1.73047-.6123-2.66406-.6123-3.35938 0-6.0918 2.73242-6.0918 6.09131s2.73242 6.0918 6.0918 6.0918c.94629 0 1.85254-.21143 2.69629-.62793.49512-.24463.69824-.84424.45313-1.33936s-.84277-.69824-1.33984-.45361c-.56445.2793-1.17383.4209-1.80957.4209-2.25586 0-4.0918-1.83545-4.0918-4.0918 0-2.25586 1.83594-4.09131 4.0918-4.09131z"/><path d="m40.69727 36.17139c-.22266.30371-.25586.70703-.08496 1.04297.16992.33594.51465.54736.8916.54736h4.16895c.55273 0 1-.44775 1-1s-.44727-1-1-1h-2.19824l2.53906-3.47168c.58576-.92851.57591-2.1492.02246-3.10205-.50977-.87646-1.40625-1.40967-2.44727-1.42627-1.70117 0-3.08496 1.38379-3.08496 3.08496 0 .55225.44727 1 1 1s1-.44775 1-1c0-.59814.48633-1.08447 1.10254-1.08447.39551.00635.60938.27344.70117.43213.13965.23828.2207.61572.04688.97705z"/><path d="m19.53906 45.5293c-.9707 0-1.90234.26465-2.73242.771-.83008-.50635-1.76172-.771-2.73242-.771-2.94238 0-5.33691 2.39404-5.33691 5.33691 0 2.94238 2.39453 5.33643 5.33691 5.33643.9707 0 1.90234-.26465 2.73242-.771.83008.50635 1.76172.771 2.73242.771 2.94238 0 5.33691-2.39404 5.33691-5.33643 0-2.94287-2.39453-5.33691-5.33691-5.33691zm0 8.67334c-.75879 0-1.48438-.26563-2.09863-.76855-.18457-.15088-.40918-.22607-.63379-.22607s-.44922.0752-.63379.22607c-.61426.50293-1.33984.76855-2.09863.76855-1.83984 0-3.33691-1.49658-3.33691-3.33643s1.49707-3.33691 3.33691-3.33691c.75879 0 1.48438.26563 2.09961.76855.36719.30176.89844.30176 1.26563 0 .61523-.50293 1.34082-.76855 2.09961-.76855 1.83984 0 3.33691 1.49707 3.33691 3.33691s-1.49707 3.33643-3.33691 3.33643z"/><path d="m49.40137 49.35156c-.9707 0-1.90234.26465-2.73242.771-.83008-.50635-1.76172-.771-2.73242-.771-2.94238 0-5.33691 2.39404-5.33691 5.33643 0 2.94287 2.39453 5.33691 5.33691 5.33691.9707 0 1.90234-.26465 2.73242-.771.83008.50635 1.76172.771 2.73242.771 2.94238 0 5.33691-2.39404 5.33691-5.33691 0-2.94238-2.39453-5.33643-5.33691-5.33643zm0 8.67334c-.75879 0-1.48438-.26563-2.09961-.76855-.18359-.15088-.4082-.22607-.63281-.22607s-.44922.0752-.63281.22607c-.61523.50293-1.34082.76855-2.09961.76855-1.83984 0-3.33691-1.49707-3.33691-3.33691s1.49707-3.33643 3.33691-3.33643c.75879 0 1.48438.26563 2.09863.76855.36914.30176.89844.30176 1.26758 0 .61426-.50293 1.33984-.76855 2.09863-.76855 1.83984 0 3.33691 1.49658 3.33691 3.33643s-1.49707 3.33691-3.33691 3.33691z"/></g></svg>
+                            </span>
+                            <div class="dashboardCO2Data">
+                                <h2 id="CO2metrica">738</h2>
+                                <h3>PPM</h3>
+                                <p>Dióxido de carbono</p>
+                            </div>
+                            
+                        </article>
+
+                        <article class="dashboardCO2Card">
+                            <span class="CO2CardSemaforo">
+                                <svg id="Capa_1" enable-background="new 0 0 512 512" height="80" viewBox="0 0 512 512" width="80" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m437 251h-140c-8.284 0-15-6.716-15-15s6.716-15 15-15h140c24.813 0 45-20.187 45-45s-20.187-45-45-45-45 20.187-45 45c0 8.284-6.716 15-15 15s-15-6.716-15-15c0-41.355 33.645-75 75-75s75 33.645 75 75-33.645 75-75 75z" fill="#00c0f1"/></g><g><path d="m317 491c-41.355 0-75-33.645-75-75 0-8.284 6.716-15 15-15s15 6.716 15 15c0 24.813 20.187 45 45 45s45-20.187 45-45-20.187-45-45-45h-260c-8.284 0-15-6.716-15-15s6.716-15 15-15h260c41.355 0 75 33.645 75 75s-33.645 75-75 75z" fill="#51faff"/></g><g><path d="m317 341h-61v30h61c24.813 0 45 20.187 45 45s-20.187 45-45 45-45-20.187-45-45c0-8.284-6.716-15-15-15-.338 0-.668.029-1 .05v58.503c13.618 19.019 35.878 31.447 61 31.447 41.355 0 75-33.645 75-75s-33.645-75-75-75z" fill="#00c0f1"/></g><g><path d="m77 311h-62c-8.284 0-15-6.716-15-15s6.716-15 15-15h62c8.284 0 15 6.716 15 15s-6.716 15-15 15z" fill="#51faff"/></g><path d="m145.606 446.394-40-40c-5.858-5.858-15.355-5.858-21.213 0s-5.858 15.355 0 21.213l14.394 14.393h-83.787c-8.284 0-15 6.716-15 15s6.716 15 15 15h83.787l-14.394 14.394c-5.858 5.858-5.858 15.355 0 21.213s15.355 5.858 21.213 0l40-40c5.858-5.858 5.858-15.355 0-21.213z" fill="#00607f"/><g><path d="m237 251h-40c-8.284 0-15-6.716-15-15s6.716-15 15-15h40c8.284 0 15 6.716 15 15s-6.716 15-15 15z" fill="#51faff"/></g><path d="m251.716 110.539c35.573-35.573 32.791-93.823 32.655-96.285-.422-7.634-6.518-13.729-14.151-14.151-2.466-.138-60.713-2.918-96.285 32.655-29.131 29.131-32.54 73.462-32.745 89.918-16.847 21.561-15.37 52.885 4.461 72.716 5.858 5.858 15.355 5.858 21.213 0s5.858-15.355 0-21.213c-8.379-8.38-9.548-21.274-3.52-30.922 17.543-.405 60.112-4.458 88.372-32.718z" fill="#00ccb2"/><g><g><path d="m166.863 174.178c-8.379-8.38-9.548-21.274-3.52-30.922 17.544-.404 60.112-4.458 88.373-32.718 35.573-35.573 32.791-93.823 32.655-96.285-.211-3.817-1.84-7.249-4.371-9.78l-150.398 150.394c-.436 14.623 4.911 29.386 16.049 40.524 5.858 5.858 15.355 5.858 21.213 0 5.857-5.858 5.857-15.355-.001-21.213z" fill="#00969c"/></g></g><g><path d="m367 311h-230c-8.284 0-15-6.716-15-15s6.716-15 15-15h230c8.284 0 15 6.716 15 15s-6.716 15-15 15z" fill="#51faff"/></g><g><path d="m367 281h-111v30h111c8.284 0 15-6.716 15-15s-6.716-15-15-15z" fill="#00c0f1"/></g></g></svg>
+                            </span>
+                            <div class="dashboardCO2Data">
+                                <h2 id="AIREmetrica">44</h2>
+                                <h3>Bueno</h3>
+                                <p>Calidad del Aire</p>
+                            </div>
+                            
+                        </article>
+                    </div>
+                    
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="dashboardIzq">
+
+                <div class="dashboardContaintVisitantes" id="estimadoVisitantes">
+                    <h3>Estimado de visitantes</h3>
+                    <div class="containtCardsVisitantes">
+
+
+                        <article class="cardVisitantes" id="vistantesBoquia">
+                            <div id="donut_single1" style="width:200px; height: 200px;"></div> 
+                                                    
+                            <p>Boquia <br> <span id="dynamic_value_1"></span>% de personas</p>  
+        
+                        </article>
+
+
+                        <article class="cardVisitantes" id="visitantesSalento">
+                            <div id="donut_single2" style="width:200px; height: 200px;"></div>
+                            <p>Salento <br> <span id="dynamic_value_2"></span>% de personas</p>
+                        </article>
+
+                        <article class="cardVisitantes" id="visitantesCocora">
+                            <div id="donut_single3" style="width:200px; height: 200px;"></div>
+                            <p>Cocora <br> <span id="dynamic_value_3"></span>% de personas</p>
+                        </article>
+
+
+                    </div>
+                </div>
+
+
+
+
+                
+                <div class="dashboardParkingContaint" id="parqueInteligente">
+                    <h3 style="margin-bottom: 20px;">Parqueo Inteligente</h3>
+                    
+                    <div class="dashboardParkingContaintCards">
+                        
+                        <article class="dashboardParkingCard">
+                            <span class="parkingCardRojo">
+                                <h2 id="parqueaderosSinCupo">5</h2>
+                            </span>
+                            <div class="parkingCardData">
+                                
+                                <p>Parqueaderos</p>
+                                <h3>Sin cupo</h3>
+                            </div>
+                            
+                        </article>
+    
+                        <article class="dashboardParkingCard">
+                            <span class="parkingCardVerde">
+                                <h2 id="parqueaderosSinCupo">40</h2>
+                            </span>
+                            <div class="parkingCardData">
+                                
+                                <p>Parqueaderos</p>
+                                <h3>Con cupo</h3>
+                            </div>
+                            
+                        </article>
+    
+                        <article class="dashboardParkingCard">
+                            <span class="parkingCardAzul">
+                                <h2 id="metricaPARQUEADEROS">45</h2>
+                            </span>
+                            <div class="parkingCardData">
+                                
+                                <p>Parqueaderos</p>
+                                <h3>En total</h3>
+                            </div>
+                            
+                        </article>
+                    </div>
+
+                    
+                    
+                </div>
+
+
+                <div class="dashboardContaintVisitantes" id="flujoVehicular">
+                    <h3>Flujo Vehicular en Tiempo Real</h3>
+                    <div class="containtCardsVisitantes">
+
+
+                        <article class="cardVisitantes">
+                            <div id="donut_single4" style="width:200px; height: 200px;"></div>   
+                            <p>Boquia <br> <span id="dynamic_value_4"></span>Personas</p>  
+                        </article>
+
+
+                        <article class="cardVisitantes">
+                            
+                                <div id="donut_single5" style="width:200px; height: 200px;"></div>
+                                <p>Salento <br> <span id="dynamic_value_5"></span>Personas</p>                    
+                        
+                        </article>
+
+                        <article class="cardVisitantes">
+                          
+                                <div id="donut_single6" style="width:200px; height: 200px;"></div>
+                                <p>Cocora <br> <span id="dynamic_value_6"></span>Personas</p>                    
+                        
+                         
+                        </article>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+        
+        
+
+        <script>
+            let currentIndex = 0;
+            const totalImages = document.querySelectorAll('.carousel-image').length;
+        
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % totalImages;
+                updateCarousel();
+            }
+        
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                updateCarousel();
+            }
+        
+            function updateCarousel() {
+                const imageContainer = document.getElementById('image-container');
+                const position = -currentIndex * 100 + '%';
+                imageContainer.style.transform = 'translateX(' + position + ')';
+            }
+        </script>
+
+
+        
+    </body>
+
+    </html>

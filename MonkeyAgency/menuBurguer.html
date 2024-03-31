@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <style>
+
+
+
+.popup {
+  font-family: 'Poppins', sans-serif !important;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: 9999;
+  opacity: 0;
+  
+}
+
+.popup.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.popup-content {
+  position: relative;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(43 48 68 / 56%);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    
+    text-align: center;
+    color: #ffffff;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.popup-content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+}
+
+
+
+              .btnMenu {
+        width: 150px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        transition: all 0.5s ease-in-out;
+        font-size: 20px;
+        
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+background: linear-gradient(318deg, rgba(0, 0, 0, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%), #E7EBF0;
+background-blend-mode: soft-light, normal;
+box-shadow: 5px 5px 10px 0px #A6ABBD, -5px -5px 10px 0px #FAFBFF;
+      }
+
+      .btnMenu:hover {
+        box-shadow: 0 0 20px 0px #2e2e2e3a;
+      }
+
+      .btnMenu .icon {
+        position: absolute;
+        height: 40px;
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+      }
+
+      .btnMenu .text {
+        transform: translateX(55px);
+      }
+
+      .btnMenu:hover .icon {
+        width: 175px;
+      }
+
+      .btnMenu:hover .text {
+        transition: all 0.5s;
+        opacity: 0;
+      }
+
+      .btnMenu:focus {
+        outline: none;
+      }
+
+      .btnMenu:active .icon {
+        transform: scale(0.85);
+      }
+      .menuBurguer {
+          display: flex;
+          align-items: center;
+          padding: 0.7rem 7rem;
+          background: #1c1e21;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+          
+          
+          
+          justify-content: space-between;
+      }
+      
+      .menuBurguer img {
+          width: 9%;
+      }
+      .menuBurguerClose {
+          display: flex;
+          align-items: center;
+          
+          background: #1c1e2100;
+          
+          
+          
+          justify-content: space-between;
+      }
+      
+      .menuBurguerClose img {
+          display: none;
+      }
+
+      .popup_containtColumns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      
+      
+      .menuOferta {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        border-right: solid 1px #ffffff;
+        
+        gap: 15px;
+        justify-content: space-between
+      }
+      .menuEstudiantes {
+        width: 50%;
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        
+        gap: 10px;
+        justify-content: space-between
+      }
+      .menuEstudiantes a {
+        text-decoration: none;
+      }
+      .menuInstitucion {
+        width: 35%;
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        
+        justify-content: space-between
+        
+      }
+      .menuInstitucionList {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+     
+      
+      
+      .menuOfertaItem_alert {
+        font-size: 11px;
+        padding: 2px 0px;
+        
+        color: #3485c3 !important;
+        font-weight: 500;
+        margin-top: 10px;
+      }
+      .menuInstitucionButton {
+        padding: 5px 13px;
+        display: flex;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: hsl(206, 58%, 48%);
+        font-weight: 600;
+        border-radius: 6px;
+        gap: 5px;
+        align-items: center;
+        font-size: 12px;
+        justify-content: center;
+        gap: 20px;
+        
+      }
+      .menuInstitucionList a {
+        color: #040f16;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+        
+        
+      }
+
+      .dropdown p {
+        color: #040f16;
+        
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+        cursor: pointer;
+        
+        
+      }
+      .menuInstitucionList {
+        display: flex;
+        flex-direction: column;
+        
+        align-items: flex-start;
+        text-align: start;
+        
+
+      }
+      .dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  
+    border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdownProgramas {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-contentProgramas {
+  display: none;
+  position: relative;
+  width: 80%;
+  
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+.dropdownProgramas:hover .dropdown-contentProgramas {
+  display: block;
+}
+
+.menuInstitucionSubList {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.menuInstitucionSubList a {
+  text-decoration: none;
+  padding: 5px 0px;
+  border-bottom: #333 solid 1px;
+}
+.menuButtonEstudiantes {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  padding: 20px 15px;
+  margin-bottom: 5px;  
+  font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif !important;
+  
+  
+  transition-duration: .2s;
+  border-radius: 10px;
+border: 1px solid rgba(255, 255, 255, 0.40);
+background: linear-gradient(318deg, rgba(0, 0, 0, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%), #E7EBF0;
+background-blend-mode: soft-light, normal;
+box-shadow: 2.5px 2.5px 5px 0px #A6ABBD inset, -2.5px -2.5px 5px 0px #FAFBFF inset;
+}
+
+.bell {
+  width: 13px;
+}
+
+.bell path {
+  fill: #3485c3;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuButtonEstudiantes:hover {
+  background-color: rgb(255, 255, 255) ;
+  backdrop-filter: blur(10px);
+  transition-duration: .2s;
+}
+
+.menuButtonEstudiantes:hover .arrow {
+  animation: slide-right .6s ease-out both;
+}
+/* arrow animation */
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.menuButtonEstudiantes:active {
+  transform: translate(1px , 1px);
+  transition-duration: .2s;
+}
+
+.cardAspirantes {
+  width: 100%;
+  
+  height: 70px;
+  background: #488aec;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.cardAspirantes:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.imgAspirantes {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: linear-gradient(#d7cfcf, #9198e5);
+  background-image: url("https://grupofinancierobbva.com/wp-content/uploads/2023/06/documento-1.png");
+  background-size: contain;
+  
+}
+
+
+
+.textBoxAspirantes {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: white;
+  font-family: 'Poppins' sans-serif;
+}
+
+.textContentAspirantes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spanAspirantes {
+  font-size: 10px;
+}
+
+.h2Aspirantes {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 !important;
+  text-align: start;
+}
+
+.pAspirantes {
+  font-size: 11px;
+  font-weight: lighter;
+  margin: 0 !important;
+  line-height: 0.9rem;
+  text-align: start;
+}
+
+.continue-application {
+  --color: #fff;
+  --background: #404660;
+  --background-hover: #3A4059;
+  --background-left: #2B3044;
+  --folder: #F3E9CB;
+  --folder-inner: #BEB393;
+  --paper: #FFFFFF;
+  --paper-lines: #BBC1E1;
+  --paper-behind: #E1E6F9;
+  --pencil-cap: #fff;
+  --pencil-top: #275EFE;
+  --pencil-middle: #fff;
+  --pencil-bottom: #5C86FF;
+  --shadow: rgba(13, 15, 25, .2);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  padding: 17px 29px 17px 69px !important;
+  transition: background 0.3s;
+  color: var(--color);
+  background: var(--bg, var(--background)) !important;
+  margin-top: 20px;
+}
+
+.continue-application > div {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 53px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 5px 0 0 5px;
+  background: var(--background-left);
+}
+
+.continue-application > div .folder {
+  width: 23px;
+  height: 27px !important;
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+
+.continue-application > div .folder .top {
+  left: 0;
+  top: 0;
+  z-index: 2;
+  position: absolute;
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application > div .folder .top svg {
+  width: 24px;
+  height: 27px;
+  display: block;
+  fill: var(--folder);
+  transform-origin: 0 50%;
+  transition: transform 0.3s ease var(--fds, 0.45s);
+  transform: perspective(120px) rotateY(var(--fr, 0deg));
+}
+
+.continue-application > div .folder:before, .continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+  content: "";
+  position: absolute;
+  left: var(--l, 0);
+  top: var(--t, 0);
+  width: var(--w, 100%);
+  height: var(--h, 100%);
+  border-radius: 1px;
+  background: var(--b, var(--folder-inner));
+}
+
+.continue-application > div .folder:before {
+  box-shadow: 0 1.5px 3px var(--shadow), 0 2.5px 5px var(--shadow), 0 3.5px 7px var(--shadow);
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+  --l: 1px;
+  --t: 1px;
+  --w: 21px;
+  --h: 25px;
+  --b: var(--paper-behind);
+}
+
+.continue-application > div .folder:after {
+  transform: translate(var(--pbx, 0), var(--pby, 0));
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application > div .folder .paper {
+  z-index: 1;
+  --b: var(--paper);
+}
+
+.continue-application > div .folder .paper:before, .continue-application > div .folder .paper:after {
+  content: "";
+  width: var(--wp, 14px);
+  height: 2px;
+  border-radius: 1px;
+  transform: scaleY(0.5);
+  left: 3px;
+  top: var(--tp, 3px);
+  position: absolute;
+  background: var(--paper-lines);
+  box-shadow: 0 12px 0 0 var(--paper-lines), 0 24px 0 0 var(--paper-lines);
+}
+
+.continue-application > div .folder .paper:after {
+  --tp: 6px;
+  --wp: 10px;
+}
+
+.continue-application > div .pencil {
+  height: 2px;
+  width: 3px;
+  border-radius: 1px 1px 0 0;
+  top: 8px;
+  left: 105%;
+  position: absolute;
+  z-index: 3;
+  transform-origin: 50% 19px;
+  background: var(--pencil-cap);
+  transform: translateX(var(--pex, 0)) rotate(35deg);
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application > div .pencil:before, .continue-application > div .pencil:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: var(--b, linear-gradient(var(--pencil-top) 55%, var(--pencil-middle) 55.1%, var(--pencil-middle) 60%, var(--pencil-bottom) 60.1%));
+  width: var(--w, 5px);
+  height: var(--h, 20px);
+  border-radius: var(--br, 2px 2px 0 0);
+  top: var(--t, 2px);
+  left: var(--l, -1px);
+}
+
+.continue-application > div .pencil:before {
+  -webkit-clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+  clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+}
+
+.continue-application > div .pencil:after {
+  --b: none;
+  --w: 3px;
+  --h: 6px;
+  --br: 0 2px 1px 0;
+  --t: 3px;
+  --l: 3px;
+  border-top: 1px solid var(--pencil-top);
+  border-right: 1px solid var(--pencil-top);
+}
+
+.continue-application:before, .continue-application:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color);
+  transform-origin: 9px 1px;
+  transform: translateX(var(--cx, 0)) scale(0.5) rotate(var(--r, -45deg));
+  top: 26px;
+  right: 16px;
+  transition: transform 0.3s;
+}
+
+.continue-application:after {
+  --r: 45deg;
+}
+
+.continue-application:hover {
+  --cx: 2px;
+  --bg: var(--background-hover);
+  --fx: -40px;
+  --fr: -60deg;
+  --fd: .15s;
+  --fds: 0s;
+  --pbx: 3px;
+  --pby: -3px;
+  --pbd: .15s;
+  --pex: -24px;
+}
+
+.buttonCampus {
+  border: none;
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  background-color: #488aec;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  text-align: center;
+  
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  user-select: none;
+  gap: 0.75rem;
+  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+  transition: all .6s ease;
+}
+
+.buttonCampus:hover {
+  box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+}
+
+.buttonCampus:focus, .buttonCampus:active {
+  opacity: .85;
+  box-shadow: none;
+}
+
+.buttonCampus svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.popupMenuContact {
+  position: relative;
+  width: 90%;
+  margin-top: 50px;
+  height: fit-content;
+  background: #FFFFFF;
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 13px;
+}
+
+.formMenuContact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px 10px;
+  align-items: center;
+  
+}
+
+.iconMenuContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #ECF1FD;
+  margin-bottom: 10px;
+  -webkit-box-shadow: inset 0px 2px 5px 0px rgb(0 0 0 / 58%);
+  
+  border-radius: 50px;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+.subtitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #5F5D6B;
+}
+
+
+
+
+
+
+
+
+.pfp {
+  border-radius: 35em;
+  fill: white;
+}
+
+
+.cardMenuContact {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 40px;
+}
+.socialbar {
+  
+  width: 80%;
+  padding: 10px;
+  
+  color: rgb(69, 69, 69);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  border-radius: 10px;
+border: 1px solid rgba(255, 255, 255, 0.40);
+background: linear-gradient(318deg, rgba(0, 0, 0, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%), #E7EBF0;
+background-blend-mode: soft-light, normal;
+box-shadow: 2.5px 2.5px 5px 0px #A6ABBD inset, -2.5px -2.5px 5px 0px #FAFBFF inset;
+  
+}
+
+.cardMenuContact a {
+  transition: 0.4s;
+  color: #2b3044;
+  margin: 0;
+  display: flex;
+}
+
+
+
+#twitter:hover {
+  color: #00acee;
+}
+.formMenuContact h2 {
+ 
+  margin: 0;
+  font-size: 14px;
+  line-height: 1rem;
+  margin-bottom: 10px;
+}
+.buttonInstitucional {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0px 8px;
+  background-color: rgba(66, 66, 66, 0);
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  border: none;
+  
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+}
+
+.bell {
+  width: 13px;
+}
+
+
+
+.arrow {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonInstitucional button:hover {
+  background-color: #00acee;
+  transition-duration: .2s;
+}
+
+.buttonInstitucional:hover .arrow {
+  animation: slide-right .6s ease-out both;
+}
+/* arrow animation */
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.buttonInstitucional:active {
+  transform: translate(1px , 1px);
+  transition-duration: .2s;
+}
+.menuOfertaSubmenu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.menuOfertaSubmenu a {
+  text-decoration: none;
+}
+
+.menuOfertaSubItem {
+  width: 90%;
+  
+  flex-shrink: 0;
+  border-radius: 16px;
+  
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+.menuOfertaSubItem_title a {
+  text-decoration: none;
+}
+.menuOfertaSubItem_title h3 {
+  margin: 0;
+  text-align: start;
+  color: #ffffff;
+  font-size: 14px;
+
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.menuOfertaSubItem_title p {
+  margin: 0;
+  color:#BDBDBD;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: start;
+}
+.menuOfertaSubItemImg {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: #9ab300;
+  background: linear-gradient(52deg, rgba(154,179,0,1) 0%, rgba(199,229,12,1) 51%, rgba(239,255,141,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menuOfertaSubItemImg svg {
+  fill: #000000;
+  
+}
+
+
+
+
+.menuEstudiantesSubItem {
+  width: 90%;
+  
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #F7F7F7;
+  display: flex;
+  padding: 13px;
+  align-items: center;
+  justify-content: space-between;
+}
+.menuEstudiantesSubItem_title a {
+  text-decoration: none;
+}
+.menuEstudiantesSubItem_title h3 {
+  margin: 0;
+  text-align: start;
+  color: #303030;
+  font-size: 13px;
+
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.menuEstudiantesSubItem_title p {
+  margin: 0;
+  color: #607D8B;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.9rem;
+  text-align: start;
+}
+.menuEstudiantesSubItemImg {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 10px;
+border: 1px solid rgba(255, 255, 255, 0.40);
+background: linear-gradient(318deg, rgba(0, 0, 0, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%), #E7EBF0;
+background-blend-mode: soft-light, normal;
+box-shadow: 2.5px 2.5px 5px 0px #A6ABBD inset, -2.5px -2.5px 5px 0px #FAFBFF inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menuEstudiantesSubItemImg svg {
+  fill: #488aec;
+  
+}
+.menuEstudiantesSubItemCTA svg {
+  fill: #404660;
+  
+}
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 2em;
+  /* Define the transition for transforming the SVG */
+ 
+}
+
+.line {
+  fill: none;
+  stroke: #ffffffc2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+
+
+
+.menuButtonBurguer {
+  display: inline-flex;
+  cursor: pointer;
+  padding: 3px 20px;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 255, 255);
+
+
+}
+
+.menuButtonBurguer h3 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 17px;
+  margin: 0;
+  font-weight: 700;
+  background: rgb(154,179,0);
+background: linear-gradient(52deg, rgba(154,179,0,1) 0%, rgba(199,229,12,1) 51%, rgba(239,255,141,1) 100%);
+        text-shadow: none;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        background-clip: text;
+        border-color: white;
+}
+
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  
+  
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  
+  border-radius: 50%;
+  
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+
+    border: 1px solid rgb(255, 255, 255);
+    
+
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: 26px;
+  left: 55%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: 60px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #3485c3;
+  color: #fff;
+  
+}
+
+
+.menuBurguerCTA {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.menuBurguerCTA ul {
+  margin: 0;
+  padding: 0;
+}
+.wrapper img {
+  width: 20px !important;
+}
+.menuBurguerClose .menuButtonBurguer {
+  display: none;
+}
+.menuOfertaSubItemCTA svg {
+  fill: #fff;
+}
+.menuCards_containt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.menuCard1 {
+  display: flex;
+  width: 170px;
+  height: 170px;
+  padding: 15px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.menuCard1 img {
+  width: 49%;
+}
+.menuCard2 {
+  display: flex;
+  width: 170px;
+  height: 170px;
+  
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.menuCard3 {
+  display: flex;
+  width: 170px;
+  height: 170px;
+  padding: 26px 35px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.menuCard4 {
+  display: flex;
+  width: 170px;
+  height: 170px;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+ 
+}
+.menuCard1CTA p {
+  
+  font-size: 12px;
+  line-height: 1.4rem;
+  text-align: start;
+  margin-bottom: 0;
+
+}
+.menuCard1CTA {
+  display: flex;
+  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+.menuCard1CTA svg {
+  fill: #fff;
+}
+.menuCard4CTA {
+  width: 48%;
+  height: 48%;
+  display: flex;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.menuCard2CTA {
+  display: flex;
+  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+.menuCard2CTA p {
+  font-size: 12px;
+  line-height: 1.4rem;
+  text-align: start;
+  margin-bottom: 0;
+}
+.menuCard2CTA svg {
+  fill: #fff;
+}
+.menuCard4CTA4 {
+  width: 48%;
+  height: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.menuCard4CTA4 p {
+  font-size: 10px;
+  color: #fff;
+  margin: 0;
+}
+.menuCard4CTA4 svg {
+  fill: #c7e50c;
+  height: 4rem;
+}
+
+.menuCard4CTA svg {
+    fill: #c7e50c;
+    height: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .menuBurguer {
+    padding: 0.7rem 1.5rem;
+    flex-direction: row-reverse;
+    
+  }
+  .menuBurguer img {
+    width: 25%;
+  }
+  .menuBurguerClose {
+    padding: 0.7rem 1.5rem;
+    flex-direction: row-reverse;
+    background: #1c1e21;
+    
+  }
+  .menuBurguerClose img {
+    width: 25%;
+    display: inline;
+  }
+  .popup_containtColumns {
+    flex-direction: column;
+  }
+  .menuOferta {
+    width: 100%;
+    border-right: none;
+    padding: 0;
+  }
+  .menuOfertaSubItem {
+    width: 100%;
+  }
+  .popup-content {
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    justify-content: flex-start;
+    border-radius: 0;
+  }
+  .menuBurguerbtnClose {
+    border-radius: 50px;
+    padding: 1rem;
+    
+  }
+  .menuBurguerbtnClose {
+    width: 0;
+    height: 0;
+  }
+  .popup-content {
+    padding: 0;
+  }
+  .menuOfertaSubmenu {
+    margin: 0px 20px;
+  }
+  .menuBurguerClose .menuButtonBurguer {
+  display: flex;
+  height: 45px;
+}
+.menuCards_containt {
+  flex-wrap: nowrap;
+  overflow: scroll;
+  justify-content: flex-start;
+}
+.menuEstudiantes {
+  width: 100%;
+}
+.menuCard1 {
+  width: 200px;
+  height: 200px;
+}
+.menuCard2 {
+  width: 200px;
+  height: 200px;
+}
+.menuCard3 {
+  width: 200px;
+  height: 200px;
+}
+.menuCard4 {
+  width: 200px;
+  height: 200px;
+}
+.menuCard2CTA p {
+  font-size: 14px;
+}
+.menuCard1CTA p {
+  font-size: 14px;
+}
+}
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="menuBurguer">
+        
+            <img src="https://monkeytwomonkey.com/wp-content/uploads/2023/07/LogoSinEslogan.png" alt="">
+       
+            <div class="menuBurguerCTA">
+              
+             
+
+              <div class="menuButtonBurguer" id="openPopupButton">
+                <h3>MENU</h3>
+                <label class="hamburger" >
+                  <input type="checkbox">
+                  <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                    <path class="line" d="M7 16 27 16"></path>
+                  </svg>
+                </label>
+                
+                
+              </div>
+
+
+            </div>
+        
+            
+
+    </nav>
+
+
+    <div id="popup" class="popup">
+      
+
+        <div class="popup-content">
+
+          <nav class="menuBurguerClose">
+        
+            <img src="https://monkeytwomonkey.com/wp-content/uploads/2023/07/LogoSinEslogan.png" alt="">
+       
+            <div class="menuBurguerCTA">
+              
+             
+
+              <div class="menuButtonBurguer" id="closePopupButton">
+                <h3>CERRAR</h3>
+                <h2 style=" background: rgb(154,179,0);
+                background: linear-gradient(52deg, rgba(154,179,0,1) 0%, rgba(199,229,12,1) 51%, rgba(239,255,141,1) 100%); ; color: #000000 !important; border-radius: 50px; width: 20px;
+                height: 20px; display: flex; align-items: center; justify-content: center; font-size:12px; font-weight: 800; margin: 0;">X</h2>
+                
+                  
+                
+                
+              </div>
+
+
+            </div>
+        
+            
+
+    </nav>
+          <section class="popup_containtColumns">
+
+            <div>
+
+             
+
+
+            </div>
+
+            <div class="menuOferta">
+                
+              
+             
+           
+ 
+            
+
+              
+              
+
+              
+                  <section class="menuOfertaSubmenu">
+                    
+
+                    <a href="#">
+                      <article class="menuOfertaSubItem">
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                        <div class="menuOfertaSubItemImg">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M288 0H160 128C110.3 0 96 14.3 96 32s14.3 32 32 32V196.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2 0 429.7 0 442.6C0 480.9 31.1 512 69.4 512H378.6c38.3 0 69.4-31.1 69.4-69.4c0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7 0 32-14.3 32-32s-14.3-32-32-32H288zM192 196.8V64h64V196.8c0 23.7 6.6 46.9 19 67.1L309.5 320h-171L173 263.9c12.4-20.2 19-43.4 19-67.1z"/></svg>
+                        </div>
+
+                        <div class="menuOfertaSubItem_title">
+                          <h3>Investigación</h3>
+                          
+                        </div>
+                      </div>
+
+                        <div class="menuOfertaSubItemCTA">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="0.5em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                        </div>
+                      </article>
+                    </a>
+
+
+
+                    <a href="#">
+                      <article class="menuOfertaSubItem">
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                        <div class="menuOfertaSubItemImg">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M480 32c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9L381.7 53c-48 48-113.1 75-181 75H192 160 64c-35.3 0-64 28.7-64 64v96c0 35.3 28.7 64 64 64l0 128c0 17.7 14.3 32 32 32h64c17.7 0 32-14.3 32-32V352l8.7 0c67.9 0 133 27 181 75l43.6 43.6c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V300.4c18.6-8.8 32-32.5 32-60.4s-13.4-51.6-32-60.4V32zm-64 76.7V240 371.3C357.2 317.8 280.5 288 200.7 288H192V192h8.7c79.8 0 156.5-29.8 215.3-83.3z"/></svg>
+                         </div>
+
+                        <div class="menuOfertaSubItem_title">
+                          <h3>Estrategia publicitaria</h3>
+                          
+                        </div>
+                      </div>
+
+                        <div class="menuOfertaSubItemCTA">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="0.5em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                        </div>
+                      </article>
+                    </a>
+
+
+
+                    <a href="#">
+                      <article class="menuOfertaSubItem">
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                        <div class="menuOfertaSubItemImg">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M.3 89.5C.1 91.6 0 93.8 0 96V224 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64V224 96c0-35.3-28.7-64-64-64H64c-2.2 0-4.4 .1-6.5 .3c-9.2 .9-17.8 3.8-25.5 8.2C21.8 46.5 13.4 55.1 7.7 65.5c-3.9 7.3-6.5 15.4-7.4 24zM48 224H464l0 192c0 8.8-7.2 16-16 16L64 432c-8.8 0-16-7.2-16-16l0-192z"/></svg>
+                        </div>
+
+                        <div class="menuOfertaSubItem_title">
+                          <h3>Diseño y desarrollo web</h3>
+                          
+                        </div>
+                      </div>
+
+                        <div class="menuOfertaSubItemCTA">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="0.5em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                        </div>
+                      </article>
+                    </a>
+
+
+
+                    <a href="#">
+                      <article class="menuOfertaSubItem">
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                        <div class="menuOfertaSubItemImg">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M3.9 22.9C10.5 8.9 24.5 0 40 0H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L396.4 195.6C316.2 212.1 256 283 256 368c0 27.4 6.3 53.4 17.5 76.5c-1.6-.8-3.2-1.8-4.7-2.9l-64-48c-8.1-6-12.8-15.5-12.8-25.6V288.9L9 65.3C-.7 53.4-2.8 36.8 3.9 22.9zM288 368a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm120.8-32.6c.6-.9 1.8-2.1 4.2-3.4c5.1-2.7 12.5-4.1 18.7-4c8.2 .1 17.1 1.8 26.4 4.1c8.6 2.1 17.3-3.1 19.4-11.7s-3.1-17.3-11.7-19.4c-5.6-1.4-11.6-2.7-17.9-3.7V288c0-8.8-7.2-16-16-16s-16 7.2-16 16v9.5c-6.1 1.2-12.3 3.2-18 6.3c-11.8 6.3-23 18.4-21.8 37.2c1 16 11.7 25.3 21.6 30.7c8.8 4.7 19.7 7.8 28.6 10.3l1.8 .5c10.3 2.9 17.9 5.2 23.2 8.3c4.5 2.7 4.7 4.2 4.7 5.6c.1 2.4-.5 3.7-1 4.5c-.6 1-1.8 2.2-4 3.3c-4.7 2.5-11.8 3.8-18.5 3.6c-9.5-.3-18.5-3.1-29.9-6.8c-1.9-.6-3.8-1.2-5.8-1.8c-8.4-2.6-17.4 2.1-20 10.5s2.1 17.4 10.5 20c1.6 .5 3.3 1 5 1.6l0 0 0 0c7 2.3 15.1 4.8 23.7 6.6v11.4c0 8.8 7.2 16 16 16s16-7.2 16-16V438.7c6.2-1.1 12.5-3.1 18.3-6.2c12.1-6.5 22.3-18.7 21.7-36.9c-.5-16.2-10.3-26.3-20.5-32.3c-9.4-5.6-21.2-8.9-30.5-11.5l-.2 0c-10.4-2.9-18.3-5.2-23.9-8.2c-4.8-2.6-4.8-4-4.8-4.5l0-.1c-.1-1.9 .3-2.9 .8-3.6z"/></svg>
+                        </div>
+
+                        <div class="menuOfertaSubItem_title">
+                          <h3>Estrategias de marketing</h3>
+                          
+                        </div>
+                      </div>
+
+                        <div class="menuOfertaSubItemCTA">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="0.5em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                        </div>
+                      </article>
+                    </a>
+
+                    <a href="#">
+                      <article class="menuOfertaSubItem">
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                        <div class="menuOfertaSubItemImg">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M72 88a56 56 0 1 1 112 0A56 56 0 1 1 72 88zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3V245.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5V416c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V389.2C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112h32c24 0 46.2 7.5 64.4 20.3zM448 416V394.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176h32c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2V416c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32zm8-328a56 56 0 1 1 112 0A56 56 0 1 1 456 88zM576 245.7v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 32a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM240 304c0 16.2 6 31 16 42.3V261.7c-10 11.3-16 26.1-16 42.3zm144-42.3v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2V448c0 17.7-14.3 32-32 32H288c-17.7 0-32-14.3-32-32V405.2c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112h32c61.9 0 112 50.1 112 112z"/></svg>
+                        </div>
+
+                        <div class="menuOfertaSubItem_title">
+                          <h3>Branding</h3>
+                          
+                        </div>
+                      </div>
+
+                        <div class="menuOfertaSubItemCTA">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="0.5em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                        </div>
+                      </article>
+                    </a>
+
+
+                    <a href="#">
+                      <article class="menuOfertaSubItem">
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                        <div class="menuOfertaSubItemImg">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 48c0-26.5 21.5-48 48-48H592c26.5 0 48 21.5 48 48V464c0 26.5-21.5 48-48 48H381.3c1.8-5 2.7-10.4 2.7-16V253.3c18.6-6.6 32-24.4 32-45.3V176c0-26.5-21.5-48-48-48H256V48zM571.3 347.3c6.2-6.2 6.2-16.4 0-22.6l-64-64c-6.2-6.2-16.4-6.2-22.6 0l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L480 310.6V432c0 8.8 7.2 16 16 16s16-7.2 16-16V310.6l36.7 36.7c6.2 6.2 16.4 6.2 22.6 0zM0 176c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H16c-8.8 0-16-7.2-16-16V176zm352 80V480c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32V256H352zM144 320c-8.8 0-16 7.2-16 16s7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H144z"/></svg>
+                        </div>
+
+                        <div class="menuOfertaSubItem_title">
+                          <h3>Diseño de empaques</h3>
+                          
+                        </div>
+                      </div>
+
+                        <div class="menuOfertaSubItemCTA">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="0.5em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                        </div>
+                      </article>
+                    </a>
+
+                    <a href="#">
+                      <article class="menuOfertaSubItem">
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                        <div class="menuOfertaSubItemImg">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448 32H361.9l-1 1-127 127h92.1l1-1L453.8 32.3c-1.9-.2-3.8-.3-5.8-.3zm64 128V96c0-15.1-5.3-29.1-14-40l-104 104H512zM294.1 32H201.9l-1 1L73.9 160h92.1l1-1 127-127zM64 32C28.7 32 0 60.7 0 96v64H6.1l1-1 127-127H64zM512 192H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192z"/></svg>
+                        </div>
+
+                        <div class="menuOfertaSubItem_title">
+                          <h3>Gestión de contenidos digitales</h3>
+                          
+                        </div>
+                      </div>
+
+                        <div class="menuOfertaSubItemCTA">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="0.5em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                        </div>
+                      </article>
+                    </a>
+
+
+                    <a href="#">
+                      <article class="menuOfertaSubItem">
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                        <div class="menuOfertaSubItemImg">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M62.6 2.3C46.2-4.3 27.6 3.6 20.9 20C7.4 53.4 0 89.9 0 128s7.4 74.6 20.9 108c6.6 16.4 25.3 24.3 41.7 17.7S86.9 228.4 80.3 212C69.8 186.1 64 157.8 64 128s5.8-58.1 16.3-84C86.9 27.6 79 9 62.6 2.3zm450.8 0C497 9 489.1 27.6 495.7 44C506.2 69.9 512 98.2 512 128s-5.8 58.1-16.3 84c-6.6 16.4 1.3 35 17.7 41.7s35-1.3 41.7-17.7c13.5-33.4 20.9-69.9 20.9-108s-7.4-74.6-20.9-108C548.4 3.6 529.8-4.3 513.4 2.3zM340.1 165.2c7.5-10.5 11.9-23.3 11.9-37.2c0-35.3-28.7-64-64-64s-64 28.7-64 64c0 13.9 4.4 26.7 11.9 37.2L98.9 466.8c-7.3 16.1-.2 35.1 15.9 42.4s35.1 .2 42.4-15.9L177.7 448H398.3l20.6 45.2c7.3 16.1 26.3 23.2 42.4 15.9s23.2-26.3 15.9-42.4L340.1 165.2zM369.2 384H206.8l14.5-32H354.7l14.5 32zM288 205.3L325.6 288H250.4L288 205.3zM163.3 73.6c5.3-12.1-.2-26.3-12.4-31.6s-26.3 .2-31.6 12.4C109.5 77 104 101.9 104 128s5.5 51 15.3 73.6c5.3 12.1 19.5 17.7 31.6 12.4s17.7-19.5 12.4-31.6C156 165.8 152 147.4 152 128s4-37.8 11.3-54.4zM456.7 54.4c-5.3-12.1-19.5-17.7-31.6-12.4s-17.7 19.5-12.4 31.6C420 90.2 424 108.6 424 128s-4 37.8-11.3 54.4c-5.3 12.1 .2 26.3 12.4 31.6s26.3-.2 31.6-12.4C466.5 179 472 154.1 472 128s-5.5-51-15.3-73.6z"/></svg>
+                        </div>
+
+                        <div class="menuOfertaSubItem_title">
+                          <h3>Producción y gestión de medios</h3>
+                          
+                        </div>
+                      </div>
+
+                        <div class="menuOfertaSubItemCTA">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="0.5em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                        </div>
+                      </article>
+                    </a>
+
+
+
+
+
+                  </section>
+                
+
+
+
+
+
+              
+
+              
+
+
+            </div>
+
+            <div class="menuEstudiantes">
+
+             
+                <section class="menuCards_containt">
+                  <div class="menuCard1">
+                    <img src="https://monkeytwomonkey.com/wp-content/uploads/2023/07/Diseno-sin-titulo-2023-07-16T082601.643-1.png" alt="">
+                    <div class="menuCard1CTA">
+                      <p>Sobre <br> MonkeytwoMonkey</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg>
+                      
+                      
+                    </div>
+                  </div>
+
+                  <div class="menuCard2">
+                    <img width="100%" src="https://monkeytwomonkey.com/wp-content/uploads/2023/07/Diseno-sin-titulo-2023-07-16T151741.212-1.png" alt="">
+                    <div class="menuCard2CTA">
+                      <p>Portafolio</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg>
+                      
+                    </div>
+                  </div>
+
+                  <div class="menuCard3">
+
+                  </div>
+
+                  <div class="menuCard4">
+                    <div class="menuCard4CTA">
+                      <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                      </a>
+                    </div>
+                    <div class="menuCard4CTA">
+                      <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                      </a>
+                    </div>
+                    <div class="menuCard4CTA">
+                      <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+                      </a>
+                    </div>
+                    <div class="menuCard4CTA4">
+                      <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 60.7 28.7 32 64 32H512c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM128 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm32-128a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM128 384a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm96-248c-13.3 0-24 10.7-24 24s10.7 24 24 24H448c13.3 0 24-10.7 24-24s-10.7-24-24-24H224zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24H448c13.3 0 24-10.7 24-24s-10.7-24-24-24H224zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24H448c13.3 0 24-10.7 24-24s-10.7-24-24-24H224z"/></svg>
+                        <p>¿Te llámamos?</p>
+                      </a>
+                    </div>
+
+                  </div>
+                </section>
+             
+              
+
+              
+
+            </div>
+
+
+            
+
+          </section>
+          
+        </div>
+    </div>
+
+
+    
+   
+
+
+
+
+    <script>
+      document.getElementById("openPopupButton").addEventListener("click", function() {
+  document.getElementById("popup").classList.add("show");
+});
+
+document.getElementById("closePopupButton").addEventListener("click", function() {
+  document.getElementById("popup").classList.remove("show");
+});
+
+document.getElementById("popup").addEventListener("click", function(event) {
+  if (event.target === this) {
+    document.getElementById("popup").classList.remove("show");
+  }
+});
+  
+    </script>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,900;1,400&display=swap" rel="stylesheet">
+  
+    <title>Document</title>
+    <style>
+        .listDiplomados {
+            display: flex;
+            padding: 3rem;
+            background-color: #fff;
+            font-family: 'Poppins', sans-serif;
+            justify-content: center;
+        }
+
+        .listDiplomados-containt{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .listDiplomados-containtDiplomado {
+            display: flex;
+            flex-direction: column;
+            padding: 3rem;
+            border: solid 1px #404040;
+            border-radius: 15px;
+            width: 400px;
+            align-items: flex-end;
+            justify-content: space-evenly;
+
+        }
+        .listDiplomados-containtDiplomado h5 {
+            background-color: #19ae8a;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 12px;
+            margin-bottom: 30px;
+
+        }
+        .listDiplomados-containtDiplomado p {
+            font-size: 15px;
+            text-align: justify;
+            margin-top: 40px;
+            line-height: 22px;
+        }
+        .listDiplomados-containtCTA {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .listDiplomados-containtCTA a {
+            text-decoration: none;
+            font-size: 15px;
+            color: #404040;
+            
+            
+        }
+        .listDiplomadosCTA2  {
+            
+            background-color: #19ae8a;
+            padding: 8px 12px;
+            display: flex;
+            color: #fff !important;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            
+        }
+
+        @media only screen and (max-width: 768px) {
+            .listDiplomados {
+                flex-direction: column;
+            }
+            .listDiplomados-containtDiplomado {
+                width: 300px;
+            }
+            .listDiplomados-containt {
+                display: flex;
+                flex-direction: column;
+            }
+            .listDiplomados-containtCTA {
+                display: flex;
+                flex-direction: column;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="listDiplomados">
+        <div class="listDiplomados-containt">
+
+
+            <article class="listDiplomados-containtDiplomado">
+                <h5>DIPLOMADO</h5>
+                <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/03/Docencia-texto-1-1.png" alt="" width="200px">
+                
+                <p>Adquiere enfoques y modelos pedagógicos contemporáneos. Fortalece tus procesos de enseñanza y aprendizaje. Desarrolla competencias TIC, pedagógicas, didácticas, socio afectivas, curriculares y más.</p>
+
+                <div class="listDiplomados-containtCTA">
+                    <a href="https://www.eam.edu.co/pedagogia-y-docencia-universitaria/">Más información</a>
+                    <a class="listDiplomadosCTA2" href="https://www.eam.edu.co/pedagogia-y-docencia-universitaria/#form-registro">Regístrate ahora</a>
+                </div>
+            </article>
+
+            <article class="listDiplomados-containtDiplomado">
+                <h5 style="background-color: #be0ccb;">DIPLOMADO</h5>
+                <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/04/Marketing-texto-1-1.png" alt="" width="200px">
+                
+                <p>Aprende Comunicación Digital y Marketing de Contenidos, crea experiencias con tus clientes a través del marketing y fortalece los conceptos de comunicación digital.</p>
+
+                <div class="listDiplomados-containtCTA">
+                    <a href="https://www.eam.edu.co/comunicacion-digital-y-marketing-de-contenidos/">Más información</a>
+                    <a style="background-color: #be0ccb;" class="listDiplomadosCTA2" href="https://www.eam.edu.co/comunicacion-digital-y-marketing-de-contenidos/#form-registro">Regístrate ahora</a>
+                </div>
+            </article>
+
+
+        </div>
+    </section>
+</body>
+</html>

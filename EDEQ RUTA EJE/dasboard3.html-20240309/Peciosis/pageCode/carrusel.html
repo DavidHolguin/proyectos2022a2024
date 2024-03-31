@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .containtLoader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            z-index: 50;
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            
+        }
+
+        .loader {
+            position: relative;
+            width: 40px;
+            height: 60px;
+            animation: heartBeat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        .loader:before,
+        .loader:after {
+            content: "";
+            background: red;
+            width: 40px;
+            height: 60px;
+            border-radius: 50px 50px 0 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: rotate(45deg);
+            transform-origin: 50% 68%;
+            box-shadow: 5px 4px 5px #0004 inset;
+        }
+
+        .loader:after {
+            transform: rotate(-45deg);
+        }
+
+        @keyframes heartBeat {
+            0% {
+                transform: scale(0.95);
+            }
+            5% {
+                transform: scale(1.1);
+            }
+            39% {
+                transform: scale(0.85);
+            }
+            45% {
+                transform: scale(1);
+            }
+            60% {
+                transform: scale(0.95);
+            }
+            100% {
+                transform: scale(0.9);
+            }
+        }
+
+        /* Clase para ocultar el loader */
+        .loaded .containtLoader {
+            display: none;
+        }
+
+        .topgal {
+            /*    opacity: 0;
+            transition: opacity 1s;*/
+                
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            padding-top: 0px;
+            top: 0;
+            background-color: none;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-color: white;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            }
+
+        .topgal img{
+            cursor: default;
+            position: relative;
+            max-width: 100%;
+            height:100%;
+            width: auto;
+            align-self: auto;
+            object-fit: cover;
+        }
+        
+        .containMenu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 5;
+            top: 20px;
+            width: 100%;
+        }
+
+        .theme-switcher {
+            background-color: rgba(255, 255, 255, 0.56);
+            backdrop-filter: blur(10px);
+            padding: 3px 10px;
+            width: -moz-fit-content;
+            width: fit-content;
+            display: flex;
+            gap: 10px;
+            border-radius: 9999px;
+        }
+
+        .theme-switcher_switch {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: inherit;
+            border: 0;
+            background: none;
+            cursor: pointer;
+        }
+
+        .theme-switcher_switch:hover > .icon {
+            stroke: #323232;
+        }
+
+        .theme-switcher_switch:active {
+            background-color: #ffd1dc	;
+        }
+
+        .theme-switcher_switch:active > .icon {
+            stroke: white;
+        }
+    </style>
+</head>
+<body>
+    <section class="containtLoader">
+        <span class="loader"></span>
+    </section>
+
+    <div class="topgal">
+        <a class="gallery" href="https://expertos.monkeytwomonkey.com/wp-content/uploads/2024/03/IMG_20240314_111336_11zon-1-scaled.webp"><img style="-webkit-transform: translateZ(0);" class="imgmob" src="https://expertos.monkeytwomonkey.com/wp-content/uploads/2024/03/IMG_20240314_111336_11zon-1-scaled.webp"></a>
+        <a class="gallery" href="https://expertos.monkeytwomonkey.com/wp-content/uploads/2024/03/IMG_20240310_160405-EDIT-1-scaled.webp"><img style="-webkit-transform: translateZ(0);" class="imgmob" src="https://expertos.monkeytwomonkey.com/wp-content/uploads/2024/03/IMG_20240310_160405-EDIT-1-scaled.webp"></a>
+        <a class="gallery" href="https://expertos.monkeytwomonkey.com/wp-content/uploads/2024/03/IMG_20240106_175006-EDIT-scaled.webp"><img style="-webkit-transform: translateZ(0);" class="imgmob" src="https://expertos.monkeytwomonkey.com/wp-content/uploads/2024/03/IMG_20240106_175006-EDIT-scaled.webp"></a>
+        <a class="gallery" href="https://expertos.monkeytwomonkey.com/wp-content/uploads/2024/03/img-20240219-105100-edit-scaled.webp"><img style="-webkit-transform: translateZ(0);" class="imgmob" src="https://expertos.monkeytwomonkey.com/wp-content/uploads/2024/03/img-20240219-105100-edit-scaled.webp"></a>
+        <a class="gallery" href="https://expertos.monkeytwomonkey.com/wp-content/uploads/2024/03/IMG_20231027_184824-EDIT-scaled.webp"><img style="-webkit-transform: translateZ(0);" class="imgmob" src="https://expertos.monkeytwomonkey.com/wp-content/uploads/2024/03/IMG_20231027_184824-EDIT-scaled.webp " ></a>
+        <a class="gallery" href="https://julianaduque.site/wp-content/uploads/2024/03/IMG_20240310_154240-EDIT.webp"><img style="-webkit-transform: translateZ(0);" class="imgmob" src="https://julianaduque.site/wp-content/uploads/2024/03/IMG_20240310_154240-EDIT.webp"></a>
+        <a class="gallery" href="https://julianaduque.site/wp-content/uploads/2024/03/IMG_20240314_110414-EDIT-scaled.webp"><img style="-webkit-transform: translateZ(0);" class="imgmob" src="https://julianaduque.site/wp-content/uploads/2024/03/IMG_20240314_110414-EDIT-scaled.webp"></a>
+        <a class="gallery" href="https://julianaduque.site/wp-content/uploads/2024/03/img-20240223-101803-edit-scaled.webp"><img style="-webkit-transform: translateZ(0);" class="imgmob" src="https://julianaduque.site/wp-content/uploads/2024/03/img-20240223-101803-edit-scaled.webp"></a>
+        <a class="gallery" href="https://julianaduque.site/wp-content/uploads/2024/03/IMG_20211205_162817-angelica-franco-EDIT-1-scaled.jpg"><img style="-webkit-transform: translateZ(0);" class="imgmob" src="https://julianaduque.site/wp-content/uploads/2024/03/IMG_20211205_162817-angelica-franco-EDIT-1-scaled.jpg"></a>
+        <a class="gallery" href="https://julianaduque.site/wp-content/uploads/2024/03/IMG_20240107_120139-EDIT_1-scaled.webp"><img style="-webkit-transform: translateZ(0);" class="imgmob" src="https://julianaduque.site/wp-content/uploads/2024/03/IMG_20240107_120139-EDIT_1-scaled.webp"></a>
+        <a class="gallery" href="https://julianaduque.site/wp-content/uploads/2024/03/img-20240204-113151-edit_11zon-scaled.webp"><img style="-webkit-transform: translateZ(0);" class="imgmob" src="https://julianaduque.site/wp-content/uploads/2024/03/img-20240204-113151-edit_11zon-scaled.webp"></a>
+        
+    </div>
+    <section class="containMenu">
+            <div role="radiogroup" class="theme-switcher">
+    
+                
+                    <button
+                    type="button"
+                    role="radio"
+                    data-theme-switcher="true"
+                    data-active="false"
+                    class="theme-switcher_switch"
+                    aria-label="Switch to light theme"
+                    aria-checked="false"
+                    >
+                    <a href="https://julianaduque.site/" style="display: flex; justify-content: center; align-items: center;">
+                      <svg style="color: currentcolor; width: 22px; height: 22px;" clip-rule="evenodd" fill-rule="evenodd" height="24" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><g><path d="m19.75 8.5c0-1.519-1.231-2.75-2.75-2.75-3.271 0-9.729 0-13 0-1.519 0-2.75 1.231-2.75 2.75v10c0 1.519 1.231 2.75 2.75 2.75h13c1.519 0 2.75-1.231 2.75-2.75zm-1.5 0v10c0 .69-.56 1.25-1.25 1.25-3.271 0-9.729 0-13 0-.69 0-1.25-.56-1.25-1.25v-10c0-.69.56-1.25 1.25-1.25h13c.69 0 1.25.56 1.25 1.25z"/><path d="m4.961 7.249.039.001.032-.004c.144-.021.718-.143.718-.759v-.987c0-.332.132-.649.366-.884.235-.234.552-.366.884-.366h13c.69 0 1.25.56 1.25 1.25v10c0 .332-.132.649-.366.884-.235.234-.552.366-.884.366h-1c-.414 0-.75.336-.75.75s.336.75.75.75h1c.729 0 1.429-.29 1.945-.805.515-.516.805-1.216.805-1.945v-10c0-1.519-1.231-2.75-2.75-2.75-3.271 0-9.729 0-13 0-.729 0-1.429.29-1.945.805-.515.516-.805 1.216-.805 1.945v.987.006.007c0 .053.006.105.016.155.02.101.058.186.106.255.128.195.343.326.589.339z"/><path d="m3.217 20.521 4.19-4.344c.09-.093.235-.103.336-.022 0 0 1.054.843 1.054.843.722.578 1.77.493 2.391-.193l3.334-3.686c.049-.054.12-.084.193-.082s.141.036.187.093c1.216 1.502 3.515 4.342 3.515 4.342.261.322.733.371 1.055.111.322-.261.371-.733.111-1.055 0 0-2.299-2.839-3.515-4.342-.322-.397-.801-.634-1.312-.648s-1.003.196-1.346.575c0 0-3.335 3.686-3.335 3.686-.088.098-.238.11-.341.027l-1.054-.842c-.706-.565-1.725-.499-2.353.151l-4.19 4.344c-.287.298-.279.773.019 1.061.298.287.774.279 1.061-.019z"/><path d="m7 8.25c-.966 0-1.75.784-1.75 1.75s.784 1.75 1.75 1.75 1.75-.784 1.75-1.75-.784-1.75-1.75-1.75zm0 1.5c.138 0 .25.112.25.25s-.112.25-.25.25-.25-.112-.25-.25.112-.25.25-.25z"/></g></g></svg>
+                    </a>
+                        
+                       
+                    </button>
+              
+        
+                <button
+                  type="button"
+                  role="radio"
+                  data-theme-switcher="true"
+                  data-active="false"
+                  class="theme-switcher_switch"
+                  aria-label="Switch to system theme"
+                  aria-checked="false"
+                >
+                <a href="https://julianaduque.site/mensajes/" style="display: flex; justify-content: center; align-items: center;">
+                  <svg style="color: currentcolor; width: 22px; height: 22px;" id="svg8" height="24" viewBox="0 0 8.4666665 8.4666669" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><g id="layer1" transform="translate(0 -288.533)"><path id="rect823" d="m6.0019531 4c-1.6446939 0-3.0058593 1.3533477-3.0058593 2.9980469v9.7656251l-1.8886719 3.787109c-.33200945.664187.1500339 1.445793.8925781 1.447266h6.9980469v3.003906c0 1.644699 1.3611651 2.998047 3.0058591 2.998047h2c1.334635 0 1.334635-2.001953 0-2.001953h-2c-.571258 0-1.005859-.424856-1.005859-.996094v-3.003906h11c1.644694 0 3.003906-1.353386 3.003906-2.998047v-6.998047h2.998047c.571234 0 1.003906.426809 1.003906.998047v12.001953c0 .571238-.432649.996094-1.003906.996094h-6.001953c-1.334635 0-1.334635 2.001953 0 2.001953h6.001953c1.644694 0 2.996094-1.353348 2.996094-2.998047v-12.001953c0-1.644699-1.351377-2.998047-2.996094-2.998047h-2.998047v-3.0039061c0-1.6446992-1.359212-2.9980469-3.003906-2.9980469zm0 2.0019531h15.9960939c.571257 0 1.003906.4248182 1.003906.9960938v12.0019531c0 .571238-.432649.996094-1.003906.996094h-18.3808595l1.2773437-2.544922c.0693134-.140226.1047682-.294756.1035157-.451172v-10.0019531c0-.5712756.4326499-.9960938 1.0039062-.9960938zm3.8964844 3.9999999c-1.3037103.09543-1.2030809 2.03967.1035155 2h4.001953c1.304853-.02818 1.304853-1.971824 0-2h-4.001953c-.034482-.0018-.069033-.0018-.1035155 0zm.00391 4c-.0013.000648-.00261.0013-.00391.002-1.3025295.09647-1.202014 2.038512.1035155 2h7.994141c1.363604.03062 1.363604-2.030615 0-2h-7.994141c-.03315-.0023-.066394-.003-.099609-.002zm8.0976525 11.998047c-.552285 0-1 .447715-1 1s.447715 1 1 1 1-.447715 1-1-.447715-1-1-1z" fill-rule="evenodd" transform="matrix(.265 0 0 .265 0 288.533)" font-variant-ligatures="normal" font-variant-position="normal" font-variant-caps="normal" font-variant-numeric="normal" font-variant-alternates="normal" font-feature-settings="normal" text-indent="0" text-align="start" text-decoration-line="none" text-decoration-style="solid" text-decoration-color="rgb(0,0,0)" text-transform="none" text-orientation="mixed" white-space="normal" shape-padding="0" isolation="auto" mix-blend-mode="normal" solid-color="rgb(0,0,0)" solid-opacity="1" vector-effect="none" paint-order="stroke fill markers"/></g></svg>
+                </a>
+                
+                  
+                </button>
+                <button
+                  type="button"
+                  role="radio"
+                  data-theme-switcher="true"
+                  data-active="true"
+                  class="theme-switcher_switch"
+                  aria-label="Switch to dark theme"
+                  aria-checked="true"
+                >
+                <a href="https://julianaduque.site/amor" style="display: flex; justify-content: center; align-items: center;">
+                    <svg style="color: currentcolor; width: 22px; height: 22px;" viewBox="0 -28 512.00001 512" xmlns="http://www.w3.org/2000/svg"><path d="m512 153.867188c0 43.292968-16.132812 82.941406-50.773438 124.734374-30.996093 37.398438-75.53125 75.355469-127.113281 119.308594-17.625 15.015625-37.597656 32.039063-58.320312 50.171875-5.429688 4.75-12.386719 7.386719-19.613281 7.429688h-.179688c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085938-40.625-35.089844-58.21875-50.085938l-.089843-.066406c-51.574219-43.957031-96.128907-81.921875-127.117188-119.320313-34.648438-41.792968-50.78125-81.441406-50.78125-124.734374 0-42.066407 14.425781-80.882813 40.617188-109.292969 26.507812-28.75 62.875-44.574219 102.414062-44.574219 29.558594 0 56.617188 9.335938 80.449219 27.761719 12.027343 9.304687 22.921875 20.679687 32.519531 33.964843l.179688-.238281c9.558593-13.183593 20.394531-24.480469 32.347656-33.726562 23.824218-18.425781 50.894531-27.761719 80.441406-27.761719 39.546875 0 75.914062 15.824219 102.414062 44.574219 26.191407 28.410156 40.617188 67.214843 40.617188 109.292969zm0 0" fill="#ff5e95"/><path d="m512 153.867188c0 43.292968-16.132812 82.941406-50.773438 124.734374-30.996093 37.398438-75.53125 75.355469-127.113281 119.308594-17.625 15.015625-37.597656 32.039063-58.320312 50.171875-5.429688 4.75-12.386719 7.386719-19.613281 7.429688v-394.023438c9.558593-13.183593 20.394531-24.480469 32.347656-33.726562 23.824218-18.425781 50.894531-27.761719 80.441406-27.761719 39.546875 0 75.914062 15.824219 102.414062 44.574219 26.191407 28.410156 40.617188 67.214843 40.617188 109.292969zm0 0" fill="#ff3980"/></svg>
+                </a>
+                
+                </button>
+              </div>
+        </section>
+    
+
+    <script>
+        window.addEventListener("load", function () {
+            document.body.classList.add("loaded");
+        });
+    </script>
+
+    <script>
+        
+        $(function () {
+            $.fn.hScroll = function (amount) {
+                amount = amount || 120;
+                $(this).bind("DOMMouseScroll mousewheel", function (event) {
+                var oEvent = event.originalEvent,
+                direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
+                position = $(this).scrollLeft();
+                position += direction > 0 ? -amount : amount;
+                $(this).scrollLeft(position);
+                event.preventDefault();
+                })
+            };
+        });
+
+        $(document).ready(function() {
+        $('.topgal').hScroll(30); // You can pass (optionally) scrolling amount
+        });
+
+
+    </script>
+  
+</body>
+</html>

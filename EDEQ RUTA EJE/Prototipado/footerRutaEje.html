@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    
+    <style>
+        footer {
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #edeff68a;
+}
+b {
+    font-weight: 700;
+    color: #3a3a3a;
+}
+
+.footerContaint {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 5rem 2rem 0rem 2rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.footerColumn1, .footerColumn2, .footerColumn3, .footerColumn4 {
+    width: 22%;
+}
+
+.footerColumn1 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.footerColumn1 h2, .footerColumn2 h2, .footerColumn3 h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: start;
+    color: #676767;
+    font-weight: 700;
+}
+.footerColumn1 p, .footerColumn2 p{
+    font-size: 15px;
+    text-align: start;
+    line-height: 18px;
+    color: #676767;
+    margin-bottom: 20px;
+}
+.footerColumn2 svg {
+    width: 20px;
+    fill: #fff;
+    
+}
+.footerColumn2 a {
+    background-color: #009AB1;
+    color: #ffffff;
+    padding: 10px 19px 10px 19px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    gap: 5px;
+    font-size: 13x;
+    font-weight: 600;
+}
+.footerColumn3 h3 {
+    font-size: 19px;
+    text-align: center !important;
+    font-weight: 700;
+    align-self: center;
+}
+
+.footerColumn3  {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.footerColumn3 p {
+    font-size: 15px;
+    text-align: start;
+    line-height: 18px;
+    color: #676767;
+    margin-bottom: 15px;
+}
+.footerColumn3 a {
+    text-align: center !important;
+    margin: 0;
+    font-size: 20px;
+    color: #009AB1;
+    align-self: center;
+    margin-top: -10px;
+    font-weight: 600;
+}
+.footerColumn4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footerColumn4 img {
+    width: 100%;
+}
+
+.footerGovCO {
+    display: flex;
+    padding: 1rem 1rem 1rem 9rem;
+    background-color: #3366cc;
+    align-items: center;
+    gap: 5px;
+}
+
+.footerGovCOimg {
+    width: 150px;
+    height: 30.2px;
+}
+
+.footerGovCOProcolombia {
+    width: 40px;
+    height: 40px;
+}
+
+.tag, .footerMunicipiosTags a {
+    background-color: #009ab1;
+    color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 15px;
+}
+.footerFila2 {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    gap: 30px;
+}
+.footerFila2Column1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.footerFila2Column1 p, .footerFila2Column2 p{
+    margin: 0;
+    font-size: 15px;
+} 
+.footerFila2Column2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footerFila3 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+    background-color: #00777e;
+}
+.footerFila3 a {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.footerFila3 p  {
+    color: #fff;
+    margin: 0px !important;
+}
+.footerGovCORedes {
+    display: flex;
+    gap: 10px;
+}
+.footerGovCORedes svg {
+    fill: #f29400;
+    width:30px;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .footerContaint {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footerColumn1 p, .footerColumn2 p{
+        color: #555;
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 20px;
+        text-align: justify;
+        margin-bottom: 12px;
+    }
+
+    .footerColumn1, .footerColumn2, .footerColumn3, .footerColumn4 {
+        width: 100%;
+    }
+    .footerFila2 {
+        flex-direction: column;
+        font-size: 17px;
+        line-height: 19px;
+        text-align: center;
+        gap: 10px;
+        
+    }
+    .footerFila3 {
+        flex-direction: column;
+        gap: 0px;
+    }
+    .footerFila3 p, .footerColumn4 p {
+        font-size: 17px;
+        line-height: 19px;
+        text-align: center;
+
+    }
+    
+}
+
+    </style>
+</head>
+<body>
+    <footer>
+        <section class="footerContaint">
+            <div class="footerColumn1">
+                <h2>Líneas de contacto</h2>
+                <p><b>Línea Nacional:</b>01 8000 910115</p>
+                <p><b>Gratis desde celular:</b> 115 (Claro, Movistar, Tigo)</p>
+                <p><b>Marcación desde fijo o móvil:</b>(606) 746 43 00</p>
+               
+            </div>
+
+
+            <div class="footerColumn2">
+                <h2>Horarios de atención</h2>
+                <p><b>Sede principal:</b> Servicio al cliente y Recaudo:  Lunes a viernes de 7:00 a.m. a 5:00 p.m.</p>
+                <p><b>Sábados:</b>Servicios de Recaudo en Sede Principal  y Fundadores de 8:00 a.m. a  12 m.</p>
+                <p><b>Horario de notificaciones PQR: </b>Lunes a viernes de 7:00 a.m. a 12:00 m. /  1:30 p.m. a 5:00 p.m.</p>
+                <a href="https://www.edeq.com.co/acerca-de-edeq/nuestro-negocio/nuestros-horarios"><svg id="Layer_1" enable-background="new 0 0 64 64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m32 64c-17.64 0-32-14.36-32-32s14.36-32 32-32 32 14.36 32 32-14.36 32-32 32zm0-59.36c-15.09 0-27.36 12.27-27.36 27.36s12.27 27.36 27.36 27.36 27.36-12.27 27.36-27.36-12.27-27.36-27.36-27.36z"/></g><g><path d="m50.95 34.32h-18.95c-1.28 0-2.32-1.04-2.32-2.32v-22.28c0-1.28 1.04-2.32 2.32-2.32s2.32 1.04 2.32 2.32v19.96h16.63c1.28 0 2.32 1.04 2.32 2.32s-1.04 2.32-2.32 2.32z"/></g></g></svg>Conoce los horarios de atención</a>
+                
+            </div>
+            <div class="footerColumn3">
+                <h2>Contacto Transparente</h2>
+                <h3>LINEA ANTICORRUPCIÓN</h3>
+                <p style="text-align: justify;">Es un mecanismo para registrar actos indebidos de los trabajadores y/o contratistas de EDEQ.</p>
+                <p style="text-align: center; line-height: 28px; align-self: center; margin-bottom: 0;">Comunícate al <br><span style="font-size: 20px; font-weight: 800;">01 8000 522 955</span>  <br>reporta un acto indebido</p>
+                <a href="https://aplicaciones.epm.com.co/contactotransparente/#/inicio?site=2">Ingresando aquí</a>
+                
+            </div>
+            <div class="footerColumn4">
+                <img src="https://www.edeq.com.co/portals/0/certificados.png" alt="">
+                <div class="footerGovCORedes">
+                    <a href="https://www.facebook.com/EDEQGrupoEPM/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a>
+                    <a href="https://www.instagram.com/edeqgrupoepm/?hl=es-la"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                    <a href="https://twitter.com/EDEQGrupoEPM?s=08"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z"/></svg></a>
+                </div>
+            </div>
+        </section>
+        
+        <div class="footerFila2">
+            <div class="footerFila2Column1">
+                <p><b>Empresa de Energía del Quindío S.A ESP.</b>  Carrera 13 Nº 14-17 Armenia (Q), Colombia.</p>
+                <p><b>Correo electrónico: </b>edeq@edeq.com.co</p>
+            </div>
+            <div class="footerFila2Column2">
+                <p><b>Dirección de Correspondencia:</b> Carrera 13 Nº 14-17 Armenia (Q), Colombia</p>
+                <p><b>Correo notificaciones judiciales: </b>secretaria_general@edeq.com.co</p>
+            </div>
+        </div>
+
+
+        <div class="footerFila3">
+            <p>Copyright 2024 DNN Corp</p>
+            <a href="https://www.edeq.com.co/prueba/terminos-y-condiciones">Términos y condiciones</a>
+            <a href="https://www.edeq.com.co/-mapa-del-sitio">Mapa del sitio</a>
+        </div>
+
+
+
+        <div class="footerGovCO">
+            <img class="footerGovCOProcolombia" src="https://www.edeq.com.co/Portals/0/Images/footer/logo-co.png" alt="">
+            <img class="footerGovCOimg" src="https://www.edeq.com.co/Portals/0/Images/footer/logo-gov-co.png" alt="">
+            
+
+            </div>
+            
+        </div>
+    </footer>
+   
+</body>
+</html>

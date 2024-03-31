@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root{
+  --primaryBg:#e2e2e2;
+  --secondaryBg:#545466;
+  --textColor:#C9C9D0;
+  --linkColor:#2f468a;
+  --grayColor:#8C8C9B;
+}
+.about {
+  background: var(--primaryBg);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+}
+.section{
+    background: #ffffff;
+    width: 80%;
+    -webkit-box-shadow: 1px 2px 15px 4px var(--secondaryBg);
+    box-shadow: 1px 2px 15px 4px #b1b1bc;
+    padding-bottom: 20px;
+    border-radius: 15px;
+}
+.section-content{
+    padding: 2.5em;
+    padding-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #000;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 400 !important;
+  
+}
+.grids {
+  display:grid;
+  align-items:start;
+  justify-content:flex-start;
+  grid-template-columns:repeat(3,1fr);
+  gap:90px;
+  padding:4rem;
+  color:var(--textColor)
+}
+.grid{
+  display:flex;
+  flex-direction:column;
+  gap:17px;
+}
+.grid .link{
+  text-decoration:none;
+  color:blue;
+  width:80px;
+  max-width:100%;
+  padding:.5em;
+  border:1px solid transparent;
+  outline:none;
+}
+.grid .link:not(.active):hover{
+  border-radius:30px;
+  padding-right:20px;
+  color:var(--textColor);
+  border:1px solid var(--textColor);
+  box-shadow:3px 7px 10px rgba(0,0,0,.2);
+}
+.grid .active{
+  border-radius:30px;
+  padding-right:20px;
+  color:var(--textColor);
+  background:var(--linkColor)
+}
+.active:hover{
+  background:var(--primaryBg);
+  cursor:pointer;
+/*   letter-spacing:2px; */
+  border:1px solid var(--textColor);
+  box-shadow:3px 7px 10px rgba(0,0,0,.2);
+}
+.fas,.fab{
+  color:var(--linkColor);
+  font-size:18px;
+}
+small{
+  color:var(--grayColor);
+}
+span{
+  font-style:bold;
+}
+
+@media screen and (max-width:600px){
+  .section-content{
+    display:flex;
+    flex-direction:column;
+  }
+  .grids{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .grid{
+    border-bottom:1px solid rgba(0,0,0,.4);
+    padding:5px;
+    padding-bottom: 50px;
+  }
+}
+.grid span {
+    color:#2f468a;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.grid small {
+    margin-bottom: -10px;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+  .section {
+    width: 95%;
+  }
+  .grids {
+    gap: 47px;
+    padding: 3rem;
+  }
+  .section-content {
+    padding: 3rem;
+  }
+  #grid3 {
+    border-bottom:none !important;
+  }
+}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <section class="about">
+        
+    <div class="section">
+        <div class="section-content">
+          <div>
+            
+          <p>El Diplomado Pedagogía y Docencia Universitaria tiene como objetivo formar profesionales de diversas áreas del conocimiento, fortaleciendo competencias pedagógicas, didácticas, curriculares, actitudinales y tecnológicas para el desempeño de la misión como docente universitario.</p>
+          </div>
+          
+          
+        </div>
+        
+        <div class="grids">
+
+
+            <div class="grid">
+                <img src="https://portafolio.site/wp-content/uploads/2023/03/lista-de-verificacion-1.png" alt="" width="45px">
+                <span>Requisitos de Inscripción</span>
+               
+                <small>Formulario de inscripción.</small>
+                <small>Copia de la cédula ampliada al 150%.</small>
+                <small>Fotocopia del Acta y Diploma de pregrado.</small>
+                
+              </div>
+
+
+          <div class="grid">
+            <img src="https://portafolio.site/wp-content/uploads/2023/03/retorno-de-la-inversion-1.png" alt="" width="45px">
+            <span>Inversión</span>
+            <small>Matrícula pública en general: $ 952.000 </small>
+            <small>Comunidad EAM: $ 896.000</small>
+            
+          </div>
+          
+
+
+
+          <div class="grid" id="grid3">
+            <img src="https://portafolio.site/wp-content/uploads/2023/03/programar.png" alt="" width="45px">
+            <span>Duración</span>
+            <small>20 Semanas</small>
+            <small>120 Horas en su Totalidad</small>
+            
+          </small>
+        </div>
+      </div>
+    </section>
+</body>
+</html>

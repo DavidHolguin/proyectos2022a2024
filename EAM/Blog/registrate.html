@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regístrate Sesión</title>
+    <style>
+        .blogRegistro {
+            display: flex;
+            justify-content: center;
+        }
+        .blogRegistro-Containt {
+            display: flex;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin: 60px 16px;
+            overflow: hidden;
+            padding: 36px 24px;
+            gap: 60px;
+            position: relative;
+        }
+        .blogRegistro-ContaintImg {
+            width: 20%;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 28px;
+        }
+        .blogRegistro-ContaintCTA {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            padding: 2rem;
+        }
+        
+        .blogRegistro-ContaintCTA h2 {
+            margin: 0 25px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .blogRegistro-ContaintCTA p {
+            margin: 0 25px;
+            text-align: center;
+            font-size: 14px;
+        }
+        @media only screen and (max-width: 768px) {
+            .blogRegistro-Containt{
+                flex-direction: column-reverse;
+                gap: 0px;
+                padding: 4rem 0rem 0rem 0rem;
+            }
+            .blogRegistro-ContaintCTA {
+                width: 100%;
+                padding: 0%;
+
+            }
+            .blogRegistro-ContaintImg {
+                padding: 0%;
+                margin-left: -3rem;
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="blogRegistro">
+        <div class="blogRegistro-Containt">
+            <div class="blogRegistro-ContaintImg">
+                <img src="https://www.blog.google/static/blogv2/images/newsletter-homepage-woman-couch.svg" alt="">
+            </div>
+            <div class="blogRegistro-ContaintCTA">
+                <h2>Recibe las últimas noticias de la EAM en tu correo electrónico.</h2>
+                
+                <div class="blogRegistro-ContaintForm">
+                    <div data-paperform-id="ol6idbpc"></div><script>(function() {var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js"; document.body.appendChild(script); })()</script>
+                </div>
+                <p>Su información se utilizará de acuerdo con la <span><a href="">política de privacidad</a></span> de la Universidad EAM</p>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

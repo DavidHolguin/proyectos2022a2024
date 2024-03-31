@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html Lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <title>Document</title>
+    <style>
+
+        .jobs {
+            display: flex;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 0rem;
+
+
+        } 
+        .jobsContaint {
+            display: flex;
+            padding: 3rem 4rem;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .card {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        height: 348px;
+        width: 360px;
+        min-width: 250px;
+        padding: 2rem;
+        border-radius: 20px;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%), #4E555D;
+        background-blend-mode: soft-light, normal;
+        box-shadow: 2.5px 2.5px 5px 0px #35373E inset;
+        transition: .2s;
+        
+        justify-content: center;
+        }
+
+        .card:hover {
+        transform: translateY(-0.4rem);
+        }
+
+        .card-author {
+        position: relative;
+        
+        align-items: center;
+        
+        }
+
+        .author-name {
+        color: #7a7a8c;
+        }
+
+        .author-name-prefix {
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 14px;
+        
+        margin-top: 0px;
+        line-height: 2rem;
+        }
+
+        .author-avatar span {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #f2f2f2;
+        margin: 16px 10px;
+        }
+
+        .half-circle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 48px;
+        fill: none;
+        stroke: #ff8a00;
+        stroke-width: 8;
+        stroke-linecap: round;
+        }
+
+        .card-header {
+        
+        color: #ffffff;
+        }
+
+        .card-header p {
+        font-size: 14px;
+        
+        color: #7a7a8c;
+        }
+
+        .card-header .title {
+        font-size: 20px;
+        margin: 5px 0px;
+        cursor: pointer;
+        font-weight: 700;
+        
+        line-height: 1.5rem;
+        }
+
+        .card-header .title:hover {
+        background: linear-gradient(90deg,#ff8a00,#e52e71);
+        text-shadow: none;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+
+        .tags {
+        
+        padding: .5rem 0 1rem;
+        line-height: 2;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        }
+
+        .tags a {
+        font-style: normal;
+        font-weight: 700;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 11px;
+        border: 1px solid #ffffff;
+        border-radius: 2rem;
+        padding: .2rem 2rem .2rem;
+        position: relative;
+        text-decoration: none;
+        }
+
+        .tags a:hover {
+        background: linear-gradient(90deg,#ff8a00,#e52e71);
+        text-shadow: none;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        background-clip: text;
+        border-color: white;
+        }
+        .author-data {
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .author-data p {
+            font-size: 9px;
+            margin-bottom: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #9E9E9E;
+            margin-bottom: -18px !important;
+
+        }
+        .author-data h3 {
+            font-size: 12px;
+            color: #fff;
+            margin: 0 !important;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .author-data_containt {
+            margin: 20px 0px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .info {
+  
+  width: 400px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background: #3485c3;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
+}
+
+.info__icon {
+  width: 20px;
+  height: 20px;
+  transform: translateY(-2px);
+  margin-right: 8px;
+}
+
+.info__icon path {
+  fill: #fff;
+}
+
+.info__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.info__close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.info__close path {
+  fill: #fff;
+}
+.authorDay {
+    display: flex;
+    justify-content: space-between;
+}
+.authorDayIcon {
+    display: flex;
+    align-items: center;
+    gap:4px
+}
+.authorDayConvocatoria p {
+    font-size: 12px;
+    text-align: center;
+}
+.success {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background: #84D65A;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
+}
+
+.success__icon {
+  width: 20px;
+  height: 20px;
+  transform: translateY(-2px);
+  margin-right: 8px;
+}
+
+.success__icon path {
+  fill: #17141d;
+}
+
+.success__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #17141d;
+}
+
+.success__close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.success__close path {
+  fill: #393A37;
+}
+.jobsStatus {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonJobs {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0px 15px;
+  font-size: 12px;
+  color: white;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  border-radius: 10px;
+background: linear-gradient(134deg, rgba(0, 0, 0, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%), #4E555D;
+background-blend-mode: soft-light, normal;
+box-shadow: 15px 15px 30px 0px #35373E inset, -15px -15px 30px 0px rgba(250, 251, 255, 0.10) inset;
+margin-bottom: 5px;
+}
+.card a {
+    text-decoration: none;
+}
+
+.bell {
+  width: 13px;
+}
+
+.buttonJobs svg {
+  fill: rgb(0, 206, 62);
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonJobs:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+  transition-duration: .2s;
+}
+
+.buttonJobs:hover .arrow {
+  animation: slide-right .6s ease-out both;
+}
+/* arrow animation */
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.buttonJobs:active {
+  transform: translate(1px , 1px);
+  transition-duration: .2s;
+}
+
+        
+    </style>
+</head>
+<body>
+    <section class="jobs">
+        <div class="jobsContaint">
+
+
+            <div class="card">
+                <header class="card-header">
+                    <div class="jobsStatus">
+                        <div class="success">
+                            <div class="success__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none"><path fill-rule="evenodd" fill="#393a37" d="m12 1c-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11-4.925-11-11-11zm4.768 9.14c.0878-.1004.1546-.21726.1966-.34383.0419-.12657.0581-.26026.0477-.39319-.0105-.13293-.0475-.26242-.1087-.38085-.0613-.11844-.1456-.22342-.2481-.30879-.1024-.08536-.2209-.14938-.3484-.18828s-.2616-.0519-.3942-.03823c-.1327.01366-.2612.05372-.3782.1178-.1169.06409-.2198.15091-.3027.25537l-4.3 5.159-2.225-2.226c-.1886-.1822-.4412-.283-.7034-.2807s-.51301.1075-.69842.2929-.29058.4362-.29285.6984c-.00228.2622.09851.5148.28067.7034l3 3c.0983.0982.2159.1748.3454.2251.1295.0502.2681.0729.4069.0665.1387-.0063.2747-.0414.3991-.1032.1244-.0617.2347-.1487.3236-.2554z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <div class="success__title">Convocatoria No. 015 vigente.</div>
+                        </div>
+                    </div>
+                  <span class="title">Web Master</span>
+                  <div class="author-name">
+                    <div class="author-name-prefix">Gestión TIC</div> 
+                    </div>
+                </header>
+                <div class="card-author">
+                <section class="author-data_containt">
+                    
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Apertura:</p>
+                                    <h3>24 de julio 2023</h3>
+                                </div>
+                            </div>
+
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Cierre:</p>
+                                    <h3>01 de agosto 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+
+
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Preseleccionados:</p>
+                                    <h3>02 de agosto 2023</h3>
+                                </div>
+                            </div>
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Resultados:</p>
+                                    <h3>04 de agosto 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>                   
+                    </article>
+                </section>
+
+                  </div>
+                  <div >
+                    
+                    <a href="https://drive.google.com/file/d/1fD4WqsWQpSaW32cDEvKpZj6Nb30kziAh/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Requisitos y como aplicar
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                  </div>
+                </div>
+
+
+
+            
+            <div class="card">
+                <header class="card-header">
+                    <div class="jobsStatus">
+                        <div class="success">
+                            <div class="success__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none"><path fill-rule="evenodd" fill="#393a37" d="m12 1c-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11-4.925-11-11-11zm4.768 9.14c.0878-.1004.1546-.21726.1966-.34383.0419-.12657.0581-.26026.0477-.39319-.0105-.13293-.0475-.26242-.1087-.38085-.0613-.11844-.1456-.22342-.2481-.30879-.1024-.08536-.2209-.14938-.3484-.18828s-.2616-.0519-.3942-.03823c-.1327.01366-.2612.05372-.3782.1178-.1169.06409-.2198.15091-.3027.25537l-4.3 5.159-2.225-2.226c-.1886-.1822-.4412-.283-.7034-.2807s-.51301.1075-.69842.2929-.29058.4362-.29285.6984c-.00228.2622.09851.5148.28067.7034l3 3c.0983.0982.2159.1748.3454.2251.1295.0502.2681.0729.4069.0665.1387-.0063.2747-.0414.3991-.1032.1244-.0617.2347-.1487.3236-.2554z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <div class="success__title">Convocatoria No. 015 vigente.</div>
+                        </div>
+                    </div>
+                  <span class="title">Instructor de Actividad Física </span>
+                  <div class="author-name">
+                    <div class="author-name-prefix">Dirección de bienestar institucional </div> 
+                    </div>
+                </header>
+                <div class="card-author">
+                <section class="author-data_containt">
+                    
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Apertura:</p>
+                                    <h3>24 de julio 2023</h3>
+                                </div>
+                            </div>
+
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Cierre:</p>
+                                    <h3>01 de agosto 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+
+
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Preseleccionados:</p>
+                                    <h3>02 de agosto 2023</h3>
+                                </div>
+                            </div>
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Resultados:</p>
+                                    <h3>04 de agosto 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>                   
+                    </article>
+                </section>
+
+                  </div>
+                  <div >
+                    
+                    <a href="https://drive.google.com/file/d/1fD4WqsWQpSaW32cDEvKpZj6Nb30kziAh/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Requisitos y como aplicar
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                  </div>
+                </div>
+
+
+
+            
+            
+            
+            <div class="card">
+                <header class="card-header">
+                    <div class="jobsStatus">
+                        <div class="success">
+                            <div class="success__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none"><path fill-rule="evenodd" fill="#393a37" d="m12 1c-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11-4.925-11-11-11zm4.768 9.14c.0878-.1004.1546-.21726.1966-.34383.0419-.12657.0581-.26026.0477-.39319-.0105-.13293-.0475-.26242-.1087-.38085-.0613-.11844-.1456-.22342-.2481-.30879-.1024-.08536-.2209-.14938-.3484-.18828s-.2616-.0519-.3942-.03823c-.1327.01366-.2612.05372-.3782.1178-.1169.06409-.2198.15091-.3027.25537l-4.3 5.159-2.225-2.226c-.1886-.1822-.4412-.283-.7034-.2807s-.51301.1075-.69842.2929-.29058.4362-.29285.6984c-.00228.2622.09851.5148.28067.7034l3 3c.0983.0982.2159.1748.3454.2251.1295.0502.2681.0729.4069.0665.1387-.0063.2747-.0414.3991-.1032.1244-.0617.2347-.1487.3236-.2554z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <div class="success__title">Convocatoria No. 014 vigente.</div>
+                        </div>
+                    </div>
+                  <span class="title">Psicólogo</span>
+                  <div class="author-name">
+                    <div class="author-name-prefix">Bienestar Institucional</div> 
+                    </div>
+                </header>
+                <div class="card-author">
+                <section class="author-data_containt">
+                    
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Apertura:</p>
+                                    <h3>21 de julio 2023</h3>
+                                </div>
+                            </div>
+
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Cierre:</p>
+                                    <h3>31 de julio 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+
+
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Preseleccionados:</p>
+                                    <h3>02 de agosto 2023</h3>
+                                </div>
+                            </div>
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Resultados:</p>
+                                    <h3>03 de agosto 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>                   
+                    </article>
+                </section>
+
+                  </div>
+                  <div >
+                    
+                    <a href="https://drive.google.com/file/d/1a5cvtz-lnzHPv3xRLaxGLJjLIQYAh0uA/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Requisitos y como aplicar
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                  </div>
+                </div>
+            
+            
+            
+            
+            
+            
+            
+            <div class="card">
+                <header class="card-header">
+                    
+                  <span class="title">Tesorero (a)</span>
+                  <div class="author-name">
+                    <div class="author-name-prefix">Dirección Contable y Financiera</div> 
+                    </div>
+                </header>
+                <div class="card-author">
+                <section class="author-data_containt">
+                    
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Apertura:</p>
+                                    <h3>12 de julio 2023</h3>
+                                </div>
+                            </div>
+
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Cierre:</p>
+                                    <h3>19 de julio 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+
+
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Preseleccionados:</p>
+                                    <h3>24 de julio 2023</h3>
+                                </div>
+                            </div>
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Resultados:</p>
+                                    <h3>25 de julio 2023
+                                </div>
+                            </div>                            
+                        </div>                   
+                    </article>
+                </section>
+
+                  </div>
+                  <div >
+                    
+                    <a href="https://drive.google.com/file/d/16ZAfeOVkWJBYgNtYyL_1FXz7vGdeH4Zw/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Requisitos y como aplicar
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                  </div>
+                </div>
+            
+            
+            
+            
+            <div class="card">
+                <header class="card-header">
+                    
+                  <span class="title">2 Docentes de Ingeniería de Software</span>
+                  <div class="author-name">
+                    <div class="author-name-prefix">Facultad de ingeniería</div> 
+                    </div>
+                </header>
+                <div class="card-author">
+                <section class="author-data_containt">
+                    
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Apertura:</p>
+                                    <h3>04 de julio 2023</h3>
+                                </div>
+                            </div>
+
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Cierre:</p>
+                                    <h3>14 de julio 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+
+
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Preseleccionados:</p>
+                                    <h3>21 de julio 2023</h3>
+                                </div>
+                            </div>
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Resultados:</p>
+                                    <h3>24 de julio 2023
+                                </div>
+                            </div>                            
+                        </div>                   
+                    </article>
+                </section>
+
+                  </div>
+                  <div >
+                    <a href="https://drive.google.com/file/d/1nahX8Jeq1mSnVwkJZvCoAWs1zCw64V_b/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Ver Selecionados
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                    <a href="https://drive.google.com/file/d/1Q42lR5qKetOHFWFZ-ewes-QsoUXBct_G/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/></svg>
+                             Ver preseleccionados
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                    
+                    <a href="https://drive.google.com/file/d/1zPwnwD5hN2VdqHmPH7K9P_IIAnhnJYuU/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Requisitos y como aplicar
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="card">
+                    <header class="card-header">
+                        
+                      <span class="title">Docente de ingeniería mecanica </span>
+                      <div class="author-name">
+                        <div class="author-name-prefix">Facultad de ingeniería</div> 
+                        </div>
+                    </header>
+                    <div class="card-author">
+                    <section class="author-data_containt">
+                        
+                        <article class="author-data">
+                            <div class="authorDay">
+                                <div class="authorDayIcon">
+                                    <span>📅</span>
+                                    <div>
+                                        <p>Fecha de Apertura:</p>
+                                        <h3>04 de julio 2023</h3>
+                                    </div>
+                                </div>
+    
+                                <div class="authorDayIcon">
+                                    <span>📅</span>
+                                    <div>
+                                        <p>Fecha de Cierre:</p>
+                                        <h3>14 de julio 2023</h3>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </article>
+    
+    
+                        <article class="author-data">
+                            <div class="authorDay">
+                                <div class="authorDayIcon">
+                                    <span>📅</span>
+                                    <div>
+                                        <p>Preseleccionados:</p>
+                                        <h3>21 de julio 2023</h3>
+                                    </div>
+                                </div>
+                                <div class="authorDayIcon">
+                                    <span>📅</span>
+                                    <div>
+                                        <p>Resultados:</p>
+                                        <h3>24 de julio 2023
+                                    </div>
+                                </div>                            
+                            </div>                   
+                        </article>
+                    </section>
+    
+                      </div>
+                      <div >
+                        
+                        <a href="https://drive.google.com/file/d/1zPwnwD5hN2VdqHmPH7K9P_IIAnhnJYuU/view?usp=drive_link">
+                            
+                            <button class="buttonJobs">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                                 Requisitos y como aplicar
+                               <div class="arrow">›</div>
+                             </button>
+                        
+                        </a>
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="card">
+                <header class="card-header">
+                    
+                  <span class="title">Soporte Técnico </span>
+                  <div class="author-name">
+                    <div class="author-name-prefix">Gestión TIC</div> 
+                    </div>
+                </header>
+                <div class="card-author">
+                <section class="author-data_containt">
+                    
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Apertura:</p>
+                                    <h3>28 de junio 2023</h3>
+                                </div>
+                            </div>
+
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Cierre:</p>
+                                    <h3>05 de julio 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+
+
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Preseleccionados:</p>
+                                    <h3>06 de julio 2023</h3>
+                                </div>
+                            </div>
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Resultados:</p>
+                                    <h3>10 de julio 2023
+                                </div>
+                            </div>                            
+                        </div>                   
+                    </article>
+                </section>
+
+                  </div>
+                  <div >
+                    <a href="https://drive.google.com/file/d/1MUcgwwUnA7IZm2FgkeOBvcBBT6DOOPki/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/></svg>
+                             Ver preseleccionados
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                    
+                    <a href="https://drive.google.com/file/d/1rBx7jpAMcR8GUzPpPtq8ydRFdhLnJEKP/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Requisitos y como aplicar
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                  </div>
+                </div>
+
+
+
+
+
+
+            <div class="card">
+                <header class="card-header">
+                    
+                  <span class="title">Asistente de Rectoría</span>
+                  <div class="author-name">
+                    <div class="author-name-prefix">Rectoría</div> 
+                    </div>
+                </header>
+                <div class="card-author">
+                <section class="author-data_containt">
+                    
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Apertura:</p>
+                                    <h3>28 de junio 2023</h3>
+                                </div>
+                            </div>
+
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Cierre:</p>
+                                    <h3>05 de julio 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+
+
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Preseleccionados:</p>
+                                    <h3>06 de julio 2023</h3>
+                                </div>
+                            </div>
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Resultados:</p>
+                                    <h3>10 de julio 2023
+                                </div>
+                            </div>                            
+                        </div>                   
+                    </article>
+                </section>
+
+                  </div>
+                  <div >
+                    <a href="https://drive.google.com/file/d/1MUcgwwUnA7IZm2FgkeOBvcBBT6DOOPki/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/></svg>
+                            Ver preseleccionados
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                    
+                    <a href="https://drive.google.com/file/d/1rBx7jpAMcR8GUzPpPtq8ydRFdhLnJEKP/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Requisitos y como aplicar
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                  </div>
+                </div>
+
+
+
+            <div class="card">
+                <header class="card-header">
+                   
+                  <span class="title">Creativo Grafico</span>
+                  <div class="author-name">
+                    <div class="author-name-prefix">Mercadeo</div> 
+                    </div>
+                </header>
+                <div class="card-author">
+                <section class="author-data_containt">
+                    
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Apertura:</p>
+                                    <h3>28 de junio 2023</h3>
+                                </div>
+                            </div>
+
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Cierre:</p>
+                                    <h3>05 de julio 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+
+
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Preseleccionados:</p>
+                                    <h3>06 de julio 2023</h3>
+                                </div>
+                            </div>
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Resultados:</p>
+                                    <h3>10 de julio 2023
+                                </div>
+                            </div>                            
+                        </div>                   
+                    </article>
+                </section>
+
+                  </div>
+                  <div >
+                    <a href="https://drive.google.com/file/d/1MUcgwwUnA7IZm2FgkeOBvcBBT6DOOPki/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/></svg>
+                            Ver preseleccionados
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                    
+                    <a href="https://drive.google.com/file/d/1rBx7jpAMcR8GUzPpPtq8ydRFdhLnJEKP/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Requisitos y como aplicar
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                  </div>
+                </div>
+
+
+
+
+
+            <div class="card">
+                <header class="card-header">
+                    
+                  <span class="title">Coordinador In House</span>
+                  <div class="author-name">
+                    <div class="author-name-prefix">Dirección de Mercadeo</div> 
+                    </div>
+                </header>
+                <div class="card-author">
+                <section class="author-data_containt">
+                    
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Apertura:</p>
+                                    <h3>28 de junio 2023</h3>
+                                </div>
+                            </div>
+
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Cierre:</p>
+                                    <h3>05 de julio 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+
+
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Preseleccionados:</p>
+                                    <h3>06 de julio 2023</h3>
+                                    
+                                </div>
+                            </div>
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Resultados:</p>
+                                    <h3>10 de julio 2023
+                                </div>
+                            </div>                            
+                        </div>                   
+                    </article>
+                </section>
+
+                  </div>
+                  <div >
+                    <a href="https://drive.google.com/file/d/1MUcgwwUnA7IZm2FgkeOBvcBBT6DOOPki/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/></svg>
+                             Ver preseleccionados
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                    
+                    <a href="https://drive.google.com/file/d/1rBx7jpAMcR8GUzPpPtq8ydRFdhLnJEKP/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Requisitos y como aplicar
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                  </div>
+                </div>
+
+
+
+
+
+            
+            <div class="card">
+                <header class="card-header">
+                    
+                  <span class="title">Community Manager</span>
+                  <div class="author-name">
+                    <div class="author-name-prefix">Dirección de Mercadeo</div> 
+                    </div>
+                </header>
+                <div class="card-author">
+                <section class="author-data_containt">
+                    
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Apertura:</p>
+                                    <h3>16 de junio 2023</h3>
+                                </div>
+                            </div>
+
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Fecha de Cierre:</p>
+                                    <h3>30 de junio 2023</h3>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+
+
+                    <article class="author-data">
+                        <div class="authorDay">
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Preseleccionados:</p>
+                                    <h3>04 de julio 2023</h3>
+                                </div>
+                            </div>
+                            <div class="authorDayIcon">
+                                <span>📅</span>
+                                <div>
+                                    <p>Resultados:</p>
+                                    <h3>06 de julio 2023
+                                </div>
+                            </div>                            
+                        </div>                   
+                    </article>
+                </section>
+
+                  </div>
+                  <div >
+                    <a href="https://drive.google.com/file/d/1r1eozbHD-jm7F9zH8ooHA6jZthnuFy0G/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Ver Selecionados
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                    
+                    <a href="https://www.eam.edu.co/wp-content/uploads/2023/07/Preseleccionados-Res.-No.-09-del-16-de-junio-23.pdf">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/></svg>
+                            Ver Preseleccionados
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+                    <a href="https://drive.google.com/file/d/1r1eozbHD-jm7F9zH8ooHA6jZthnuFy0G/view?usp=sharing">
+                        
+                        <button class="buttonJobs">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                             Requisitos y como aplicar
+                           <div class="arrow">›</div>
+                         </button>
+                    
+                    </a>
+
+                  </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="card">
+                    <header class="card-header">
+
+                        
+                      
+                      <span class="title">Secretaria Ejecutiva</span>
+                      <div class="author-name   ">
+                        <div class="author-name-prefix">Vicerrectoría Académica</div> 
+                        </div>
+                        
+                    </header>
+                    <div class="card-author">
+                      
+                      
+                      
+
+                        <section class="author-data_containt">
+
+                            <article class="author-data">
+                                <div class="authorDay">
+        
+                                    <div class="authorDayIcon">
+                                        <span>📅</span>
+                                        <div>
+                                            <p>Fecha de Apertura:</p>
+                                            <h3>16 de junio 2023</h3>
+                                        </div>
+                                    </div>
+        
+                                    <div class="authorDayIcon">
+                                        <span>📅</span>
+                                        <div>
+                                            <p>Fecha de Cierre:</p>
+                                            <h3>30 de junio 2023</h3>
+                                        </div>
+                                    </div>                            
+                                </div>
+        
+                            </article>
+        
+        
+                            <article class="author-data">
+                                <div class="authorDay">
+        
+                                    <div class="authorDayIcon">
+                                        <span>📅</span>
+                                        <div>
+                                            <p>Preseleccionados:</p>
+                                            <h3>04 de julio 2023</h3>
+                                        </div>
+                                    </div>
+        
+                                    <div class="authorDayIcon">
+                                        <span>📅</span>
+                                        <div>
+                                            <p>Resultados:</p>
+                                            <h3>06 de julio 2023
+                                        </div>
+                                    </div>                            
+                                </div>
+                                                        
+                            </article>
+        
+                           
+                                            
+                                      
+        
+        
+                        </section>
+
+                      </div>
+
+                      <div >
+                    
+                        <a href="https://drive.google.com/file/d/1r1eozbHD-jm7F9zH8ooHA6jZthnuFy0G/view?usp=sharing">
+                        
+                            <button class="buttonJobs">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                                 Ver Selecionados
+                               <div class="arrow">›</div>
+                             </button>
+                        
+                        </a>
+                    
+                    
+                        <a href="https://www.eam.edu.co/wp-content/uploads/2023/07/Preseleccionados-Res.-No.-09-del-16-de-junio-23.pdf">
+                            
+                            <button class="buttonJobs">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/></svg>
+                                Ver Preseleccionados
+                               <div class="arrow">›</div>
+                             </button>
+                        
+                        </a>
+                        <a href="https://drive.google.com/file/d/1r1eozbHD-jm7F9zH8ooHA6jZthnuFy0G/view?usp=sharing">
+                        
+                            <button class="buttonJobs">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                                 Requisitos y como aplicar
+                               <div class="arrow">›</div>
+                             </button>
+                        
+                        </a>
+                        
+                      </div>
+                      
+                    </div>
+
+
+
+                    <div class="card">
+                        <header class="card-header">
+
+                            
+                          
+                          <span class="title">Auxiliar de servicios generales</span>
+                          <div class="author-name">
+                            <div class="author-name-prefix">Dirección de servicios administrativos y logísticos</div> 
+                            </div>
+                            
+                        </header>
+                        <div class="card-author">
+                          
+                          
+                         
+
+                            <section class="author-data_containt">
+
+                                <article class="author-data">
+                                    <div class="authorDay">
+            
+                                        <div class="authorDayIcon">
+                                            <span>📅</span>
+                                            <div>
+                                                <p>Fecha de Apertura:</p>
+                                                <h3>16 de junio 2023</h3>
+                                            </div>
+                                        </div>
+            
+                                        <div class="authorDayIcon">
+                                            <span>📅</span>
+                                            <div>
+                                                <p>Fecha de Cierre:</p>
+                                                <h3>30 de junio 2023</h3>
+                                            </div>
+                                        </div>                            
+                                    </div>
+            
+                                </article>
+            
+            
+                                <article class="author-data">
+                                    <div class="authorDay">
+            
+                                        <div class="authorDayIcon">
+                                            <span>📅</span>
+                                            <div>
+                                                <p>Preseleccionados:</p>
+                                                <h3>04 de julio 2023</h3>
+                                            </div>
+                                        </div>
+            
+                                        <div class="authorDayIcon">
+                                            <span>📅</span>
+                                            <div>
+                                                <p>Resultados:</p>
+                                                <h3>06 de julio 2023
+                                            </div>
+                                        </div>                            
+                                    </div>
+                                                            
+                                </article>
+            
+                               
+                                                
+                                          
+            
+            
+                            </section>
+
+                          </div>
+                          <div >
+                    
+                            <a href="https://drive.google.com/file/d/1r1eozbHD-jm7F9zH8ooHA6jZthnuFy0G/view?usp=sharing">
+                        
+                                <button class="buttonJobs">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                                     Ver Selecionados
+                                   <div class="arrow">›</div>
+                                 </button>
+                            
+                            </a>
+                    
+                    
+                            <a href="https://www.eam.edu.co/wp-content/uploads/2023/07/Preseleccionados-Res.-No.-09-del-16-de-junio-23.pdf">
+                                
+                                <button class="buttonJobs">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/></svg>
+                                    Ver Preseleccionados
+                                   <div class="arrow">›</div>
+                                 </button>
+                            
+                            </a>
+                            <a href="https://drive.google.com/file/d/1r1eozbHD-jm7F9zH8ooHA6jZthnuFy0G/view?usp=sharing">
+                        
+                                <button class="buttonJobs">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                                     Requisitos y como aplicar
+                                   <div class="arrow">›</div>
+                                 </button>
+                            
+                            </a>
+                            
+                          </div>
+                          
+                        </div>
+
+
+        </div>
+    </section>
+</body>
+</html>

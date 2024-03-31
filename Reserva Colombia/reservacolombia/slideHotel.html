@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+    <style>
+       
+*, ::after, ::before {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home_ofertas {
+  min-height: 100vh;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: #f8f8f8;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.TravelCard {
+  cursor: pointer;
+  aspect-ratio: 12/16;
+  height: 380px;
+  background: white;
+  overflow: hidden;
+  border-radius: 2rem;
+  padding: 1rem;
+  box-shadow: 1rem 1rem 2rem rgba(42, 42, 42, 0.12);
+}
+
+.TravelCard-picture {
+  position: relative;
+}
+.TravelCard-img {
+  border-radius: 1.5rem;
+  aspect-ratio: 1/1;
+}
+.TravelCard-price {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.10);
+    right: 0.5rem;
+    left: 0.5rem;
+    bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(0.25rem);
+    color: white;
+    border: solid 0.5px rgba(255, 255, 255, .1);
+}
+.TravelCard-info {
+  width: 100%;
+  margin-top: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: center;
+}
+.TravelCard-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.TravelCard-data {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: .8rem;
+  align-items: center;
+}
+.TravelCard-country, .TravelCard-days {
+  padding: .75rem 1rem;
+}
+.TravelCard-days {
+  color: #c4cbd3;
+  background: #f3f3f3;
+  border-radius: 1rem;
+}
+
+.card {
+  
+    width: 270px;
+   
+    height: 80px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 1rem 1rem 2rem rgba(42, 42, 42, 0.12);
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background-image: url(https://reservacolombia.com.co/wp-content/uploads/2023/05/Diseno-sin-titulo-57-1-1.png);
+  background-size: cover;
+}
+
+.card:hover > .img {
+  transition: 0.5s ease-in-out;
+  background-image: url(https://reservacolombia.com.co/wp-content/uploads/2023/05/Diseno-sin-titulo-58-1.png);
+}
+
+.textBox {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: rgb(0, 0, 0);
+  font-family: 'Poppins' sans-serif;
+}
+
+.textContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.span {
+  font-size: 10px;
+}
+
+.h1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.p {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.travelCard_colum-containt {
+  display: flex;
+  flex-direction: column;
+  height: 380px;
+  justify-content: space-between;
+}
+
+.home_destinosTitle {
+    font-display: flex;
+    padding: 60px 30px;
+    align-items: start;
+    justify-content: center;
+}
+.cta {
+  border: none;
+  background: none;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+    </style>
+</head>
+<body>
+  <div class="home_destinosTitle">
+    <button class="cta">
+        <span class="hover-underline-animation"> Destinos nacionales </span>
+        <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+            <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+        </svg>
+    </button>
+
+    <section class="home_ofertas">
+
+      
+
+
+
+        <section class="TravelCard">
+            <figure class="TravelCard-picture">
+              <img src="https://reservacolombia.com.co/wp-content/uploads/2023/05/Diseno-sin-titulo-55-1.png" alt="Cancún" class="TravelCard-img">
+              <span class="TravelCard-price">Desde $2.400.000 COP</span>
+            </figure>
+            <aside class="TravelCard-info">
+              <h2 class="TravelCard-title">Paquetes a <span style="color: #022a82; font-weight: 600;">CANCÚN</span> </h2>
+              <p class="TravelCard-data">
+                
+                <span class="TravelCard-days">
+                  🌤️ 5 días | 🌙 4 noches 
+                </span>
+
+                
+              </p>
+            </aside>
+          </section>
+
+
+
+          <section class="TravelCard">
+            <figure class="TravelCard-picture">
+              <img src="https://reservacolombia.com.co/wp-content/uploads/2023/05/Diseno-sin-titulo-55-1.png" alt="Cancún" class="TravelCard-img">
+              <span class="TravelCard-price">Desde $1.300.000 COP</span>
+            </figure>
+            <aside class="TravelCard-info">
+              <h2 class="TravelCard-title">Paquetes a <span style="color: #022a82; font-weight: 600;">CARTAGENA</span> </h2>
+              <p class="TravelCard-data">
+                
+                <span class="TravelCard-days">
+                  🌤️ 6 días | 🌙 5 noches 
+                </span>
+
+                
+              </p>
+            </aside>
+          </section>
+
+
+          <section class="travelCard_colum-containt">
+
+
+            <div class="card">
+              <div class="img"></div>
+              <div class="textBox">
+                <div class="textContent">
+                  <p class="h1">Paquetes a  Medellín</p>
+                  
+                </div>
+                <p class="p">🌤️ 5 días | 🌙 4 noches</p>
+              <div>
+            </div></div></div>
+
+            <div class="card">
+              <div class="img"></div>
+              <div class="textBox">
+                <div class="textContent">
+                  <p class="h1">Paquetes a  Medellín</p>
+                  
+                </div>
+                <p class="p">🌤️ 5 días | 🌙 4 noches</p>
+              <div>
+            </div></div></div>
+
+            <div class="card">
+              <div class="img"></div>
+              <div class="textBox">
+                <div class="textContent">
+                  <p class="h1">Paquetes a  Medellín</p>
+                  
+                </div>
+                <p class="p">🌤️ 5 días | 🌙 4 noches</p>
+              <div>
+            </div></div></div>
+
+
+            <div class="card">
+              <div class="img"></div>
+              <div class="textBox">
+                <div class="textContent">
+                  <p class="h1">Paquetes a  Medellín</p>
+                  
+                </div>
+                <p class="p">🌤️ 5 días | 🌙 4 noches</p>
+              <div>
+            </div></div></div>
+
+          </section>
+
+          
+
+          </section>
+          
+
+
+
+    </section>
+
+
+
+    
+
+
+
+
+</body>
+</html>

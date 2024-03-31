@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <script>
+        function esDeNoche() {
+            const horaActual = new Date().getHours();
+            return horaActual >= 18 || horaActual < 6; // Supongamos que de 6 PM a 6 AM es de noche
+        }
+    
+        // Función para cambiar la clase del contenedor principal
+        function actualizarFondo() {
+            const contenedorPrincipal = document.querySelector('.backgroundDashboard');
+            const claseNoche = 'backgroundDashboardNoche';
+    
+            const contenedorMetricas = document.querySelector('.containerDashboard_metricasSecundarias');
+            const metricasSecundariasNoche = 'containerDashboard_metricasSecundariasNoche';
+    
+            const contenedorMetricasPrincipal = document.querySelector('.metricasPrincipales_containerPrincipal');
+            const metricasPrincipalNoche = 'metricasPrincipales_containerPrincipalNoche';
+    
+            const contenedorSelectCity = document.querySelector('.radio-inputs');
+            const contenedorSelectCityNoche = 'radio-inputsNoche'; // Corregido aquí
+    
+            if (esDeNoche()) {
+                contenedorPrincipal.classList.add(claseNoche);
+                contenedorMetricas.classList.add(metricasSecundariasNoche);
+                contenedorMetricasPrincipal.classList.add(metricasPrincipalNoche);
+                contenedorSelectCity.classList.add(contenedorSelectCityNoche); // Corregido aquí
+            } else {
+                contenedorPrincipal.classList.remove(claseNoche);
+                contenedorMetricas.classList.remove(metricasSecundariasNoche);
+                contenedorMetricasPrincipal.classList.remove(metricasPrincipalNoche);
+                contenedorSelectCity.classList.remove(contenedorSelectCityNoche); // Corregido aquí
+            }
+        }
+    
+        // Llamamos a la función al cargar la página
+        window.onload = function () {
+            actualizarFondo();
+    
+            // Además, puedes configurar un temporizador para actualizar la clase cada cierto tiempo
+            setInterval(actualizarFondo, 60000); // Actualiza cada minuto (en milisegundos)
+        };
+    </script>
+    
+    <style>
+        .backgroundDashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #60B4E2;
+    justify-content: center;
+    font-family: "Nunito Sans", sans-serif;
+    align-items: center;
+    padding: 3rem;
+}
+.backgroundDashboardNoche {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #055586;
+    justify-content: center;
+    font-family: "Nunito Sans", sans-serif;
+    align-items: center;
+    padding: 3rem;
+}
+.containerDashboard {
+    display: flex;
+    gap: 20px;
+}
+.containerDashboard_metricasPrincipales {
+    display: flex;
+    flex-direction: column;
+    
+}
+.metricasPrincipales_containerSuperior {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.metricasPrincipales_containerIcon {
+    
+    width: 200px;
+    height: 200px;
+   
+    background-image: url('https://rutaeje.com/wp-content/uploads/2024/02/Group-53.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.metricasPrincipales_containerPrincipal {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    height: 200px;
+    background-color: rgba(5, 85, 134, 0.22);
+    justify-content: space-evenly;
+   color: #fff;
+   padding-left: 30px;
+   border-radius: 30px;
+    
+}
+.metricasPrincipales_containerPrincipalNoche {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    border-radius: 30px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.29);
+    justify-content: space-evenly;
+   color: #fff;
+   padding-left: 30px;
+}
+.metricasPrincipales_Temp {
+    display: flex;
+    align-items: center;
+}
+.metricasPrincipales_Temp h2 {
+    font-size: 45px;
+    font-weight: 900 !important;
+    margin: 0;
+    color: #fff;
+}
+.metricasPrincipales_title {
+    
+    display: flex;
+    flex-direction: column;
+}
+.metricasPrincipales_title p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 18px;
+}
+.metricasPrincipales_title h3 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff
+}
+.metricasPrincipales_temMaxMin {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+.metricasPrincipales_detalles {
+    margin-left: 50px;
+}
+.metricasPrincipales_detalles p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 25px;
+}
+.metricasSecundarias {
+display: flex;
+align-items: center;
+color: #fff;
+width: 90%;
+gap: 10px;
+justify-content: flex-start;
+
+}
+.containerDashboard_metricasSecundarias {
+width: 200px;
+background-color: rgba(5, 85, 134, 0.22);
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+border-radius: 30px;
+justify-content: space-evenly;
+
+
+
+}
+.containerDashboard_metricasSecundariasNoche {
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.29);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    
+}
+.metricasSecundarias svg {
+fill: #fff;
+}
+.metricasSecundarias p  {
+margin: 0;
+font-size: 12px;
+}
+.metricasSecundarias h3 {
+    margin: 0 !important;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 800;
+    color: #fff;
+
+}
+.radio-inputs {
+    font-family: "Nunito Sans", sans-serif;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #4c9fcd;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 310px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.radio-inputsNoche {
+    font-family: "Nunito Sans", sans-serif;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #043c5f;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 310px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: .5rem 0;
+  color: #fff;
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #fff;
+  font-weight: 600;
+  color: #043c5f;
+}
+.Containt_imgVolty {
+    width: 100%;
+    display: flex;
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .containerDashboard {
+        flex-direction: column;
+        width: 100%;
+        
+        
+    }
+    .backgroundDashboard {
+        
+        padding: 5rem 1rem;
+    }
+    .metricasPrincipales_containerSuperior {
+        flex-direction: column;
+    }
+    .metricasPrincipales_containerIcon {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 10px;
+
+    }
+    .metricasPrincipales_containerPrincipal {
+        width: 100%;
+        padding: 0;
+
+    }
+    .containerDashboard_metricasSecundarias {
+        width: 100%;
+        height: 200px;
+    }
+    .metricasPrincipales_title {
+        margin-left: 120px;
+    }
+    .metricasPrincipales_Temp {
+        margin-left: 20px;
+    }
+
+}
+    </style>
+    
+    
+    </head>
+    <body>
+        <section class="backgroundDashboard">
+
+            <div class="radio-inputs">
+                <label class="radio">
+                  <input type="radio" name="radio" checked="" value="Salento">
+                  <span class="name">Salento</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="radio" value="Cocora">
+                  <span class="name">Cocora</span>
+                </label>
+                    
+                
+            </div>
+
+
+            <div class="containerDashboard">
+
+                <div class="containerDashboard_metricasPrincipales">
+
+                    <div class="metricasPrincipales_containerSuperior">
+                        <article class="metricasPrincipales_containerIcon">
+                            
+                        </article>
+                        <article class="metricasPrincipales_containerPrincipal">
+                            <div class="metricasPrincipales_title">
+                                <div id="varMeterCity"></div>
+                                <div id="varMeterCountry"></div>
+                                <div id="varMeterFecha"></div>
+                                <div id="varMeterLevelSea"></div>
+
+                            </div>
+                            <div class="metricasPrincipales_Temp">
+                                <div id="varMeterTemperatura"> </div>
+                                <div class="metricasPrincipales_detalles">
+                                    <div class="metricasPrincipales_temMaxMin">
+                                        <div id="varMetereologicaTempMax"></div>
+                                        <div id="varMetereologicaTempMin"></div>
+                                        
+                                    </div>
+                                    <div>
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                    
+                </div>
+
+
+                <div class="containerDashboard_metricasSecundarias">
+                    <article class="metricasSecundarias">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" height="30" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 512 512" width="30" xmlns="http://www.w3.org/2000/svg" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003"><g id="Layer_x0020_1"><path d="m169.13 271.8h-136.16c-6.47 0-11.72-5.25-11.72-11.73 0-6.47 5.25-11.72 11.72-11.72h136.16c6.48 0 11.73 5.25 11.73 11.72 0 6.48-5.25 11.73-11.73 11.73z"/><path d="m128.18 229.83h-95.21c-6.47 0-11.72-5.26-11.72-11.73s5.25-11.72 11.72-11.72h95.21c6.48 0 11.73 5.25 11.73 11.72s-5.25 11.73-11.73 11.73z"/><path d="m437.03 512c-29.62 0-53.73-24.08-53.73-53.7 0-6.47 5.26-11.73 11.73-11.73s11.72 5.26 11.72 11.73c0 16.68 13.59 30.25 30.28 30.25 16.68 0 30.27-13.57 30.27-30.25 0-16.69-13.59-30.25-30.27-30.25h-235.63c-6.47 0-11.73-5.26-11.73-11.73s5.26-11.72 11.73-11.72h235.63c29.61 0 53.72 24.07 53.72 53.7 0 29.62-24.1 53.7-53.72 53.7z"/><path d="m395.03 317.27c-6.47 0-11.73-5.25-11.73-11.72 0-29.62 24.11-53.71 53.73-53.71 29.61 0 53.72 24.09 53.72 53.71s-24.11 53.7-53.72 53.7h-235.63c-6.47 0-11.73-5.25-11.73-11.73 0-6.47 5.26-11.72 11.73-11.72h235.63c16.68 0 30.27-13.57 30.27-30.25 0-16.69-13.59-30.26-30.27-30.26s-30.28 13.57-30.28 30.26c0 6.47-5.25 11.72-11.72 11.72z"/><path d="m277.09 194.73c6.47 0 11.72 5.25 11.72 11.72 0 16.69 13.59 30.26 30.27 30.26s30.28-13.57 30.28-30.26c0-16.68-13.6-30.25-30.28-30.25h-235.62c-6.48 0-11.73-5.25-11.73-11.72 0-6.48 5.25-11.73 11.73-11.73h235.62c29.62 0 53.73 24.08 53.73 53.7 0 29.63-24.11 53.71-53.73 53.71-29.61 0-53.72-24.09-53.72-53.71 0-6.47 5.25-11.72 11.73-11.72z"/><path d="m319.08 107.4h-235.62c-6.48 0-11.73-5.25-11.73-11.72 0-6.48 5.25-11.73 11.73-11.73h235.62c16.69 0 30.28-13.56 30.28-30.25s-13.59-30.25-30.28-30.25c-16.68 0-30.27 13.56-30.27 30.25 0 6.47-5.25 11.73-11.72 11.73s-11.73-5.26-11.73-11.73c0-29.62 24.11-53.7 53.72-53.7 29.62 0 53.73 24.08 53.73 53.7s-24.11 53.7-53.73 53.7z"/><path d="m223.39 313.77h-190.42c-6.47 0-11.72-5.25-11.72-11.72s5.25-11.72 11.72-11.72h190.42c6.47 0 11.73 5.25 11.73 11.72s-5.26 11.72-11.73 11.72z"/></g></svg>
+                        <div>
+                            <div id="varMeterVelViento"></div>
+                            <p>Velocidad del viento</p>
+                        </div>
+                    </article>
+                    <article class="metricasSecundarias">
+                        <svg enable-background="new 0 0 42.404 57.695" height="30" viewBox="0 0 42.404 57.695" width="30" xmlns="http://www.w3.org/2000/svg"><path d="m21.125 57.695c-5.776 0-11.386-2.203-15.259-6.133-16.202-16.434 5.432-41.49 13.575-50.923.666-.77 1.832-.858 2.603-.191.772.667.857 1.832.191 2.604-11.825 13.699-26.117 33.363-13.739 45.919 3.834 3.89 10.05 5.756 15.837 4.759 5.766-.995 10.354-4.575 12.921-10.081 5.392-11.568-5.646-25.533-12.24-33.877-.785-.993-1.508-1.907-2.134-2.73-.618-.811-.461-1.97.351-2.587.811-.616 1.97-.46 2.587.351.614.807 1.323 1.703 2.093 2.677 7.123 9.012 19.044 24.095 12.689 37.727-3.093 6.633-8.646 10.951-15.638 12.159-1.276.219-2.561.326-3.837.326z"/><path d="m12.734 25.649c-.312 0-.627-.079-.916-.245-.885-.507-1.19-1.635-.684-2.52 1.442-2.517 3.226-5.165 5.449-8.096.616-.813 1.774-.97 2.587-.354.812.617.971 1.774.354 2.587-2.128 2.803-3.824 5.322-5.188 7.699-.339.596-.961.929-1.602.929z"/><path d="m13.292 48.283c-.473 0-.945-.181-1.306-.541-.721-.721-.721-1.891 0-2.611l15.505-15.505c.721-.721 1.891-.721 2.611 0 .721.721.721 1.889 0 2.611l-15.505 15.505c-.36.361-.833.541-1.305.541z"/><path d="m15.481 38.31c-2.86 0-5.187-2.327-5.187-5.188s2.326-5.188 5.187-5.188 5.187 2.328 5.187 5.188c0 1.02-.826 1.847-1.846 1.847s-1.846-.827-1.846-1.847c0-.825-.671-1.495-1.495-1.495s-1.495.67-1.495 1.495.671 1.495 1.495 1.495c1.02 0 1.846.826 1.846 1.846s-.827 1.847-1.846 1.847z"/><path d="m26.889 49.718c-2.86 0-5.186-2.327-5.186-5.188 0-2.859 2.326-5.186 5.186-5.186s5.187 2.326 5.187 5.186c0 1.02-.826 1.847-1.846 1.847s-1.846-.827-1.846-1.847c0-.823-.671-1.494-1.495-1.494s-1.495.671-1.495 1.494c0 .825.671 1.496 1.495 1.496 1.02 0 1.846.826 1.846 1.846s-.827 1.846-1.846 1.846z"/></svg>
+                        <div>
+                            <div id="varMeterHumedad"></div>
+                            <p>Humedad</p>
+                        </div>
+                    </article>
+                    <article class="metricasSecundarias">
+                        <svg id="Capa_1" enable-background="new 0 0 511.692 511.692" height="30" viewBox="0 0 511.692 511.692" width="30" xmlns="http://www.w3.org/2000/svg"><g><path d="m139.409 334.959c13.178 0 25.558 5.124 34.86 14.429 5.857 5.857 15.354 5.861 21.213.002 5.858-5.856 5.859-15.354.002-21.213-14.969-14.973-34.883-23.218-56.076-23.218-105.007 3.982-104.991 154.562.001 158.533 21.19 0 41.104-8.245 56.074-23.218 5.857-5.858 5.856-15.355-.001-21.213-5.858-5.857-15.356-5.857-21.213.002-30.442 30.94-84.41 8.604-84.127-34.839 0-27.164 22.101-49.265 49.267-49.265z"/><path d="m484.016 428.527c-2.176-57.323-84.308-57.219-86.474.001.739 19.877 29.265 19.87 30-.001 0-7.298 5.956-13.235 13.276-13.235 11.637-.078 17.631 14.438 9.317 22.594l-48.2 48.2c-4.29 4.29-5.573 10.741-3.252 16.347 2.322 5.605 7.792 9.26 13.858 9.26h56.474c19.881-.738 19.866-29.269 0-30h-20.261l22.586-22.587c8.175-8.163 12.676-19.022 12.676-30.579z"/><path d="m300.076 304.959c-43.708 0-79.267 35.559-79.267 79.267 3.985 105.014 154.564 104.985 158.533-.001 0-43.707-35.559-79.266-79.266-79.266zm0 128.533c-27.166 0-49.267-22.101-49.267-49.267 2.477-65.269 96.066-65.251 98.533.001 0 27.166-22.101 49.266-49.266 49.266z"/><path d="m448.852 144.292h-2.942c12.6-53.381-35.422-104.574-89.5-95.48-48.794-74.399-165.842-61.162-196.645 23.181-38.701-.25-68.325 34.954-62.659 72.3h-33.854c-83.75 3.187-83.686 123.243 0 126.4h385.6c83.75-3.188 83.686-123.244 0-126.401zm0 96.4h-385.6c-43.995-1.674-43.962-64.742 0-66.4h54.627c11.388.14 18.805-12.721 12.986-22.507-14.438-24.69 8.227-55.53 36.125-48.959 8.013 1.882 16.05-3.052 18-11.051 17.342-72.211 116.332-84.521 150.918-18.889 3.392 6.394 10.864 9.452 17.767 7.273 42.491-13.456 79.931 33.009 57.496 71.543-2.72 4.639-2.75 10.379-.077 15.045s7.639 7.544 13.016 7.544h24.742c43.995 1.675 43.962 64.743 0 66.401z"/><path d="m47.185 93.959c25.989 0 47.133-21.144 47.133-47.133-2.369-62.443-91.905-62.426-94.266.001 0 25.988 21.144 47.132 47.133 47.132zm0-64.267c9.447 0 17.133 7.687 17.133 17.134-.861 22.698-33.409 22.692-34.267 0 .001-9.447 7.687-17.134 17.134-17.134z"/></g></svg>
+                        <div>
+                            <div id="varMeterCO2"></div>
+                            <p>CO2</p>
+                        </div>
+                    </article>
+                </div>
+
+
+            </div>
+        </section>
+    </section>
+    <section class="Containt_imgVolty">
+        <img src="https://rutaeje.com/wp-content/uploads/2024/02/WhatsApp-Image-2024-01-24-at-5.53.54-PM-1.jpeg" alt="">
+    </section>
+
+       <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            
+  const apiKey = '5959c3fb533ea0804f267554f465237b';
+  let city = 'Salento'; // Inicialmente, Salento está seleccionado
+  
+  const radioInputs = document.querySelectorAll('input[name="radio"]');
+  
+  // Iterar sobre los elementos de radio para detectar cambios
+  radioInputs.forEach(input => {
+      input.addEventListener('change', function() {
+          if (this.checked) {
+              city = this.value; // Actualizar la ciudad seleccionada
+              fetchData(city); // Volver a obtener datos según la nueva ciudad seleccionada
+          }
+      });
+  });
+
+  // Llamar a la función fetchData para obtener los datos iniciales
+  fetchData(city);
+
+  function fetchData(city) {
+      let apiUrl = '';
+      // Verificar la ciudad seleccionada y asignar las coordenadas correspondientes
+      if (city === 'Salento') {
+          apiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=4.633&lon=-75.567&appid=' + apiKey + '&units=metric';
+      } else if (city === 'Cocora') {
+          apiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=4.652&lon=-75.549&appid=' + apiKey + '&units=metric';
+      } else {
+          apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+      }
+
+      // Hacer una solicitud GET a la API
+      fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+          // Obtener la descripción y el icono de la respuesta de la API
+          const description = data.weather[0].description;
+          const icon = data.weather[0].icon;
+
+          // Actualizar la imagen en la página
+          updateImage(icon);
+
+          const seaLevel = data.main.sea_level;
+          const tempMax = data.main.temp_max;
+          const tempMin = data.main.temp_min;
+          const presion = data.main.pressure;
+          const cityAPI = data.name;
+          const country = data.sys.country;
+
+          // Insertar variables en el HTML
+          const weatherInfoTemperatura = document.getElementById('varMeterTemperatura');
+          weatherInfoTemperatura.innerHTML = `<h2>${data.main.temp} °C</h2>`;
+
+          const weatherInfoVelViento = document.getElementById('varMeterVelViento');
+          weatherInfoVelViento.innerHTML = `<h3>${data.wind.speed} m/s</h3>`;
+
+          const weatherInfoHumedad = document.getElementById('varMeterHumedad');
+          weatherInfoHumedad.innerHTML = `<h3>${data.main.humidity} %</h3>`;
+
+          const weatherInfoLevelSea = document.getElementById('varMeterLevelSea');
+          weatherInfoLevelSea.innerHTML = `<p>${seaLevel} hPa</p>`; // hPa es la unidad de medida del nivel del mar   
+
+          const weatherInfoTempMax = document.getElementById('varMetereologicaTempMax');
+          weatherInfoTempMax.innerHTML = `<p>${tempMax} °C</p>`;
+
+          const weatherInfoTempMin = document.getElementById('varMetereologicaTempMin');
+          weatherInfoTempMin.innerHTML = `<p>${tempMin} °C</p>`;
+
+          
+
+          const weatherInfoCity = document.getElementById('varMeterCity');
+          if (city=='Salento') {
+            weatherInfoCity.innerHTML = `<h3>${cityAPI} Quindío</h3>`;
+          }
+          else {
+            weatherInfoCity.innerHTML = `<h3>Valle del Cocora </h3>`;
+          }
+
+           // Generar un número aleatorio entre 430 y 445 para CO2
+    
+           
+
+
+          // Obtener el día de la semana y la fecha actual
+          const currentDate = new Date();
+          const days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+          const dayOfWeek = days[currentDate.getDay()];
+          const date = currentDate.getDate();
+          const month = currentDate.getMonth() + 1;
+          const year = currentDate.getFullYear();
+
+          // Insertar el día de la semana y la fecha en el HTML
+          const weatherInfoFecha = document.getElementById('varMeterFecha');
+          weatherInfoFecha.innerHTML = `<p>${dayOfWeek}, ${date}/${month}/${year}</p>`;
+      })
+      .catch(error => {
+          console.error('Error fetching data:', error);
+      });
+      const co2 = (Math.random() * (445 - 430) + 430).toFixed(2);
+        
+        // Mostrar CO2 en el HTML
+        const weatherInfoCO2 = document.getElementById('varMeterCO2');
+        weatherInfoCO2.innerHTML = `<h3>${co2}</h3>`;
+  }
+
+  function updateImage(icon) {
+      
+// Obtener el elemento <article> por su clase
+var article = document.querySelector('.metricasPrincipales_containerIcon');
+
+// Definir la URL base de las imágenes
+var baseUrl = 'https://rutaeje.com/wp-content/uploads/2024/02/';
+
+// Definir el nombre del archivo de imagen basado en el icono proporcionado
+var imageName = '';
+
+// Mapear los iconos a los nombres de las imágenes correspondientes
+var iconImageMap = {
+  '01d': 'clear_sky.png',
+  '01n': 'clear_sky_n.png',
+  '02d': 'few_clouds.png',
+  '02n': 'few_clouds_n.png',
+  '03d': 'scattered_clouds.png',
+  '03n': 'scattered_clouds.png',
+  '04d': 'few_clouds.png',
+  '04n': 'few_clouds_n.png',
+  '09d': 'shower_rain.png',
+  '09n': 'shower_rain_n.png',
+  '10d': 'rain.png',
+  '10n': 'rain_n.png',
+  '11d': 'thunderstorm.png',
+  '11n': 'thunderstorm_n.png',
+  // Agrega más iconos según sea necesario
+};
+
+// Verificar si el icono está mapeado y obtener el nombre de la imagen correspondiente
+if (icon in iconImageMap) {
+  imageName = iconImageMap[icon];
+} else {
+  // Si el icono no está mapeado, usar una imagen predeterminada o manejar el caso según sea necesario
+  imageName = 'few_clouds.png';
+}
+
+// Actualizar el estilo de fondo del elemento <article> con la nueva imagen
+article.style.backgroundImage = "url('" + baseUrl + imageName + "')";
+
+  }
+});
+
+       </script>
+        
+
+
+</body>
+</html>

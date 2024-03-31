@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+        
+    <title>Card Jobs</title>
+    <style>
+        .card {
+            width: 290px;
+            
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f2f2f3;
+            border-radius: 12px;
+            box-shadow: inset 5px 5px 10px #a9a9aa77,
+                        inset -5px -5px 10px #ffffff7e;
+                        justify-content: center;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .card .img {
+        height: 190px;
+        margin-top: 1.6em;
+        aspect-ratio: 1;
+        border-radius: 30%;
+        background: #f2f2f3;
+        margin-bottom: 0.4em;
+        box-shadow: -5px -5px 8px #ffffff7a, 
+                    5px 5px 8px #a9a9aa7a;
+        }
+        .card .img img {
+            width: 100%;
+            border-radius: 30%;
+        }
+
+        .card .info {
+        text-align: center;
+        margin-top: 0.4em;
+        background: linear-gradient(120deg, #00c2ff 0%, #346398 100%);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+
+        .card .info p {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            text-align: justify;
+            margin: 0 15px;
+        }
+
+        .card .info > span {
+        font-weight: bold;
+        font-size: 1.2em;
+        }
+
+        .card a {
+        margin-top: 1em;
+        color: #fff;
+        text-decoration: none;
+        background: linear-gradient(90deg, #00c2ff 0%, #346398 100%);
+        padding: .5em 2em;
+        border-radius: 0.7em;
+        }
+
+        .card a:active {
+        box-shadow: inset 3px 3px 3px #0056ff,
+                    inset -3px -3px 3px #00c2ff;
+        }
+        .bloqueJobs {
+            display: flex;
+            align-items: center;
+ 
+            padding: 3rem;
+            font-family: 'Poppins', sans-serif;
+            justify-content: space-around;
+            
+        }
+        .bloqueJobsDer {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            padding: 3rem;
+        }
+        .bloqueJobsDer h2 {
+            background: linear-gradient(120deg, #00c2ff 0%, #346398 100%);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            padding: 0px !important;
+            font-weight: 600;
+            margin-bottom: 10px;
+            -webkit-text-fill-color: transparent;
+        }
+        .bloqueJobsDer p {
+            line-height: 2rem;
+            text-align: justify;
+        }
+
+
+
+
+
+
+        @media screen and (max-width: 767px) {
+            .bloqueJobs{
+                flex-direction: column;
+                padding: 1rem;
+            }
+            .bloqueJobsDer {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="bloqueJobs">
+
+        <div class="bloqueJobsDer">
+            <h2>Facultad de Ciencias Administrativas y Financieras
+            </h2>
+            <p>La Facultad de Ciencias Administrativas y Financieras de la Institución Universitaria EAM, es una unidad académico – administrativa encargada de gestionar y administrar actividades de docencia, investigación y proyección social.
+
+                Cuenta con los programas académicos de Administración de Empresas, Hotelería y Turismo, Contaduría Pública y Administración de Negocios Internacionales, los cuales tienen como fin la formación y capacitación en conocimientos, valores y competencias administrativas de nuestros estudiantes, contribuyendo así al desarrollo integral de profesionales líderes, creativos y exitosos.            </p>
+        </div>
+
+        <div>
+            <div class="card">
+                <div class="img">
+                    <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/05/Facaf-decana-1.png" alt="">
+                </div>
+                  <div class="info">
+                    <span>Isabel Cristina Londoño</span>
+                    <p>Decana Facultad de Ciencias Administrativas y Financieras</p>
+                  </div>
+                  <a href="deccaf@eam.edu.co">📧 Envíar correo</a>
+                </div>
+
+        </div>
+
+        
+
+        
+
+    </section>
+    
+    
+</body>
+</html>

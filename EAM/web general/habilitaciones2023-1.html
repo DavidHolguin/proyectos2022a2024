@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+    <style>
+
+        #perfiles h2 {
+        background-color: #0d2436 !important;
+        }
+        .homeHabilitaciones {
+            display: flex;
+            padding: 6rem 8rem;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .homeHabilitaciones_containt {
+            display: flex;
+            padding: 5rem 7rem;
+            gap: 50px;
+            background-color: #0d2436;
+            border-radius: 30px;
+        }
+        .homeHabilitaciones_der img {
+            width: 120%;
+        }
+        .homeHabilitaciones_der {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35%;
+
+        }
+        .homeHabilitaciones_izq {
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 0 8rem 0 0;
+
+            justify-content: center;
+        }
+
+        .button {
+            margin-top: 20px;
+            margin-bottom:30px;
+            position: relative;
+            width: 150px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border: 1px solid #34639e;
+                background-color: #3485c3;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            }
+
+            .button, .button__icon, .button__text {
+            transition: all 0.3s;
+            }
+
+            .button .button__text {
+            transform: translateX(22px);
+            color: #0d2436;
+            font-weight: 600;
+            }
+
+            .button .button__icon {
+            position: absolute;
+            transform: translateX(109px);
+            height: 100%;
+            width: 39px;
+            background-color: #34639e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+
+            .button .svg {
+            width: 20px;
+            fill: #0d2436;
+            }
+
+            .button:hover {
+            background: #3485c3;
+            }
+
+            .button:hover .button__text {
+            color: transparent;
+            }
+
+            .button:hover .button__icon {
+            width: 148px;
+            transform: translateX(0);
+            }
+
+            .button:active .button__icon {
+            background-color: #3485c3;
+            }
+
+            .button:active {
+            border: 1px solid #3485c3;
+            }
+            .homeHabilitaciones_izq a {
+                text-decoration: none;
+                font-size: 12px;
+            }
+            .homeHabilitaciones_izq h2  {
+                color: #fff !important;
+                font-weight: 800;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                font-size: 35px;
+            }
+            .homeHabilitaciones_izq p {
+                line-height: 2rem;
+            }
+
+
+
+
+            @media only screen and (max-width: 768px) {
+                #perfiles .container {
+                    margin-top: 0;
+                }
+                .homeHabilitaciones_containt {
+                    border-radius: 0%;
+                }
+
+                .homeHabilitaciones_containt {
+                    flex-direction: column-reverse;
+                    padding: 4rem 3rem !important;
+                }
+                .homeHabilitaciones {
+                    justify-content: center;
+                    padding: 0;
+                }
+                .homeHabilitaciones_der {
+                    width: 100%;
+                }
+                .homeHabilitaciones_izq {
+                    padding: 0px !important;
+                }
+                .homeHabilitaciones {
+                    padding: 0px !important;
+                }
+                .homeHabilitaciones_izq h2 {
+                    font-size: 35px;
+                    line-height: 3.5rem;
+                }
+                .homeHabilitaciones_izq p {
+                    text-align: justify;
+                }
+                .button .button__text {
+                    font-size: 13px;
+                }
+                .homeHabilitaciones_der {
+                    width: 100% !important;
+                }
+
+            }
+    </style>
+</head>
+<body>
+    <section class="homeHabilitaciones">
+        <div class="homeHabilitaciones_containt">
+            <div class="homeHabilitaciones_izq">
+                <h2>HORARIO DE HABILITACIONES <br>2023 - 1</h2>
+                <p>No olvides solicitar el recibo en Tesorería y pagar en el banco para mostrar al docente durante la habilitación. </p>
+                <a href="https://docs.google.com/spreadsheets/d/1upsAoy0ffn8QShmoXFalhht3F7W6l6td/edit?usp=sharing&ouid=101003663489868647573&rtpof=true&sd=true">
+                    <button class="button" type="button">
+                        <span class="button__text">Descargar</span>
+                        <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
+                      </button>
+
+
+                </a>
+                
+
+            </div>
+            <div class="homeHabilitaciones_der">
+                <img src="https://www.eam.edu.co/wp-content/uploads/2023/06/Diseno-sin-titulo-2023-06-15T180035.001-1.png" alt="">
+
+            </div>
+            
+
+        </div>
+    </section>
+</body>
+</html>

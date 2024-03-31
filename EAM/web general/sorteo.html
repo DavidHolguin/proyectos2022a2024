@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .heroViceAdmin {
+            display: flex;
+            width: 100%;
+            height: 650px;
+            border-radius: 0px 0px 50px 50px;
+            background: #08B3F0;
+            font-family: 'Poppins', sans-serif !important;
+            justify-content: space-around;
+        }
+        .heroViceAdmin-left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 3rem 0rem 3rem 3rem;  
+            gap: 35px;
+        }
+        .heroViceAdmin-dependencia {
+            display: flex;
+            width: 202px;
+            height: 45px;
+            padding: 10px 25px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Poppins', sans-serif !important;
+            border-radius: 10px;
+            border: 0.5px solid rgba(255, 255, 255, 0.40);
+            background: linear-gradient(318deg, rgba(0, 0, 0, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%), #E7EBF0;
+            background-blend-mode: soft-light, normal;
+            box-shadow: 2.5px 2.5px 5px 0px #A6ABBD inset, -2.5px -2.5px 5px 0px #FAFBFF inset;
+            
+        }
+        .heroViceAdmin-dependencia p {
+            text-align: center;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.4px;
+            background: linear-gradient(180deg, #005AFF 0%, #0098FF 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0%;
+            padding: 0%;
+        }
+        .heroViceAdmin-left-h2 {
+            
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 30px !important;
+           
+            font-weight: 800 !important;
+            line-height: 34px !important;
+            background: linear-gradient(180deg, #05F 0%, #009FFF 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            margin: 0% !important;
+            padding: 0% !important;
+        }
+        .heroViceAdmin-CTA {
+            display: flex;
+            gap: 3px;
+            font-family: 'Poppins', sans-serif !important;
+            
+        }
+        .heroViceAdmin-CTA p {
+            margin: 0% !important;
+            padding: 0% !important;
+            color: #FFF;
+        }
+        .heroViceAdmin-CTA-img {
+            display: flex;
+            width: 38px;
+            height: 41px;
+            padding: 0px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            border-radius: 10px 0px 0px 10px;
+            background: linear-gradient(180deg, #05F 0%, #009FFF 100%);
+        }
+        .heroViceAdmin-CTA-img img {
+            width: 25px;
+            max-width: 25px;
+        }
+        .heroViceAdmin-CTA-number {
+            display: flex;
+            width: 165px;
+            height: 41px;
+            padding: 0px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 2px;
+            background: linear-gradient(180deg, #05F 0%, #009FFF 100%);
+            font-weight: 600;
+        }
+        .heroViceAdmin-CTA-ext {
+            display: flex;
+            width: 58px;
+            height: 41px;
+            padding: 0px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 0px 10px 10px 0px;
+            background: linear-gradient(180deg, #05F 0%, #009FFF 100%);
+            font-weight: 600;
+        }
+        .heroViceAdmin-rigth {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .heroViceAdmin-rigth img {
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+        }
+        .heroViceAdmin-left-p {
+            font-size: 20px;
+            line-height: 23px;
+            margin: 0%;
+            color: #fff;
+        }
+        #rum_sst_tab {
+            display: none;
+        }
+        
+        
+        
+        .heroViceAdmin-left img { 
+            width: 60%;
+        }
+        .word-container {
+                font-size: 1.5em;
+    font-weight: 600;
+    color: #08B3F0;
+            
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: #0d6efdd1;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            border: none;
+            width: 65%;
+          
+            text-align: center;
+            border-radius: 30px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            
+
+        }
+
+        .close {
+            
+    
+            font-size: 28px;
+            font-weight: bold;
+            
+            cursor: pointer;
+            background-color: #ffffff;
+            border-radius: 50px;
+            padding: 10px;
+            height: 40px;
+            width: 40px;
+            color: #0d6efd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            margin: 20px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .inputSorteo {
+            display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    gap: 10px;
+    width: 60%;
+    border-radius: 10px;
+    border: 0.5px solid rgba(255, 255, 255, 0.40);
+    background: linear-gradient(318deg, rgba(0, 0, 0, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%), #E7EBF0;
+    background-blend-mode: soft-light, normal;
+    box-shadow: 2.5px 2.5px 5px 0px #A6ABBD inset, -2.5px -2.5px 5px 0px #FAFBFF inset;
+    justify-content: space-between;
+
+
+        }
+        .heroViceAdmin-left h2 {
+            color: #fbf100;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 53px;
+            margin: 0;
+        }
+        .inputSorteo button {
+            background-color: #08B3F0;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 15px;
+        }
+        .modal-contentLeft {
+    width: 100% !important;
+    display: flex;
+}
+
+    .modal-contentLeft img {
+        height: 100%;
+        border-radius: 30px 0 0 30px !important;
+    }
+
+    .modal-contentRigth {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        align-items: center !important;
+        justify-content: center !important;
+        
+    }
+
+    .modal-contentRigth h2 {
+        color: #0560D4 !important;
+        font-size: 30px !important;
+        font-weight: 700 !important;
+        line-height: 28px !important;
+        margin: 0%;
+        
+        
+    }
+    .modal-contentRigth h3 {
+        margin: 0%;
+    }
+
+    .modal-contentRigth p {
+        color: #555 !important;
+        font-weight: 500 !important;
+        font-size: 20px !important;
+        margin: 0 !important;
+    }
+
+    .modal-contentEmoji {
+        padding: 1rem !important;
+        border-radius: 100px !important;
+        border: 0.5px solid rgba(255, 255, 255, 0.40) !important;
+        margin-bottom: 20px;
+        background-blend-mode: soft-light, normal !important;
+        box-shadow: 2.5px 2.5px 5px 0px #A6ABBD, -2.5px -2.5px 5px 0px #FAFBFF inset !important;
+
+        width: 80px !important;
+        height: 80px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        justify-self: center !important;
+        font-size: 50px !important;
+    }
+
+    .modal-contentEmoji p {
+        font-size: 50px !important;
+    }
+
+
+
+
+
+
+    @media only screen and (max-width: 768px) {
+            
+            .heroViceAdmin {
+                flex-direction: column;
+                border-radius: 0%;
+                padding: 3rem 0 0 0;
+                height: 100%;
+                justify-content: space-between;
+            }
+            .inputSorteo {
+                width: 100%;
+            }
+            .heroViceAdmin-left {
+                width: 100%;
+                padding: 3rem 1.5rem;
+                gap: 25px;
+            }
+            
+            .heroViceAdmin-rigth img {
+                height: 100%;
+            }
+            .heroViceAdmin-left h2  {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 33px ;
+            }
+            
+            .heroViceAdmin-dependencia p {
+                font-size: 16px;
+                font-weight: 700;
+            }
+            .heroViceAdmin-dependencia {
+                width: 170px;
+                height: 41px;
+            }
+            .heroViceAdmin-left-p {
+                font-size: 18px;
+                line-height: 19px;
+                
+            }
+            .heroViceAdmin-CTA-number {
+                width: 175px;
+            }
+            .modal-content { 
+                flex-direction: column-reverse;
+                border: none;
+                width: 100%;
+                border-radius: 0px;
+            }
+            .modal-contentRigth {
+                height: 300px;
+                justify-content: flex-start;
+            }
+            .modal {
+                padding: 0;
+            }
+            .modal-contentLeft img {
+                border-radius: 0px;
+            }
+            .close {
+                position: relative;
+                background-color: #0d6efd;
+                color: #fff;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <section class="heroViceAdmin">
+        <div class="heroViceAdmin-left">
+            
+             <h2>CELEBRAMOS 43 AÑOS  <br>  RODANDO CONTIGO</h2>
+            <p class="heroViceAdmin-left-p">
+                ¡Estamos a un solo clic de conocer al ganador del bono por 200.000 en productos de <span style="color: #fbf100; font-weight: 700;">La Casa del Caucho</span> y otros fabulosos regalos! ¡No te lo pierdas!</p>
+                
+                <section class="inputSorteo">
+                    <div class="word-container">
+                        <span class="animated-letter" data-original="4">4</span>
+                        <span class="animated-letter" data-original="2">3</span>
+                        <span class="animated-letter" data-original=" "> </span>
+                        <span class="animated-letter" data-original="A">A</span>
+                        <span class="animated-letter" data-original="Ñ">Ñ</span>
+                        <span class="animated-letter" data-original="O">O</span>
+                        <span class="animated-letter" data-original="S">S</span>
+                    </div>
+                    
+                    <button onclick="startDrawing()">SORTEAR</button>
+                </section>
+                
+            
+                <!-- Modal -->
+                
+        </div>
+
+        <div class="heroViceAdmin-rigth">
+            <img src="https://casadelcaucho.monkeytwomonkey.com/wp-content/uploads/2023/10/Group-1000001770-1.webp" alt="">
+        </div>
+    </section>
+    <div id="winnerModal" class="modal">
+        <div class="modal-content">
+            
+            <div class="modal-contentLeft">
+                <img src="https://casadelcaucho.monkeytwomonkey.com/wp-content/uploads/2023/10/GANADOR-1.webp" alt="">
+            </div>
+
+            <div class="modal-contentRigth">
+                
+                <div class="modal-contentEmoji"><p>🎉</p></div>
+                <h3>GANADOR</h3>
+                <h2 id="winnerName"></h2>
+                <p id="winnerCedula"></p>
+            </div>
+            <span id="closeModal" class="close">&times;</span>
+            
+        </div>
+    </div>
+    <script>
+        let animating = false;
+
+        function getRandomCharacter() {
+            const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÑ';
+            return characters[Math.floor(Math.random() * characters.length)];
+        }
+
+        function animateWord(callback) {
+            const letters = document.querySelectorAll('.animated-letter');
+
+            if (animating) return;
+
+            animating = true;
+
+            const interval = setInterval(() => {
+                letters.forEach(letter => {
+                    const original = letter.getAttribute('data-original');
+                    if (original !== ' ') {
+                        letter.textContent = getRandomCharacter();
+                    }
+                });
+            }, 100);
+
+            setTimeout(() => {
+                clearInterval(interval);
+                animating = false;
+                callback();
+            }, 5000);
+        }
+
+        const API_KEY = 'AIzaSyDv-LggE-dy_7fyjaqzRreKLn-JzI6HZSM';
+        const SPREADSHEET_ID = '13meOezdqCfimduGf0DqiyW9RJVfNc1it0XBxi-YZmFE';
+        const SHEET_NAME = 'Hoja 1';
+
+        function drawWinnerFromSheet() {
+            const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const rows = data.values.slice(1);
+                    const winnerRow = rows[Math.floor(Math.random() * rows.length)];
+                    const [id, nombre, cedula] = winnerRow;
+                    const lastFourDigits = cedula.slice(-4);
+
+                    const winnerModal = document.getElementById('winnerModal');
+                    const winnerNameElem = document.getElementById('winnerName');
+                    const winnerCedulaElem = document.getElementById('winnerCedula');
+
+                    winnerNameElem.innerText = `${nombre}`;
+                    winnerCedulaElem.innerText = `CC XXX XXX ${lastFourDigits}`;
+
+                    winnerModal.style.display = "block";
+                })
+                .catch(error => {
+                    console.log('Error fetching data:', error);
+                    alert('Hubo un error al obtener los datos.');
+                });
+        }
+
+        function startDrawing() {
+            animateWord(drawWinnerFromSheet);
+        }
+
+        document.getElementById('closeModal').onclick = function () {
+            const winnerModal = document.getElementById('winnerModal');
+            winnerModal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            const winnerModal = document.getElementById('winnerModal');
+            if (event.target === winnerModal) {
+                winnerModal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

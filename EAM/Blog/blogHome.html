@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html Lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2F468A" />
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap" rel="stylesheet">
+    <title>Blog</title>
+    <script>
+        function mostrarVentana() {
+          document.getElementById("fondo").style.display = "flex";
+        }
+      
+        function cerrarVentana() {
+          document.getElementById("fondo").style.display = "none";
+        }
+        function mostrarBuscador() {
+          document.getElementById("fondoBuscador").style.display = "flex";
+        }
+      
+        function cerrarBuscador() {
+          document.getElementById("fondoBuscador").style.display = "none";
+        }
+    </script>
+    
+    <style>
+        body {
+            margin: 0px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .blog-header {
+            display: flex;
+            height: 64px;
+            width: 100%;
+            background: #fff;
+            align-items: center;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+            padding: 0px 50px;
+            justify-content: space-evenly;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            transform: translateY(0);
+            transition: transform 150ms ease-out;
+            z-index: 300000;
+        }
+        .blog-header_containt {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .blog-header img {
+            width: 96px;
+            height: 47px;            
+        }
+        .blog-header_menu {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .blog-header_menu .material-symbols-outlined {
+            color:#5f6368;
+        }
+        .blog-header_menu-buttonCategory  {
+            color:#5f6368;
+            text-decoration: none;
+        }
+        .blog-header_menu-buttonSuscribe {
+            background-color: #2F468A;
+            color: #fff;
+            text-decoration: none;
+            
+            padding: 13px 24px 11px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 30px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .blog-header_menu-buttonSuscribe span.material-symbols-outlined {
+            color: #fff;
+        }
+       
+        .blog-header_menu-buttonSuscribe:hover {
+            color: #fff;;
+        }
+        #popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.662);
+            padding: 20px;
+            border: 1px solid black;
+            height: 50vh;
+            width: 100%;
+            display: none;
+        }
+        #fondo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2f468ae8;
+            margin-top: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 200000;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #ventana-planEstudio {            
+            height: 100vh;
+            width: 100%;
+            display: flex;            
+            flex-direction: column;
+            align-items: center;
+            padding: 0rem 5rem;
+            
+            
+        }
+        .ventanaEmergente-card {
+            display: flex;
+            background-color: #fff;
+            font-size: 14px;
+            align-items: center;
+            
+            border-radius: 50px;
+            justify-content: center;
+            box-shadow: 0 0 32px rgb(0 0 0 / 11%);
+            
+            padding: 5px 7px;
+        }
+        
+        .ventanaEmergente-card p {
+            margin-bottom: 0px;
+        }
+        .buttonCerrar {
+            background-color: #fff0;
+            border: none;
+            display: flex;
+            padding: 3px;
+            
+            border-radius: 50px;
+            color: #fff;
+        }
+        .ventanaEmergente-category {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            
+            padding: 2rem;
+            align-items: center;
+            align-content: flex-start;
+            justify-content: flex-start;
+        }
+        .buttonCerrar .material-symbols-outlined {
+            font-size: 40px;
+        }
+        .ventanaEmergente_buttonCerrar-content {
+            
+            display: flex;
+            width: 100%;
+            padding: 4rem 2rem;
+            justify-content: center;
+            
+            
+        }
+        #fondoBuscador {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2f468ae8;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 200000;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content:space-between;
+
+        }
+        .ventanaBuscador_containt-buscador {
+            display: flex;
+        }
+        .ventanaBuscador_containt-input {
+            background-color: #fff;
+            padding: 8px;
+            width: 601px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            justify-content: space-between;
+            box-shadow: 2px 3px 1px 0px rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+            
+        }
+        .ventanaBuscador_containt-input input {
+            width: 500px;
+            border: none;
+            padding: 8px;
+            margin: 0 0 0px;
+        }
+        .ventanaBuscador_containt-input input::placeholder {
+            font-size: 1.1rem;
+        }
+        .ventanaBuscador_containt-input button {
+            background-color: #2f468a;
+            color: #fff;
+            border: none;
+            padding: 8px;
+            border-radius: 50px;
+            display: flex;
+        }
+        .buttonCerrarBuscador {
+            border: none;
+            background-color: #fff0;
+            color: #fff;
+            
+            
+        }
+        .buttonCerrarBuscador span.material-symbols-outlined {
+            font-size: 40px;
+        }
+        
+        #ventana-buscador {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 150px;
+            justify-content: flex-start;
+        }
+        .ventanaBuscador_footer {
+            
+            
+            display: flex;
+            
+        }
+        .blog-home_categorys {
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+            margin: 7rem 3rem;
+            justify-content: space-evenly;
+
+        }
+        #rum_sst_tab {
+            display: none !important;
+        }
+        .blog-home_category-titleContaint {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            justify-content: center;
+            
+        }
+        .blog-home_category-titleContaint  a {
+            align-items: center;
+            background: #fff;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            color: #1a73e8;
+            display: flex;
+            font-size: 16px;
+            font-weight: 400;
+            justify-content: center;
+            line-height: 24px;
+            margin: 7px 0 0;
+            min-height: 48px;
+            width: 192px;
+        }
+        .blog-home_category-articleCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 20%;
+            gap: 20px;
+           
+        }
+        .blog-home_category-articleCard h3 {
+            font-size: 18px;
+            color: #202124;
+            font-weight: 500;
+            padding: 5px 0 0 0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 2rem;
+        }
+        .blog-home_category-imgContent {
+            border-radius: 16px;
+            overflow: hidden;
+            width: 248px;
+            height: 145px;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+
+        }
+        .blog-home_category-articleCard img {
+            
+            border-radius: 16px;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center;
+            width: 100%;
+
+        }
+        .blog-home_category-titleContaint h3 {
+            font-size: 30px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        .blogHero {
+            display: flex;
+            
+        }
+        .blogHero-containt{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 60px;
+        }
+        .blogHero-containtPostOne {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            
+            align-items: flex-end;
+
+        }
+        .blogHero-containtPostOne-title {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            background-color: #fff;
+            box-shadow: 0 0 32px rgba(0,0,0,.11);
+            padding: clamp(36px,3.33vw,48px);
+            border-radius: 15px 0px 15px 15px;
+            margin-top: -100px;
+            z-index: 20;
+            
+        }
+        .blogHero-containtPostOne-title h2 {
+            font-size: 18px;
+            line-height: 2rem;
+            font-weight: 700;
+        }
+        .blogHero-containtPostOne-title p {
+            font-weight: 400;
+            line-height: 2rem;
+
+        }
+
+        .blogHero-lastPost {
+            display: flex;
+            padding: 4rem 3rem 3rem;
+            width: 30%;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .blogHero-lastPost-article {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+
+        }
+        .blogHero-lastPost-article img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 32px rgba(0,0,0,.11);
+        }
+        .blogHero-containtPostOne img {
+            width: 100%;
+            transform: scale(1);
+            transition: all .2s;
+            
+        }
+        .blogHero-lastPost-article h2 {
+            padding: 0;
+            font-size: 18px;
+            line-height: 2rem;
+            font-weight: 600;
+        }
+        .blogHero-containtPostOne-autor {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .postCategory {
+            color: #1a73e8;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            border-bottom: 2px solid #1a73e8 !important;
+            margin-bottom: 52px !important;
+            
+        }
+        .blogHero-lastPost-article a {
+            padding: 0;
+            font-size: 18px;
+            line-height: 2rem;
+            font-weight: 600;
+            color: #252525;
+        }
+        .blogHero-containtPostOne-autor p {
+
+            font-size: 13px;
+        }
+
+        .blog-header_containtMobile {
+            display: none;
+        }
+
+
+        @media only screen and (max-width: 768px) {
+            .blogHero-containt {
+                flex-direction: column;
+            }
+            #ventana-planEstudio {
+                padding: 0;
+            }
+
+            .blogHero-containtPostOne {
+                width: 100%;
+            }
+            .blogHero-lastPost {
+                width: 100%;
+            }
+            .blog-header_containt {
+                display: none;
+            }
+            .blog-header_containtMobile {
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .blog-header {
+                padding: 0;
+                justify-content: center;
+            }
+            .blogHero-containtPostOne-title {
+                margin-top: -40px;
+                width: 100%;
+            }
+            
+            .blogHero-lastPost {
+                gap: 50px;
+            }
+
+            .ventanaEmergente-category {
+                justify-content: flex-start;
+            }
+        }
+        .blog-header_menu {
+            cursor: pointer;
+        }
+        .ventanaEmergente-categoryContaint {
+            display: flex;
+            flex-direction: column;
+        }
+        .ventanaEmergente-categoryTitle {
+            color: #fff;
+            padding: 0rem 2rem;
+            font-size: 14px !important;
+            
+    
+        }
+        .ventanaEmergente-categoryTitle h2{
+            color: #fff !important;
+            font-size: 23px !important;
+            font-weight: 900;
+            margin: 30px 0 0 0;
+        }
+        a.blogHero-containtPostOne-title_title1 {
+                padding: 0 ;
+                font-size: 18px ;
+                line-height: 2rem ;
+                font-weight: 600 ;
+                color: #252525 ;
+                margin-bottom: 15px;
+                margin-top: 10px;
+            }
+
+            .blogRegistro {
+            display: flex;
+            justify-content: center;
+        }
+        .blogRegistro-Containt {
+            display: flex;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin: 144px 149px;
+            overflow: hidden;
+            padding: 36px 24px;
+            gap: 60px;
+            position: relative;
+            justify-content: center;
+        }
+        .blogRegistro-ContaintImg {
+            width: 30%;
+            display: flex;
+            
+        }
+        .blogRegistro-ContaintCTA {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            
+        }
+        
+        .blogRegistro-ContaintCTA h2 {
+            margin: 0 25px;
+            text-align: justify;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .blogRegistro-ContaintCTA p {
+            margin: 0 25px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 2rem;
+        }
+        @media only screen and (max-width: 768px) {
+            .blogRegistro-Containt{
+                flex-direction: column-reverse;
+                gap: 0px;
+                padding: 4rem 0rem 0rem 0rem;
+                margin: 0%;
+            }
+            .blogRegistro-ContaintCTA {
+                width: 100%;
+                padding: 0%;
+
+            }
+            .blogRegistro-ContaintImg {
+                padding: 0%;
+                margin-left: -3rem;
+            }
+            
+        }
+
+
+
+
+        
+
+        
+        
+
+    </style>
+</head>
+<body>
+
+
+    <header class="blog-header">
+        <section class="blog-header_containt">
+            <img src="https://www.eam.edu.co/wp-content/uploads/2021/10/logoo.png" alt="">
+            <div class="blog-header_menu">
+            
+            <span onclick="mostrarVentana()" class="material-symbols-outlined">tune</span>
+            
+            <a class="blog-header_menu-buttonSuscribe" href="https://www.eam.edu.co/blog/#registro"> <span class="material-symbols-outlined"> account_circle</span>SUSCRÍBETE</a> </div>
+
+        </section>
+
+        <section class="blog-header_containtMobile">
+            <img src="https://www.eam.edu.co/wp-content/uploads/2021/10/logoo.png" alt="">
+            <div class="blog-header_menu">
+            <span onclick="mostrarBuscador()" class="material-symbols-outlined">search</span>
+            <span onclick="mostrarVentana()" class="material-symbols-outlined">tune</span>
+            
+            
+        </div>
+
+        </section>
+        
+        
+        
+    </header>
+
+
+
+
+    <div id="fondo" style="display:none">
+        <div id="ventana-planEstudio" >
+
+            
+
+            <div class="ventanaEmergente-categoryContaint">
+
+                <section class="ventanaEmergente-categoryTitle">
+                    <h2>CATEGORÍAS DEL BLOG</h2>
+                    <p>Selecciona la categoría de tu interes:</p>
+                </section>
+
+
+
+                <section class="ventanaEmergente-category">
+
+
+                    <article class="ventanaEmergente-card">
+                        <a href="https://www.eam.edu.co/category/investigacion/ ">Investigación</a>
+                        
+                    </article>
+    
+                    <article class="ventanaEmergente-card">
+                        
+                        <a href="https://www.eam.edu.co/category/noticias/">Noticias</a>
+                    </article>
+    
+                    <article class="ventanaEmergente-card">
+                        
+                        <p>Inteligencia Artificial</p>
+                    </article>
+    
+                    <article class="ventanaEmergente-card">
+                        
+                        <p>Marketing Digital</p>
+                    </article>
+    
+                    <article class="ventanaEmergente-card">
+                        
+                        <p>Analítica de datos</p>
+                    </article>
+    
+                    <article class="ventanaEmergente-card">
+                       
+                        <p>Admin. de empresas</p>
+                    </article>
+    
+                    <article class="ventanaEmergente-card">
+                        
+                        <p>Emprendimiento</p>
+                    </article>
+    
+                    <article class="ventanaEmergente-card">
+                       
+                        <p>Innovación</p>
+                    </article>
+    
+                    <article class="ventanaEmergente-card">
+                      
+                        <p>Diseño Digital</p>
+                    </article>
+    
+                    
+    
+    
+                </section>
+
+                <div class="ventanaEmergente_buttonCerrar-content">
+                    <button onclick="cerrarVentana()" class="buttonCerrar"><span class="material-symbols-outlined">cancel</span></button> 
+                </div>
+
+            </div>
+
+              
+        </div>
+    </div>
+
+
+    <div id="fondoBuscador" style="display:none">
+        <div id="ventana-buscador" >
+
+            <div class="ventanaEmergente_buttonCerrar-content">
+                 
+            </div>
+            <section class="ventanaBuscador_footer">
+                <button onclick="cerrarBuscador()" class="buttonCerrarBuscador"><span class="material-symbols-outlined">cancel</span> </button>
+            </section>
+
+           
+
+            
+
+            
+
+                
+
+
+             
+        </div>
+    </div>
+
+
+   
+    <section class="blogHero">
+        <div class="blogHero-containt">
+
+
+            <div class="blogHero-containtPostOne">
+                <img src="https://www.eam.edu.co/wp-content/uploads/2023/04/Diseno-sin-titulo-10-1.png" alt="">
+                <div class="blogHero-containtPostOne-title">
+                    <a href="https://www.eam.edu.co/category/investigacion/"><span class="postCategory">Investigación </span></a>
+                    <a class="blogHero-containtPostOne-title_title1" href="https://www.eam.edu.co/analisis-de-las-caracteristicas-financieras-sociales-y-ambientales-presentadas-en-los-informes-gri-pro-parte-de-la-empresa-de-energia-del-quindio-edeq-para-el-ano-2021/">Análisis de las características financieras, sociales y ambientales presentadas en los informes GRI pro parte de la Empresa de Energía del Quindío EDEQ para el año 2021</a>
+                    <p>El proyecto que estamos realizando se enmarca en la temática de Reportes Integrados (RI) en una revisión reflexiva desde la contabilidad social y ambiental.</p>
+                    <div class="blogHero-containtPostOne-autor">
+                        <div>
+                            
+                            <p>Angélica María Varela <br>Carolina León </p>
+                            
+                        </div>
+
+                        <a href="https://www.eam.edu.co/analisis-de-las-caracteristicas-financieras-sociales-y-ambientales-presentadas-en-los-informes-gri-pro-parte-de-la-empresa-de-energia-del-quindio-edeq-para-el-ano-2021/"><span class="material-symbols-outlined">arrow_circle_right</span></a>
+
+                    </div>
+                </div>
+
+            </div>
+            
+
+            <div class="blogHero-lastPost">
+
+                <article class="blogHero-lastPost-article">
+                    <a href="https://www.eam.edu.co/la-economia-circular-como-un-modelo-del-desarrollo-sostenible/"><img src="https://www.eam.edu.co/wp-content/uploads/2023/04/Diseno-sin-titulo-12.png" alt=""></a>
+                    <a href="https://www.eam.edu.co/category/investigacion/"><span class="postCategory">Investigación </span></a>
+                    <a href="https://www.eam.edu.co/la-economia-circular-como-un-modelo-del-desarrollo-sostenible/">La Economía circular como un modelo del desarrollo sostenible</a>
+                    
+                    
+                </article>
+
+                <article class="blogHero-lastPost-article">
+                    <a href="https://www.eam.edu.co/3560-2/"><img src="https://www.eam.edu.co/wp-content/uploads/2023/04/Diseno-sin-titulo-14.png" alt=""></a>
+                    <a href="https://www.eam.edu.co/category/noticias/"><span class="postCategory">Noticias</span></a>
+                    <a href="https://www.eam.edu.co/3560-2/">Café Don Narcizo presente en 500 empresas que hacen grande al quindío</a>
+                    
+                    
+                </article>
+
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <section class="blog-home_categorys">
+
+        <article class="blog-home_category-titleContaint">
+            <h3>Analitica de datos</h3>
+            
+            <a href="">Ver todo</a>
+        </article>
+
+        <article class="blog-home_category-articleCard">
+            <h3>Cómo la analítica de datos puede mejorar tu estrategia SEO y aumentar tu tráfico web</h3>
+            <div class="blog-home_category-imgContent">
+                <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/image5_bmarkBN.max-1000x1000.jpg" alt="">
+            </div>
+            
+        </article>
+        
+        <article class="blog-home_category-articleCard">
+            <h3>Cómo la analítica de datos puede mejorar tu estrategia SEO y aumentar tu tráfico web</h3>
+            <div class="blog-home_category-imgContent">
+                <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/image5_bmarkBN.max-1000x1000.jpg" alt="">
+            </div>
+            
+        </article>
+
+        <article class="blog-home_category-articleCard">
+            <h3>Cómo la analítica de datos puede mejorar tu estrategia SEO y aumentar tu tráfico web</h3>
+            <div class="blog-home_category-imgContent">
+                <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/image5_bmarkBN.max-1000x1000.jpg" alt="">
+            </div>
+            
+        </article>
+
+      
+        
+
+
+    </section> -->
+
+    
+    <section class="blogRegistro">
+        <div id="registro" class="blogRegistro-Containt">
+            <div class="blogRegistro-ContaintImg">
+                <img src="https://www.blog.google/static/blogv2/images/newsletter-homepage-woman-couch.svg" alt="">
+            </div>
+            <div class="blogRegistro-ContaintCTA">
+                <h2>Recibe las últimas noticias en tu correo electrónico.</h2>
+                
+                <div class="blogRegistro-ContaintForm">
+                    <div data-paperform-id="ol6idbpc"></div><script>(function() {var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js"; document.body.appendChild(script); })()</script>
+                </div>
+                <p>Su información se utilizará de acuerdo con la <span><a href="">política de privacidad</a></span></p>
+            </div>
+        </div>
+    </section>
+    
+    
+</body>
+</html>

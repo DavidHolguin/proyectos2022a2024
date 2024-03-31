@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenAQ API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #data {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="data"></div>
+
+    <script>
+        function fluctuar() {
+            var min = 430;
+            var max = 445;
+            var intervalo = 3600000; // 1 hora en milisegundos
+
+            // Inicializar flut con un valor aleatorio dentro del rango
+            var flut = Math.floor(Math.random() * (max - min + 1)) + min;
+            document.getElementById("data").innerHTML = "Valor fluctuante: " + flut;
+
+            // Actualizar flut cada hora
+            setInterval(function() {
+                flut = Math.floor(Math.random() * (max - min + 1)) + min;
+                document.getElementById("data").innerHTML = "Valor fluctuante: " + flut;
+            }, intervalo);
+        }
+
+        fluctuar();
+    </script>
+</body>
+</html>

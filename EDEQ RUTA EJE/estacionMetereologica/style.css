@@ -1,0 +1,242 @@
+.backgroundDashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #60B4E2;
+    justify-content: center;
+    font-family: "Nunito Sans", sans-serif;
+    align-items: center;
+    padding: 3rem;
+}
+.backgroundDashboardNoche {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #055586;
+    justify-content: center;
+    font-family: "Nunito Sans", sans-serif;
+    align-items: center;
+    padding: 3rem;
+}
+.containerDashboard {
+    display: flex;
+    gap: 20px;
+}
+.containerDashboard_metricasPrincipales {
+    display: flex;
+    flex-direction: column;
+    
+}
+.metricasPrincipales_containerSuperior {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.metricasPrincipales_containerIcon {
+    
+    width: 200px;
+    height: 200px;
+   
+    background-image: url('https://rutaeje.com/wp-content/uploads/2024/02/Group-53.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.metricasPrincipales_containerPrincipal {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 200px;
+    background-color: rgba(5, 85, 134, 0.22);
+    justify-content: space-evenly;
+   color: #fff;
+   padding-left: 30px;
+   border-radius: 30px;
+    
+}
+.metricasPrincipales_containerPrincipalNoche {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    border-radius: 30px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.29);
+    justify-content: space-evenly;
+   color: #fff;
+   padding-left: 30px;
+}
+.metricasPrincipales_Temp {
+    display: flex;
+    align-items: center;
+}
+.metricasPrincipales_Temp h2 {
+    font-size: 40px;
+    font-weight: 900 !important;
+    margin: 0;
+}
+.metricasPrincipales_title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.metricasPrincipales_title p {
+    margin: 0;
+    font-size: 14px;
+}
+.metricasPrincipales_title h3 {
+    margin: 0;
+}
+.metricasPrincipales_temMaxMin {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+}
+.metricasPrincipales_detalles {
+    margin-left: 50px;
+}
+.metricasPrincipales_detalles p {
+    margin: 0;
+    font-size: 14px;
+}
+.metricasSecundarias {
+display: flex;
+align-items: center;
+color: #fff;
+width: 90%;
+gap: 10px;
+justify-content: flex-start;
+
+}
+.containerDashboard_metricasSecundarias {
+width: 200px;
+background-color: rgba(5, 85, 134, 0.22);
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+border-radius: 30px;
+justify-content: space-evenly;
+
+
+
+}
+.containerDashboard_metricasSecundariasNoche {
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.29);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    
+}
+.metricasSecundarias svg {
+fill: #fff;
+}
+.metricasSecundarias p  {
+margin: 0;
+font-size: 12px;
+}
+.metricasSecundarias h3 {
+margin: 0 !important;
+}
+.radio-inputs {
+    font-family: "Nunito Sans", sans-serif;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #4c9fcd;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 310px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.radio-inputsNoche {
+    font-family: "Nunito Sans", sans-serif;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #043c5f;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 310px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: .5rem 0;
+  color: #fff;
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #fff;
+  font-weight: 600;
+  color: #043c5f;
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .containerDashboard {
+        flex-direction: column;
+        width: 100%;
+        
+        
+    }
+    .backgroundDashboard {
+        
+        padding: 1rem;
+    }
+    .metricasPrincipales_containerSuperior {
+        flex-direction: column;
+    }
+    .metricasPrincipales_containerIcon {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 10px;
+
+    }
+    .metricasPrincipales_containerPrincipal {
+        width: 100%;
+        padding: 0;
+
+    }
+    .containerDashboard_metricasSecundarias {
+        width: 100%;
+        height: 200px;
+    }
+    .metricasPrincipales_title {
+        margin-left: 120px;
+    }
+    .metricasPrincipales_Temp {
+        margin-left: 20px;
+    }
+
+}

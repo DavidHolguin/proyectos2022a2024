@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #carousel-container {
+                position: relative;
+                
+                margin: auto;
+                overflow: hidden;
+            }
+
+            #image-container {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .carousel-image {
+                width: 100%;
+                height: auto;
+            }
+
+            .carouselText{
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 200px;
+            }
+            .carouselText h4 {
+                color: #fff;
+                font-size: 35px;
+                line-height: 38px;
+                text-align: right;
+            }
+
+            .arrow {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                font-size: 20px;
+                color: #4f8333;
+                background-color: rgba(255, 255, 255, 0.534);
+                border: none;
+                outline: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10;
+            }
+
+            #prev {
+                left: 10px;
+                font-weight: 800;
+            }
+
+            #next {
+                right: 10px;
+                font-weight: 800;
+            }
+            .carouselText h4 {
+                color: #fff;
+                font-size: 35px;
+                line-height: 38px;
+                text-align: right;
+            }
+            .carouselTextContaint {
+                width: 35%;
+                border-right: 5px solid #8ed046;
+                padding-right: 21px;
+            }
+    </style>
+</head>
+<body>
+    <div id="carousel-container">
+        <div id="image-container">
+            <img class="carousel-image" src="https://www.rutaeje.com/wp-content/uploads/2024/01/banner_salento-1.webp" alt="Imagen 1">
+            <img class="carousel-image" src="https://www.rutaeje.com/wp-content/uploads/2024/01/1-1.webp" alt="Imagen 1">
+            <img class="carousel-image" src="https://www.rutaeje.com/wp-content/uploads/2024/01/2-1.webp" alt="Imagen 1">
+        </div>
+        <div class="carouselText">
+
+            <span class="carouselTextContaint">
+                <h4 >
+                    Innovamos a través de nuestras iniciativas de <span style="color:#8ed046 ;">Smart Cities</span> , para promover el desarrollo del Quindío.
+                </h4>
+            </span>
+            
+        </div>
+        <button class="arrow" id="prev" onclick="prevImage()">❮</button>
+        <button class="arrow" id="next" onclick="nextImage()">❯</button>
+    </div>
+    
+</body>
+</html>

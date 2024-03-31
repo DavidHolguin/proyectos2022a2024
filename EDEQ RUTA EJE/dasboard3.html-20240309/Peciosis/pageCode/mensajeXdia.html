@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.message-container {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+#message {
+  margin: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <p id="message"></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+  // Array de mensajes para cada día
+        const messages = [
+            "Mensaje para el 17 de marzo de 2024",
+            "Mensaje para el 18 de marzo de 2024",
+            "Mensaje para el 19 de marzo de 2024",
+            // Agrega mensajes para los días siguientes aquí
+        ];
+
+        // Obtiene la fecha actual
+        const currentDate = new Date();
+        const currentDay = currentDate.getDate() - 17; // Cambiar el 17 al día de inicio
+        const messageIndex = currentDay % messages.length;
+
+        // Muestra el mensaje correspondiente al día actual
+        const messageElement = document.getElementById("message");
+        messageElement.textContent = messages[messageIndex];
+        });
+
+    </script>
+</body>
+</html>

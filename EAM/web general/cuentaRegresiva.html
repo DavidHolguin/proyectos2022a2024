@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function formatTime(time) {
+  return time < 10 ? "0" + time : time;
+}
+
+function updateCountdown() {
+  var endDate = new Date("June 25, 2023 23:59:00").getTime();
+  var now = new Date().getTime();
+  var remainingTime = endDate - now;
+
+  var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+  days = formatTime(days);
+  hours = formatTime(hours);
+  minutes = formatTime(minutes);
+  seconds = formatTime(seconds);
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+}
+
+setInterval(updateCountdown, 1000);
+
+
+    </script>
+    <style>
+        .countdownContaint {
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.countdown-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 5px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="countdownContaint">
+
+        <div class="countdown-container">
+            <div class="countdown-item">
+            <span id="days" class="countdown-value"></span>
+            <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-item">
+            <span id="hours" class="countdown-value"></span>
+            <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+            <span id="minutes" class="countdown-value"></span>
+            <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+            <span id="seconds" class="countdown-value"></span>
+            <span class="countdown-label">Segundos</span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

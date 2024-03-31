@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        
+        @media only screen and (max-width: 767px) {
+            
+       
+        
+            .icons-apps {
+        
+        color: #000 !important;
+        
+        border-radius: 50px !important;
+        width: 30px !important;
+        display: flex !important;
+        height: 30px !important;
+        background-color: #fff !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .icons-apps a {
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .registroEstudiantesNuevos-containt {
+        display: flex !important;
+        line-height: 2rem;
+        width: 100% !important;
+        font-family: 'Poppins', sans-serif !important;
+  
+        padding: 50px 0px 100px 0px !important;
+        
+        font-size: 1.6rem !important;
+        background-color: #f1f3f4 !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 30px !important;
+    }
+    .registroEstudiantesNuevos-step {
+        width: 90% !important;
+        background-color: #ffffff;
+        border-radius: 8px !important;
+        display: flex !important;
+        font-size: 14px !important;
+        padding: 40px 20px !important;            
+        color: #0f0f0f;
+        flex-direction: column !important;
+        -webkit-box-shadow: 4px 4px 14px 1px rgb(0 0 0 / 58%);
+    }
+    .registroEstudiantesNuevos-step p {
+        margin: 0 !important;
+    }
+    .registroEstudiantesNuevos-step a {
+        width: 80% !important;
+        padding: 13px 10px !important;
+        margin: 20px 0px !important;
+        background-color: #2f468a !important;
+        color: #fff !important;
+        border-radius: 8px !important;
+        border: none !important;
+        font-family: 'Poppins', sans-serif !important;
+        display: flex !important;
+        justify-content: space-evenly !important;
+        align-items: center !important;
+        
+    }
+    
+
+        .registroEstudiantesNuevos-numberStep {
+        display: flex !important;
+        background-color: #2f468a !important;
+        color:#fff !important;
+        width: 40px !important;
+        height: 40px !important;
+        font-weight: 900 !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 50px !important;
+        font-size: 2rem !important;
+        margin-bottom: 10px !important;
+        }
+        .registroEstudiantesNuevos-numberStep p {
+        margin: 0 !important;
+        }
+        .registroEstudiantesNuevos-logosPago {
+        display: flex !important;
+        gap: 15px !important;
+        margin: 30px 0px !important;
+      
+        }
+        .registroEstudiantesNuevos-logosPago img {
+        width: 15% !important;
+        }
+        .registroEstudiantesNuevos-titleContaint {
+        width: 90% !important;
+        margin-top: 30px !important;
+        font-size: 2rem !important;
+        font-weight: bold !important;
+        margin-bottom: 0px !important;
+        }
+        .registroEstudiantesNuevos-titleStep {
+        background-color: #ffffff !important;
+        border-radius: 8px !important;
+        display: flex !important;
+        padding: 20px 20px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 90% !important;
+        color: #000000 !important;
+        -webkit-box-shadow: 4px 4px 14px 1px rgb(0 0 0 / 58%);
+        gap: 15px !important;
+        }
+        .registroEstudiantesNuevos-titleStep p {
+        margin: 0 !important;
+        }
+        .registroEstudiantesNuevos-flecha {
+        background-color: #fff !important;    
+        border-radius: 50px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 80px !important;
+        
+    }
+    .registroEstudiantesNuevos-flecha img {
+        width: 60px !important;
+        
+
+    }
+    .registroEstudiantesNuevos-atencionHorario {
+        background-color: #fff !important;
+        color: #000 !important;
+        padding: 10px !important;
+        border-radius: 8px !important;
+        margin-top: 10px !important;
+        text-align: center !important;
+        
+    }
+    
+
+    .registroEstudiantesNuevos-step3-horarioContaint {
+        display: flex !important;
+        gap: 5px !important;
+        }
+        .registroEstudiantesNuevos-conserveRecibo {
+        display: flex !important;
+        gap: 5px !important;
+        }
+        .button-support {
+        background-color: #fff !important;
+        color: #000 !important;
+        font-weight: 600 !important;
+        border-radius: 50px !important;
+        display: flex !important;
+        gap: 5px !important;
+        padding: 3px 10px !important;
+        align-items: center !important;
+        }
+        .barBotton-assitant {
+        display: flex !important;
+        flex-direction: row !important;
+        position: absolute !important;
+        bottom: 10px !important;
+        left: 20px !important;
+        right: 20px !important;
+        height: 60px !important;
+        background-color: #f9fafb !important;
+        border-radius: 8px !important;
+        pointer-events: auto !important;
+        position: fixed !important;
+        z-index: 6 !important;
+        justify-content: space-evenly !important;
+        align-items: center !important;
+        -webkit-box-shadow: 3px 2px 3px 0px rgb(0 0 0 / 58%) !important;
+            
+        }
+        .barBotton-assitant a  {
+            display: flex !important;
+            
+            flex-direction: column !important;
+            align-items: center !important;
+        }
+        .barBotton-assitant div {
+            display: flex !important;
+            align-items: center !important;
+            align-content: center !important;
+            gap: 10px !important;
+        }
+        .barBotton-assitant p {
+            margin: 0 !important;
+        }
+
+      
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        @media only screen and (min-width: 992px) {
+            body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        .icons-apps {
+            
+            color: #000;
+            
+            border-radius: 50px;
+            width: 30px;
+            display: flex;
+            height: 30px;
+            background-color: #fff;
+            justify-content: center;
+            align-items: center;
+        }
+        .icons-apps a {
+            display: flex;
+            justify-content: center;
+        }
+
+        .registroEstudiantesNuevos-containt {
+            display: flex;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+      
+            padding: 50px 0px 20px 0px;
+            
+            font-size: 1.4rem;
+            background-color: #f1f3f4;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            align-content: flex-start;
+        }
+        .registroEstudiantesNuevos-step {
+            width: 70%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    padding: 0px 20px 40px 20px;
+    color: #0f0f0f;
+    flex-direction: column;
+    -webkit-box-shadow: 4px 4px 14px 1px rgb(0 0 0 / 58%);
+        }
+        .registroEstudiantesNuevos-step p {
+            margin: 0;
+        }
+        .registroEstudiantesNuevos-step a {
+            width: 40%;
+            padding: 13px 10px;
+            margin: 20px 0px;
+            background-color: #2f468a;
+            color: #fff;
+            border-radius: 8px;
+            -webkit-box-shadow: inset 3px 2px 3px 0px rgb(0 0 0 / 58%);
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            
+        }
+        .registroEstudiantesNuevos-numberStep {
+            display: flex;
+            background-color: #2f468a;
+            color:#fff;
+            width: 40px;
+            height: 40px;
+            font-weight: 900;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            font-size: 2rem;
+            -webkit-box-shadow: inset 3px 2px 3px 0px rgb(0 0 0 / 58%);
+            
+            margin-left: -100px;
+        }
+        .button-support {
+            -webkit-box-shadow: inset 3px 2px 3px 0px rgb(0 0 0 / 58%);
+        }
+        .registroEstudiantesNuevos-numberStep p {
+            margin: 0;
+        }
+        .registroEstudiantesNuevos-logosPago {
+            display: flex;
+            gap: 15px;
+            
+            margin: 30px 0px;
+        }
+        .registroEstudiantesNuevos-logosPago img {
+            width: 10%;
+        }
+        .registroEstudiantesNuevos-titleContaint {
+            width: 90%;
+            margin-top: 30px;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+        .registroEstudiantesNuevos-titleStep {
+            background-color: #ffffff;
+            border-radius: 8px;
+            display: flex;
+            padding: 20px 20px;  
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            color: #000000;
+            -webkit-box-shadow: 4px 4px 14px 1px rgb(0 0 0 / 58%);
+            gap: 15px;
+        }
+        .registroEstudiantesNuevos-titleStep p {
+            margin: 0;
+        }
+        .registroEstudiantesNuevos-flecha {
+            background-color: #fff;     
+            
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+        .registroEstudiantesNuevos-flecha img {
+            width: 34px;
+            
+
+        }
+        .registroEstudiantesNuevos-atencionHorario {
+            background-color: #fff;
+            color: #000;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-align: center;
+            
+        }
+        .registroEstudiantesNuevos-step3-horarioContaint {
+            display: flex;
+            gap: 5px;
+        }
+        .registroEstudiantesNuevos-conserveRecibo {
+            display: flex;
+            gap: 5px;
+        }
+        .button-support {
+            background-color: #fff;
+            color: #000;
+            font-weight: 600;
+            border-radius: 50px;
+            display: flex;
+            gap: 5px;
+            padding: 3px 10px;
+            align-items: center;
+
+        }
+        
+
+        .barBotton-assitant {
+            display: none;
+        }
+        
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+             body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        
+        .icons-apps {
+            
+            color: #000;
+            
+            border-radius: 50px;
+            width: 30px;
+            display: flex;
+            height: 30px;
+            background-color: #fff;
+            justify-content: center;
+            align-items: center;
+        }
+        .icons-apps a {
+            display: flex;
+            justify-content: center;
+        }
+
+        .registroEstudiantesNuevos-containt {
+            display: flex;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+      
+            padding: 50px 0px 20px 0px;
+            
+            font-size: 1.4rem;
+            background-color: #f1f3f4;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            align-content: flex-start;
+        }
+        .registroEstudiantesNuevos-step {
+            width: 70%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    padding: 0px 20px 40px 20px;
+    color: #0f0f0f;
+    flex-direction: column;
+    -webkit-box-shadow: 4px 4px 14px 1px rgb(0 0 0 / 58%);
+        }
+        .registroEstudiantesNuevos-step p {
+            margin: 0;
+        }
+        .registroEstudiantesNuevos-step a {
+            width: 60%;
+            padding: 13px 10px;
+            margin: 20px 0px;
+            background-color: #2f468a;
+            color: #fff;
+            border-radius: 8px;
+            -webkit-box-shadow: inset 3px 2px 3px 0px rgb(0 0 0 / 58%);
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            
+        }
+        .registroEstudiantesNuevos-numberStep {
+            display: flex;
+            background-color: #2f468a;
+            color:#fff;
+            width: 40px;
+            height: 40px;
+            font-weight: 900;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            font-size: 2rem;
+            -webkit-box-shadow: inset 3px 2px 3px 0px rgb(0 0 0 / 58%);
+            
+            margin-left: -100px;
+        }
+        .button-support {
+            -webkit-box-shadow: inset 3px 2px 3px 0px rgb(0 0 0 / 58%);
+        }
+        .registroEstudiantesNuevos-numberStep p {
+            margin: 0;
+        }
+        .registroEstudiantesNuevos-logosPago {
+            display: flex;
+            gap: 15px;
+            
+            margin: 30px 0px;
+        }
+        .registroEstudiantesNuevos-logosPago img {
+            width: 10%;
+        }
+        .registroEstudiantesNuevos-titleContaint {
+            width: 90%;
+            margin-top: 30px;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+        .registroEstudiantesNuevos-titleStep {
+            background-color: #ffffff;
+            
+            border-radius: 8px;
+            display: flex;
+            padding: 20px 20px;  
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            color: #000000;
+            -webkit-box-shadow: 4px 4px 14px 1px rgb(0 0 0 / 58%);
+            gap: 15px;
+        }
+        .registroEstudiantesNuevos-titleStep p {
+            margin: 0;
+        }
+        .registroEstudiantesNuevos-flecha {
+            background-color: #fff;     
+            
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+        .registroEstudiantesNuevos-flecha img {
+            width: 34px;
+            
+
+        }
+        .registroEstudiantesNuevos-atencionHorario {
+            background-color: #fff;
+            color: #000;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-align: center;
+            
+        }
+        .registroEstudiantesNuevos-step3-horarioContaint {
+            display: flex;
+            gap: 5px;
+        }
+        .registroEstudiantesNuevos-conserveRecibo {
+            display: flex;
+            gap: 5px;
+        }
+        .button-support {
+            background-color: #fff;
+            color: #000;
+            font-weight: 600;
+            border-radius: 50px;
+            display: flex;
+            gap: 5px;
+            padding: 3px 10px;
+            align-items: center;
+
+        }
+        
+
+        .barBotton-assitant {
+            display: none;
+        }
+        }
+        .registroEstudiantesNuevos-containt hr {
+            width: 100%;
+    border: solid 1px;
+        }
+
+
+        .section-nota {
+            display: flex;
+            justify-content: center;
+            background-color: #f1f3f4;
+            padding-top: 30px;
+        }
+        .section-nota_containt {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            background-color: #f1f3f4;
+            text-align: justify;
+        }
+        .registroEstudiantesNuevos-containt hr {
+            border: solid 1px #606060;
+        }
+
+
+        
+
+
+    </style>
+</head>
+<body>
+
+
+    
+
+   
+
+
+
+    <section class="registroEstudiantesNuevos-containt">
+    
+        <div class="registroEstudiantesNuevos-titleStep">
+            <p>Para el proceso de admisión tenga en cuenta los siguientes pasos:</p>
+            <div class="registroEstudiantesNuevos-flecha">
+                <img src="https://portafolio.site/wp-content/uploads/2023/01/flecha-hacia-abajo.png" alt="">
+            </div>
+        </div>
+
+        <article class="registroEstudiantesNuevos-step">
+            <div class="registroEstudiantesNuevos-numberStep">
+                <p>1</p>
+            </div>
+            <p>Generar recibo (pin de inscripción) diligenciando la información solicitada. Diligencie el formulario que se encuentra en el siguiente link:</p>
+            <a href="https://hiezer.eam.edu.co/admissions/inscriptions"><span class="material-symbols-outlined">edit_note</span> Diligenciar formulario</a>
+            <p>Una vez finalice el registro de sus datos, debe aceptar términos y condiciones y dar clic en el botón Generar PIN <br> Nota: Al correo que registre le llegará un PIN. </p> <hr>
+            <p>El PIN de inscripción para el semestre lo puede pagar en:</p>
+            <P style="color:red; ">NOTA IMPORTANTE: Por favor revisar su correo electrónico en el listado de spam o no deseado, dado que es posible que el correo automático llegue allí.</P>
+                
+                
+
+        
+            <div class="registroEstudiantesNuevos-logosPago">
+                <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/01/5.png" alt="">
+                <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/01/4.png" alt="">
+                <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/01/3.png" alt="">
+                <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/01/2.png" alt="">
+                <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/04/Diseno-sin-titulo-23-1.png" alt="">
+            </div>
+             </article>
+
+        <article class="registroEstudiantesNuevos-step">
+            <div class="registroEstudiantesNuevos-numberStep">
+                <p>2</p>
+            </div>
+            <p>Después que realice el pago del PIN, al correo le llegará un mensaje para que continúe con el proceso de inscripción y se habilitará el diligenciamiento.</p>
+            <p>Realice la inscripción diligenciando cada paso del formulario en el siguiente enlace</p>
+            
+            <a href="https://hiezer.eam.edu.co/admissions/registration"><span class="material-symbols-outlined">edit_note</span> Diligenciar formulario</a>
+            <p>Cuando llegue a los requisitos, por favor adjuntar los siguientes documentos en PDF (Legibles)</p>
+            <ul>
+                <li>Copia del documento de identidad ampliado al 150% en formato PDF.</li>
+                <li>Fotografía digital 800 x 500 pixeles – fondo blanco, tamaño documento.</li>
+                <li>Registro civil de nacimiento en formato PDF.</li>
+                <li>Copia en formato PDF del Diploma o acta de grado que acreditan la condición de bachiller, o su equivalente obtenido en el exterior, convalidado para el territorio nacional según las normas legales vigentes.</li>
+                <li>Informe individual de resultados del Examen Saber 11 en formato PDF.</li>
+                
+                
+            </ul>
+            <p>Observación: Revisados los documentos recibirá un correo electrónico de aprobación de los mismos para continuar con el proceso de inscripción. Cuando un documento no este legible, tenga cortadas las firmas o borroso, Registro y Control académico rechazará el documento y le llegará un mensaje a su correo registrado para que lo corrija y lo suba a la plataforma nuevamente.</p>
+            
+                     
+        </article>
+
+        <article class="registroEstudiantesNuevos-step">
+            <div class="registroEstudiantesNuevos-numberStep">
+                <p>3</p>
+            </div>
+            
+                <p>Luego de realizar satisfactoriamente el proceso de inscripción, será convocado para presentar entrevista individual con el Decano de la Facultad y un profesional del Programa de Acompañamiento Integral – PAI.
+                </p> <br><br>
+                <p>El aspirante será notificado del resultado de admisión vía correo electrónico y al WhatsApp registrado en el formulario de inscripción donde podrá liquidar su recibo de pago de matrícula financiera.</p>
+                <a href="https://hiezer.eam.edu.co/payments/epayment-form"><span class="material-symbols-outlined">edit_note</span> Pagar Matrícula</a>
+                <p>Si la matrícula es financiada, legalice dicho proceso de acuerdo a los lineamientos establecidos por la entidad con la que vaya a realizar el crédito. Conserve su recibo.</p>
+            </div> 
+        </article>
+            
+        
+        
+
+
+
+        
+
+    </section>
+
+
+    <section class="section-nota">
+        <div class="section-nota_containt">
+            <h4>PARA TENER EN CUENTA</h4>
+            <p>Hasta que no realice su matrícula financiera, NO quedará matriculado(a).</p>
+            <p>Después de iniciadas las clases, no habrá lugar a devolución de dinero o título valor alguno por concepto de matrícula.</p>
+            <p>La Institución Universitaria EAM tiene convenio con las siguientes entidades financieras: Avanza, Banco AV Villas, Davivienda, Cooservunal e Icetex.
+            </p>
+            <p>Nota: Si se realiza el pago en línea, el tiempo de cargue de la transacción es de alrededor de 15 minutos; por el contrario, si el pago se realiza a través de nuestros aliados (puntos de pago Banco AV Villas, en las cajas de los almacenes del Grupo Éxito, la EDEQ y Efecty) el cargue de la transacción se confirmará a través de correo electrónico.
+            </p>
+            <p>Si desea mayor información podrá comunicarse a los correos:  auxmercadeo@eam.edu.co, comercial@eam.edu.co o a través de nuestras redes sociales @eamdelquindio, o en los WhatsApp 318 851 6428 – Teléfono 606 745 11 01 Ext. 105 – 127 en los siguientes horarios: 7:30 am a 12 m y de 2 pm a 7 pm.</p>
+        </div>
+    </section>
+
+    
+   
+
+
+
+
+</body>
+</html>

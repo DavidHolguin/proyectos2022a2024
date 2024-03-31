@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <style>
+        .homeEnlacesInteres_Containt {
+            display: flex;
+            font-family: 'Poppins', sans-serif !important;
+            justify-content: center;
+            gap: 10px;
+            padding: 6rem 3rem;
+            background-color: #fff;
+            flex-wrap: wrap;
+            -webkit-box-shadow: inset 0px 2px 5px 0px rgb(0 0 0 / 58%);
+        }
+
+        .cardEnlaces {
+            width: 185px;
+            height: 164px;
+            border-radius: 20px;
+            background: #f5f5f5;
+            position: relative;
+            padding: 1rem;
+            border: 2px solid #c3c6ce;
+            transition: 0.5s ease-out;
+            overflow: visible;
+            gap: 15px;
+        }
+
+        .cardEnlaces-details {
+            color: black !important;
+            height: 100%;
+            display: flex;
+            align-items: center !important;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .cardEnlaces-details  a {
+            text-decoration: none;
+            display: flex;
+            align-items: center !important;
+            flex-direction: column;
+        }
+        .cardEnlaces-details img {
+            width: 50px;
+            margin-bottom: 15px;
+        }
+
+        .cardEnlaces-button {
+            transform: translate(-50%, 125%);
+            width: 60%;
+            border-radius: 1rem;
+            border: none;
+            background-color: #3485c3;
+            color: #fff;
+            font-size: 1rem;
+            padding: .5rem 1rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            opacity: 0;
+            transition: 0.3s ease-out;
+        }
+
+        .text-body {
+            color: rgb(134, 134, 134);
+            margin: 0;
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 1.4rem;
+            
+        }
+
+        /*Text*/
+        .text-title {
+            font-size: 0.9em;
+            font-weight: bold;
+            margin: 0;
+            color: #000 !important;
+            margin-bottom: -5px;
+        }
+
+        /*Hover*/
+        .cardEnlaces:hover {
+            border-color: #3485c3;
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .cardEnlaces:hover .cardEnlaces-button {
+            transform: translate(-50%, 50%);
+            opacity: 1;
+        }
+
+
+
+
+
+
+
+        @media only screen and (max-width: 768px) {
+            
+            .homeEnlacesInteres_Containt {
+                padding: 3rem 0rem;
+                gap:10px
+            }
+            .cardEnlaces{
+                width: 165px;
+            }
+            .text-title  {
+                font-size: 0.8em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section class="homeEnlacesInteres_Containt">
+        
+        <div class="cardEnlaces">
+            <div class="cardEnlaces-details">
+                <a href="https://www.eam.edu.co/trabaja-con-nosotros/">
+                    <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/06/maleta-1.png" alt="">
+                    <p class="text-title">Convocatorias EAM</p>
+              <p class="text-body">Aplíca y rabaja con nosotros</p>
+                </a>   
+            </div>
+            <a href="https://www.eam.edu.co/trabaja-con-nosotros/">
+                <button class="cardEnlaces-button">Más info...</button>
+            </a>
+            
+          </div>
+
+
+          
+
+
+
+          <div class="cardEnlaces">
+            <div class="cardEnlaces-details">
+                <a href="https://www.eam.edu.co/informacion-esal/">
+                    <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/06/expediente-1.png" alt="">
+                    <p class="text-title">Información ESAL</p>
+              <p class="text-body">Conoce nuestra información pública</p>
+                </a>   
+            </div>
+            <a href="https://www.eam.edu.co/informacion-esal/">
+                <button class="cardEnlaces-button">Más info...</button>
+            </a>
+            
+          </div>
+
+
+
+          <div class="cardEnlaces">
+            <div class="cardEnlaces-details">
+                <a href="https://ci1330.eam.edu.co/" target="_blank">
+                    <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/06/normas-1.png" alt="">
+                    <p class="text-title">Normatividad</p>
+              <p class="text-body">Lee las Condiciones institucionales</p>
+                </a>   
+            </div>
+            <a href="https://ci1330.eam.edu.co/" target="_blank">
+                <button class="cardEnlaces-button">Más info...</button>
+            </a>
+            
+          </div>
+
+
+
+          <div class="cardEnlaces">
+            <div class="cardEnlaces-details">
+                <a href="https://app.eam.edu.co/site/pqrs/">
+                    <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/06/lista-de-verificacion-2-1.png" alt="">
+                    <p class="text-title">PQRSF</p>
+              <p class="text-body">Crea tus PQRSF para la EAM</p>
+                </a>   
+            </div>
+            <a href="https://app.eam.edu.co/site/pqrs/">
+                <button class="cardEnlaces-button">Más info...</button>
+            </a>
+            
+          </div>
+
+
+
+          <div class="cardEnlaces">
+            <div class="cardEnlaces-details">
+                <a href="https://www.eam.edu.co/#/">
+                    <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/06/video-conferencia-1.png" alt="">
+                    <p class="text-title">EAM Virtual</p>
+              <p class="text-body">Accede a nuestro sistema en linea</p>
+                </a>   
+            </div>
+            <a href="https://www.eam.edu.co/#/">
+                <button class="cardEnlaces-button">Más info...</button>
+            </a>
+            
+          </div>
+
+
+
+        
+
+
+
+          
+
+          
+
+          
+
+    </section>
+</body>
+</html>

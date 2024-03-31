@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(initialize);
+
+        var dynamicValue1, dynamicValue2, dynamicValue3; // Variables globales para almacenar los valores dinámicos
+
+        function initialize() {
+            // Configuramos el intervalo para llamar a las funciones updateChart() cada 9 segundos
+            setInterval(updateChart1, 9000);
+            setInterval(updateChart2, 9000);
+            setInterval(updateChart3, 9000);
+        }
+
+        function updateChart1() {
+            dynamicValue1 = Math.floor(Math.random() * 101); // Generamos un nuevo valor aleatorio para el gráfico 1
+            updateChart(dynamicValue1, 'donut_single1'); // Llamamos a la función updateChart con el valor generado y el ID del div correspondiente
+            document.getElementById('dynamic_value_1').innerText = dynamicValue1;
+        }
+
+        function updateChart2() {
+            dynamicValue2 = Math.floor(Math.random() * 101); // Generamos un nuevo valor aleatorio para el gráfico 2
+            updateChart(dynamicValue2, 'donut_single2'); // Llamamos a la función updateChart con el valor generado y el ID del div correspondiente
+            document.getElementById('dynamic_value_2').innerText = dynamicValue2;
+        }
+
+        function updateChart3() {
+            dynamicValue3 = Math.floor(Math.random() * 101); // Generamos un nuevo valor aleatorio para el gráfico 3
+            updateChart(dynamicValue3, 'donut_single3'); // Llamamos a la función updateChart con el valor generado y el ID del div correspondiente
+            document.getElementById('dynamic_value_3').innerText = dynamicValue3;
+        }
+
+        function updateChart(dynamicValue, chartId) {
+            // Definimos el color principal del gráfico según el valor generado
+            var mainColor;
+            if (dynamicValue > 80) {
+                mainColor = '#ff0000'; // Rojo si el valor es superior al 80%
+            } else if (dynamicValue > 60) {
+                mainColor = '#ffff00'; // Amarillo si el valor es superior al 60% pero no llega al 80%
+            } else {
+                mainColor = '#3366cc'; // Azul por defecto
+            }
+            // Creamos los datos del gráfico con el nuevo valor aleatorio y el color principal definido
+            var data = google.visualization.arrayToDataTable([
+                ['Effort', 'Amount given', { role: 'style' }],
+                ['Disponible', 100 - dynamicValue, '#dddddd'], // Color gris para el espacio restante
+                ['Visitantes', dynamicValue, mainColor] // Color principal definido según el valor generado
+            ]);
+            // Opciones del gráfico
+            var options = {
+                pieHole: 0.7,
+                pieSliceText: 'none',
+                chartArea: { width: '90%', height: '90%' },
+                pieSliceTextStyle: 'none',
+                legend: 'none',
+                colors: ['#dddddd', mainColor], // Colores especificados para las porciones del gráfico
+                tooltip: { trigger: 'hover' } // Mostrar etiquetas solo al hacer selección
+            };
+            // Seleccionamos el elemento div donde se mostrará el gráfico
+            var chart = new google.visualization.PieChart(document.getElementById(chartId));
+            // Dibujamos el gráfico con los nuevos datos y opciones
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+    <div class="containtCardsVisitantes">
+
+
+        <article class="cardVisitantes" id="vistantesBoquia">
+            <div id="donut_single1" style="width:200px; height: 200px;"></div> 
+                                    
+            <p>Boquia <br> <span id="dynamic_value_1"></span>% de ocupación</p>  
+
+        </article>
+
+
+        <article class="cardVisitantes" id="visitantesSalento">
+            <div id="donut_single2" style="width:200px; height: 200px;"></div>
+            <p>Salento <br> <span id="dynamic_value_2"></span>% de ocupación</p>
+        </article>
+
+        <article class="cardVisitantes" id="visitantesCocora">
+            <div id="donut_single3" style="width:200px; height: 200px;"></div>
+            <p>Cocora <br> <span id="dynamic_value_3"></span>% de ocupación</p>
+        </article>
+
+
+    </div>
+</body>
+</html>

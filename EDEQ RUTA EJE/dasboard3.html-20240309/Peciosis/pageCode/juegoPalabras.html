@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    .containtJuegoPalabras{
+        background-color: #111b21;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .container {
+        width: 100%;
+        
+        overflow: hidden;
+        position: relative;
+        max-width: 100%;
+    }
+
+    .words {
+        white-space: nowrap;
+        animation: moveWords 10s linear infinite;
+    }
+    .words span {
+        color: white;
+        padding: 5px 5px;
+        font-size: 15px;
+    }
+
+    @keyframes moveWords {
+        from { transform: translateX(0%); }
+        to { transform: translateX(-100%); }
+    }
+
+    /* Nuevas clases para el segundo carrusel */
+    .container2 {
+        width: 100%;
+         /* Altura igual a la del primer carrusel */
+        overflow: hidden;
+        position: relative;
+        max-width: 100%;
+    }
+
+    .words2 {
+        white-space: nowrap;
+        animation: moveWords2 15s linear infinite;
+    }
+    .words2 span {
+        color: white;
+        padding: 5px 5px;
+        font-size: 15px;
+    }
+
+    @keyframes moveWords2 {
+        from { transform: translateX(0%); }
+        to { transform: translateX(-100%); }
+    }
+</style>
+</head>
+<body>
+    <section class="containtJuegoPalabras">
+        <div class="container">
+            <div class="words">
+                <span>Feroz</span>
+                <span>Palo</span>
+                <span>Toxic</span>
+                <span>Menta</span>
+                <span>Apolo</span>
+                <span>Solecito Polinizador</span>
+                <span>Rustic</span>
+                <span>Amiguito Vaca</span>
+                <!-- Agrega más palabras aquí para llenar el espacio -->
+            </div>
+        </div>
+        <!-- Segundo carrusel -->
+        <div class="container2">
+            <div class="words2">
+                <span>Peciosis</span>
+                <span>Solecito</span>
+                <span>Pechugis</span>
+                <span>Pechuga Isleña</span>
+                <span>Pantanera</span>
+                <span>Pechuga a la carbonara</span>
+                <span>Estrellista</span>
+                <!-- Agrega más palabras aquí para llenar el espacio -->
+            </div>
+        </div>
+    </section>
+
+<script>
+    // JavaScript para duplicar palabras y llenar el espacio
+    const wordsContainer1 = document.querySelector('.words');
+    const words1 = wordsContainer1.innerHTML.trim().repeat(100); // Repetir para llenar el espacio
+    wordsContainer1.innerHTML = words1;
+
+    const wordsContainer2 = document.querySelector('.words2');
+    const words2 = wordsContainer2.innerHTML.trim().repeat(100); // Repetir para llenar el espacio
+    wordsContainer2.innerHTML = words2;
+</script>
+</body>
+</html>

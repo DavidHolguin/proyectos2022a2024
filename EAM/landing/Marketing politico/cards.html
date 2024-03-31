@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+  --color: ;
+  --transition-time: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Open Sans';
+  background: #fafafa;
+}
+
+a {
+  color: inherit;
+}
+
+.cards-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.card {
+  font-family: 'Heebo';
+  --bg-filter-opacity: 0.5;
+  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+  height:auto;
+  width: 15em;
+  font-size: 1.5em;
+  color: #fff;
+  border-radius: 1em;
+  padding: 1em;
+  /*margin: 2em;*/
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ccc;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: rotate(0);
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 1em;
+  color: #fff;
+  line-height: 1.2em;
+}
+
+.card p {
+  font-size: 0.55em;
+  font-family: 'Open Sans';
+  margin-top: 0.5em;
+  line-height: 1.31em;
+}
+
+.card .tags {
+  display: flex;
+}
+
+.card .tags .tag {
+  font-size: 0.6em;
+  background: #2f468aa9;
+  border-radius: 0.3rem;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  transition: all, var(--transition-time);
+}
+
+.card:hover .tags .tag {
+  background: var(--color);
+  color: white;
+}
+
+.card .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 1em;
+  line-height: 1em;
+  opacity: .8;
+}
+
+.card:before, .card:after {
+  content: '';
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+
+.card:before {
+  background: #ddd;
+  width: 250%;
+  height: 250%;
+}
+
+.card:after {
+  background: white;
+  width: 200%;
+  height: 200%;
+}
+
+.card:hover {
+  color: var(--color);
+}
+
+.card:hover:before, .card:hover:after {
+  transform: scale(1);
+}
+
+.card-grid-space .num {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  color:#878787;
+}
+
+.info {
+  font-size: 1.2em;
+  display: flex;
+  padding: 1em 3em;
+  height: 3em;
+}
+
+.info img {
+  height: 3em;
+  margin-right: 0.5em;
+}
+
+.info h1 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    justify-content: center;
+  }
+  .card-grid-space .num {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards-wrapper {
+    padding: 4rem 2rem;
+  }
+  .card {
+    max-width: calc(100vw - 4rem);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info {
+    display: block;
+    text-align: center;
+  }
+  .info h1 {
+    margin: 0;
+  }
+}
+    </style>
+</head>
+<body>
+    
+      <section class="cards-wrapper">
+
+        <div class="card-grid-space">
+          <div class="num">MODULO 1</div>
+          <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-25.png')">
+            <div>
+              <h1>Fundamentos del marketing político</h1>
+              <p>Introducción a los conceptos básicos del marketing político y su importancia en la comunicación política.
+              <div class="tags">
+                <div class="tag">🕛 15 Horas</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-grid-space">
+          <div class="num">MODULO 2</div>
+          <a class="card" href="https://codetheweb.blog/2017/10/09/basic-types-of-html-tags/" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-26.png')">
+            <div>
+              <h1>Inteligencia artificial para la creación de textos</h1>
+              <p>Uso de tecnologías de inteligencia artificial para generar textos relevantes y efectivos en el contexto político.</p>
+              
+              <div class="tags">
+                <div class="tag">🕛 15 Horas</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-grid-space">
+          <div class="num">MODULO 3</div>
+          <a class="card" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-27.png')">
+            <div>
+              <h1>Inteligencia artifical para la creación de imágenes</h1>
+              <p> Uso de tecnologías de inteligencia artificial para crear imágenes impactantes y atractivas en el contexto político.
+            </p>
+            
+              <div class="tags">
+                <div class="tag">🕛 15 Horas</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-grid-space">
+            <div class="num">MODULO 4</div>
+            <a class="card" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-28.png')">
+              <div>
+                <h1>Inteligencia artifical en el Margeting político digital</h1>
+                <p>Visión general de las estrategias de marketing político digital y cómo aplicar la inteligencia artificial en esta área.</p>
+              
+                <div class="tags">
+                    <div class="tag">🕛 15 Horas</div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="card-grid-space">
+            <div class="num">MODULO 5</div>
+            <a class="card" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-29.png')">
+              <div>
+                <h1>Marca personal y Storytelling </h1>
+                <p>explora la importancia de la marca personal en la política y cómo se puede utilizar la inteligencia artificial para mejorarla.</p>
+              
+                <div class="tags">
+                    <div class="tag">🕛 15 Horas</div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="card-grid-space">
+            <div class="num">MODULO 6</div>
+            <a class="card" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://portafolio.site/wp-content/uploads/2023/03/Untitled-design-30.png')">
+              <div>
+                <h1>Analitica de datos para la toma de desiciones</h1>
+                <p>Recopilación y uso estrategico de datos de multiples fuentes para la toma efectiva de desiciones.</p>
+              
+                <div class="tags">
+                    <div class="tag">🕛 15 Horas</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+</body>
+</html>

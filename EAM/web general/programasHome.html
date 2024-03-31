@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    
+        <style>
+
+            .homeCardsPregrados {
+                display: flex;
+                padding: 4rem 3rem;
+                align-items: center;
+                align-content: center;
+                background-color: #fff;
+                flex-wrap: wrap;
+                font-family: 'Poppins', sans-serif !important;
+                justify-content: space-evenly;
+            }
+            .card {
+                width: 370px;
+                background: #FFFFFF;
+                box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+                border-radius: 11px;
+                font-family: 'Poppins', sans-serif !important;
+                margin: 5px 0px;
+                }
+
+                .search-container {
+                display: flex;
+                
+                flex-direction: column;
+                justify-content: flex-start;
+               
+                padding: 0 20px;
+                }
+
+
+
+                .search-container p {
+                margin: 0px;
+                font-size: 16px;
+                margin-bottom: 5px;
+                }
+
+                .search-container h3 {
+                margin: 0px;
+                margin-bottom: 20px;
+                line-height: 2.2rem;
+                color: #558D36;
+                font-family: 'Poppins', sans-serif !important;
+                font-weight: 700;
+                padding: 0;
+                
+                }
+
+                .categories {
+                
+                padding: 0px 20px 20px 20px;
+                font-family: 'Poppins', sans-serif !important;
+                }
+
+                .categories a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                font-family: 'Poppins', sans-serif !important;
+                background: #FFFFFF;
+                box-shadow: 0px 0.5px 0.5px #EFEFEF, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+                border-radius: 20px;
+                font-weight: 600;
+                color: #171718;
+                transition: all 0.6s cubic-bezier(0.15, 0.83, 0.66, 1);
+                font-size: 12px;
+                text-decoration: none;
+                }
+
+                .categories a:hover {
+                transform: scale(1.05) translateY(-3px);
+                }
+
+                .results {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                }
+
+                hr {
+                width: 100% !important;
+                height: 1px !important;
+                border: 0 !important;
+                background-color: #ECECEC !important;
+                margin: 0 !important;
+                }
+
+                .results p {
+                padding: 0 20px;
+                }
+
+                p.label {
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 13px;
+                color: #5F6368;
+                background: none;
+                text-transform: none;
+                font-family: 'Poppins', sans-serif !important;
+                letter-spacing: 0px;
+                text-align: start;
+                }
+
+                .results .entry {
+                display: grid;
+                grid-template-columns: 40px 1fr 0px;
+                gap: 12px;
+                padding: 5px 20px;
+                transition: all 0.2s cubic-bezier(0.15, 0.83, 0.66, 1);
+                cursor: pointer;
+                margin-bottom: 7px;
+                }
+
+                .results .entry:hover {
+                background-color: #F5F8FE;
+                }
+
+                .results .results-list .entry:hover .icon {
+                    
+                  background: rgb(128,210,84);
+                  background: linear-gradient(83deg, rgba(128,210,84,1) 41%, rgba(76,175,80,1) 72%, rgba(76,175,80,1) 90%);
+}
+
+                .results .results-list .entry:hover .icon svg path,
+                .results .results-list .entry:hover .icon svg circle {
+                stroke: #ffffff;
+                }
+
+                .results .results-list .entry:hover label {
+                color: #558D36;
+                }
+
+                .results .results-list .entry:hover span {
+                color: #558D36;
+                }
+
+                .results .results-list {
+                display: flex;
+                flex-direction: column;
+                }
+
+                .results .entry .icon {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgb(128,210,84);
+                
+                border-radius: 7px;
+                transition: all 0.2s cubic-bezier(0.15, 0.83, 0.66, 1);
+                }
+
+                .results .entry .desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+                }
+
+                .results .entry .desc label {
+                display: block;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 15px;
+                font-family: 'Poppins', sans-serif !important;
+                color: #171718;
+                margin: 0px;
+                }
+
+                .results .entry .desc span {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 12px;
+                color: #72767c;
+                }
+
+                .results .entry .badge {
+                width: 40px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                background: #DDFFDE;
+                border: 1px solid #08581d0e;
+                border-radius: 7px;
+                font-weight: 700;
+                font-size: 11px;
+                line-height: 13px;
+                text-align: center;
+                color: #08581D;
+                }
+
+                .card-footer {
+                    height: 69px;
+                    display: flex;
+                    align-items: center;
+                    
+                    background: #F8F8F8;
+                    justify-content: center;
+                }
+
+            .card .action {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .card .action p {
+                padding-left: 5px;
+            }
+
+            .card-footer button {
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 6px;
+                border: 0;
+                background: rgb(95,186,255);
+                background: linear-gradient(90deg, rgba(95,186,255,1) 0%, rgba(52,133,195,1) 42%, rgba(47,70,138,1) 100%);
+                outline: none;
+                margin: 8px 0px;
+            }
+
+                .edit-actions {
+                width: 100%;
+                text-align: right;
+                padding-right: 10px;
+                opacity: 0.6;
+                }
+                .continue-application {
+  --color: #fff;
+  --background: #404660;
+  --background-hover: #3A4059;
+  --background-left: #2B3044;
+  --folder: #F3E9CB;
+  --folder-inner: #BEB393;
+  --paper: #FFFFFF;
+  --paper-lines: #BBC1E1;
+  --paper-behind: #E1E6F9;
+  --pencil-cap: #fff;
+  --pencil-top: #275EFE;
+  --pencil-middle: #fff;
+  --pencil-bottom: #5C86FF;
+  --shadow: rgba(13, 15, 25, .2);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  padding: 18px 29px 18px 190px;
+  transition: background 0.3s;
+  color: var(--color);
+  background: var(--bg, var(--background));
+  font-size: 14px;
+}
+
+
+.continue-application > div {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 53px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 5px 0 0 5px;
+  background: rgb(95,186,255);
+background: linear-gradient(90deg, rgba(95,186,255,1) 0%, rgba(52,133,195,1) 42%, rgba(47,70,138,1) 100%);
+}
+
+.continue-application > div .folder {
+  width: 23px;
+  height: 27px;
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+
+.continue-application > div .folder .top {
+  left: 0;
+  top: 0;
+  z-index: 2;
+  position: absolute;
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application > div .folder .top svg {
+  width: 24px;
+  height: 27px;
+  display: block;
+  fill: var(--folder);
+  transform-origin: 0 50%;
+  transition: transform 0.3s ease var(--fds, 0.45s);
+  transform: perspective(120px) rotateY(var(--fr, 0deg));
+}
+
+.continue-application > div .folder:before, .continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+  content: "";
+  position: absolute;
+  left: var(--l, 0);
+  top: var(--t, 0);
+  width: var(--w, 100%);
+  height: var(--h, 100%);
+  border-radius: 1px;
+  background: var(--b, var(--folder-inner));
+}
+
+.continue-application > div .folder:before {
+  box-shadow: 0 1.5px 3px var(--shadow), 0 2.5px 5px var(--shadow), 0 3.5px 7px var(--shadow);
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+  --l: 1px;
+  --t: 1px;
+  --w: 21px;
+  --h: 25px;
+  --b: var(--paper-behind);
+}
+
+.continue-application > div .folder:after {
+  transform: translate(var(--pbx, 0), var(--pby, 0));
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application > div .folder .paper {
+  z-index: 1;
+  --b: var(--paper);
+}
+
+.continue-application > div .folder .paper:before, .continue-application > div .folder .paper:after {
+  content: "";
+  width: var(--wp, 14px);
+  height: 2px;
+  border-radius: 1px;
+  transform: scaleY(0.5);
+  left: 3px;
+  top: var(--tp, 3px);
+  position: absolute;
+  background: var(--paper-lines);
+  box-shadow: 0 12px 0 0 var(--paper-lines), 0 24px 0 0 var(--paper-lines);
+}
+
+.continue-application > div .folder .paper:after {
+  --tp: 6px;
+  --wp: 10px;
+}
+
+.continue-application > div .pencil {
+  height: 2px;
+  width: 3px;
+  border-radius: 1px 1px 0 0;
+  top: 8px;
+  left: 105%;
+  position: absolute;
+  z-index: 3;
+  transform-origin: 50% 19px;
+  background: var(--pencil-cap);
+  transform: translateX(var(--pex, 0)) rotate(35deg);
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application > div .pencil:before, .continue-application > div .pencil:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: var(--b, linear-gradient(var(--pencil-top) 55%, var(--pencil-middle) 55.1%, var(--pencil-middle) 60%, var(--pencil-bottom) 60.1%));
+  width: var(--w, 5px);
+  height: var(--h, 20px);
+  border-radius: var(--br, 2px 2px 0 0);
+  top: var(--t, 2px);
+  left: var(--l, -1px);
+}
+
+.continue-application > div .pencil:before {
+  -webkit-clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+  clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+}
+
+.continue-application > div .pencil:after {
+  --b: none;
+  --w: 3px;
+  --h: 6px;
+  --br: 0 2px 1px 0;
+  --t: 3px;
+  --l: 3px;
+  border-top: 1px solid var(--pencil-top);
+  border-right: 1px solid var(--pencil-top);
+}
+
+.continue-application:before, .continue-application:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color);
+  transform-origin: 9px 1px;
+  transform: translateX(var(--cx, 0)) scale(0.5) rotate(var(--r, -45deg));
+  
+  right: 16px;
+  transition: transform 0.3s;
+}
+
+.continue-application:after {
+  --r: 45deg;
+}
+
+.continue-application:hover {
+  --cx: 2px;
+  --bg: var(--background-hover);
+  --fx: -40px;
+  --fr: -60deg;
+  --fd: .15s;
+  --fds: 0s;
+  --pbx: 3px;
+  --pby: -3px;
+  --pbd: .15s;
+  --pex: -24px;
+}
+
+.social-links,.flex-center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  background: white;
+  margin: 5px;
+  transition: 0.3s;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.social-btn svg {
+  height: 16px;
+  width: 16px;
+}
+
+.social-btn span {
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+ 
+}
+
+.social-btn:hover {
+  width: 150px;
+  border-radius: 5px;
+}
+
+.social-btn:hover span {
+  padding: 2px;
+  width: 80px;
+}
+.button {
+    width: 200px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    padding: 0px 15px !important;
+    background-color: rgb(255 255 255) !important;
+    border-radius: 10px !important;
+    color: black !important;
+    border: none !important;
+    font-size: 14px;
+    position: relative !important;
+    cursor: pointer !important;
+    transition-duration: .2s !important;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1) !important;
+    margin: 0 !important;
+}
+
+.bell {
+  width: 13px;
+}
+
+.bell path {
+  fill: #558D36;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: rgb(255, 255, 255);
+  transition-duration: .2s;
+}
+
+.button:hover .arrow {
+  animation: slide-right .6s ease-out both;
+}
+/* arrow animation */
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.button:active {
+  transform: translate(1px , 1px);
+  transition-duration: .2s;
+}
+.results-list a {
+    text-decoration: none;
+}
+
+
+
+
+results .entryIng {
+                display: grid;
+                grid-template-columns: 40px 1fr 40px;
+                gap: 12px;
+                padding: 5px 20px;
+                transition: all 0.2s cubic-bezier(0.15, 0.83, 0.66, 1);
+                cursor: pointer;
+                margin-bottom: 7px;
+                }
+
+                .results .entryIng:hover {
+                background-color: #F5F8FE;
+                }
+
+                .results .results-list .entryIng:hover .icon {
+                    
+                  background: rgb(156,51,126);
+background: linear-gradient(270deg, rgba(156,51,126,1) 0%, rgba(226,53,179,1) 52%, #ff51cf 100%);}
+
+                .results .results-list .entryIng:hover .icon svg path,
+                .results .results-list .entryIng:hover .icon svg circle {
+                stroke: #ffffff;
+                }
+
+                .results .results-list .entryIng:hover label {
+                color: #a13c85;
+                }
+
+                .results .results-list .entryIng:hover span {
+                color: #a13c85;
+                }
+
+                .results .results-list {
+                display: flex;
+                flex-direction: column;
+                }
+
+                .results .entryIng .icon {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #ff51cf;
+border-radius: 7px;
+                transition: all 0.2s cubic-bezier(0.15, 0.83, 0.66, 1);
+                }
+
+                .results .entryIng .desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+                }
+
+                .results .entryIng .desc label {
+                display: block;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 15px;
+                font-family: 'Poppins', sans-serif !important;
+                margin: 0px;
+                color: #171718;
+                }
+
+                .results .entryIng .desc span {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 12px;
+                color: #72767c;
+                }
+
+                .results .entryIng .badge {
+                width: 40px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                background: #DDFFDE;
+                border: 1px solid #08581d0e;
+                border-radius: 7px;
+                font-weight: 700;
+                font-size: 11px;
+                line-height: 13px;
+                text-align: center;
+                color: #08581D;
+                }
+
+
+                .results .entryIng {
+                display: grid;
+                grid-template-columns: 40px 1fr 40px;
+                gap: 12px;
+                padding: 5px 20px;
+                transition: all 0.2s cubic-bezier(0.15, 0.83, 0.66, 1);
+                cursor: pointer;
+                margin-bottom: 7px;
+                }
+
+                .bellIng path {
+                  fill: #a13c85;
+                }
+                .bellIng {
+                  width: 13px;
+                }
+                
+        .results .entryPub {
+        display: grid;
+        grid-template-columns: 40px 1fr 40px;
+        gap: 12px;
+        padding: 5px 20px;
+        transition: all 0.2s cubic-bezier(0.15, 0.83, 0.66, 1);
+        cursor: pointer;
+        margin-bottom: 7px;
+        }
+
+        .results .entryPub:hover {
+        background-color: #F5F8FE;
+        }
+
+        .results .results-list .entryPub:hover .icon {
+            
+            background: rgb(236,111,0);
+            background: linear-gradient(262deg, rgba(236,111,0,1) 0%, rgba(205,126,10,1) 56%, rgba(255,186,85,1) 100%);}
+
+        .results .results-list .entryPub:hover .icon svg path,
+        .results .results-list .entryPub:hover .icon svg circle {
+        stroke: #ffffff;
+        }
+
+        .results .results-list .entryPub:hover label {
+        color: #ec6f00;
+        }
+
+        .results .results-list .entryPub:hover span {
+        color: #ec6f00;
+        }
+
+        .results .results-list {
+        display: flex;
+        flex-direction: column;
+        }
+
+        .results .entryPub .icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ff7905;
+border-radius: 7px;
+        transition: all 0.2s cubic-bezier(0.15, 0.83, 0.66, 1);
+        }
+
+        .results .entryPub .desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        }
+
+        .results .entryPub .desc label {
+        display: block;
+        font-weight: 600;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif !important;
+        line-height: 15px;
+        color: #171718;
+        margin: 0;
+        }
+
+        .results .entryPub .desc span {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 12px;
+        color: #72767c;
+        }
+
+        .results .entryPub .badge {
+        width: 40px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        background: #DDFFDE;
+        border: 1px solid #08581d0e;
+        border-radius: 7px;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: center;
+        color: #ec6f00;
+        }
+
+        .bellPub path {
+                  fill: #ec6f00;
+                }
+                .bellPub {
+                  width: 13px;
+                }
+        
+        .btnPregradosRegistro {
+          margin: 0;
+        }
+
+
+
+
+
+
+
+
+
+        @media only screen and (max-width: 768px) {
+          .continue-application{
+            padding: 18px 29px 18px 195px;
+          }
+          .card {
+            margin-bottom: 30px;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1) !important;
+    
+          }
+          .homeCardsPregrados {
+            padding: 2rem 1.2rem;
+            background-color: #f5f4f4;
+          }
+        }
+
+
+
+
+
+
+        </style>
+    </head>
+        
+    <body>
+
+
+        <section class="homeCardsPregrados">
+
+            
+            
+
+            <div class="card">
+                <div class="search-container">
+                    <p><br>Facultad</p>
+                    <h3>Ciencias Administrativas y Financieras </h3>
+                </div>
+              
+                <div class="categories">
+
+
+                  
+                    <div class="social-links">
+
+
+                      <a href="https://wa.me//573188516428">  
+                      <div id="twitter" class="social-btn flex-center">
+                            <svg style="fill: #72767c;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg><span>3188516428</span>
+                        </div>
+                      </a>
+
+
+                      <a href="tel:3188516428">
+                        <div id="linkedin" class="social-btn flex-center">
+                            <svg style="fill: #72767c;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg><span>3188516428</span>
+                        </div>
+                      </a>
+
+                        <button class="button" data-paperform-id="oybval8t" data-popup-button="1">
+                          <svg class="bell" viewBox="0 0 448 512"><path d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg>
+                         ¿Te Llamamos?
+                         <div class="arrow">›</div>
+                       </button>
+
+                       <script>(function() { var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js";document.body.appendChild(script); })()</script>
+                       
+
+
+
+                          
+                
+                        
+                </div>
+
+
+
+
+                </div>
+              
+                <div class="results">
+                  <p class="label">Programas académicos:</p>
+              
+                  <div class="results-list">
+
+
+                    <a href="https://www.eam.edu.co/administracion-de-empresas/">
+                    <div class="entry">
+                      <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 352h8.2c32.3-39.1 81.1-64 135.8-64c5.4 0 10.7 .2 16 .7V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM320 352H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H360.2C335.1 449.6 320 410.5 320 368c0-5.4 .2-10.7 .7-16l-.7 0zm320 16a144 144 0 1 0 -288 0 144 144 0 1 0 288 0zM496 288c8.8 0 16 7.2 16 16v48h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H496c-8.8 0-16-7.2-16-16V304c0-8.8 7.2-16 16-16z"/></svg>
+                      </div>
+                      <div class="desc">
+                        <label>Administración de Empresas</label>
+                        <span>SNIES 52563</span>
+                        </div>
+                      </div>
+                    </a>
+
+
+                    <a href="https://www.eam.edu.co/contaduria-publica/">
+                    <div class="entry">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M32 32c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-44.2 0-80-35.8-80-80V64C0 46.3 14.3 32 32 32zM160 224c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V256c0-17.7 14.3-32 32-32zm128-64V320c0 17.7-14.3 32-32 32s-32-14.3-32-32V160c0-17.7 14.3-32 32-32s32 14.3 32 32zm64 32c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V224c0-17.7 14.3-32 32-32zM480 96V320c0 17.7-14.3 32-32 32s-32-14.3-32-32V96c0-17.7 14.3-32 32-32s32 14.3 32 32z"/></svg>
+                        </div>
+                        <div class="desc">
+                          <label>Contaduría Pública</label>
+                          <span>SNIES 53422</span>
+                          </div>
+                      </div>
+                    </a>
+
+
+                    <a href="https://www.eam.edu.co/hoteleria-y-turismo/">
+                    <div class="entry">
+                      <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 32H64C46.3 32 32 46.3 32 64v64c0 17.7 14.3 32 32 32H441.4c4.2 0 8.3-1.7 11.3-4.7l48-48c6.2-6.2 6.2-16.4 0-22.6l-48-48c-3-3-7.1-4.7-11.3-4.7H288c0-17.7-14.3-32-32-32s-32 14.3-32 32zM480 256c0-17.7-14.3-32-32-32H288V192H224v32H70.6c-4.2 0-8.3 1.7-11.3 4.7l-48 48c-6.2 6.2-6.2 16.4 0 22.6l48 48c3 3 7.1 4.7 11.3 4.7H448c17.7 0 32-14.3 32-32V256zM288 480V384H224v96c0 17.7 14.3 32 32 32s32-14.3 32-32z"/></svg>
+                      </div>
+                      <div class="desc">
+                        <label>Hotelería y Turismo</label>
+                        <span>SNIES 109225</span>
+                        </div>
+                    </div>
+                    </a>
+
+
+
+                    <a href="https://www.eam.edu.co/administracion-de-negocios-internacionales/">
+                    <div class="entry">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/></svg>
+                        </div>
+                        <div class="desc">
+                          <label>Administración de Negocios Internacionales</label>
+                          <span>SNIES 52562</span>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+
+
+                  
+              
+                  <hr>
+              
+                  
+              
+                <div class="card-footer">
+                    
+                    <button class="continue-application" data-paperform-id="igqqzpsg" data-popup-button="1">
+                        <div>
+                            <div class="pencil"></div>
+                            <div class="folder">
+                                <div class="top">
+                                    <svg viewBox="0 0 24 27">
+                                        <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="paper"></div>
+                            </div>
+                        </div>
+                        <p class="btnPregradosRegistro">Regístrate ahora</p>
+                    </button>
+
+                    <script>(function() { var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js";document.body.appendChild(script); })()</script>
+
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="card">
+              <div class="search-container">
+                  <p><br>Facultad</p>
+                  <h3 style="color: #a13c85;">Ingeniería <br><br> </h3>
+              </div>
+            
+              <div class="categories">
+      
+      
+                
+                  <div class="social-links">
+      
+      
+                    <a href="https://wa.me//573188516428">  
+                    <div id="twitter" class="social-btn flex-center">
+                          <svg style="fill: #72767c;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg><span>3188516428</span>
+                      </div>
+                    </a>
+      
+      
+                    <a href="tel:3188516428">
+                      <div id="linkedin" class="social-btn flex-center">
+                          <svg style="fill: #72767c;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg><span>3188516428</span>
+                      </div>
+                    </a>
+      
+                      <button class="button" data-paperform-id="oybval8t" data-popup-button="1">
+                        <svg class="bellIng" viewBox="0 0 448 512"><path d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg>
+                       ¿Te Llamamos?
+                       <div class="arrow">›</div>
+                     </button>
+      
+                     <script>(function() { var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js";document.body.appendChild(script); })()</script>
+                     
+      
+      
+      
+                        
+              
+                      
+              </div>
+      
+      
+      
+      
+              </div>
+            
+              <div class="results">
+                <p class="label">Programas académicos:</p>
+            
+                <div class="results-list">
+      
+      
+                  <a href="https://www.eam.edu.co/ingenieria-de-software">
+                  <div class="entryIng">
+                    <div class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM153 289l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L71 337c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM265 255l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    <div class="desc">
+                      <label>Ingeniería de Software</label>
+                      <span>SNIES 52410</span>
+                      </div>
+                    </div>
+                  </a>
+      
+      
+                  <a href="https://www.eam.edu.co/ingenieria-industrial">
+                  <div class="entryIng">
+                      <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zM448 0c-17.7 0-32 14.3-32 32V512h64V192H624c8.8 0 16-7.2 16-16V48c0-8.8-7.2-16-16-16H480c0-17.7-14.3-32-32-32z"/></svg>    
+                      </div>
+                      <div class="desc">
+                        <label>Ingeniería Industrial</label>
+                        <span>SNIES 101621</span>
+                        </div>
+                    </div>
+                  </a>
+      
+      
+                 
+      
+      
+      
+                  <a href="https://www.eam.edu.co/ingenieria-mecatronica">
+                  <div class="entryIng">
+                      <div class="icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M308.5 135.3c7.1-6.3 9.9-16.2 6.2-25c-2.3-5.3-4.8-10.5-7.6-15.5L304 89.4c-3-5-6.3-9.9-9.8-14.6c-5.7-7.6-15.7-10.1-24.7-7.1l-28.2 9.3c-10.7-8.8-23-16-36.2-20.9L199 27.1c-1.9-9.3-9.1-16.7-18.5-17.8C173.9 8.4 167.2 8 160.4 8h-.7c-6.8 0-13.5 .4-20.1 1.2c-9.4 1.1-16.6 8.6-18.5 17.8L115 56.1c-13.3 5-25.5 12.1-36.2 20.9L50.5 67.8c-9-3-19-.5-24.7 7.1c-3.5 4.7-6.8 9.6-9.9 14.6l-3 5.3c-2.8 5-5.3 10.2-7.6 15.6c-3.7 8.7-.9 18.6 6.2 25l22.2 19.8C32.6 161.9 32 168.9 32 176s.6 14.1 1.7 20.9L11.5 216.7c-7.1 6.3-9.9 16.2-6.2 25c2.3 5.3 4.8 10.5 7.6 15.6l3 5.2c3 5.1 6.3 9.9 9.9 14.6c5.7 7.6 15.7 10.1 24.7 7.1l28.2-9.3c10.7 8.8 23 16 36.2 20.9l6.1 29.1c1.9 9.3 9.1 16.7 18.5 17.8c6.7 .8 13.5 1.2 20.4 1.2s13.7-.4 20.4-1.2c9.4-1.1 16.6-8.6 18.5-17.8l6.1-29.1c13.3-5 25.5-12.1 36.2-20.9l28.2 9.3c9 3 19 .5 24.7-7.1c3.5-4.7 6.8-9.5 9.8-14.6l3.1-5.4c2.8-5 5.3-10.2 7.6-15.5c3.7-8.7 .9-18.6-6.2-25l-22.2-19.8c1.1-6.8 1.7-13.8 1.7-20.9s-.6-14.1-1.7-20.9l22.2-19.8zM112 176a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM504.7 500.5c6.3 7.1 16.2 9.9 25 6.2c5.3-2.3 10.5-4.8 15.5-7.6l5.4-3.1c5-3 9.9-6.3 14.6-9.8c7.6-5.7 10.1-15.7 7.1-24.7l-9.3-28.2c8.8-10.7 16-23 20.9-36.2l29.1-6.1c9.3-1.9 16.7-9.1 17.8-18.5c.8-6.7 1.2-13.5 1.2-20.4s-.4-13.7-1.2-20.4c-1.1-9.4-8.6-16.6-17.8-18.5L583.9 307c-5-13.3-12.1-25.5-20.9-36.2l9.3-28.2c3-9 .5-19-7.1-24.7c-4.7-3.5-9.6-6.8-14.6-9.9l-5.3-3c-5-2.8-10.2-5.3-15.6-7.6c-8.7-3.7-18.6-.9-25 6.2l-19.8 22.2c-6.8-1.1-13.8-1.7-20.9-1.7s-14.1 .6-20.9 1.7l-19.8-22.2c-6.3-7.1-16.2-9.9-25-6.2c-5.3 2.3-10.5 4.8-15.6 7.6l-5.2 3c-5.1 3-9.9 6.3-14.6 9.9c-7.6 5.7-10.1 15.7-7.1 24.7l9.3 28.2c-8.8 10.7-16 23-20.9 36.2L315.1 313c-9.3 1.9-16.7 9.1-17.8 18.5c-.8 6.7-1.2 13.5-1.2 20.4s.4 13.7 1.2 20.4c1.1 9.4 8.6 16.6 17.8 18.5l29.1 6.1c5 13.3 12.1 25.5 20.9 36.2l-9.3 28.2c-3 9-.5 19 7.1 24.7c4.7 3.5 9.5 6.8 14.6 9.8l5.4 3.1c5 2.8 10.2 5.3 15.5 7.6c8.7 3.7 18.6 .9 25-6.2l19.8-22.2c6.8 1.1 13.8 1.7 20.9 1.7s14.1-.6 20.9-1.7l19.8 22.2zM464 304a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                        </div>
+                      <div class="desc">
+                        <label>Ingeniería Mecatrónica</label>
+                        <span>SNIES 52409</span>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+      
+              <div style="height: 71px;">
+      
+              </div>
+      
+      
+      
+                
+            
+                <hr>
+            
+                
+            
+              <div class="card-footer">
+                  
+                  <button class="continue-application" data-paperform-id="igqqzpsg" data-popup-button="1">
+                      <div>
+                          <div class="pencil"></div>
+                          <div class="folder">
+                              <div class="top">
+                                  <svg viewBox="0 0 24 27">
+                                      <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
+                                  </svg>
+                              </div>
+                              <div class="paper"></div>
+                          </div>
+                      </div>
+                      Regístrate ahora
+                  </button>
+      
+                  <script>(function() { var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js";document.body.appendChild(script); })()</script>
+      
+            </div>
+          </div>
+
+
+
+          <div class="card">
+            <div class="search-container">
+                <p><br>Facultad</p>
+                <h3 style="color: #ec6f00;">Publicidad Diseño y Comunicación</h3>
+            </div>
+          
+            <div class="categories">
+    
+    
+              
+                <div class="social-links">
+    
+    
+                  <a href="https://wa.me//573188516428">  
+                  <div id="twitter" class="social-btn flex-center">
+                        <svg style="fill: #72767c;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg><span>3188516428</span>
+                    </div>
+                  </a>
+    
+    
+                  <a href="tel:3188516428">
+                    <div id="linkedin" class="social-btn flex-center">
+                        <svg style="fill: #72767c;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg><span>3188516428</span>
+                    </div>
+                  </a>
+    
+                    <button class="button" data-paperform-id="oybval8t" data-popup-button="1">
+                      <svg class="bellPub" viewBox="0 0 448 512"><path d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg>
+                     ¿Te Llamamos?
+                     <div class="arrow">›</div>
+                   </button>
+    
+                   <script>(function() { var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js";document.body.appendChild(script); })()</script>
+                   
+    
+    
+    
+                      
+            
+                    
+            </div>
+    
+    
+    
+    
+            </div>
+          
+            <div class="results">
+              <p class="label">Programas académicos:</p>
+          
+              <div class="results-list">
+    
+    
+                <a href="https://www.eam.edu.co/diseno-visual-digital/">
+                <div class="entryPub">
+                  <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M296 136V88h48v48H296zM288 32c-26.5 0-48 21.5-48 48v4H121.6C111.2 62.7 89.3 48 64 48C28.7 48 0 76.7 0 112s28.7 64 64 64c25.3 0 47.2-14.7 57.6-36h66.9c-58.9 39.6-98.9 105-104 180H80c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48h-3.3c5.9-67 48.5-123.4 107.5-149.1c8.6 12.7 23.2 21.1 39.8 21.1h64c16.6 0 31.1-8.4 39.8-21.1c59 25.7 101.6 82.1 107.5 149.1H496c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48h-4.5c-5-75-45.1-140.4-104-180h66.9c10.4 21.3 32.3 36 57.6 36c35.3 0 64-28.7 64-64s-28.7-64-64-64c-25.3 0-47.2 14.7-57.6 36H400V80c0-26.5-21.5-48-48-48H288zM88 376h48v48H88V376zm416 48V376h48v48H504z"/></svg>
+                   </div>
+                  <div class="desc">
+                    <label>Diseño Visual Digital</label>
+                    <span>SNIES 103031</span>
+                    </div>
+                  </div>
+                </a>
+    
+    
+                <a href="https://www.eam.edu.co/publicidad-digital-y-mercadeo/">
+                <div class="entryPub">
+                    <div class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M480 32c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9L381.7 53c-48 48-113.1 75-181 75H192 160 64c-35.3 0-64 28.7-64 64v96c0 35.3 28.7 64 64 64l0 128c0 17.7 14.3 32 32 32h64c17.7 0 32-14.3 32-32V352l8.7 0c67.9 0 133 27 181 75l43.6 43.6c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V300.4c18.6-8.8 32-32.5 32-60.4s-13.4-51.6-32-60.4V32zm-64 76.7V240 371.3C357.2 317.8 280.5 288 200.7 288H192V192h8.7c79.8 0 156.5-29.8 215.3-83.3z"/></svg>
+                    </div>
+                    <div class="desc">
+                      <label>Publicidad Digital y Mercadeo </label>
+                      <span>SNIES 111201</span>
+                      </div>
+                  </div>
+                </a>
+    
+    
+               <div style="height: 130px;">
+    
+               </div>
+    
+    
+    
+              
+          
+              <hr>
+          
+              
+          
+            <div class="card-footer">
+                
+                <button class="continue-application" data-paperform-id="igqqzpsg" data-popup-button="1">
+                    <div>
+                        <div class="pencil"></div>
+                        <div class="folder">
+                            <div class="top">
+                                <svg viewBox="0 0 24 27">
+                                    <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
+                                </svg>
+                            </div>
+                            <div class="paper"></div>
+                        </div>
+                    </div>
+                    Regístrate ahora
+                </button>
+    
+                <script>(function() { var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js";document.body.appendChild(script); })()</script>
+    
+          </div>
+        </div>
+
+
+
+
+
+            
+
+
+
+
+
+
+
+              
+
+
+
+
+        </section>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+   
+    <style>
+        .radio-inputs {
+            font-family: "Nunito Sans", sans-serif;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 0.5rem;
+            background-color: #EEE;
+            box-sizing: border-box;
+            box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+            padding: 0.25rem;
+            width: 300px;
+            font-size: 14px;
+        }
+
+        .radio-inputs .radio {
+          flex: 1 1 auto;
+          text-align: center;
+        }
+
+        .radio-inputs .radio input {
+          display: none;
+        }
+
+        .radio-inputs .radio .name {
+          display: flex;
+          cursor: pointer;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0.5rem;
+          border: none;
+          padding: .5rem 0;
+          color: rgba(51, 65, 85, 1);
+          transition: all .15s ease-in-out;
+        }
+
+        .radio-inputs .radio input:checked + .name {
+          background-color: #fff;
+          font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="radio-inputs">
+        <label class="radio">
+          <input type="radio" name="radio" checked="" value="Salento">
+          <span class="name">Salento</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" value="Cocora">
+          <span class="name">Cocora</span>
+        </label>
+            
+        <label class="radio">
+          <input type="radio" name="radio" value="Armenia">
+          <span class="name">Armenia</span>
+        </label>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let selectedOption = null;
+            const radioInputs = document.querySelectorAll('.radio-inputs input[type="radio"]');
+            radioInputs.forEach(function(input) {
+                input.addEventListener('change', function() {
+                    if (this.checked) {
+                        selectedOption = this.value;
+                        console.log("Seleccionaste: " + selectedOption);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

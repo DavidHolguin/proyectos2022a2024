@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Robótica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+                
+        .blog-header {
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+            height: 64px;
+            width: 100%;
+            background: #fff;
+            align-items: center;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+            
+            justify-content: space-evenly;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            transform: translateY(0);
+            transition: transform 150ms ease-out;
+            z-index: 300000;
+            border-bottom: #9c27b0 solid 2px;
+        }
+        .blog-header_containt {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .blog-header_containt a {
+        margin-bottom: 0px;
+        }
+        .blog-header img {
+            width: 96px;
+                    
+        }
+        .blog-header_menu {
+            display: flex;
+            
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+        .blog-header_menu .material-symbols-outlined {
+            color:#ffffff;
+        }
+        .blog-header_menu-buttonCategory  {
+            color:#5f6368;
+            text-decoration: none;
+        }
+        .blog-header_menu-buttonSuscribeHeader {
+            background-color: rgb(156, 39, 176);
+            color: #fff !important ;
+            text-decoration: none;
+            display: flex;
+            padding: 9px 24px 9px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 15px;
+            align-items: center;
+            box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+            font-weight: 500;
+            gap: 3px;
+        }
+        .blog-header_menu-buttonSuscribe {
+            background-color: #9c27b0;
+            color: #fff !important ;
+            text-decoration: none;
+            display: flex;
+            padding: 9px 24px 9px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 15px;
+            align-items: center;
+            box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+            font-weight: 500;
+            gap: 3px;
+        }
+        .blog-header_containt_whatsapp {
+            width: 42px !important;
+            height: auto !important;
+        }
+        .landingRobotica-hero {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        background-color: #E6E6E6;
+        }
+        .landingRobotica-hero_containt {
+            display: flex;
+            padding: 3rem;
+            margin-top: 30px;
+        }
+        .landingRobotica-hero_left {
+            display: flex;
+            flex-direction: column;
+            padding: 3rem;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .landingRobotica-hero_rigth {
+            display: flex;
+            margin: 3rem;
+            width: 50%;
+            align-items: flex-start;
+        }
+        .landingRobotica-hero_rigth img {
+            width: 100%;
+        }
+        .blog-header_containt_whatsapp img {
+            width: 34px;
+        }
+        .landingRobotica-hero_rigthContaintIMG {
+            display: flex;
+            width: 100%;
+        }
+        .landingRobotica-hero_leftCurso {
+            display: flex;
+            align-items: center;
+        }
+        .landingRobotica-hero_left h1 {
+            font-size: 2.5rem;
+            line-height: 3rem;
+            width: 700;
+            margin: 0;
+        }
+        .landingRobotica-hero_left img {
+            width: 8%;
+            z-index: 5;
+            margin-bottom: -25px;
+        }
+        .blog-header_containt_whatsapp img {
+            width: 34px;
+            margin-bottom: 0;
+        }
+        .landingRobotica-hero_leftCTA1 {
+            background-color: #9c27b0;
+            color: #fff !important ;
+            text-decoration: none;
+            display: flex;
+            padding: 9px 24px 9px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 15px;
+            align-items: center;
+            box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%);
+            font-weight: 500;
+            gap: 3px;
+        }
+        .landingRobotica-hero_leftCTA img {
+                width: 50% !important;
+                margin: 0;
+
+            }
+            .landingRobotica-hero_leftCTA  {
+                display: flex
+                ;
+            }
+        .landingRobotica-hero_leftCTAwpp {
+            width: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .landingRobotica-hero_leftCTAwpp  img {
+           
+            width: 90% !important;
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        @media screen and (max-width: 767px) {
+            
+            .blog-header_containt_whatsapp {
+                width: 31px !important;
+                height: auto !important;
+            }
+            .blog-header_menu-buttonSuscribeHeader {
+                background-color: #ffffff;
+                color: #9c27b0 !important;
+                text-decoration: none;
+                display: flex;
+                padding: 0;
+                border: none;
+                border-radius: 0px;
+                box-shadow: none;
+                cursor: pointer;
+                font-size: 14px;
+                align-items: center;
+                
+                font-weight: 500;
+                gap: 3px;
+                padding-right: 7px;
+                border-right: solid;
+            }
+            
+            .blog-header_menu .material-symbols-outlined {
+                color: #ffffff !important;
+            }
+            .blog-header_menu-buttonSuscribeHeader .material-symbols-outlined {
+                color: #9c27b0 !important;
+            }
+            .blog-header img {
+                width: 75px;
+            }
+            .landingRobotica-hero_containt {
+                flex-direction: column-reverse;
+                padding: 0;
+            }
+            .landingRobotica-hero_left {
+                padding: 2rem;
+            }
+            .blog-header_containt_whatsapp img {
+                width: 70%;
+                margin-bottom: -5px;
+            }
+            .blog-header_menu {
+                flex-direction: row;
+                gap: 10px;
+            }
+            .landingRobotica-hero_rigth img {
+                display: none;
+            }
+            .landingRobotica-hero_containt {
+                margin-bottom: 100px;
+            }
+            .landingRobotica-hero_left img {
+                width: 16%;
+                z-index: 5;
+                
+            }
+            .blog-header_containt_whatsappHero img {
+                width: 100%;
+                margin-bottom: -5px;
+            }
+            .blog-header_containt_whatsappHero {
+                width: 20%;
+            }
+            .landingRobotica-hero_leftCTAwpp  img {
+                width: 100% !important;
+            }
+            .landingRobotica-hero_leftCTAwpp {
+                width: 10%;
+            }
+            .landingRobotica-hero_leftCTA {
+                gap: 5px;
+            }
+       
+            
+
+        } 
+        
+        
+        
+    </style>
+</head>
+<body>
+
+    <header class="blog-header">
+        <section class="blog-header_containt">
+
+            <img src="https://www.eam.edu.co/wp-content/uploads/2021/10/logoo.png" alt="">
+            <div class="blog-header_menu">
+                
+                <button class="blog-header_menu-buttonSuscribeHeader" data-paperform-id="igqqzpsg" data-popup-button="1"><span class="material-symbols-outlined">
+                    child_care
+                    </span> Registra a tu hijo</button><script>(function() { var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js";document.body.appendChild(script); })()</script>
+                
+                <div class="blog-header_containt_whatsapp">
+                    <a  href="https://wa.me//573188516428"><img src="https://grupofinancierobbva.com/wp-content/uploads/2023/04/Diseno-sin-titulo-36.png" alt=""> </a>
+               
+                </div>
+            </div>
+      
+        </section>
+    </header>
+
+
+
+    <section class="landingRobotica-hero">
+        <div class="landingRobotica-hero_containt">
+
+            <div class="landingRobotica-hero_left">
+                <img  src="https://grupofinancierobbva.com/wp-content/uploads/2023/04/Diseno-sin-titulo-29.png" alt="">  
+                <div class="landingRobotica-hero_leftCurso">  
+                <p style="background-color:#9c27b0; color: #fff ; padding: 2px 5px;">CURSO DE ROBÓTICA<span style="background-color: #fff; box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%); padding: 0px 11px; margin: 2px -13px 2px 9px;"></span></p> <p><span style="box-shadow: inset 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 23%); background-color: #9c27b0;  padding: 0px 8px; margin: 0px -10px;"></span></p></div>
+                <h1>Asegura el <span style="color:#9c27b0 ;">FUTURO</span> de tu <span style="color:#9c27b0;">HIJO</span> </h1>
+                <p>La robótica representa el 19% de los trabajoS del futuro</p>
+
+                <div class="landingRobotica-hero_leftCTA">
+                    <div class="landingRobotica-hero_leftCTAwpp">
+                        <a  href="https://wa.me//573188516428">
+                            <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/04/Diseno-sin-titulo-36.png" alt=""> 
+                        </a>
+
+                    </div>
+                    
+                    <a href="" class="landingRobotica-hero_leftCTA1"><span class="material-symbols-outlined">child_care</span>Registra a tu hijo</a>
+                    
+                </div>
+               
+                
+                
+        </div>   
+            
+            <div class="landingRobotica-hero_rigth">
+                <div class="landingRobotica-hero_rigthContaintIMG">
+                    <img src="https://grupofinancierobbva.com/wp-content/uploads/2023/04/ROBOT-03-1.png" alt="">
+                </div>
+
+            </div>
+        
+    </div>
+    </section>
+    
+</body>
+</html>

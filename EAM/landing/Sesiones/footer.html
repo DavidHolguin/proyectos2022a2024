@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        footer.site-footer {
+    padding: 60px 30px;
+    background: #222222 !important;
+    color: #999999;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10pt;
+}
+
+div#footer-container {
+    width: 80%;
+    margin: 0 auto;
+    transition: all 0.2s ease;
+}
+
+div#footer-grid {
+    display: flex;
+    align-items: stretch;
+    padding-bottom: 60px;
+}
+
+
+
+
+
+
+
+/*============ footer 2 columns ===========*/
+
+footer#footer-2-cols div#left-footer-section {
+    flex-basis: 50%;
+    border-right: 1px solid #444444;
+    padding-right: 30px;
+}
+
+footer#footer-2-cols div#right-footer-section {
+    flex-basis: 50%;
+}
+
+footer#footer-2-cols div#copyright-information div#footer-logo-section {
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-2-cols div#copyright-information div#footer-logo {
+    width: 30px;
+    margin-right: 30px;
+}
+
+footer#footer-2-cols div#footer-search input {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: #2a2a2a;
+    outline: none;
+    color: #999999;
+    padding: 2px;
+}
+
+footer#footer-2-cols div#footer-search button {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: transparent;
+    color: #cecece;
+    padding: 2px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+footer#footer-2-cols div#footer-search button:hover {
+    background: #1aad8b;
+    color: #ffffff;
+    border: 2px solid #666666;
+    transition: all 0.25s ease;
+}
+
+footer#footer-2-cols div#footer-search button:active {
+    position: relative;
+    top: 1px;
+}
+
+footer#footer-2-cols div#footer-logo img {
+    width: 100%;
+}
+
+footer#footer-2-cols div.footer-information p {
+    margin-top: 10px;
+}
+
+footer#footer-2-cols div.footer-information p:first-child {
+    margin-top: 30px;
+}
+
+footer#footer-2-cols div.footer-information p:last-child {
+    margin-bottom: 0;
+}
+
+footer#footer-2-cols div.footer-information p img {
+    margin-right: 0.75em;
+}
+
+footer#footer-2-cols div#right-footer-section ul {
+    margin: 0;
+}
+
+footer#footer-2-cols div.footer-links ul li, footer#footer-2-cols div.footer-links ul li a  {
+    list-style: none;
+    color: #999999;
+    line-height: 1.38em;
+    margin-bottom: 1em;
+}
+
+footer#footer-2-cols div.footer-links ul li:last-child, footer#footer-2-cols div.footer-links ul li a:last-child  {
+    margin-bottom: 0;
+}
+
+footer#footer-2-cols div#right-footer-section ul li a:hover {
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+footer#footer-2-cols div#copyright-information {
+    border-top: 1px solid #444444;
+    padding: 30px 0 0 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-2-cols div#copyright-information div#social-buttons {
+    margin-left: auto;
+}
+
+footer#footer-2-cols div#copyright-information div#social-buttons img {
+    margin-left: 0.68em;
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+footer#footer-2-cols div#copyright-information div#social-buttons i.fa:hover {
+    color: #666666;
+    transition: all 0.2s ease;
+}
+
+
+/*==== media queries for footer-2-columns ====*/
+
+@media screen and (max-width: 960px){
+
+    div#footer-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    div#footer-grid {
+        flex-direction: column;
+        width: 480px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+
+    footer#footer-2-cols div#left-footer-section {
+        border-right: 0;
+        padding-bottom: 30px;
+    }
+
+    footer#footer-2-cols div.footer-section {
+        padding-top: 30px;
+    }
+
+    footer#footer-2-cols div.footer-section:first-child {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    footer#footer-2-cols div#right-footer-section ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 11pt;
+    }
+
+    footer#footer-2-cols div#right-footer-section ul li {
+        margin: 0;
+    }
+
+    footer#footer-2-cols div#right-footer-section ul li a {
+        margin: 0;
+        display: block;
+        padding: 15px;
+        background: #2a2a2a;
+        border-bottom: 1px solid #444444;
+        text-decoration: none;
+    }
+
+    footer#footer-2-cols div#right-footer-section ul li:last-child a {
+        border-bottom: none;
+    }
+
+    footer#footer-2-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-2-cols div#copyright-information {
+        display: block;
+        width: 480px;
+        margin: 0 auto;
+    }
+
+    footer#footer-2-cols div#copyright-information div#social-buttons {
+        padding: 15px 0;
+    }
+
+    footer#footer-2-cols div#copyright-information div#social-buttons i.fa:first-child {
+        margin-left: 0;
+    }
+
+    footer#footer-2-cols div#copyright-information div#footer-logo-section {
+        display: block;
+        align-items: normal;
+    }
+
+    footer#footer-2-cols div#copyright-information div#footer-logo {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    footer#footer-2-cols div#copyright-information div#footer-logo img {
+        width: 30px;
+        text-align: center;
+    }
+
+    footer#footer-2-cols div#copyright-information div#copyright-text {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    footer#footer-2-cols div#copyright-information div#social-buttons i.fa {
+        font-size: 24pt;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    div#footer-grid {
+        width: 100%;
+    }
+
+    footer#footer-2-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-2-cols div.footer-information {
+        margin: 0 auto;
+    }
+
+    footer#footer-2-cols div#copyright-information {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer#footer-2-cols div#copyright-information div#copyright-text {
+        width: 100%;
+    }
+
+    footer#footer-2-cols div#copyright-information div#social-buttons {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/*============ footer 3 columns ===========*/
+
+footer#footer-3-cols div#left-footer-section {
+    flex-basis: 33.33%;
+    border-right: 1px solid #444444;
+    padding-right: 30px;
+}
+
+footer#footer-3-cols div#second-footer-section {
+    flex-basis: 33.33%;
+    border-right: 1px solid #444444;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+footer#footer-3-cols div#right-footer-section {
+    flex-basis: 33.33%;
+    padding-left: 30px;
+}
+
+footer#footer-3-cols div#footer-logo-section {
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-3-cols div#footer-logo {
+    width: 30px;
+    margin-right: 30px;
+}
+
+footer#footer-3-cols div#footer-search input {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: #2a2a2a;
+    outline: none;
+    color: #999999;
+    padding: 2px;
+    width: 130px;
+}
+
+footer#footer-3-cols div#footer-search button {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: transparent;
+    color: #cecece;
+    padding: 2px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+footer#footer-3-cols div#footer-search button:hover {
+    background: #1aad8bc2;
+    color: #ffffff;
+    
+    transition: all 0.25s ease;
+}
+
+footer#footer-3-cols div#footer-search button:active {
+    position: relative;
+    top: 1px;
+}
+
+footer#footer-3-cols div.footer-section h3 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 12pt;
+}
+
+footer#footer-3-cols div#footer-logo img {
+    width: 100%;
+}
+
+footer#footer-3-cols div.footer-information p {
+    margin-top: 10px;
+}
+
+footer#footer-3-cols div.footer-information p:first-child {
+    margin-top: 30px;
+}
+
+footer#footer-3-cols div.footer-information p:last-child {
+    margin-bottom: 0;
+}
+
+footer#footer-3-cols div.footer-information p img {
+    margin-right: 0.75em;
+}
+
+
+footer#footer-3-cols div.footer-section ul {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+footer#footer-3-cols div.footer-links ul li, footer#footer-3-cols div.footer-links ul li a   {
+    list-style: none;
+    color: #999999;
+    line-height: 1.38em;
+    margin-bottom: 1em;
+}
+
+footer#footer-3-cols div.footer-links ul li:last-child, footer#footer-3-cols div.footer-links ul li a:last-child   {
+    margin-bottom: 0;
+}
+
+footer#footer-3-cols div.footer-section ul li a:hover {
+    color:#ffffff;
+    transition: all 0.2s ease;
+}
+
+footer#footer-3-cols div#copyright-information {
+    border-top: 1px solid #444444;
+    padding: 30px 0 0 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-3-cols div#copyright-information div#social-buttons {
+    margin-left: auto;
+
+}
+
+footer#footer-3-cols div#copyright-information div#social-buttons img {
+    margin-left: 0.68em;
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+
+/*==== media queries for footer-3-columns ====*/
+
+@media screen and (max-width: 960px){
+
+    div#footer-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    div#footer-grid {
+        flex-direction: column;
+        width: 480px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+    footer#footer-3-cols div#left-footer-section {
+        border-right: 0;
+        padding-bottom: 30px;
+    }
+
+    footer#footer-3-cols div#second-footer-section {
+        border-right: none;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 30px;
+
+    }
+
+    footer#footer-3-cols div.footer-section {
+        padding-top: 30px;
+    }
+
+    footer#footer-3-cols div.footer-section h3 {
+        text-align: center;
+    }
+
+    footer#footer-3-cols div.footer-section:first-child {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    footer#footer-3-cols div#right-footer-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    footer#footer-3-cols div#second-footer-section ul,
+    footer#footer-3-cols div#right-footer-section ul {
+        margin: 0;
+        padding: 0;
+        font-size: 11pt;
+        text-align: center;
+    }
+
+    footer#footer-3-cols div.footer-links ul li {
+        margin: 0;
+    }
+
+    footer#footer-3-cols div.footer-links ul li a {
+        margin: 0;
+        display: block;
+        padding: 15px;
+        background: #2a2a2a;
+        border-bottom: 1px solid #444444;
+        text-decoration: none;
+
+    }
+
+    footer#footer-3-cols div.footer-links ul li:last-child a {
+        border-bottom: none;
+    }
+
+    footer#footer-3-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-3-cols div#copyright-information {
+        display: block;
+        width: 480px;
+        margin: 0 auto;
+    }
+
+    footer#footer-3-cols div#copyright-information div#social-buttons {
+        padding: 15px 0;
+    }
+
+    footer#footer-3-cols div#copyright-information div#social-buttons img:first-child {
+        margin-left: 0;
+    }
+
+    footer#footer-3-cols div#copyright-information div#footer-logo-section {
+        display: block;
+        align-items: normal;
+    }
+
+    footer#footer-3-cols div#copyright-information div#footer-logo {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    footer#footer-3-cols div#copyright-information div#footer-logo img {
+        width: 30px;
+        text-align: center;
+    }
+
+    footer#footer-3-cols div#copyright-information div#copyright-text {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    footer#footer-3-cols div#copyright-information div#social-buttons i.fa {
+        font-size: 24pt;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    div#footer-grid {
+        width: 100%;
+    }
+
+    footer#footer-3-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-3-cols div.footer-information {
+        margin: 0 auto;
+    }
+
+    footer#footer-3-cols div#copyright-information {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer#footer-3-cols div#copyright-information div#copyright-text {
+        width: 100%;
+    }
+
+    footer#footer-3-cols div#copyright-information div#social-buttons {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/*============ footer 4 columns ===========*/
+
+footer#footer-4-cols div#left-footer-section {
+    flex-basis: 33.33%;
+    padding-right: 20px;
+}
+
+footer#footer-4-cols div#first-footer-section {
+  flex-basis: 35%;
+    border-right: 1px solid #444444;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #444444;
+    display: flex;
+    overflow: auto;
+    flex-wrap: nowrap;
+}
+footer#footer-4-cols div#firstt-footer-section {
+  flex-basis: 35%;
+    
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    border-left: 1px solid #444444;
+    display: flex;
+    overflow: auto;
+    flex-wrap: nowrap;
+}
+
+
+footer#footer-4-cols div#second-footer-section {
+    flex-basis: 22.22%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+footer#footer-4-cols div#right-footer-section {
+    flex-basis: 22.22%;
+    padding-left: 20px;
+}
+
+footer#footer-4-cols div#footer-logo-section {
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-4-cols div#footer-logo {
+    width: 30px;
+    margin-right: 30px;
+}
+
+footer#footer-4-cols div#footer-search input {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: #2a2a2a;
+    outline: none;
+    color: #999999;
+    padding: 2px;
+    width: 130px;
+}
+
+footer#footer-4-cols div#footer-search button {
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid #999999;
+    background: transparent;
+    color: #cecece;
+    padding: 2px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+footer#footer-4-cols div#footer-search button:hover {
+    background: #1aad8b;
+    color: #fff;
+    
+    transition: all 0.25s ease;
+}
+
+footer#footer-4-cols div#footer-search button:active {
+    position: relative;
+    top: 1px;
+}
+
+footer#footer-4-cols div.footer-section h3 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 12pt;
+    color: #fff;
+}
+
+footer#footer-4-cols div#footer-logo img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+footer#footer-4-cols div.footer-information{
+    display: flex;
+    flex-direction: column;
+}
+footer#footer-4-cols div.footer-information img {
+    align-self: center;
+}
+
+
+
+footer#footer-4-cols div.footer-information p:last-child {
+    margin-bottom: 0;
+}
+
+footer#footer-4-cols div.footer-information p img {
+    margin-right: 0.75em;
+}
+
+footer#footer-4-cols div.footer-tags a.footer-tag {
+    
+  
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #19ae8a;
+    background: #203933;
+    padding: 0.2em 0.6em;
+    margin: 0 0.68em 0.68em 0;
+    display: block;
+    float: left;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    font-style: italic;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+footer#footer-4-cols div.footer-tags a.footer-tag:hover {
+    background: #19ae8b00;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+footer#footer-4-cols div.footer-section ul {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+footer#footer-4-cols div.footer-links ul li, footer#footer-4-cols div.footer-links ul li a   {
+    list-style: none;
+    color: #999999;
+    line-height: 1.38em;
+    margin-bottom: 1em;
+}
+
+footer#footer-4-cols div.footer-links ul li:last-child, footer#footer-4-cols div.footer-links ul li a:last-child   {
+    margin-bottom: 0;
+}
+
+footer#footer-4-cols div.footer-section ul li a:hover {
+    color:#ffffff;
+    transition: all 0.2s ease;
+}
+
+footer#footer-4-cols div#copyright-information {
+    border-top: 1px solid #444444;
+    padding: 30px 0 0 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+footer#footer-4-cols div#copyright-information div#social-buttons {
+    margin-left: auto;
+
+}
+
+footer#footer-4-cols div#copyright-information div#social-buttons img {
+    margin-left: 0.68em;
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+
+/*==== media queries for footer-4-columns ====*/
+
+@media screen and (max-width: 960px){
+
+    div#footer-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    div#footer-grid {
+        flex-direction: column;
+        width: 480px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+    footer#footer-4-cols div#left-footer-section {
+        border-right: 0;
+        padding-bottom: 30px;
+    }
+
+    footer#footer-4-cols div#second-footer-section {
+        border-right: none;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+
+    footer#footer-4-cols div.footer-section {
+        padding-top: 30px;
+    }
+
+   
+
+    footer#footer-4-cols div.footer-section:first-child {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    footer#footer-4-cols div#first-footer-section {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 30px;
+        border-right: none;
+    }
+
+    footer#footer-4-cols div.footer-tags a.footer-tag {
+        font-size: 11pt;
+        padding: 0.32em 0.5em;
+    }
+
+    footer#footer-4-cols div#right-footer-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    footer#footer-4-cols div#second-footer-section ul,
+    footer#footer-4-cols div#right-footer-section ul {
+        margin: 0;
+        padding: 0;
+        font-size: 11pt;
+        text-align: center;
+    }
+
+    footer#footer-4-cols div.footer-links ul li {
+        margin: 0;
+    }
+
+    footer#footer-4-cols div.footer-links ul li a {
+        margin: 0;
+        display: block;
+        padding: 15px;
+        background: #2a2a2a;
+        border-bottom: 1px solid #444444;
+        text-decoration: none;
+    }
+
+    footer#footer-4-cols div.footer-links ul li:last-child a {
+        border-bottom: none;
+    }
+
+    footer#footer-4-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-4-cols div#copyright-information {
+        display: block;
+        width: 480px;
+        margin: 0 auto;
+    }
+
+    footer#footer-4-cols div#copyright-information div#social-buttons {
+        padding: 15px 0;
+    }
+
+    footer#footer-4-cols div#copyright-information div#social-buttons i.fa:first-child {
+        margin-left: 0;
+    }
+
+    footer#footer-4-cols div#copyright-information div#footer-logo-section {
+        display: block;
+        align-items: normal;
+    }
+
+    footer#footer-4-cols div#copyright-information div#footer-logo {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    footer#footer-4-cols div#copyright-information div#footer-logo img {
+        width: 100px;
+        text-align: center;
+    }
+
+    footer#footer-4-cols div#copyright-information div#copyright-text {
+        display: block;
+        text-align: justify;
+        padding: 15px 0;
+        line-height: 1.5;
+    }
+
+    footer#footer-4-cols div#copyright-information div#social-buttons i.fa {
+        font-size: 24pt;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    div#footer-grid {
+        width: 100%;
+    }
+    footer#footer-4-cols div#copyright-information div#footer-logo {
+        display: none;
+    }
+
+    footer#footer-4-cols div#footer-search input {
+        width: calc(100% - 77px);
+    }
+
+    footer#footer-4-cols div.footer-information {
+        margin: 0 auto;
+    }
+
+    footer#footer-4-cols div#copyright-information {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer#footer-4-cols div#copyright-information div#copyright-text {
+        width: 100%;
+    }
+
+    footer#footer-4-cols div#copyright-information div#social-buttons {
+        width: 100%;
+    }
+}
+.button-googleMaps {
+    background-color: #1aad8b2b;
+    color: #fff;
+    padding: 7px 14px;
+    font-weight: 400;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 30px !important;
+    border: solid 1px #1aad8b;
+}
+.button-googleMaps:hover{
+    color: #fff;
+}
+@media screen and (max-width: 767px) { 
+  footer#footer-4-cols div#left-footer-section {
+    font-size: 1.5rem;
+  }
+  footer#footer-4-cols div.footer-tags a.footer-tag {
+    font-size: 1rem;
+  }
+  footer#footer-4-cols div#firstt-footer-section {
+    border-left: none;
+    border-top: 1px solid #444444;
+    padding-left: 0px;
+    
+  }
+  footer#footer-4-cols div#first-footer-section {
+    border-left: none;
+    border-top: 1px solid #444444;
+  }
+
+}
+p.footer-pbx{ 
+    margin-bottom: 0px !important;
+}
+    </style>
+</head>
+<body>
+    <footer id="footer-4-cols" class="site-footer">
+        <div id="footer-container">
+          <div id="footer-grid">
+              <div id="left-footer-section" class="footer-section">
+        
+                  <div id="footer-search">
+                      
+                  </div>
+                  <div class="footer-information">
+                        <img src="https://www.eam.edu.co/wp-content/uploads/2022/06/logoeam-footer.png" alt="" width="120px">
+                      <p><img src="https://img.icons8.com/ios-filled/12/999999/marker.png">Avenida Bolívar # 3-11 Armenia Q.</p>
+                      <a class="button-googleMaps" href="https://goo.gl/maps/srxqCV49CVp7ouGp8" style="margin-bottom: 30px !important;">Llegar con Google Maps</a>
+                      <p class="footer-pbx"><img src="https://img.icons8.com/ios-filled/12/999999/phone.png">PBX: (60) 6 745 11 01</p>
+                      <p><img src="https://img.icons8.com/ios-filled/12/999999/mail.png">mercadeo@eam.edu.co</p>
+                      
+                  </div>
+              </div>
+        
+              <div id="first-footer-section" class="footer-section">
+                  <div class="footer-tags">
+                      <h3>Pregrados</h3>
+                      <a href="https://www.eam.edu.co/diseno-visual-digital/" class="footer-tag">Diseño Visual Digital</a>
+                      <a href="https://www.eam.edu.co/publicidad-digital-y-mercadeo/" class="footer-tag">Publicidad Digital y Mercadeo</a>
+                      <a href="https://www.eam.edu.co/ingenieria-mecatronica/" class="footer-tag">Ing Mecatrónica</a>
+                      <a href="https://www.eam.edu.co/ingenieria-industrial" class="footer-tag">Ing Industrial</a>
+                      <a href="https://www.eam.edu.co/ingenieria-de-software" class="footer-tag">Ing de Software</a>
+                      <a href="https://www.eam.edu.co/administracion-de-empresas" class="footer-tag">Admin de Empresas</a>
+                      <a href="https://www.eam.edu.co/administracion-de-negocios-internacionales/" class="footer-tag">Admin de Negocios Internacionales</a>
+                      <a href="https://www.eam.edu.co/contaduria-publica" class="footer-tag">Contaduría Pública</a>
+                      <a href="https://www.eam.edu.co/hoteleria-y-turismo/" class="footer-tag">Hotelería y Turismo</a>
+                      
+                  </div>
+              </div>
+        
+              <div id="firstt-footer-section" class="footer-section">
+                <div class="footer-tags">
+                    <h3>Posgrados</h3>
+                    <a href="https://www.eam.edu.co/especializacion-en-analitica-de-datos/" class="footer-tag">Analítica de Datos Aplicada a los Negocios</a>
+                    <a href="https://www.eam.edu.co/especializacion-en-calidad-de-software/" class="footer-tag">Calidad de Software</a>
+                    
+                </div>
+            </div>
+        
+              
+              
+          </div>
+          <div id="copyright-information">
+              <div id="footer-logo-section">
+                  <div id="footer-logo">
+                      <img src="https://www.eam.edu.co/wp-content/uploads/2022/06/logoeam-footer.png" alt="">
+                  </div></div>
+              <div id="copyright-text">
+                  &copy; Institución Universitaria EAM - IES sujeta a inspección y vigilancia por el MEN. 2023. Todos los derechos reservados. 
+              </div>
+              <div id="social-buttons">
+                <a href="https://www.facebook.com/eamdelquindio"><img src="https://img.icons8.com/ios-filled/25/999999/facebook--v1.png"/></a>
+                <a href="https://www.instagram.com/eamdelquindio/"><img src="https://img.icons8.com/ios-filled/25/999999/instagram--v1.png"/></a>
+                  
+              </div>
+          </div>
+        </div>
+        </footer>
+</body>
+</html>
